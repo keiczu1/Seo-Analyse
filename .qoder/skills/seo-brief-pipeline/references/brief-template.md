@@ -201,6 +201,8 @@ Evidence mode: knowledge_draft | title_snippet_only | parsed_html
 
 ## 10. UX и визуальная структура
 
+Все UX-блоки выбираются из канонического UI kit `Gemini/article-ui-kit.html`. В брифе указывай не только тип блока, но и класс/компонент UI kit.
+
 ### Первый экран:
 - короткий ответ
 - карточка ключевых параметров
@@ -222,6 +224,24 @@ Evidence mode: knowledge_draft | title_snippet_only | parsed_html
 
 ### Сценарные развилки:
 Если запрос допускает несколько путей — опиши развилку и точки ветвления.
+
+### UI kit mapping
+
+| Блок в брифе | Компонент/класс UI kit |
+|---|---|
+| Верхняя мета | `.meta` |
+| Карточка параметров | `.summary-card` |
+| Сценарная развилка | `.choice-cards` |
+| Предупреждение / совет / резюме | `.callout-important` / `.callout-tip` / `.callout-summary` |
+| Пошаговый порядок | `.steps` |
+| Чек-лист | `.checklist` |
+| Таблица рисков | `.risk-table` |
+| Судебная практика | `.court-practice` |
+| Образец документа | `.doc-template` + `.doc-download-block` |
+| FAQ | `.faq-item` |
+| Правовая база | `.law-base` |
+| Автор / проверка / дисклеймер | `.author-box` / `.reviewer-box` / `.disclaimer` |
+| Перелинковка | `.related-articles` |
 
 ---
 
@@ -313,6 +333,8 @@ Evidence mode: knowledge_draft | title_snippet_only | parsed_html
 - [ ] Таблица рисков включена (для сложных споров с несколькими рисками)
 - [ ] Цитаты из законов оформлены курсивом (для юридической ниши)
 - [ ] Термины при первом упоминании выделены bold + пояснение
+- [ ] HTML использует компоненты из `Gemini/article-ui-kit.html`; одноразовые классы не заменяют существующие UI kit блоки
+- [ ] В публичную статью не попали `.kit-*` демо-блоки и служебные пояснения UI kit
 ```
 
 ---

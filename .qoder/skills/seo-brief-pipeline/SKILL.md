@@ -240,6 +240,16 @@ npm.cmd run analyze:query -- --id <queryId> --query "<query>" --locale ru-RU
 
 Подробные правила — в `references/article-html-guide.md`.
 
+### UI kit gate
+
+Если в проекте есть `Gemini/article-ui-kit.html`, он является каноническим визуальным и семантическим эталоном для всех HTML-статей.
+
+Перед генерацией статьи:
+1. Открой `Gemini/article-ui-kit.html` и используй его структуру, классы и паттерны как источник правды.
+2. Не изобретай новые блоки вместо существующих компонентов UI kit.
+3. Если статье нужен новый тип повторяемого блока, сначала обнови UI kit и правила, затем используй его в статье.
+4. HTML-статья считается незавершенной, если обязательный блок есть в брифе, но не оформлен компонентом из UI kit.
+
 ### Краткие правила
 
 1. **Семантический HTML5**: `<article>`, `<nav>`, `<section>`, `<details>`, `<time>`
@@ -248,6 +258,7 @@ npm.cmd run analyze:query -- --id <queryId> --query "<query>" --locale ru-RU
 4. **Структура**: breadcrumbs → sidebar TOC → meta → h1 → summary card → sections → FAQ → disclaimer
 5. **Ссылки на источники**: `rel="noopener"`, `target="_blank"`
 6. **Без выдуманных URL**: используй конкретные URL статей (с хешем) из WebSearch; если хеш недоступен — base-URL + пометка `[URL требует уточнения]`
+7. **Компоненты только из UI kit**: summary-card, choice-cards, callout, risk-table, court-practice, steps, checklist, doc-template, doc-download-block, FAQ, law-base, author/trust, related links.
 
 ### Обязательные блоки для YMYL
 
@@ -281,6 +292,7 @@ npm.cmd run analyze:query -- --id <queryId> --query "<query>" --locale ru-RU
 5. **HTML ≠ бриф.** Бриф = ТЗ для копирайтера. HTML = финальная статья.
 6. **Evidence mode всегда виден.** `knowledge_draft` ≠ `parsed_html`.
 7. **SEO-триплеты с типами.** Без типизации — это просто список фактов.
+8. **UI kit обязателен для HTML.** Все статьи используют `Gemini/article-ui-kit.html` как эталон оформления; нельзя выпускать одноразовую разметку, которая расходится с UI kit.
 
 ---
 
