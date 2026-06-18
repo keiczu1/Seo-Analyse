@@ -2084,6 +2084,7 @@ td:first-child {
   height: 100%;
   display: flex;
   align-items: center;
+  margin-bottom: 0;
 }
 
 .top_menu > li > a {
