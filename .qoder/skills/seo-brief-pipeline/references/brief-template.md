@@ -241,7 +241,7 @@ Evidence mode: knowledge_draft | title_snippet_only | parsed_html
 | FAQ | `.faq-item` |
 | Правовая база | `.law-base` |
 | Автор / проверка / дисклеймер | `.auth-v9-author-card` / `.auth-v9-reviewer-card` / `.disclaimer` |
-| Перелинковка | `.relink-block` / `.relink-card` |
+| Перелинковка | обычный `<a>` / `.article-link` / `.relink-block` / `.relink-card` |
 
 ---
 

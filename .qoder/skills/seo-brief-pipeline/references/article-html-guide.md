@@ -45,7 +45,7 @@
 - Не создавать одноразовые классы, если в UI kit уже есть подходящий блок
 - Если нужен новый повторяемый паттерн, сначала добавить его в UI kit и только потом использовать в статье
 - Не переносить в публичную статью служебные элементы UI kit: `.kit-*`, демо-подписи, таблицы правил, пояснения для разработчика
-- Публичная статья использует реальные компоненты из UI kit: `.meta`, `.summary-card`, `.choice-cards`, `.callout.callout-important`, `.callout.callout-tip`, `.callout.callout-summary`, `.risk-table`, `.court-practice`, `.steps`, `.checklist`, `.doc-template`, `.doc-download-block`, `.faq-item`, `.law-base`, `.auth-v9-author-card`, `.auth-v9-reviewer-card`, `.relink-block`, `.relink-card`, `.disclaimer`
+- Публичная статья использует реальные компоненты из UI kit: `.meta`, `.summary-card`, `.choice-cards`, `.callout.callout-important`, `.callout.callout-tip`, `.callout.callout-summary`, `.risk-table`, `.court-practice`, `.steps`, `.checklist`, `.doc-template`, `.doc-download-block`, `.faq-item`, `.law-base`, `.article-link`, `.auth-v9-author-card`, `.auth-v9-reviewer-card`, `.relink-block`, `.relink-card`, `.disclaimer`
 
 ### Карта компонентов UI kit
 
@@ -66,7 +66,7 @@
 | FAQ | `.faq-item` / `<details>` | Вопросы, которые дополняют body |
 | Правовая база | `.law-base` | Все использованные нормы с точными ссылками |
 | Доверие | `.auth-v9-author-card`, `.auth-v9-reviewer-card`, `.disclaimer` | Автор, проверка, ограничение ответственности |
-| Перелинковка | `.relink-block`, `.relink-card` | Следующие связанные статьи |
+| Перелинковка | обычный `<a>`, `.article-link`, `.relink-block`, `.relink-card` | Ссылки на соседние статьи в тексте или карточках |
 
 ---
 

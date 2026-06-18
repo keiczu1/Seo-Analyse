@@ -211,6 +211,31 @@ a:hover {
   text-decoration-color: var(--accent-hover);
 }
 
+.article-link {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  color: var(--heading-text);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.article-link::after {
+  content: "→";
+  color: var(--brand-accent);
+  transition: transform 0.2s ease;
+}
+
+.article-link:hover {
+  color: var(--brand-accent);
+  text-decoration: none;
+}
+
+.article-link:hover::after {
+  transform: translateX(3px);
+}
+
 ul,
 ol {
   margin-bottom: 18px;
