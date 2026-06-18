@@ -5,7 +5,7 @@
 ## Содержание
 
 - Базовая структура HTML
-- Канонический UI kit и карта компонентов
+- Канонический UI kit, модульная архитектура и карта компонентов
 - Метаданные статьи и CSS-система
 - Обязательные компоненты статьи
 - Образец документа, судебная практика и таблицы рисков
@@ -30,7 +30,8 @@
   <script type="application/ld+json"><!-- Article schema --></script>
   <script type="application/ld+json"><!-- Типовой schema: HowTo/FAQPage/etc --></script>
 
-  <style>/* inline CSS */</style>
+  <link rel="stylesheet" href="style.css">
+  <script src="article-interactions.js" defer></script>
 </head>
 <body>
   <nav class="breadcrumbs"><!-- хлебные крошки --></nav>
@@ -49,7 +50,7 @@
 
 ## Канонический UI kit
 
-Источник правды для оформления HTML-статей — проектный `Gemini/article-ui-kit.html`. Если проектного UI kit нет, используй bundled-копию skill: `references/stage-4-04-ui-kit-article.html` и `references/stage-4-05-ui-kit-style.css`. Все новые статьи должны использовать семантику, классы, порядок блоков и визуальные паттерны выбранного UI kit.
+Источник правды для оформления HTML-статей — проектный `Gemini/article-ui-kit.html`. Если проектного UI kit нет, используй bundled-копию skill как эталон: `references/stage-4-04-ui-kit-article.html`, `references/stage-4-05-ui-kit-style.css`, `references/stage-4-06-ui-kit-demo.css` и `references/stage-4-07-ui-kit-interactions.js`. Demo CSS/JS нужны только для reference-страницы UI kit; в production-статью переносить production-компоненты и проектные слои, а не `.kit-*`. Все новые статьи должны использовать семантику, классы, порядок блоков и визуальные паттерны выбранного UI kit.
 
 Правила:
 - Перед сборкой HTML открыть проектный `Gemini/article-ui-kit.html`; если его нет — `references/stage-4-04-ui-kit-article.html`; сверить нужные компоненты
@@ -57,6 +58,17 @@
 - Если нужен новый повторяемый паттерн, сначала добавить его в UI kit и только потом использовать в статье
 - Не переносить в публичную статью служебные элементы UI kit: `.kit-*`, демо-подписи, таблицы правил, пояснения для разработчика
 - Публичная статья использует реальные компоненты из UI kit: `.meta`, `.summary-card`, `.choice-cards`, `.callout.callout-important`, `.callout.callout-tip`, `.callout.callout-summary`, `.risk-table`, `.court-practice`, `.steps`, `.checklist`, `.doc-template`, `.doc-download-block`, `.faq-item`, `.law-base`, `.article-link`, `.auth-v9-author-card`, `.auth-v9-reviewer-card`, `.relink-block`, `.relink-card`, `.disclaimer`
+
+### Модульная архитектура UI kit
+
+Соблюдай разделение слоев:
+
+- `stage-4-04-ui-kit-article.html` — только HTML-структура, контент демо и JSON-LD. Не добавлять inline CSS/JS и `style=""` для повторяемых UI-компонентов.
+- `stage-4-05-ui-kit-style.css` — production-компоненты статьи: layout, typography, cards, callouts, tables, documents, FAQ, trust, relink.
+- `stage-4-06-ui-kit-demo.css` — только демо-слой UI kit: `.kit-*`, preview grids, поясняющие панели. Эти классы не переносить в публичную статью.
+- `stage-4-07-ui-kit-interactions.js` — поведение демо-страницы: checklist, active TOC, mobile header, dropdowns.
+
+Для production-статьи повторяемый CSS и JS выноси во внешние файлы проекта или подключай существующие слои. `style=""` на повторяемых блоках запрещен. Inline допускается только для `application/ld+json` schema и минимальных одноразовых данных, которые не являются стилями или поведением.
 
 ### Карта компонентов UI kit
 
@@ -164,7 +176,7 @@ Layout: body = CSS Grid `1fr 220px`. Breadcrumbs — `grid-column: 1 / -1`. Ко
 
 ```html
 <body>
-  <nav class="breadcrumbs" style="grid-column: 1 / -1;">...</nav>
+  <nav class="breadcrumbs">...</nav>
   <div class="main">
     <!-- весь контент статьи -->
   </div>
@@ -179,6 +191,7 @@ Layout: body = CSS Grid `1fr 220px`. Breadcrumbs — `grid-column: 1 / -1`. Ко
 CSS:
 ```css
 body { display: grid; grid-template-columns: 1fr 220px; gap: 32px; max-width: 1100px; }
+.breadcrumbs { grid-column: 1 / -1; }
 .toc { position: sticky; top: 24px; border-left: 2px solid var(--border); }
 .toc a { display: block; padding: 5px 0 5px 14px; border-left: 2px solid transparent; }
 .toc a.active { color: var(--accent); border-left-color: var(--accent); }
@@ -665,6 +678,7 @@ document.querySelectorAll('.animate-in').forEach(el => observer.observe(el));
 - [ ] Title/H1/Description из брифа (секция 8)
 - [ ] Использованы компоненты из проектного `Gemini/article-ui-kit.html` или bundled `references/stage-4-04-ui-kit-article.html`; новые одноразовые блоки не подменяют UI kit
 - [ ] В публичную статью не попали `.kit-*`, демо-пояснения и служебные блоки UI kit
+- [ ] HTML, CSS и JS разделены по слоям; нет inline CSS/JS и `style=""` для повторяемых компонентов
 - [ ] Schema.org: Article + типовой schema
 - [ ] Responsive CSS (media query ≤600px)
 - [ ] Breadcrumbs + sticky TOC

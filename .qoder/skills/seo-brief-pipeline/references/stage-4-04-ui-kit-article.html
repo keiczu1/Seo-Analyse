@@ -41,445 +41,7 @@
   }
   </script>
   <link rel="stylesheet" href="stage-4-05-ui-kit-style.css?v=10">
-  <style>
-    .kit-main {
-      padding-bottom: 48px;
-    }
-
-    .kit-kicker {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      margin-bottom: 14px;
-      color: var(--brand-accent);
-      font-size: var(--fs-xs);
-      font-weight: 800;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-    }
-
-    .kit-kicker::before {
-      content: "";
-      width: 24px;
-      height: 2px;
-      border-radius: 999px;
-      background: var(--brand-accent);
-    }
-
-    .kit-section-note {
-      color: var(--muted);
-      font-size: var(--fs-sm);
-      margin-top: -8px;
-      margin-bottom: var(--space-md);
-    }
-
-    .kit-component-note {
-      margin: 12px 0 18px;
-      padding: 12px 14px;
-      border: 1px dashed var(--border);
-      border-radius: 8px;
-      background: #F8FAFC;
-      color: var(--muted);
-      font-size: var(--fs-xs);
-      line-height: 1.55;
-    }
-
-    .kit-code {
-      display: inline-flex;
-      align-items: center;
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      padding: 2px 7px;
-      background: #ffffff;
-      color: var(--heading-text);
-      font-family: Consolas, "Courier New", monospace;
-      font-size: 12px;
-      font-weight: 700;
-      line-height: 1.4;
-    }
-
-    .kit-token-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 14px;
-      margin: var(--space-md) 0 var(--space-lg);
-    }
-
-    .kit-token {
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      background: var(--surface);
-      overflow: hidden;
-    }
-
-    .kit-token-swatch {
-      height: 64px;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .kit-token-body {
-      padding: 12px;
-    }
-
-    .kit-token-name {
-      display: block;
-      color: var(--heading-text);
-      font-family: var(--font-heading);
-      font-size: 15px;
-      font-weight: 700;
-      line-height: 1.35;
-    }
-
-    .kit-token-value {
-      display: block;
-      margin-top: 3px;
-      color: var(--muted);
-      font-size: 12px;
-      font-weight: 700;
-    }
-
-    .kit-type-sample {
-      display: grid;
-      gap: 14px;
-      margin: var(--space-md) 0 var(--space-lg);
-    }
-
-    .kit-type-row {
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 14px;
-    }
-
-    .kit-type-row:last-child {
-      border-bottom: none;
-      padding-bottom: 0;
-    }
-
-    .kit-type-label {
-      display: block;
-      margin-bottom: 4px;
-      color: var(--muted);
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: 0.6px;
-      text-transform: uppercase;
-    }
-
-    .kit-heading-demo {
-      font-family: var(--font-heading);
-      color: var(--heading-text);
-      letter-spacing: 0;
-    }
-
-    .kit-h1-demo {
-      font-size: var(--fs-3xl);
-      line-height: 1.25;
-      font-weight: 800;
-    }
-
-    .kit-h2-demo {
-      font-size: var(--fs-2xl);
-      line-height: 1.35;
-      font-weight: 700;
-    }
-
-    .kit-h3-demo {
-      font-size: var(--fs-xl);
-      line-height: 1.4;
-      font-weight: 700;
-    }
-
-    .kit-h4-demo {
-      font-size: var(--fs-lg);
-      line-height: 1.4;
-      font-weight: 700;
-    }
-
-    .kit-heading-h4 {
-      margin: 0;
-      color: var(--heading-text);
-      font-family: var(--font-heading);
-      font-size: var(--fs-lg);
-      font-weight: 700;
-      line-height: 1.4;
-    }
-
-    .kit-text-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 18px;
-      margin: var(--space-md) 0 var(--space-lg);
-    }
-
-    .kit-text-panel {
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 18px;
-      background: #ffffff;
-    }
-
-    .kit-text-panel h3,
-    .kit-text-panel h4 {
-      margin-top: 0;
-    }
-
-    .kit-text-panel ul,
-    .kit-text-panel ol {
-      margin-bottom: 0;
-    }
-
-    .kit-link-list {
-      display: grid;
-      gap: 10px;
-      margin: var(--space-md) 0 var(--space-lg);
-      padding-left: 0;
-      list-style: none;
-    }
-
-    .kit-link-list li {
-      margin: 0;
-      padding: 12px 14px;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      background: #ffffff;
-      font-size: var(--fs-sm);
-    }
-
-    .kit-rules-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 18px;
-      margin: var(--space-md) 0 var(--space-lg);
-    }
-
-    .kit-rule-card {
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 18px;
-      background: #ffffff;
-    }
-
-    .kit-rule-card h3 {
-      margin-top: 0;
-      font-size: var(--fs-lg);
-    }
-
-    .kit-rule-card p:last-child,
-    .kit-rule-card ul:last-child,
-    .kit-rule-card ol:last-child {
-      margin-bottom: 0;
-    }
-
-    .kit-do-dont {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 14px;
-      margin: var(--space-md) 0 var(--space-lg);
-    }
-
-    .kit-do,
-    .kit-dont {
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 14px;
-      background: #ffffff;
-      font-size: var(--fs-sm);
-    }
-
-    .kit-do {
-      border-left: 4px solid var(--summary-border);
-    }
-
-    .kit-dont {
-      border-left: 4px solid var(--brand-accent);
-    }
-
-    .kit-do strong,
-    .kit-dont strong {
-      display: block;
-      margin-bottom: 6px;
-      color: var(--heading-text);
-    }
-
-    .kit-link-label {
-      display: block;
-      margin-bottom: 3px;
-      color: var(--muted);
-      font-size: 11px;
-      font-weight: 800;
-      letter-spacing: 0.7px;
-      text-transform: uppercase;
-    }
-
-    .article-link {
-      display: inline-flex;
-      align-items: baseline;
-      gap: 6px;
-      color: var(--heading-text);
-      font-family: var(--font-heading);
-      font-weight: 700;
-      text-decoration: none;
-    }
-
-    .article-link::after {
-      content: "→";
-      color: var(--brand-accent);
-      transition: transform 0.2s ease;
-    }
-
-    .article-link:hover {
-      color: var(--brand-accent);
-      text-decoration: none;
-    }
-
-    .article-link:hover::after {
-      transform: translateX(3px);
-    }
-
-    .kit-grid-two {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 18px;
-      margin: var(--space-md) 0 var(--space-lg);
-    }
-
-    .kit-mini-card {
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 18px;
-      background: #ffffff;
-      box-shadow: 0 2px 10px rgba(15, 23, 42, 0.02);
-    }
-
-    .kit-mini-card h3 {
-      margin-top: 0;
-      font-size: var(--fs-lg);
-    }
-
-    .kit-state-strip {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin: 14px 0 4px;
-    }
-
-    .kit-inline-pill {
-      display: inline-flex;
-      align-items: center;
-      border-radius: 6px;
-      padding: 5px 9px;
-      background: #EEF2F7;
-      color: var(--heading-text);
-      font-size: 12px;
-      font-weight: 800;
-    }
-
-    .kit-example-title {
-      margin: 26px 0 12px;
-      color: var(--heading-text);
-      font-family: var(--font-heading);
-      font-size: var(--fs-lg);
-      font-weight: 700;
-      line-height: 1.35;
-    }
-
-    .kit-footer-note {
-      margin-top: var(--space-lg);
-      padding-top: var(--space-md);
-      border-top: 1px solid var(--border);
-      color: var(--muted);
-      font-size: var(--fs-xs);
-    }
-
-    @media (max-width: 760px) {
-      .kit-rules-grid,
-      .kit-do-dont {
-        grid-template-columns: 1fr;
-      }
-
-      .kit-text-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .kit-grid-two {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 600px) {
-      .article-layout {
-        grid-template-columns: minmax(0, 1fr);
-      }
-
-      .toc-sidebar,
-      .toc {
-        min-width: 0;
-        max-width: 100%;
-      }
-
-      .kit-main,
-      .kit-main article,
-      .kit-main section,
-      .kit-main .summary-card,
-      .kit-main .table-container,
-      .kit-main .choice-cards,
-      .kit-main .doc-template,
-      .kit-main .doc-download-block,
-      .kit-main .auth-v9-shadow,
-      .kit-main .relink-block {
-        min-width: 0;
-        max-width: 100%;
-      }
-
-      .kit-main .summary-card {
-        grid-template-columns: 1fr;
-      }
-
-      .kit-main .kit-token-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .kit-main .kit-text-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .kit-h1-demo {
-        font-size: 24px;
-      }
-
-      .kit-h2-demo {
-        font-size: 19px;
-      }
-
-      .kit-main .choice-cards .cards {
-        grid-template-columns: 1fr;
-      }
-
-      .kit-main .doc-download-block {
-        grid-template-columns: 1fr;
-      }
-
-      .kit-main .doc-download-block .download-card,
-      .kit-main .doc-download-block .card-header-info {
-        min-width: 0;
-      }
-
-      .kit-main .doc-signature {
-        flex-direction: column;
-        gap: 8px;
-      }
-
-      .kit-main .relink-container {
-        grid-template-columns: 1fr;
-      }
-
-      .kit-code,
-      .kit-token-value,
-      .kit-main .summary-card .value,
-      .kit-main .doc-download-block .card-title {
-        overflow-wrap: anywhere;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="stage-4-06-ui-kit-demo.css?v=1">
 </head>
 <body>
 <header class="site-header" id="siteHeader">
@@ -527,7 +89,7 @@
 
   <div class="header-nav-bar" id="headerNavRow">
     <div class="header-inner">
-      <nav class="header-nav-row" style="border: none; width: 100%;">
+      <nav class="header-nav-row header-nav-row--flush">
         <ul id="main_menu" class="top_menu">
           <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
             <a href="https://law-divorce.org/besplatnye-konsultatsii-yurista-po-semejnym-voprosam-online/" data-wpel-link="internal"><span class="icon_text">Консультации</span></a>
@@ -640,6 +202,14 @@
             <span class="value">stage-4-05-ui-kit-style.css?v=10</span>
           </div>
           <div class="item">
+            <span class="label">Demo CSS</span>
+            <span class="value">stage-4-06-ui-kit-demo.css?v=1</span>
+          </div>
+          <div class="item">
+            <span class="label">JS</span>
+            <span class="value">stage-4-07-ui-kit-interactions.js?v=1</span>
+          </div>
+          <div class="item">
             <span class="label">Сетка</span>
             <span class="value">контент + TOC</span>
           </div>
@@ -655,42 +225,42 @@
 
           <div class="kit-token-grid">
             <div class="kit-token">
-              <div class="kit-token-swatch" style="background: var(--heading-text);"></div>
+              <div class="kit-token-swatch kit-token-swatch-heading"></div>
               <div class="kit-token-body">
                 <span class="kit-token-name">Heading / Navy</span>
                 <span class="kit-token-value">--heading-text #0E2A47</span>
               </div>
             </div>
             <div class="kit-token">
-              <div class="kit-token-swatch" style="background: var(--accent);"></div>
+              <div class="kit-token-swatch kit-token-swatch-accent"></div>
               <div class="kit-token-body">
                 <span class="kit-token-name">Accent</span>
                 <span class="kit-token-value">--accent #355380</span>
               </div>
             </div>
             <div class="kit-token">
-              <div class="kit-token-swatch" style="background: var(--brand-accent);"></div>
+              <div class="kit-token-swatch kit-token-swatch-brand"></div>
               <div class="kit-token-body">
                 <span class="kit-token-name">Brand accent</span>
                 <span class="kit-token-value">--brand-accent #cc3f5c</span>
               </div>
             </div>
             <div class="kit-token">
-              <div class="kit-token-swatch" style="background: var(--bg);"></div>
+              <div class="kit-token-swatch kit-token-swatch-bg"></div>
               <div class="kit-token-body">
                 <span class="kit-token-name">Page background</span>
                 <span class="kit-token-value">--bg #F8FAFC</span>
               </div>
             </div>
             <div class="kit-token">
-              <div class="kit-token-swatch" style="background: var(--important-bg);"></div>
+              <div class="kit-token-swatch kit-token-swatch-important"></div>
               <div class="kit-token-body">
                 <span class="kit-token-name">Important callout</span>
                 <span class="kit-token-value">--important-bg</span>
               </div>
             </div>
             <div class="kit-token">
-              <div class="kit-token-swatch" style="background: var(--summary-bg);"></div>
+              <div class="kit-token-swatch kit-token-swatch-summary"></div>
               <div class="kit-token-body">
                 <span class="kit-token-name">Summary callout</span>
                 <span class="kit-token-value">--summary-bg</span>
@@ -807,11 +377,11 @@
             </div>
             <div class="kit-type-row">
               <span class="kit-type-label">Абзац</span>
-              <p style="margin: 0;"><strong>Подсудность</strong> — это правило, которое определяет нужный суд. Вам нужно выбрать мировой или районный суд до подачи иска.</p>
+              <p class="kit-tight-text"><strong>Подсудность</strong> — это правило, которое определяет нужный суд. Вам нужно выбрать мировой или районный суд до подачи иска.</p>
             </div>
             <div class="kit-type-row">
               <span class="kit-type-label">Курсив / цитата или ссылка на норму</span>
-              <p style="margin: 0;">Согласно <em><a href="https://www.consultant.ru/document/cons_doc_LAW_8982/4a167ba0c30fe37c07642d042cf2aa85ee1345da/" target="_blank" rel="noopener">ст. 22 СК РФ</a></em>, суд может назначить срок для примирения. Это значит, что процесс иногда затягивается.</p>
+              <p class="kit-tight-text">Согласно <em><a href="https://www.consultant.ru/document/cons_doc_LAW_8982/4a167ba0c30fe37c07642d042cf2aa85ee1345da/" target="_blank" rel="noopener">ст. 22 СК РФ</a></em>, суд может назначить срок для примирения. Это значит, что процесс иногда затягивается.</p>
             </div>
           </div>
 
@@ -1198,7 +768,7 @@
 
           <section class="law-base">
             <h2>Правовая база</h2>
-            <p style="font-size: var(--fs-xs); color: var(--muted); margin-bottom: var(--space-xs);">Список норм, использованных в статье.</p>
+            <p class="kit-law-base-note">Список норм, использованных в статье.</p>
             <ul>
               <li><em><a href="https://www.consultant.ru/document/cons_doc_LAW_8982/72751553f2dbd0ffeb99df74fd4b0e9a57ac4255/" target="_blank" rel="noopener">Ст. 21 СК РФ</a></em> — расторжение брака в судебном порядке</li>
               <li><em><a href="https://www.consultant.ru/document/cons_doc_LAW_8982/4a167ba0c30fe37c07642d042cf2aa85ee1345da/" target="_blank" rel="noopener">Ст. 22 СК РФ</a></em> — примирительный срок до 3 месяцев</li>
@@ -1278,7 +848,7 @@
           </aside>
         </section>
 
-        <p class="kit-footer-note">UI kit intentionally reuses the production classes from <span class="kit-code">stage-4-05-ui-kit-style.css</span>. New helper classes use the <span class="kit-code">kit-*</span> prefix and only shape this reference page.</p>
+        <p class="kit-footer-note">UI kit intentionally keeps layers separate: production classes live in <span class="kit-code">stage-4-05-ui-kit-style.css</span>, demo-only <span class="kit-code">kit-*</span> helpers live in <span class="kit-code">stage-4-06-ui-kit-demo.css</span>, and page behavior lives in <span class="kit-code">stage-4-07-ui-kit-interactions.js</span>.</p>
       </article>
     </main>
 
@@ -1333,78 +903,6 @@
   </div>
 </footer>
 
-<script>
-  document.querySelectorAll('.checklist li').forEach(item => {
-    item.addEventListener('click', () => {
-      item.classList.toggle('completed');
-    });
-  });
-
-  const tocLinks = document.querySelectorAll('.toc a');
-  const sections = Array.from(tocLinks).map(link => {
-    const selector = link.getAttribute('href');
-    return document.querySelector(selector);
-  }).filter(Boolean);
-
-  function updateActiveToc() {
-    let activeIndex = -1;
-    const scrollPos = window.scrollY + 120;
-
-    for (let i = 0; i < sections.length; i++) {
-      if (scrollPos >= sections[i].offsetTop) {
-        activeIndex = i;
-      } else {
-        break;
-      }
-    }
-
-    tocLinks.forEach((link, idx) => {
-      link.classList.toggle('active', idx === activeIndex);
-    });
-  }
-
-  window.addEventListener('scroll', updateActiveToc);
-  updateActiveToc();
-
-  const mobileToggle = document.getElementById('mobileToggle');
-  const headerNavRow = document.getElementById('headerNavRow');
-
-  if (mobileToggle && headerNavRow) {
-    mobileToggle.addEventListener('click', () => {
-      mobileToggle.classList.toggle('active');
-      headerNavRow.classList.toggle('active');
-    });
-  }
-
-  const parentMenuItems = document.querySelectorAll('.menu-item-has-children');
-  parentMenuItems.forEach(item => {
-    const link = item.querySelector('a');
-    const arrow = item.querySelector('.arrow');
-
-    const toggleSubmenu = event => {
-      if (window.innerWidth <= 1024) {
-        event.preventDefault();
-        event.stopPropagation();
-
-        const isActive = item.classList.contains('active-dropdown');
-        parentMenuItems.forEach(otherItem => {
-          otherItem.classList.remove('active-dropdown');
-        });
-
-        if (!isActive) {
-          item.classList.add('active-dropdown');
-        }
-      }
-    };
-
-    if (arrow) {
-      arrow.addEventListener('click', toggleSubmenu);
-    }
-
-    if (link && link.getAttribute('href') === '#') {
-      link.addEventListener('click', toggleSubmenu);
-    }
-  });
-</script>
+<script src="stage-4-07-ui-kit-interactions.js?v=1" defer></script>
 </body>
 </html>

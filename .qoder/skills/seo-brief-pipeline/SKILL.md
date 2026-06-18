@@ -246,13 +246,14 @@ npm.cmd run analyze:query -- --id <queryId> --query "<query>" --locale ru-RU
 
 ### UI kit gate
 
-Если в проекте есть `Gemini/article-ui-kit.html`, он является каноническим визуальным и семантическим эталоном для всех HTML-статей. Если проектного UI kit нет, используй bundled-копию skill: `references/stage-4-04-ui-kit-article.html` и `references/stage-4-05-ui-kit-style.css`.
+Если в проекте есть `Gemini/article-ui-kit.html`, он является каноническим визуальным и семантическим эталоном для всех HTML-статей. Если проектного UI kit нет, используй bundled-копию skill как эталон: `references/stage-4-04-ui-kit-article.html`, `references/stage-4-05-ui-kit-style.css`, `references/stage-4-06-ui-kit-demo.css` и `references/stage-4-07-ui-kit-interactions.js`. Demo CSS/JS нужны только для reference-страницы UI kit; в production-статью переносить production-компоненты и проектные слои, а не `.kit-*`.
 
 Перед генерацией статьи:
 1. Открой проектный `Gemini/article-ui-kit.html`; если его нет — `references/stage-4-04-ui-kit-article.html`. Используй структуру, классы и паттерны UI kit как источник правды.
 2. Не изобретай новые блоки вместо существующих компонентов UI kit.
 3. Если статье нужен новый тип повторяемого блока, сначала обнови UI kit и правила, затем используй его в статье.
 4. HTML-статья считается незавершенной, если обязательный блок есть в брифе, но не оформлен компонентом из UI kit.
+5. Соблюдай слои: HTML = семантика и контент, CSS = компоненты и layout, JS = поведение. Не возвращай demo CSS или JS в inline-блоки и не используй `style=""` для повторяемых UI-компонентов.
 
 ### Краткие правила
 
@@ -263,6 +264,7 @@ npm.cmd run analyze:query -- --id <queryId> --query "<query>" --locale ru-RU
 5. **Ссылки на источники**: `rel="noopener"`, `target="_blank"`
 6. **Без выдуманных URL**: используй конкретные URL статей (с хешем) из WebSearch; если хеш недоступен — base-URL + пометка `[URL требует уточнения]`
 7. **Компоненты только из UI kit**: `.summary-card`, `.choice-cards`, `.callout.callout-important`, `.callout.callout-tip`, `.callout.callout-summary`, `.risk-table`, `.court-practice`, `.steps`, `.checklist`, `.doc-template`, `.doc-download-block`, `.faq-item`, `.law-base`, `.article-link`, `.auth-v9-author-card`, `.auth-v9-reviewer-card`, `.relink-block`, `.relink-card`, `.disclaimer`.
+8. **Чистая архитектура HTML**: не смешивать структуру, стили и поведение. Внешние CSS/JS файлы обязательны для повторяемых UI kit слоев; `style=""` на повторяемых блоках запрещен; inline допускается только для JSON-LD schema и минимальных page-specific данных.
 
 ### Обязательные блоки для YMYL
 
@@ -297,6 +299,7 @@ npm.cmd run analyze:query -- --id <queryId> --query "<query>" --locale ru-RU
 6. **Evidence mode всегда виден.** `knowledge_draft` ≠ `parsed_html`.
 7. **SEO-триплеты с типами.** Без типизации — это просто список фактов.
 8. **UI kit обязателен для HTML.** Все статьи используют проектный `Gemini/article-ui-kit.html` или bundled `references/stage-4-04-ui-kit-article.html` как эталон оформления; нельзя выпускать одноразовую разметку, которая расходится с UI kit.
+9. **Модульность обязательна.** Для UI kit и новых статей не смешивай HTML, CSS и JS в одном файле. Повторяемые стили и поведение выноси в отдельные файлы или существующие проектные слои.
 
 ---
 
@@ -357,7 +360,10 @@ Pipeline:
 - `references/stage-4-01-article-html-guide.md` — Stage 4: правила HTML-генерации
 - `references/stage-4-02-editorial-legal.md` — Stage 4: редакторские правила для юридической ниши
 - `references/stage-4-03-editorial-general.md` — Stage 4: редакторские правила для общей ниши
-- `references/stage-4-04-ui-kit-article.html` и `references/stage-4-05-ui-kit-style.css` — Stage 4: bundled UI kit для проектов без локального `Gemini/article-ui-kit.html`
+- `references/stage-4-04-ui-kit-article.html` — Stage 4: bundled UI kit HTML-структура для проектов без локального `Gemini/article-ui-kit.html`
+- `references/stage-4-05-ui-kit-style.css` — Stage 4: production CSS-компоненты статьи
+- `references/stage-4-06-ui-kit-demo.css` — Stage 4: demo-only стили страницы UI kit (`.kit-*`)
+- `references/stage-4-07-ui-kit-interactions.js` — Stage 4: поведение demo-страницы UI kit
 
 **Выбор редакторских правил по нише:**
 
