@@ -201,7 +201,7 @@ Evidence mode: knowledge_draft | title_snippet_only | parsed_html
 
 ## 10. UX и визуальная структура
 
-Все UX-блоки выбираются из канонического UI kit `Gemini/article-ui-kit.html`. В брифе указывай не только тип блока, но и класс/компонент UI kit.
+Все UX-блоки выбираются из канонического UI kit: проектного `Gemini/article-ui-kit.html` или bundled `references/stage-4-04-ui-kit-article.html`. В брифе указывай не только тип блока, но и класс/компонент UI kit.
 
 ### Первый экран:
 - короткий ответ
@@ -333,7 +333,7 @@ Evidence mode: knowledge_draft | title_snippet_only | parsed_html
 - [ ] Таблица рисков включена (для сложных споров с несколькими рисками)
 - [ ] Цитаты из законов оформлены курсивом (для юридической ниши)
 - [ ] Термины при первом упоминании выделены bold + пояснение
-- [ ] HTML использует компоненты из `Gemini/article-ui-kit.html`; одноразовые классы не заменяют существующие UI kit блоки
+- [ ] HTML использует компоненты из проектного `Gemini/article-ui-kit.html` или bundled `references/stage-4-04-ui-kit-article.html`; одноразовые классы не заменяют существующие UI kit блоки
 - [ ] В публичную статью не попали `.kit-*` демо-блоки и служебные пояснения UI kit
 ```
 

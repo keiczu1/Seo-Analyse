@@ -65,6 +65,8 @@ description: Universal SEO page brief pipeline. Takes any search query, runs rul
 
 ## Stage 1: Rule-Based Analysis
 
+Рабочий чек-лист этапа — `references/stage-1-01-rule-analysis.md`.
+
 ### Если доступен `analysis-engine.mjs`
 
 Запусти pipeline:
@@ -117,9 +119,9 @@ npm.cmd run analyze:query -- --id <queryId> --query "<query>" --locale ru-RU
 
 ## Stage 2: LLM Synthesis
 
-Это ключевой этап. Заполни **все 15 секций** брифа по шаблону в `references/brief-template.md`.
+Это ключевой этап. Заполни **все 15 секций** брифа по шаблону в `references/stage-2-01-brief-template.md`.
 
-Подробные инструкции для каждой секции — в `references/stage2-instructions.md`.
+Подробные инструкции для каждой секции — в `references/stage-2-02-brief-instructions.md`.
 
 ### Краткий чек-лист секций
 
@@ -156,6 +158,8 @@ npm.cmd run analyze:query -- --id <queryId> --query "<query>" --locale ru-RU
 ---
 
 ## Stage 3: Fact-Check + Score
+
+Рабочий чек-лист fact-check и score — `references/stage-3-01-fact-check-score.md`.
 
 > **GATE: переход к Stage 4 запрещён, пока Stage 3 не пройден.**
 > После завершения Stage 3 выведи явный блок:
@@ -238,14 +242,14 @@ npm.cmd run analyze:query -- --id <queryId> --query "<query>" --locale ru-RU
 
 ## Stage 4: HTML Article Generation
 
-Подробные правила — в `references/article-html-guide.md`.
+Подробные правила — в `references/stage-4-01-article-html-guide.md`.
 
 ### UI kit gate
 
-Если в проекте есть `Gemini/article-ui-kit.html`, он является каноническим визуальным и семантическим эталоном для всех HTML-статей.
+Если в проекте есть `Gemini/article-ui-kit.html`, он является каноническим визуальным и семантическим эталоном для всех HTML-статей. Если проектного UI kit нет, используй bundled-копию skill: `references/stage-4-04-ui-kit-article.html` и `references/stage-4-05-ui-kit-style.css`.
 
 Перед генерацией статьи:
-1. Открой `Gemini/article-ui-kit.html` и используй его структуру, классы и паттерны как источник правды.
+1. Открой проектный `Gemini/article-ui-kit.html`; если его нет — `references/stage-4-04-ui-kit-article.html`. Используй структуру, классы и паттерны UI kit как источник правды.
 2. Не изобретай новые блоки вместо существующих компонентов UI kit.
 3. Если статье нужен новый тип повторяемого блока, сначала обнови UI kit и правила, затем используй его в статье.
 4. HTML-статья считается незавершенной, если обязательный блок есть в брифе, но не оформлен компонентом из UI kit.
@@ -292,7 +296,7 @@ npm.cmd run analyze:query -- --id <queryId> --query "<query>" --locale ru-RU
 5. **HTML ≠ бриф.** Бриф = ТЗ для копирайтера. HTML = финальная статья.
 6. **Evidence mode всегда виден.** `knowledge_draft` ≠ `parsed_html`.
 7. **SEO-триплеты с типами.** Без типизации — это просто список фактов.
-8. **UI kit обязателен для HTML.** Все статьи используют `Gemini/article-ui-kit.html` как эталон оформления; нельзя выпускать одноразовую разметку, которая расходится с UI kit.
+8. **UI kit обязателен для HTML.** Все статьи используют проектный `Gemini/article-ui-kit.html` или bundled `references/stage-4-04-ui-kit-article.html` как эталон оформления; нельзя выпускать одноразовую разметку, которая расходится с UI kit.
 
 ---
 
@@ -346,16 +350,19 @@ Pipeline:
 
 Этот skill оркестрирует pipeline. Он использует:
 
-- `references/brief-template.md` — шаблон 15-секционного брифа (что заполнять)
-- `references/stage2-instructions.md` — инструкции LLM-синтеза (как заполнять)
-- `references/article-html-guide.md` — правила HTML-генерации
-- `references/editorial-rules-legal.md` — редакторские правила для юридической ниши
-- `references/editorial-rules-general.md` — редакторские правила для общей ниши
+- `references/stage-1-01-rule-analysis.md` — Stage 1: rule-based анализ запроса
+- `references/stage-2-01-brief-template.md` — Stage 2: шаблон 15-секционного брифа (что заполнять)
+- `references/stage-2-02-brief-instructions.md` — Stage 2: инструкции LLM-синтеза (как заполнять)
+- `references/stage-3-01-fact-check-score.md` — Stage 3: fact-check, scoring и gate перед HTML
+- `references/stage-4-01-article-html-guide.md` — Stage 4: правила HTML-генерации
+- `references/stage-4-02-editorial-legal.md` — Stage 4: редакторские правила для юридической ниши
+- `references/stage-4-03-editorial-general.md` — Stage 4: редакторские правила для общей ниши
+- `references/stage-4-04-ui-kit-article.html` и `references/stage-4-05-ui-kit-style.css` — Stage 4: bundled UI kit для проектов без локального `Gemini/article-ui-kit.html`
 
 **Выбор редакторских правил по нише:**
 
 | Ниша | Файл |
 |---|---|
-| Юридическая (право, законы, суды) | `editorial-rules-legal.md` |
-| Общая (how-to, обзоры, инструкции) | `editorial-rules-general.md` |
-| Медицинская, финансовая | Пока не созданы — используй `general` + добавь YMYL-правила из `legal` |
+| Юридическая (право, законы, суды) | `stage-4-02-editorial-legal.md` |
+| Общая (how-to, обзоры, инструкции) | `stage-4-03-editorial-general.md` |
+| Медицинская, финансовая | Пока не созданы — используй `stage-4-03-editorial-general.md` + добавь YMYL-правила из `stage-4-02-editorial-legal.md` |
