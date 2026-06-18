@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Сравнение 3 вариантов блока-развилки</title>
+  <style>
+    :root {
+      --text: #1a1a1a;
+      --muted: #555;
+      --bg: #fff;
+      --surface: #f7f8fa;
+      --border: #e0e3e8;
+      --accent: #2563eb;
+      --warn-bg: #fef3cd;
+      --warn-border: #f0ad4e;
+      --tip-bg: #d1ecf1;
+      --tip-border: #17a2b8;
+      --important-bg: #fde8e8;
+      --important-border: #dc2626;
+      --summary-bg: #ecfdf5;
+      --summary-border: #10b981;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; color: var(--text); background: var(--bg); line-height: 1.7; font-size: 17px; max-width: 780px; margin: 0 auto; padding: 24px 20px 80px; }
+    h2 { font-size: 22px; margin-top: 48px; margin-bottom: 14px; font-weight: 700; }
+    p { margin-bottom: 12px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    strong { font-weight: 600; }
+
+    /* Variant label */
+    .variant-label {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 4px 14px;
+      border-radius: 6px;
+      margin-bottom: 12px;
+    }
+    .variant-desc {
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 20px;
+      padding: 10px 14px;
+      background: var(--surface);
+      border-radius: 8px;
+      border-left: 3px solid var(--accent);
+    }
+    .separator { border: none; border-top: 2px dashed var(--border); margin: 56px 0 32px; }
+
+    /* ============================================= */
+    /* VARIANT 1: Two cards side by side             */
+    /* ============================================= */
+    .choice-cards { margin: 20px 0 28px; }
+    .choice-cards .question-text { font-size: 16px; font-weight: 600; margin-bottom: 12px; }
+    .choice-cards .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .choice-cards .card {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 18px 20px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: var(--surface);
+      text-decoration: none;
+      color: var(--text);
+      transition: border-color 0.15s, box-shadow 0.15s;
+      cursor: pointer;
+    }
+    .choice-cards .card:hover {
+      border-color: var(--accent);
+      box-shadow: 0 2px 12px rgba(37,99,235,0.08);
+    }
+    .choice-cards .card-icon {
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px; font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .choice-cards .card-icon.yes-icon { background: #fef3c7; color: #b45309; }
+    .choice-cards .card-icon.no-icon  { background: #d1fae5; color: #047857; }
+    .choice-cards .card-title { font-size: 17px; font-weight: 700; margin-bottom: 4px; }
+    .choice-cards .card-desc { font-size: 14px; color: var(--muted); line-height: 1.5; }
+    .choice-cards .card-link { font-size: 13px; color: var(--accent); font-weight: 600; margin-top: 10px; }
+    @media (max-width: 600px) { .choice-cards .cards { grid-template-columns: 1fr; } }
+
+    /* ============================================= */
+    /* VARIANT 2: Inline switcher in text            */
+    /* ============================================= */
+    .inline-switch {
+      margin: 16px 0;
+    }
+    .inline-switch .lead { font-size: 17px; margin-bottom: 0; }
+    .inline-switch .switch-links {
+      display: inline-flex;
+      gap: 6px;
+      margin: 8px 0;
+      align-items: center;
+    }
+    .inline-switch .switch-links .opt {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 6px 16px;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      border: 1.5px solid var(--border);
+      background: var(--surface);
+      transition: all 0.15s;
+    }
+    .inline-switch .switch-links .opt:hover { border-color: var(--accent); background: #eef4ff; }
+    .inline-switch .switch-links .opt .dot { width: 8px; height: 8px; border-radius: 50%; }
+    .inline-switch .switch-links .opt .dot.yes-dot { background: #f59e0b; }
+    .inline-switch .switch-links .opt .dot.no-dot  { background: #10b981; }
+    .inline-switch .switch-links .divider { color: var(--muted); font-size: 14px; }
+
+    /* ============================================= */
+    /* VARIANT 3: Stepper with branching             */
+    /* ============================================= */
+    .stepper { list-style: none; padding: 0; margin: 20px 0 28px; counter-reset: stepnum; }
+    .stepper .step {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 0;
+      position: relative;
+    }
+    .stepper .step-left {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-shrink: 0;
+      width: 32px;
+    }
+    .stepper .step-circle {
+      width: 32px; height: 32px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 14px;
+      flex-shrink: 0;
+    }
+    .stepper .step-line {
+      width: 2px;
+      flex: 1;
+      background: var(--border);
+      min-height: 12px;
+    }
+    .stepper .step-content {
+      padding-bottom: 20px;
+      flex: 1;
+    }
+    .stepper .step-title { font-weight: 700; font-size: 16px; margin-bottom: 4px; }
+    .stepper .step-body { font-size: 15px; color: var(--text); }
+    .stepper .branch-options { margin: 8px 0 0; display: flex; flex-direction: column; gap: 8px; }
+    .stepper .branch-opt {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: var(--surface);
+      font-size: 14px;
+    }
+    .stepper .branch-opt .badge {
+      font-size: 12px;
+      font-weight: 700;
+      padding: 2px 10px;
+      border-radius: 6px;
+      flex-shrink: 0;
+    }
+    .stepper .branch-opt .badge.yes-badge { background: #fef3c7; color: #b45309; }
+    .stepper .branch-opt .badge.no-badge  { background: #d1fae5; color: #047857; }
+    .stepper .branch-opt .branch-text { flex: 1; }
+    .stepper .branch-opt .branch-link { font-weight: 600; font-size: 13px; flex-shrink: 0; }
+  </style>
+</head>
+<body>
+
+<h1 style="font-size:24px; margin-bottom:8px;">Сравнение: блок «Есть ли дети?»</h1>
+<p style="color:var(--muted); font-size:14px;">Три варианта оформления одной и той же развилки. Прокрутите вниз и сравните.</p>
+
+<!-- ============================================================= -->
+<!-- VARIANT 1                                                      -->
+<!-- ============================================================= -->
+<hr class="separator">
+<span class="variant-label">Вариант 1 — Две карточки</span>
+<div class="variant-desc">Вопрос как подзаголовок. Под ним — две кликабельные карточки рядом. Иконка, заголовок, описание, ссылка. На мобильных — в колонку.</div>
+
+<div class="choice-cards">
+  <div class="question-text">Есть общие несовершеннолетние дети?</div>
+  <div class="cards">
+    <a href="#children" class="card">
+      <div class="card-icon yes-icon">✓</div>
+      <div class="card-title">Да, есть дети</div>
+      <div class="card-desc">Дело рассматривает <strong>районный суд</strong> с участием органов опеки</div>
+      <span class="card-link">→ Перейти к разделу</span>
+    </a>
+    <a href="#court" class="card">
+      <div class="card-icon no-icon">—</div>
+      <div class="card-title">Нет, детей нет</div>
+      <div class="card-desc">Дело рассматривает <strong>мировой судья</strong> по месту жительства ответчика</div>
+      <span class="card-link">→ Определить подсудность</span>
+    </a>
+  </div>
+</div>
+
+<!-- ============================================================= -->
+<!-- VARIANT 2                                                      -->
+<!-- ============================================================= -->
+<hr class="separator">
+<span class="variant-label">Вариант 2 — Inline-переключатель</span>
+<div class="variant-desc">Вопрос встроен прямо в текст. Две компактные кнопки-ссылки с точками-маркерами. Минимум места, навигация в потоке чтения.</div>
+
+<div class="inline-switch">
+  <p class="lead">Путь зависит от того, есть ли у вас общие несовершеннолетние дети:</p>
+  <div class="switch-links">
+    <a href="#children" class="opt"><span class="dot yes-dot"></span> Есть дети → районный суд</a>
+    <span class="divider">или</span>
+    <a href="#court" class="opt"><span class="dot no-dot"></span> Нет детей → мировой суд</a>
+  </div>
+  <p style="font-size:14px; color:var(--muted); margin-top:8px;">Нажмите на свой вариант, чтобы перейти к нужному разделу.</p>
+</div>
+
+<!-- ============================================================= -->
+<!-- VARIANT 3                                                      -->
+<!-- ============================================================= -->
+<hr class="separator">
+<span class="variant-label">Вариант 3 — Степпер с ветвлением</span>
+<div class="variant-desc">Развилка встроена как первый шаг пошагового алгоритма. Два варианта — подпункты внутри шага. Читатель видит весь путь сразу.</div>
+
+<ol class="stepper">
+  <li class="step">
+    <div class="step-left">
+      <div class="step-circle">1</div>
+      <div class="step-line"></div>
+    </div>
+    <div class="step-content">
+      <div class="step-title">Определите вашу ситуацию</div>
+      <div class="step-body">Есть ли общие несовершеннолетние дети?</div>
+      <div class="branch-options">
+        <div class="branch-opt">
+          <span class="badge yes-badge">Есть</span>
+          <span class="branch-text">Районный суд + органы опеки</span>
+          <a href="#children" class="branch-link">→ Подробнее</a>
+        </div>
+        <div class="branch-opt">
+          <span class="badge no-badge">Нет</span>
+          <span class="branch-text">Мировой судья</span>
+          <a href="#court" class="branch-link">→ Подробнее</a>
+        </div>
+      </div>
+    </div>
+  </li>
+  <li class="step">
+    <div class="step-left">
+      <div class="step-circle">2</div>
+      <div class="step-line"></div>
+    </div>
+    <div class="step-content">
+      <div class="step-title">Соберите документы</div>
+      <div class="step-body">Иск, свидетельство о браке, документы на детей, квитанция об оплате госпошлины.</div>
+    </div>
+  </li>
+  <li class="step">
+    <div class="step-left">
+      <div class="step-circle">3</div>
+    </div>
+    <div class="step-content">
+      <div class="step-title">Оплатите госпошлину и подайте иск</div>
+      <div class="step-body">5 000 ₽ — через банк или Госуслуги. Подайте лично, через представителя или по почте.</div>
+    </div>
+  </li>
+</ol>
+
+</body>
+</html>

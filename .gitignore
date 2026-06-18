@@ -1,0 +1,20 @@
+node_modules/
+npm-debug.log*
+.env
+.env.*
+!.env.example
+
+# generated workflow output
+reports/
+dist/
+site/
+serp-cache/
+data/serp-cache/
+data/parser-output/
+data/analysis/
+data/clusters/
+data/benchmark/offline-benchmark-output.json
+data/source-catalog/*.json
+docs/reviews/
+docs/archive/
+docs/source-material/

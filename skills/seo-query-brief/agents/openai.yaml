@@ -1,0 +1,3 @@
+display_name: SEO Query Brief
+short_description: Build evidence-based SEO page briefs from SERP and parsed competitor data.
+default_prompt: Analyze this search query and produce a production-ready page brief.

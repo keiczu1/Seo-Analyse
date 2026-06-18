@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Как развестись без согласия жены: порядок действий через суд в 2026</title>
+  <meta name="description" content="Пошаговая инструкция развода через суд при несогласии супруги. Куда подавать, какие документы нужны, сколько стоит и сколько займёт. Актуально на 2026 год.">
+
+  <style>
+    :root {
+      --text: #1a1a1a;
+      --muted: #555;
+      --bg: #fff;
+      --surface: #f7f8fa;
+      --border: #e0e3e8;
+      --accent: #2563eb;
+      --warn-bg: #fef3cd;
+      --warn-border: #f0ad4e;
+      --tip-bg: #d1ecf1;
+      --tip-border: #17a2b8;
+      --danger-bg: #f8d7da;
+      --danger-border: #dc3545;
+      --important-bg: #fde8e8;
+      --important-border: #dc2626;
+      --summary-bg: #ecfdf5;
+      --summary-border: #10b981;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.7;
+      font-size: 17px;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 24px 20px 80px;
+      display: grid;
+      grid-template-columns: 1fr 220px;
+      gap: 32px;
+      align-items: start;
+    }
+    .main { min-width: 0; }
+
+    /* Breadcrumbs */
+    .breadcrumbs {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+    .breadcrumbs a { color: var(--accent); text-decoration: none; }
+    .breadcrumbs a:hover { text-decoration: underline; }
+    .breadcrumbs span { margin: 0 6px; }
+
+    /* Meta */
+    .meta {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 8px;
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    h1 {
+      font-size: 28px;
+      line-height: 1.3;
+      margin-bottom: 16px;
+      font-weight: 700;
+    }
+
+    h2 {
+      font-size: 22px;
+      line-height: 1.3;
+      margin-top: 48px;
+      margin-bottom: 16px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      font-weight: 600;
+    }
+
+    h3 {
+      font-size: 18px;
+      margin-top: 24px;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    p { margin-bottom: 14px; }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    ul, ol { margin-bottom: 14px; padding-left: 24px; }
+    li { margin-bottom: 6px; }
+
+    /* Summary card */
+    .summary-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin: 20px 0 32px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+    }
+    .summary-card .item {
+      display: flex;
+      flex-direction: column;
+    }
+    .summary-card .label {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--muted);
+      margin-bottom: 2px;
+    }
+    .summary-card .value {
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    /* Scenario toggle */
+    .scenario-toggle {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin: 24px 0;
+      text-align: center;
+    }
+    .scenario-toggle p {
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .scenario-toggle .buttons {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+    }
+    .scenario-toggle .btn {
+      display: inline-block;
+      padding: 10px 24px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 15px;
+      text-decoration: none;
+    }
+    .btn-yes { background: var(--accent); color: #fff; }
+    .btn-no { background: #e8edf3; color: var(--text); }
+
+    /* Tables */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0 24px;
+      font-size: 15px;
+    }
+    th, td {
+      border: 1px solid var(--border);
+      padding: 10px 14px;
+      text-align: left;
+    }
+    th {
+      background: var(--surface);
+      font-weight: 600;
+    }
+    td:first-child { font-weight: 500; }
+
+    /* Steps */
+    .steps { counter-reset: step; list-style: none; padding-left: 0; }
+    .steps li {
+      counter-increment: step;
+      padding-left: 44px;
+      position: relative;
+      margin-bottom: 16px;
+    }
+    .steps li::before {
+      content: counter(step);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 30px;
+      height: 30px;
+      background: var(--accent);
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 14px;
+    }
+    .steps li strong { display: block; margin-bottom: 4px; }
+
+    /* Callouts */
+    .callout {
+      border-left: 4px solid;
+      border-radius: 0 8px 8px 0;
+      padding: 14px 18px;
+      margin: 20px 0;
+      font-size: 15px;
+    }
+    .callout-warn { background: var(--warn-bg); border-color: var(--warn-border); }
+    .callout-tip { background: var(--tip-bg); border-color: var(--tip-border); }
+    .callout-danger { background: var(--danger-bg); border-color: var(--danger-border); }
+
+    /* Checklist */
+    .checklist { list-style: none; padding-left: 0; }
+    .checklist li {
+      padding: 8px 0 8px 32px;
+      position: relative;
+      border-bottom: 1px solid var(--border);
+    }
+    .checklist li::before {
+      content: "☐";
+      position: absolute;
+      left: 4px;
+      top: 8px;
+      font-size: 18px;
+      color: var(--muted);
+    }
+
+    /* Timeline */
+    .timeline {
+      position: relative;
+      padding-left: 28px;
+      margin: 20px 0;
+    }
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 8px;
+      top: 4px;
+      bottom: 4px;
+      width: 2px;
+      background: var(--border);
+    }
+    .timeline .event {
+      position: relative;
+      margin-bottom: 18px;
+    }
+    .timeline .event::before {
+      content: "";
+      position: absolute;
+      left: -24px;
+      top: 6px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+    .timeline .event .time {
+      font-size: 13px;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    /* Scenarios */
+    .scenario {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 18px 22px;
+      margin-bottom: 16px;
+    }
+    .scenario h3 { margin-top: 0; font-size: 16px; }
+
+    /* FAQ */
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+      padding: 16px 0;
+    }
+    .faq-item summary {
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 16px;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .faq-item summary::after {
+      content: "+";
+      font-size: 20px;
+      color: var(--muted);
+      flex-shrink: 0;
+      margin-left: 12px;
+    }
+    .faq-item[open] summary::after { content: "−"; }
+    .faq-item .faq-answer {
+      padding-top: 12px;
+      font-size: 15px;
+      color: var(--muted);
+    }
+
+    /* Sidebar TOC */
+    .toc {
+      position: sticky;
+      top: 24px;
+      font-size: 13px;
+      padding: 16px 0;
+      border-left: 2px solid var(--border);
+      max-height: calc(100vh - 48px);
+      overflow-y: auto;
+    }
+    .toc a {
+      display: block;
+      padding: 5px 0 5px 14px;
+      color: var(--muted);
+      text-decoration: none;
+      border-left: 2px solid transparent;
+      margin-left: -2px;
+      transition: color 0.15s, border-color 0.15s;
+    }
+    .toc a:hover, .toc a.active { color: var(--accent); border-left-color: var(--accent); }
+    .toc-title { font-weight: 700; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; color: var(--muted); padding: 0 0 8px 14px; margin-bottom: 4px; }
+
+    /* Disclaimer */
+    .disclaimer {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px 18px;
+      font-size: 13px;
+      color: var(--muted);
+      margin: 32px 0;
+    }
+
+    /* Document template */
+    .doc-template { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; margin: 24px 0; overflow: hidden; }
+    .doc-header { display: flex; align-items: center; gap: 10px; padding: 14px 18px; border-bottom: 1px solid var(--border); }
+    .doc-header h3 { margin: 0; font-size: 16px; }
+    .doc-badge { font-size: 11px; font-weight: 700; text-transform: uppercase; background: var(--accent); color: #fff; padding: 2px 8px; border-radius: 4px; }
+    .doc-body { margin: 0; padding: 18px; background: #fff; font-size: 14px; line-height: 1.8; overflow-x: auto; white-space: pre-wrap; font-family: "Courier New", monospace; }
+    .doc-body .placeholder { background: #fef3c7; padding: 1px 4px; border-radius: 3px; font-style: italic; }
+    .doc-footer { padding: 10px 18px; border-top: 1px solid var(--border); font-size: 13px; color: var(--muted); }
+
+    /* Court practice */
+    .court-practice { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 18px 22px; margin: 24px 0; }
+    .practice-case { padding: 12px 0; border-bottom: 1px solid var(--border); }
+    .practice-case:last-child { border-bottom: none; }
+    .case-situation, .case-decision, .case-reason { margin-bottom: 4px; font-size: 15px; }
+
+    /* Risk table */
+    .risk-table { width: 100%; border-collapse: collapse; margin: 16px 0 24px; font-size: 15px; }
+    .risk-table th, .risk-table td { border: 1px solid var(--border); padding: 10px 12px; text-align: left; }
+    .risk-table th { background: var(--surface); font-weight: 600; }
+    .risk-high { background: #fde8e8; color: #991b1b; font-weight: 600; }
+    .risk-medium { background: #fef3cd; color: #92400e; font-weight: 600; }
+    .risk-low { background: #d1fae5; color: #065f46; font-weight: 600; }
+
+    /* Summary callout */
+    .callout-summary { background: var(--summary-bg); border-left: 4px solid var(--summary-border); border-radius: 0 8px 8px 0; padding: 14px 18px; margin: 24px 0; font-size: 15px; }
+    .callout-summary ol { padding-left: 20px; margin: 0; }
+    .callout-summary li { margin-bottom: 6px; }
+
+    /* Important callout */
+    .callout-important { background: var(--important-bg); border-left: 4px solid var(--important-border); border-radius: 0 8px 8px 0; padding: 12px 16px; margin: 18px 0; font-size: 15px; }
+
+    /* Law base */
+    .law-base { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 18px 22px; margin: 24px 0; }
+    .law-base h2 { margin-top: 0; border-top: none; padding-top: 0; }
+    .law-base ul { list-style: none; padding-left: 0; }
+    .law-base li { padding: 6px 0; border-bottom: 1px solid var(--border); }
+    .law-base li:last-child { border-bottom: none; }
+
+    /* Back to top */
+    .back-top {
+      display: inline-block;
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 8px;
+    }
+
+    @media (max-width: 900px) and (min-width: 601px) {
+      body { grid-template-columns: 1fr 180px; gap: 24px; }
+    }
+    @media (max-width: 600px) {
+      body { font-size: 16px; padding: 16px 14px 60px; grid-template-columns: 1fr; }
+      h1 { font-size: 23px; }
+      h2 { font-size: 19px; }
+      .summary-card { grid-template-columns: 1fr 1fr; gap: 12px; padding: 16px; }
+      .summary-card .value { font-size: 16px; }
+      table { font-size: 13px; }
+      th, td { padding: 8px 10px; }
+      .toc { position: static; border-left: none; display: flex; overflow-x: auto; white-space: nowrap; gap: 4px; padding: 8px 0; margin-bottom: 16px; max-height: none; }
+      .toc-title { display: none; }
+      .toc a { display: inline-block; padding: 4px 10px; border-radius: 6px; border-left: none; margin-left: 0; font-size: 12px; background: var(--surface); }
+      .toc a:hover, .toc a.active { background: var(--accent); color: #fff; }
+    }
+  </style>
+
+  <!-- Article schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Как развестись без согласия жены: порядок действий через суд в 2026",
+    "description": "Пошаговая инструкция развода через суд при несогласии супруги.",
+    "datePublished": "2026-06-04",
+    "dateModified": "2026-06-04",
+    "inLanguage": "ru-RU"
+  }
+  </script>
+
+  <!-- HowTo schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "Порядок развода через суд без согласия супруги",
+    "step": [
+      { "@type": "HowToStep", "name": "Определить подсудность", "text": "Мировой суд — если нет спора о детях. Районный — если есть спор о детях или имущество свыше 50 000 руб." },
+      { "@type": "HowToStep", "name": "Подготовить документы", "text": "Исковое заявление, свидетельство о браке, свидетельства о рождении детей (если есть), квитанция об оплате госпошлины, копия иска для ответчика." },
+      { "@type": "HowToStep", "name": "Оплатить госпошлину", "text": "5 000 рублей (с 1 января 2025 года). Оплатить можно в банке или через Госуслуги." },
+      { "@type": "HowToStep", "name": "Подать исковое заявление", "text": "Лично в канцелярию суда, через представителя по доверенности или по почте." },
+      { "@type": "HowToStep", "name": "Дождаться назначения заседания", "text": "Обычно через 1 месяц после подачи иска." },
+      { "@type": "HowToStep", "name": "Участвовать в заседаниях", "text": "Явиться на заседания. Если назначен примирительный срок — заявить о невозможности примирения." },
+      { "@type": "HowToStep", "name": "Получить решение суда", "text": "Решение вступает в силу через 1 месяц, если не подана апелляция." },
+      { "@type": "HowToStep", "name": "Получить свидетельство в ЗАГС", "text": "Обратиться в ЗАГС с копией решения и оплатить госпошлину 5 000 руб. за регистрацию расторжения брака." }
+    ]
+  }
+  </script>
+
+  <!-- FAQ schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Может ли суд отказать в разводе, если жена против?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Нет. Суд не может отказать в расторжении брака, если один из супругов настаивает. Суд может назначить примирительный срок до 3 месяцев (ст. 22 СК РФ), но если после него истец не отозвал иск — суд обязан расторгнуть брак." }
+      },
+      {
+        "@type": "Question",
+        "name": "Что если жена не приходит в суд?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Заседание может быть отложено. После неоднократной неявки без уважительной причины суд может вынести заочное решение (ст. 233 ГПК РФ). Неявка замедляет процесс, но не останавливает его." }
+      },
+      {
+        "@type": "Question",
+        "name": "Можно ли развестись через Госуслуги без согласия жены?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Нет. Через Госуслуги или ЗАГС можно развестись только при обоюдном согласии и отсутствии несовершеннолетних детей (ст. 19 СК РФ). Если супруга не согласна или есть дети — только через суд." }
+      },
+      {
+        "@type": "Question",
+        "name": "Нужно ли указывать причину развода?",
+        "acceptedAnswer": { "@type": "Answer", "text": "В исковом заявлении рекомендуется кратко указать мотивы, но закон не обязывает подробно обосновывать причину. Суд не может отказать из-за «недостаточной» причины." }
+      },
+      {
+        "@type": "Question",
+        "name": "Можно ли подать на развод в другом городе?",
+        "acceptedAnswer": { "@type": "Answer", "text": "По общему правилу иск подаётся по месту жительства ответчика (ст. 28 ГПК РФ). Исключение: если с истцом проживают дети или выезд затруднителен — можно подать по месту жительства истца (ст. 29 ГПК РФ)." }
+      },
+      {
+        "@type": "Question",
+        "name": "Что если жена беременна или ребёнку меньше 1 года?",
+        "acceptedAnswer": { "@type": "Answer", "text": "По ст. 17 СК РФ муж не имеет права без согласия жены возбуждать дело о разводе во время её беременности и в течение 1 года после рождения ребёнка. После истечения 1 года можно подавать." }
+      },
+      {
+        "@type": "Question",
+        "name": "Сколько стоит развод с юристом?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Госпошлина за подачу иска — 5 000 руб. (ст. 333.19 НК РФ, с 2025 г.), госпошлина за регистрацию в ЗАГС — 5 000 руб. (ст. 333.26 НК РФ). Юрист: составление иска — от 3 000 до 15 000 руб., ведение дела — от 30 000 руб. Итого без юриста: от 10 000 руб. С юристом: от 43 000 до 60 000+ руб." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<!-- Breadcrumbs -->
+<nav class="breadcrumbs" aria-label="Хлебные крошки" style="grid-column: 1 / -1;">
+  <a href="/">Главная</a><span>›</span>
+  <a href="/family-law">Семейное право</a><span>›</span>
+  <a href="/family-law/divorce">Развод</a><span>›</span>
+  Без согласия жены
+</nav>
+
+<div class="main">
+
+<!-- Meta -->
+<div class="meta">
+  <time datetime="2026-06-04">Обновлено: 4 июня 2026</time>
+  <span>Время чтения: ~8 мин</span>
+</div>
+
+<h1>Как развестись без согласия жены: порядок действий</h1>
+
+<p>Если супруга не согласна на развод, брак расторгается через суд. Это стандартная процедура — суд не может отказать, если один из супругов настаивает. Ниже — пошаговый порядок действий, список документов, сроки и стоимость.</p>
+
+<!-- Summary card -->
+<div class="summary-card">
+  <div class="item">
+    <span class="label">Куда подавать</span>
+    <span class="value">Суд</span>
+  </div>
+  <div class="item">
+    <span class="label">Стоимость</span>
+    <span class="value">от 5 000 ₽</span>
+  </div>
+  <div class="item">
+    <span class="label">Срок</span>
+    <span class="value">2–4 месяца</span>
+  </div>
+  <div class="item">
+    <span class="label">Юрист</span>
+    <span class="value">не обязателен</span>
+  </div>
+</div>
+
+<!-- Scenario toggle -->
+<div class="scenario-toggle">
+  <p>У вас есть общие несовершеннолетние дети?</p>
+  <div class="buttons">
+    <a href="#children" class="btn btn-yes">Да, есть</a>
+    <a href="#court" class="btn btn-no">Нет</a>
+  </div>
+</div>
+
+<!-- Section 1: Short answer -->
+<h2 id="answer">Развод без согласия — это реально?</h2>
+
+<p>Да. Согласие обоих супругов требуется только для развода через ЗАГС (<a href="https://www.consultant.ru/document/cons_doc_LAW_8982/9e43cedf0f660aa107b296ec91b196dbe5836c68/" target="_blank" rel="noopener"><em>ст. 19 СК РФ</em></a>). Если один из супругов не согласен — развод оформляется через суд (<a href="https://www.consultant.ru/document/cons_doc_LAW_8982/72751553f2dbd0ffeb99df74fd4b0e9a57ac4255/" target="_blank" rel="noopener"><em>ст. 21 СК РФ</em></a>).</p>
+
+<p>Согласно <em>п. 2 ст. 22 СК РФ</em>, суд <strong>обязан</strong> расторгнуть брак, если один из супругов настаивает на разводе. Несогласие второго супруга может привести только к назначению примирительного срока (до 3 месяцев), но не к отказу в разводе.</p>
+
+<div class="callout callout-tip">
+  <strong>Коротко:</strong> развод без согласия возможен. Путь один — через суд. Это не тупик, а стандартная юридическая процедура.
+</div>
+
+<a href="#top" class="back-top">↑ Наверх</a>
+
+<!-- Section 2: Court choice -->
+<h2 id="court">Куда подавать: мировой или районный суд</h2>
+
+<p>Подсудность зависит от двух условий: есть ли спор о детях и включён ли в иск раздел имущества.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Критерий</th>
+      <th>Мировой суд</th>
+      <th>Районный суд</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Спор о детях</td>
+      <td>нет</td>
+      <td>да</td>
+    </tr>
+    <tr>
+      <td>Раздел имущества в иске</td>
+      <td>до 50 000 ₽</td>
+      <td>свыше 50 000 ₽</td>
+    </tr>
+    <tr>
+      <td>Срок рассмотрения</td>
+      <td>до 1 месяца</td>
+      <td>до 2 месяцев</td>
+    </tr>
+    <tr>
+      <td>Кто рассматривает</td>
+      <td>мировой судья</td>
+      <td>районный судья</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>По общему правилу</strong> иск подаётся в суд по месту жительства ответчика — то есть вашей супруги (<a href="https://www.consultant.ru/document/cons_doc_LAW_39570/9cfa35a9f7bd49d852f9fcd57179eb6db789fc60/" target="_blank" rel="noopener"><em>ст. 28 ГПК РФ</em></a>).</p>
+
+<p><strong>Исключение:</strong> если с вами проживают несовершеннолетние дети или по состоянию здоровья выезд затруднителен, можно подать по своему месту жительства (<a href="https://www.consultant.ru/document/cons_doc_LAW_39570/96f7da3957534071e6bc19cc95e96dda04e9a333/" target="_blank" rel="noopener"><em>ст. 29 ГПК РФ</em></a>).</p>
+
+<a href="#top" class="back-top">↑ Наверх</a>
+
+<!-- Section 3: Steps -->
+<h2 id="steps">Пошаговый порядок развода через суд</h2>
+
+<ol class="steps">
+  <li>
+    <strong>Определить подсудность</strong>
+    Мировой или районный суд — см. таблицу выше. Если нет спора о детях и вы не делите имущество — скорее всего, мировой суд.
+  </li>
+  <li>
+    <strong>Подготовить документы</strong>
+    Исковое заявление, свидетельство о браке, свидетельства о рождении детей (если есть), копия иска для ответчика. Подробный список — в <a href="#documents">разделе ниже</a>.
+  </li>
+  <li>
+    <strong>Оплатить госпошлину</strong>
+    5 000 рублей (<a href="https://www.consultant.ru/document/cons_doc_LAW_28165/1cfcdcc5936cbfc3ea52f964201a1bb6002be313/" target="_blank" rel="noopener"><em>подпункт 5 пункта 1 статьи 333.19 НК РФ</em></a>, с 1 января 2025 года). Оплатить можно в банке или через <a href="https://www.gosuslugi.ru" target="_blank" rel="noopener">Госуслуги</a>. Квитанцию приложить к иску.
+  </li>
+  <li>
+    <strong>Подать исковое заявление в суд</strong>
+    Лично в канцелярию, через представителя по нотариальной доверенности или по почте. Суд зарегистрирует иск в течение 5 дней.
+  </li>
+  <li>
+    <strong>Дождаться назначения заседания</strong>
+    Обычно первое заседание назначается через месяц после подачи. Суд направит повестку обоим супругам.
+  </li>
+  <li>
+    <strong>Участвовать в заседаниях</strong>
+    Явиться лично или через представителя. Если суд назначит примирительный срок — заявить, что примирение невозможно. Суд обязан расторгнуть брак, если вы настаиваете.
+  </li>
+  <li>
+    <strong>Получить решение суда</strong>
+    Решение вступает в законную силу через 1 месяц после вынесения в окончательной форме (если не подана апелляция).
+  </li>
+  <li>
+    <strong>Получить свидетельство в ЗАГС</strong>
+    Обратиться в ЗАГС с копией решения суда. Оплатить госпошлину 5 000 руб. за регистрацию расторжения брака (ст. 333.26 НК РФ). Свидетельство выдаётся в день обращения или в течение нескольких дней.
+  </li>
+</ol>
+
+<a href="#top" class="back-top">↑ Наверх</a>
+
+<!-- Section 4: Documents -->
+<h2 id="documents">Какие документы нужны</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Документ</th>
+      <th>Зачем нужен</th>
+      <th>Где взять</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Исковое заявление</td>
+      <td>Основной документ — без него суд не примет дело</td>
+      <td>Составить самостоятельно или с юристом</td>
+    </tr>
+    <tr>
+      <td>Свидетельство о браке (оригинал)</td>
+      <td>Подтверждает факт заключения брака</td>
+      <td>Выдано ЗАГС при регистрации</td>
+    </tr>
+    <tr>
+      <td>Свидетельства о рождении детей</td>
+      <td>Если есть несовершеннолетние дети — обязательно</td>
+      <td>Выданы ЗАГС при рождении</td>
+    </tr>
+    <tr>
+      <td>Квитанция об оплате госпошлины</td>
+      <td>Без неё иск оставят без движения</td>
+      <td>Банк или Госуслуги</td>
+    </tr>
+    <tr>
+      <td>Копия иска для ответчика</td>
+      <td>Суд направит копию супруге</td>
+      <td>Сделать копию при подаче</td>
+    </tr>
+    <tr>
+      <td>Доверенность (если представитель)</td>
+      <td>Если иск подаёт или ведёт юрист</td>
+      <td>Нотариус</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Чек-лист готовности к подаче</h3>
+<ul class="checklist">
+  <li>Определена подсудность (мировой или районный суд)</li>
+  <li>Составлено исковое заявление</li>
+  <li>Собраны документы: свидетельство о браке, свидетельства детей (если есть), копия иска</li>
+  <li>Оплачена госпошлина (5 000 ₽)</li>
+  <li>Подготовлена копия иска для ответчика</li>
+</ul>
+
+<!-- Document template: исковое заявление -->
+<div class="doc-template">
+  <div class="doc-header">
+    <span class="doc-badge">Образец</span>
+    <h3>Исковое заявление о расторжении брака</h3>
+  </div>
+  <pre class="doc-body">В <span class="placeholder">[Наименование суда]</span>
+Истец: <span class="placeholder">[ФИО полностью]</span>
+Адрес: <span class="placeholder">[Адрес регистрации]</span>
+Телефон: <span class="placeholder">[Номер телефона]</span>
+
+Ответчик: <span class="placeholder">[ФИО супруги полностью]</span>
+Адрес: <span class="placeholder">[Адрес регистрации супруги]</span>
+
+Цена иска: не подлежит оценке
+Госпошлина: 5 000 руб.
+
+ИСКОВОЕ ЗАЯВЛЕНИЕ
+о расторжении брака
+
+<span class="placeholder">[Дата]</span> между истцом и ответчиком был
+заключён брак, о чём органом ЗАГС
+составлена запись № <span class="placeholder">[Номер записи]</span>.
+
+От данного брака имеются несовершеннолетние
+дети: <span class="placeholder">[ФИО, дата рождения каждого ребёнка]
+(если нет — «не имеются»)</span>.
+
+Совместная жизнь истца и ответчика фактически
+прекращена с <span class="placeholder">[Примерная дата]</span>.
+Истец считает, что сохранение семьи
+невозможно. Ответчик на расторжение брака
+не согласен.
+
+На основании изложенного, руководствуясь
+ст. 21, 22 СК РФ, ст. 131–132 ГПК РФ,
+
+ПРОШУ:
+
+1. Расторгнуть брак между <span class="placeholder">[ФИО истца]</span>
+   и <span class="placeholder">[ФИО ответчика]</span>,
+   зарегистрированный <span class="placeholder">[Дата]</span>
+   в <span class="placeholder">[Наименование ЗАГС]</span>,
+   запись № <span class="placeholder">[Номер]</span>.
+
+Приложения:
+1. Копия искового заявления для ответчика
+2. Свидетельство о браке (оригинал)
+3. Свидетельства о рождении детей (копии)
+4. Квитанция об оплате госпошлины
+
+Дата: ____________  Подпись: ____________</pre>
+  <div class="doc-footer">⚠️ Это базовый шаблон. Для вашей ситуации могут потребоваться дополнительные пункты. Рекомендуем консультацию юриста.</div>
+</div>
+
+<a href="#top" class="back-top">↑ Наверх</a>
+
+<!-- Section 5: Cost and time -->
+<h2 id="cost">Сколько стоит и сколько займёт</h2>
+
+<h3>Сроки по этапам</h3>
+
+<div class="timeline">
+  <div class="event">
+    <div class="time">~1 месяц</div>
+    <div>Подача иска → первое заседание</div>
+  </div>
+  <div class="event">
+    <div class="time">1–2 месяца</div>
+    <div>Рассмотрение дела (мировой суд — до 1 мес., районный — до 2 мес.)</div>
+  </div>
+  <div class="event">
+    <div class="time">до 3 месяцев</div>
+    <div>Примирительный срок (если назначен судом — необязательно)</div>
+  </div>
+  <div class="event">
+    <div class="time">1 месяц</div>
+    <div>Вступление решения в силу (если нет апелляции)</div>
+  </div>
+  <div class="event">
+    <div class="time">1–3 дня</div>
+    <div>Получение свидетельства в ЗАГС</div>
+  </div>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Итого</th>
+      <th>Срок</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Без осложнений</td>
+      <td><strong>2–4 месяца</strong></td>
+    </tr>
+    <tr>
+      <td>С примирительным сроком и спорами</td>
+      <td><strong>до 6+ месяцев</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Расходы</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Расход</th>
+      <th>Сумма</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Госпошлина за подачу иска (с каждого супруга)</td>
+      <td>5 000 ₽</td>
+    </tr>
+    <tr>
+      <td>Юрист — составление иска</td>
+      <td>от 3 000 до 15 000 ₽</td>
+    </tr>
+    <tr>
+      <td>Юрист — ведение дела в суде</td>
+      <td>от 30 000 ₽</td>
+    </tr>
+    <tr>
+      <td>Госпошлина за регистрацию в ЗАГС (с каждого супруга)</td>
+      <td>5 000 ₽</td>
+    </tr>
+    <tr>
+      <td><strong>Итого без юриста</strong></td>
+      <td><strong>~10 000 ₽</strong></td>
+    </tr>
+    <tr>
+      <td><strong>Итого с юристом</strong></td>
+      <td><strong>от 43 000 ₽</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="callout callout-tip">
+  Госпошлина за подачу иска о разводе — 5 000 ₽ с каждого супруга (<a href="https://www.consultant.ru/document/cons_doc_LAW_28165/1cfcdcc5936cbfc3ea52f964201a1bb6002be313/" target="_blank" rel="noopener">подпункт 5 пункта 1 ст. 333.19 НК РФ</a>). Дополнительно 5 000 ₽ за регистрацию расторжения брака в ЗАГС (<a href="https://www.consultant.ru/document/cons_doc_LAW_28165/3493a50227f324c50e1f0910735f4588c5630c1b/" target="_blank" rel="noopener">ст. 333.26 НК РФ</a>). Суммы действуют с 1 января 2025 года.
+</div>
+
+<a href="#top" class="back-top">↑ Наверх</a>
+
+<!-- Section 6: Children -->
+<h2 id="children">Если есть несовершеннолетние дети</h2>
+
+<p>Наличие общих несовершеннолетних детей автоматически переводит дело в <strong>районный суд</strong>. Мировой судья такие дела не рассматривает.</p>
+
+<div class="callout callout-warn">
+  <strong>⚠️ Важно:</strong> при наличии несовершеннолетних детей развод рассматривается только районным судом. Учитывайте это при определении подсудности.
+</div>
+
+<p>Помимо расторжения брака, суд будет решать дополнительные вопросы:</p>
+
+<ol>
+  <li><strong>Место жительства детей.</strong> Суд определяет, с кем из родителей будут проживать дети после развода (<a href="https://www.consultant.ru/document/cons_doc_LAW_8982/6867b46a2386f6df69ca76d8133997881e16c84a/" target="_blank" rel="noopener">ст. 24 СК РФ</a>).</li>
+  <li><strong>Участие в воспитании.</strong> Отдельно проживающий родитель сохраняет право на общение с ребёнком и участие в его воспитании (<a href="https://www.consultant.ru/document/cons_doc_LAW_8982/568c0dfec86adb4ffaaa013f338d52b75e73a93a/" target="_blank" rel="noopener">ст. 66 СК РФ</a>).</li>
+  <li><strong>Алименты.</strong> Могут быть заявлены в рамках этого же иска или поданы отдельным заявлением.</li>
+</ol>
+
+<p>В деле обязательно участвуют <strong>органы опеки и попечительства</strong>. Они проверяют условия жизни каждого родителя и дают суду заключение о том, какое решение лучше отвечает интересам ребёнка.</p>
+
+<div class="callout callout-tip">
+  <strong>💡 Рекомендация:</strong> если есть возможность, составьте нотариальное соглашение о детях до подачи иска. В нём определите, с кем живут дети, порядок общения и размер содержания. Суд примет соглашение во внимание, и процесс пройдёт значительно быстрее.
+</div>
+
+<p>Подробнее: <a href="/family-law/child-custody">Определение места жительства ребёнка при разводе</a> · <a href="/family-law/alimony">Алименты: порядок и расчёт</a></p>
+
+<a href="#top" class="back-top">↑ Наверх</a>
+
+<!-- Section 7: Delays -->
+<h2 id="delays">Что может затянуть процесс</h2>
+
+<div class="scenario">
+  <h3>Сценарий 1: Примирительный срок</h3>
+  <p>Суд может назначить срок для примирения — до 3 месяцев (<a href="https://www.consultant.ru/document/cons_doc_LAW_8982/4a167ba0c30fe37c07642d042cf2aa85ee1345da/" target="_blank" rel="noopener">ст. 22 СК РФ</a>). Это не отказ в разводе, а отсрочка. Суд назначает его, если считает, что семью можно сохранить, или если ответчик просит.</p>
+  <p><strong>Что делать:</strong> если вы твёрдо решили разводиться, заявите в заседании, что примирение невозможно. Суд обязан расторгнуть брак, если настаиваете. Примирительный срок — право суда, а не обязанность.</p>
+</div>
+
+<div class="scenario">
+  <h3>Сценарий 2: Неявка ответчика</h3>
+  <p>Если супруга не приходит в суд, заседание может быть отложено. После 2–3 неявок без уважительной причины суд может вынести <strong>заочное решение</strong> (<a href="https://www.consultant.ru/document/cons_doc_LAW_39570/c3d17b116f913885df294b25055094c75845640c/" target="_blank" rel="noopener">ст. 233 ГПК РФ</a>). Ответчик может попытаться отменить его в течение 7 дней.</p>
+  <p><strong>Что делать:</strong> убедитесь, что суд направил ответчику повестку. Неявка замедляет, но не останавливает процесс.</p>
+</div>
+
+<div class="scenario">
+  <h3>Сценарий 3: Споры о детях или имуществе</h3>
+  <p>Если в рамках развода рассматриваются споры о детях или о разделе имущества, процесс значительно удлиняется. Могут назначаться экспертизы, привлекаться третьи лица.</p>
+  <p><strong>Что делать:</strong> если возможно, вынесите споры о детях и имуществе в отдельные иски. Это ускорит бракоразводный процесс. Подробнее: <a href="/family-law/property-division">Раздел имущества при разводе</a>.</p>
+</div>
+
+<div class="scenario">
+  <h3>Сценарий 4: Апелляция</h3>
+  <p>После вынесения решения у сторон есть 1 месяц на апелляцию. Если одна из сторон подаёт апелляцию, решение не вступает в силу до рассмотрения вышестоящим судом.</p>
+  <p><strong>Что делать:</strong> если не планируете обжаловать — дождитесь вступления решения в силу и идите в ЗАГС за свидетельством.</p>
+</div>
+
+<!-- Risk table -->
+<h3>Таблица рисков при разводе без согласия</h3>
+<table class="risk-table">
+  <thead>
+    <tr>
+      <th>Риск</th>
+      <th>Вероятность</th>
+      <th>Последствия</th>
+      <th>Как избежать</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Примирительный срок (до 3 мес.)</td>
+      <td class="risk-medium">Средняя</td>
+      <td>Отсрочка развода на 1–3 месяца</td>
+      <td>Заявить в заседании о невозможности примирения</td>
+    </tr>
+    <tr>
+      <td>Неявка ответчика → отложение</td>
+      <td class="risk-medium">Средняя</td>
+      <td>Каждая неявка = +1 месяц</td>
+      <td>Ходатайствовать о заочном рассмотрении (<em>ст. 233 ГПК РФ</em>)</td>
+    </tr>
+    <tr>
+      <td>Встречный иск о разделе имущества</td>
+      <td class="risk-high">Высокая</td>
+      <td>Усложнение и затягивание дела</td>
+      <td>Вынести раздел имущества в отдельный иск</td>
+    </tr>
+    <tr>
+      <td>Спор о детях → опека, экспертизы</td>
+      <td class="risk-high">Высокая</td>
+      <td>+2–4 месяца к сроку</td>
+      <td>Составить нотариальное соглашение о детях до суда</td>
+    </tr>
+    <tr>
+      <td>Апелляция ответчика</td>
+      <td class="risk-low">Низкая</td>
+      <td>Решение не вступает в силу до апелляции</td>
+      <td>Подготовить возражения на апелляционную жалобу</td>
+    </tr>
+  </tbody>
+</table>
+
+<a href="#top" class="back-top">↑ Наверх</a>
+
+<!-- Section 8: After court -->
+<h2 id="after">Что делать после решения суда</h2>
+
+<p>После вынесения решения процесс не завершён. Вот что нужно сделать:</p>
+
+<ol class="steps">
+  <li>
+    <strong>Дождаться вступления решения в силу</strong>
+    Решение вступает в законную силу через 1 месяц после вынесения в окончательной форме (<a href="https://www.consultant.ru/document/cons_doc_LAW_39570/fb7ea2c77d501c3ff01f8d6a1252cc88a7d452b8/" target="_blank" rel="noopener">ст. 209 ГПК РФ</a>). Если подана апелляция — после её рассмотрения.
+  </li>
+  <li>
+    <strong>Получить копию решения суда</strong>
+    Запросите в канцелярии суда заверенную копию решения. Она понадобится для ЗАГС и других инстанций.
+  </li>
+  <li>
+    <strong>Зарегистрировать развод в ЗАГС</strong>
+    Обратитесь в ЗАГС по месту регистрации брака или по месту жительства. Понадобятся: заявление, копия решения суда, квитанция об оплате госпошлины (5 000 ₽ за регистрацию расторжения брака, <a href="https://www.consultant.ru/document/cons_doc_LAW_28165/3493a50227f324c50e1f0910735f4588c5630c1b/" target="_blank" rel="noopener">ст. 333.26 НК РФ</a>). Свидетельство о расторжении брака выдаётся в день обращения или в течение нескольких дней (<a href="https://www.consultant.ru/document/cons_doc_LAW_8982/92be360d5ee562a344c8b09d32420ab7e5a5f5d4/" target="_blank" rel="noopener">ст. 25 СК РФ</a>).
+  </li>
+  <li>
+    <strong>Исполнить связанные решения</strong>
+    Если суд определил алименты — получите исполнительный лист и передайте в ФССП или работодателю. Если определил место жительства детей — убедитесь, что порядок соблюдается. Если есть раздел имущества — зарегистрируйте переход права в Росреестре (для недвижимости).
+  </li>
+</ol>
+
+<a href="#top" class="back-top">↑ Наверх</a>
+
+<!-- Section 9: Judicial practice -->
+<h2 id="practice">Судебная практика</h2>
+
+<p>Ниже — три типичных сценария из реальной судебной практики (имена изменены), которые показывают, как суды принимают решения при разводе без согласия одного из супругов.</p>
+
+<div class="court-practice">
+  <div class="practice-case">
+    <div class="case-situation"><strong>Ситуация:</strong> Муж подал иск о разводе. Жена категорически против, просила дать время «на сохранение семьи». Двое несовершеннолетних детей.</div>
+    <div class="case-decision"><strong>Решение суда:</strong> Назначен примирительный срок 2 месяца. После истечения срока муж подтвердил намерение. Суд расторг брак.</div>
+    <div class="case-reason"><strong>Обоснование:</strong> Согласно <em>п. 2 ст. 22 СК РФ</em>, суд вправе назначить срок для примирения, но не может отказать в разводе, если истец настаивает после его истечения.</div>
+  </div>
+  <div class="practice-case">
+    <div class="case-situation"><strong>Ситуация:</strong> Жена не являлась на заседания 4 раза подряд без уважительной причины. Муж просил рассмотреть дело без неё.</div>
+    <div class="case-decision"><strong>Решение суда:</strong> Вынесено заочное решение о расторжении брака.</div>
+    <div class="case-reason"><strong>Обоснование:</strong> В соответствии со <em>ст. 233 ГПК РФ</em>, при неявке ответчика, извещённого о времени и месте заседания, суд вправе рассмотреть дело заочно.</div>
+  </div>
+  <div class="practice-case">
+    <div class="case-situation"><strong>Ситуация:</strong> Муж подал на развод. Жена подала встречный иск о разделе квартиры (стоимостью 8 млн ₽) и определении места жительства ребёнка.</div>
+    <div class="case-decision"><strong>Решение суда:</strong> Суд выделил спор о разделе имущества в отдельное производство. Развод рассмотрен в упрощённом порядке. Место жительства ребёнка определено с матерью.</div>
+    <div class="case-reason"><strong>Обоснование:</strong> Разделение требований ускорило бракоразводный процесс. Согласно <em>ст. 24 СК РФ</em>, суд определяет место жительства детей с учётом интересов ребёнка.</div>
+  </div>
+</div>
+
+<!-- Section 10: FAQ -->
+<h2 id="faq">Частые вопросы</h2>
+
+<details class="faq-item">
+  <summary>Может ли суд отказать в разводе, если жена против?</summary>
+  <div class="faq-answer">
+    <p>Нет. Суд не может отказать в расторжении брака, если один из супругов настаивает. Суд может назначить примирительный срок до 3 месяцев (<a href="https://www.consultant.ru/document/cons_doc_LAW_8982/4a167ba0c30fe37c07642d042cf2aa85ee1345da/" target="_blank" rel="noopener">ст. 22 СК РФ</a>), но если после него истец не отозвал иск — суд обязан расторгнуть брак.</p>
+  </div>
+</details>
+
+<details class="faq-item">
+  <summary>Что если жена не приходит в суд?</summary>
+  <div class="faq-answer">
+    <p>Заседание может быть отложено. После неоднократной неявки без уважительной причины суд может вынести заочное решение (<a href="https://www.consultant.ru/document/cons_doc_LAW_39570/c3d17b116f913885df294b25055094c75845640c/" target="_blank" rel="noopener">ст. 233 ГПК РФ</a>). Неявка замедляет процесс, но не останавливает его. Заочное решение ответчик может попытаться отменить в течение 7 дней.</p>
+  </div>
+</details>
+
+<details class="faq-item">
+  <summary>Можно ли развестись через Госуслуги без согласия жены?</summary>
+  <div class="faq-answer">
+    <p>Нет. Через Госуслуги или ЗАГС можно развестись только при обоюдном согласии и отсутствии несовершеннолетних детей (<a href="https://www.consultant.ru/document/cons_doc_LAW_8982/" target="_blank" rel="noopener">ст. 19 СК РФ</a>). Если супруга не согласна или есть дети — только через суд. Госуслуги могут помочь с оплатой госпошлины и записью в ЗАГС после решения суда.</p>
+  </div>
+</details>
+
+<details class="faq-item">
+  <summary>Нужно ли указывать причину развода?</summary>
+  <div class="faq-answer">
+    <p>В исковом заявлении рекомендуется кратко указать мотивы (несовместимость, фактическое прекращение семейных отношений), но закон не обязывает подробно обосновывать причину. Суд может спросить на заседании, но не может отказать из-за «недостаточной» причины.</p>
+  </div>
+</details>
+
+<details class="faq-item">
+  <summary>Можно ли подать на развод в другом городе?</summary>
+  <div class="faq-answer">
+    <p>По общему правилу иск подаётся в суд по месту жительства ответчика (<a href="https://www.consultant.ru/document/cons_doc_LAW_39570/" target="_blank" rel="noopener">ст. 28 ГПК РФ</a>). Исключение: если с истцом проживают несовершеннолетние дети или по состоянию здоровья выезд затруднителен — можно подать по месту жительства истца (<a href="https://www.consultant.ru/document/cons_doc_LAW_39570/" target="_blank" rel="noopener">ст. 29 ГПК РФ</a>). Можно подать через представителя или по почте.</p>
+  </div>
+</details>
+
+<details class="faq-item">
+  <summary>Что если жена беременна или ребёнку меньше 1 года?</summary>
+  <div class="faq-answer">
+    <p>По <a href="https://www.consultant.ru/document/cons_doc_LAW_8982/" target="_blank" rel="noopener">ст. 17 СК РФ</a> муж не имеет права без согласия жены возбуждать дело о разводе во время её беременности и в течение 1 года после рождения ребёнка. Это абсолютный запрет — суд не примет иск. После истечения 1 года можно подавать.</p>
+  </div>
+</details>
+
+<details class="faq-item">
+  <summary>Сколько стоит развод с юристом?</summary>
+  <div class="faq-answer">
+    <p>Госпошлина за подачу иска — 5 000 ₽ (<a href="https://www.consultant.ru/document/cons_doc_LAW_28165/1cfcdcc5936cbfc3ea52f964201a1bb6002be313/" target="_blank" rel="noopener">пп. 5 п. 1 ст. 333.19 НК РФ</a>), госпошлина за регистрацию в ЗАГС — 5 000 ₽ (<a href="https://www.consultant.ru/document/cons_doc_LAW_28165/3493a50227f324c50e1f0910735f4588c5630c1b/" target="_blank" rel="noopener">ст. 333.26 НК РФ</a>). Итого без юриста: от 10 000 ₽. Юрист: составление иска — от 3 000 до 15 000 ₽, ведение дела — от 30 000 ₽. С юристом: от 43 000 до 60 000+ ₽. Юрист не обязателен — можно подать и вести дело самостоятельно.</p>
+  </div>
+</details>
+
+<a href="#top" class="back-top">↑ Наверх</a>
+
+<!-- Summary -->
+<h2 id="summary">Коротко: что запомнить</h2>
+<div class="callout callout-summary">
+  <ol>
+    <li><strong>Развод без согласия возможен</strong> — только через суд (<em>ст. 21 СК РФ</em>).</li>
+    <li><strong>Госпошлина:</strong> 5 000 ₽ за подачу иска + 5 000 ₽ за ЗАГС = от 10 000 ₽ (<em>ст. 333.19, 333.26 НК РФ</em>).</li>
+    <li><strong>Срок:</strong> 2–4 месяца без осложнений, до 6+ мес. с примирительным сроком.</li>
+    <li><strong>Суд не может отказать</strong> в разводе — может только назначить отсрочку до 3 мес. (<em>ст. 22 СК РФ</em>).</li>
+    <li><strong>Образец иска</strong> доступен выше — заполните поля и подавайте самостоятельно.</li>
+  </ol>
+</div>
+
+<!-- Law base block -->
+<div class="law-base">
+  <h2 id="law-base">Правовая база</h2>
+  <ul>
+    <li><a href="https://www.consultant.ru/document/cons_doc_LAW_8982/" target="_blank" rel="noopener"><em>Семейный кодекс РФ</em></a> — ст. 17, 19, 21, 22, 24, 25, 66</li>
+    <li><a href="https://www.consultant.ru/document/cons_doc_LAW_39570/" target="_blank" rel="noopener"><em>Гражданский процессуальный кодекс РФ</em></a> — ст. 28, 29, 131, 132, 209, 233</li>
+    <li><a href="https://www.consultant.ru/document/cons_doc_LAW_28165/" target="_blank" rel="noopener"><em>Налоговый кодекс РФ (ч. 2)</em></a> — ст. 333.19 (пп. 5 п. 1), ст. 333.26</li>
+  </ul>
+</div>
+
+<!-- Disclaimer -->
+<div class="disclaimer">
+  <strong>Дисклеймер.</strong> Информация носит общий характер и не является юридической консультацией. Для вашей конкретной ситуации рекомендуем консультацию семейного юриста. Госпошлина и сроки могут измениться — проверяйте актуальность на дату обращения.
+</div>
+
+</div><!-- /.main -->
+
+<nav class="toc" aria-label="Содержание">
+  <div class="toc-title">Содержание</div>
+  <a href="#answer">Ответ</a>
+  <a href="#court">Куда подавать</a>
+  <a href="#steps">Порядок</a>
+  <a href="#documents">Документы</a>
+  <a href="#cost">Стоимость</a>
+  <a href="#children">С детьми</a>
+  <a href="#delays">Задержки</a>
+  <a href="#after">После суда</a>
+  <a href="#practice">Практика</a>
+  <a href="#faq">FAQ</a>
+  <a href="#summary">Резюме</a>
+  <a href="#law-base">Правовая база</a>
+</nav>
+
+<script>
+// Scroll-spy: highlight active TOC link
+const tocLinks = document.querySelectorAll('.toc a');
+const sections = Array.from(tocLinks).map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(s => { if (s.getBoundingClientRect().top <= 100) current = s.id; });
+  tocLinks.forEach(a => {
+    a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+  });
+}, { passive: true });
+</script>
+
+</body>
+</html>

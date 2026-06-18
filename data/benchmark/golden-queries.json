@@ -1,0 +1,110 @@
+{
+  "version": "1.0",
+  "updatedAt": "2026-06-04",
+  "queries": [
+    {
+      "id": "G01",
+      "query": "ипотечный калькулятор",
+      "locale": "ru-RU",
+      "intent": "calculate",
+      "expectedPageType": "hybrid_tool_guide",
+      "userTask": "Рассчитать платеж, переплату и график ипотеки по входным параметрам."
+    },
+    {
+      "id": "G02",
+      "query": "что такое API",
+      "locale": "ru-RU",
+      "intent": "definition",
+      "expectedPageType": "article_guide_definition",
+      "userTask": "Понять термин API, механику request/response и базовые примеры."
+    },
+    {
+      "id": "G03",
+      "query": "как открыть ип",
+      "locale": "ru-RU",
+      "intent": "how_to",
+      "expectedPageType": "how_to_guide",
+      "userTask": "Понять шаги, документы, сроки, ограничения и актуальность процедуры."
+    },
+    {
+      "id": "G04",
+      "query": "Notion vs Obsidian",
+      "locale": "en-US",
+      "intent": "compare",
+      "expectedPageType": "comparison_page",
+      "userTask": "Choose between Notion and Obsidian by criteria and use case."
+    },
+    {
+      "id": "G05",
+      "query": "best project management software for small business",
+      "locale": "en-US",
+      "intent": "commercial_investigation",
+      "expectedPageType": "commercial_comparison_page",
+      "userTask": "Shortlist project management tools by criteria, pricing and team scenario."
+    },
+    {
+      "id": "G06",
+      "query": "usd to eur",
+      "locale": "en-US",
+      "intent": "convert",
+      "expectedPageType": "interactive_converter",
+      "userTask": "Convert USD to EUR with a current source and timestamp."
+    },
+    {
+      "id": "G07",
+      "query": "симптомы диабета",
+      "locale": "ru-RU",
+      "intent": "medical_information",
+      "expectedPageType": "ymyl_medical_guide",
+      "userTask": "Понять возможные симптомы без самодиагностики и с красными флагами."
+    },
+    {
+      "id": "G08",
+      "query": "калории в авокадо",
+      "locale": "ru-RU",
+      "intent": "reference",
+      "expectedPageType": "reference_database",
+      "userTask": "Быстро получить справочное значение, единицы и источник данных."
+    },
+    {
+      "id": "G09",
+      "query": "ремонт стиральных машин рядом",
+      "locale": "ru-RU",
+      "intent": "local",
+      "expectedPageType": "local_service_page",
+      "userTask": "Найти локальную услугу, контакты, зону обслуживания и условия."
+    },
+    {
+      "id": "G10",
+      "query": "iphone дата выхода",
+      "locale": "ru-RU",
+      "intent": "freshness",
+      "expectedPageType": "freshness_page",
+      "userTask": "Узнать актуальную дату/статус и отличить подтвержденные факты от слухов."
+    },
+    {
+      "id": "G11",
+      "query": "как удалить плесень со стены",
+      "locale": "ru-RU",
+      "intent": "how_to",
+      "expectedPageType": "how_to_guide",
+      "userTask": "Получить безопасные шаги, материалы, ограничения и точку обращения к специалисту."
+    },
+    {
+      "id": "G12",
+      "query": "crm",
+      "locale": "en-US",
+      "intent": "ambiguous",
+      "expectedPageType": "hub_or_disambiguation",
+      "userTask": "Разобрать неоднозначный head term и выбрать правильный путь."
+    },
+    {
+      "id": "Q-bmi-calculator-ru",
+      "query": "калькулятор индекса массы тела",
+      "locale": "ru-RU",
+      "intent": "calculate",
+      "expectedPageType": "hybrid_tool_guide",
+      "userTask": "Рассчитать ИМТ по росту и весу, понять категорию результата, формулу, ограничения метода и когда нужна консультация врача."
+    }
+  ]
+}

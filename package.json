@@ -1,0 +1,33 @@
+{
+  "name": "seo-query-analysis-production",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "fetch:serp": "node scripts/fetch-serp.mjs",
+    "parse:serp": "node scripts/hybrid-parser.mjs",
+    "analyze:parsed": "node scripts/analyze-parsed-matrix.mjs",
+    "analyze:full": "node scripts/generate-full-analysis.mjs",
+    "source:refresh": "node scripts/source-refresh.mjs",
+    "publication:review": "node scripts/publication-review.mjs",
+    "cluster:query": "node scripts/generate-query-cluster.mjs",
+    "brief:query": "node scripts/generate-query-brief.mjs",
+    "page:spec": "node scripts/generate-page-spec.mjs",
+    "score:brief": "node skills/seo-query-brief/scripts/score-brief.mjs",
+    "analyze:query": "node scripts/analyze-query.mjs",
+    "benchmark:offline": "node scripts/benchmark-offline.mjs",
+    "package:skill": "node scripts/package-skill.mjs",
+    "validate:skill": "node scripts/validate-skill.mjs skills/seo-query-brief && node scripts/validate-skill.mjs dist/seo-query-brief-portable/skills/seo-query-brief",
+    "validate:page-spec": "node scripts/validate-page-spec.mjs",
+    "production:gate": "node scripts/production-gate.mjs",
+    "test": "npm.cmd run benchmark:offline && npm.cmd run analyze:parsed && npm.cmd run analyze:full && npm.cmd run cluster:query && npm.cmd run brief:query && npm.cmd run page:spec && npm.cmd run package:skill && npm.cmd run validate:skill && npm.cmd run production:gate"
+  },
+  "dependencies": {
+    "@mozilla/readability": "^0.6.0",
+    "cheerio": "^1.1.2",
+    "docx": "^9.7.1",
+    "fast-xml-parser": "^5.2.5",
+    "jsdom": "^26.1.0",
+    "playwright": "^1.54.2"
+  }
+}
