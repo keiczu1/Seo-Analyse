@@ -97,28 +97,28 @@
   }
 }
 
-.doc-download-block .docx-card .card-action-btn {
+.doc-download-block .docx-card .card-action-btn,
+.doc-header .card-action-btn.docx-btn {
   background: #eff6ff;
   color: #2563eb;
   border: 1px solid #93c5fd;
 }
 
-.doc-download-block .docx-card .card-action-btn:hover {
+.doc-download-block .docx-card .card-action-btn:hover,
+.doc-header .card-action-btn.docx-btn:hover {
   background: #2563eb;
   color: #ffffff;
   border-color: #2563eb;
   box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15);
 }
 
-.doc-download-block .pdf-card .card-action-btn,
-.doc-header .card-action-btn.docx-btn {
+.doc-download-block .pdf-card .card-action-btn {
   background: #fef2f2;
   color: #dc2626;
   border: 1px solid #fca5a5;
 }
 
-.doc-download-block .pdf-card .card-action-btn:hover,
-.doc-header .card-action-btn.docx-btn:hover {
+.doc-download-block .pdf-card .card-action-btn:hover {
   background: #dc2626;
   color: #ffffff;
   border-color: #dc2626;
@@ -172,4 +172,21 @@
   margin-bottom: 12px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+}
+
+@media (max-width: 600px) {
+  .doc-download-block {
+    grid-template-columns: 1fr;
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .doc-download-block .download-card,
+  .doc-download-block .card-header-info {
+    min-width: 0;
+  }
+
+  .doc-download-block .card-title {
+    overflow-wrap: anywhere;
+  }
 }

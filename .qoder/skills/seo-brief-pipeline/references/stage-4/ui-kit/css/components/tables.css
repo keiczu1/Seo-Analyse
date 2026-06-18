@@ -45,6 +45,15 @@ table caption {
   .table-container table.table-wide {
     min-width: 700px;
   }
+
+  table {
+    font-size: 13px;
+  }
+
+  th,
+  td {
+    padding: 8px 10px;
+  }
 }
 
 th,

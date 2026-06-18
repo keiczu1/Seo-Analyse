@@ -63,3 +63,20 @@
   font-family: "Times New Roman", Times, serif;
   font-size: 15px;
 }
+
+@media (max-width: 600px) {
+  .doc-meta-header {
+    max-width: 100%;
+    font-size: 13.5px;
+  }
+
+  .doc-content-text p {
+    text-indent: 0.75cm;
+    margin-bottom: 8px;
+  }
+
+  .doc-signature {
+    flex-direction: column;
+    gap: 8px;
+  }
+}

@@ -379,32 +379,11 @@
 }
 
 @media (max-width: 600px) {
-  .article-layout {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .toc-sidebar,
-  .toc {
-    min-width: 0;
-    max-width: 100%;
-  }
-
   .kit-main,
   .kit-main article,
-  .kit-main section,
-  .kit-main .summary-card,
-  .kit-main .table-container,
-  .kit-main .choice-cards,
-  .kit-main .doc-template,
-  .kit-main .doc-download-block,
-  .kit-main .auth-v9-shadow,
-  .kit-main .relink-block {
+  .kit-main section {
     min-width: 0;
     max-width: 100%;
-  }
-
-  .kit-main .summary-card {
-    grid-template-columns: 1fr;
   }
 
   .kit-main .kit-token-grid {
@@ -423,32 +402,8 @@
     font-size: 19px;
   }
 
-  .kit-main .choice-cards .cards {
-    grid-template-columns: 1fr;
-  }
-
-  .kit-main .doc-download-block {
-    grid-template-columns: 1fr;
-  }
-
-  .kit-main .doc-download-block .download-card,
-  .kit-main .doc-download-block .card-header-info {
-    min-width: 0;
-  }
-
-  .kit-main .doc-signature {
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .kit-main .relink-container {
-    grid-template-columns: 1fr;
-  }
-
   .kit-code,
-  .kit-token-value,
-  .kit-main .summary-card .value,
-  .kit-main .doc-download-block .card-title {
+  .kit-token-value {
     overflow-wrap: anywhere;
   }
 }

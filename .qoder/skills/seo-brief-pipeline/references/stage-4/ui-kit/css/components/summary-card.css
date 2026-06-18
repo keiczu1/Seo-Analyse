@@ -30,3 +30,19 @@
   font-weight: 700;
   color: var(--heading-text);
 }
+
+@media (max-width: 600px) {
+  .summary-card {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 16px;
+    margin-bottom: 24px;
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .summary-card .value {
+    font-size: 15.5px;
+    overflow-wrap: anywhere;
+  }
+}

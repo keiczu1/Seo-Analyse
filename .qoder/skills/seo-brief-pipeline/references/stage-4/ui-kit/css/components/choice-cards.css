@@ -86,3 +86,15 @@
   color: var(--accent-hover);
   transform: translateX(4px);
 }
+
+@media (max-width: 600px) {
+  .choice-cards,
+  .choice-cards .cards {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .choice-cards .cards {
+    grid-template-columns: 1fr;
+  }
+}
