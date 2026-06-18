@@ -232,7 +232,7 @@ Evidence mode: knowledge_draft | title_snippet_only | parsed_html
 | Верхняя мета | `.meta` |
 | Карточка параметров | `.summary-card` |
 | Сценарная развилка | `.choice-cards` |
-| Предупреждение / совет / резюме | `.callout-important` / `.callout-tip` / `.callout-summary` |
+| Предупреждение / совет / резюме | `.callout.callout-important` / `.callout.callout-tip` / `.callout.callout-summary` |
 | Пошаговый порядок | `.steps` |
 | Чек-лист | `.checklist` |
 | Таблица рисков | `.risk-table` |

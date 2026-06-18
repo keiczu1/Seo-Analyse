@@ -45,7 +45,7 @@
 - Не создавать одноразовые классы, если в UI kit уже есть подходящий блок
 - Если нужен новый повторяемый паттерн, сначала добавить его в UI kit и только потом использовать в статье
 - Не переносить в публичную статью служебные элементы UI kit: `.kit-*`, демо-подписи, таблицы правил, пояснения для разработчика
-- Публичная статья использует реальные компоненты из UI kit: `.meta`, `.summary-card`, `.choice-cards`, `.callout-*`, `.risk-table`, `.court-practice`, `.steps`, `.checklist`, `.doc-template`, `.doc-download-block`, `.faq-item`, `.law-base`, `.auth-v9-author-card`, `.auth-v9-reviewer-card`, `.relink-block`, `.relink-card`, `.disclaimer`
+- Публичная статья использует реальные компоненты из UI kit: `.meta`, `.summary-card`, `.choice-cards`, `.callout.callout-important`, `.callout.callout-tip`, `.callout.callout-summary`, `.risk-table`, `.court-practice`, `.steps`, `.checklist`, `.doc-template`, `.doc-download-block`, `.faq-item`, `.law-base`, `.auth-v9-author-card`, `.auth-v9-reviewer-card`, `.relink-block`, `.relink-card`, `.disclaimer`
 
 ### Карта компонентов UI kit
 
@@ -317,13 +317,13 @@ Mobile: grid-template-columns: 1fr (стек в колонку).
 
 ### 11. Блок «Правовая база» (для юридической ниши)
 
-**Важно:** все ссылки на законы должны вести на **конкретную статью**, а не на общий документ кодекса. Используй URL с хешем статьи (например, `consultant.ru/document/cons_doc_LAW_8982/<hash>/` для ст. 22 СК РФ), а не `consultant.ru/document/cons_doc_LAW_8982/` (весь кодекс). Пользователь должен сразу увидеть нужную норму.
+**Важно:** все ссылки на законы должны вести на **конкретную статью**, а не на общий документ кодекса. Используй URL с хешем статьи (например, `consultant.ru/document/cons_doc_LAW_8982/<hash>/` для ст. 22 СК РФ), а не `consultant.ru/document/cons_doc_LAW_8982/` (весь кодекс). Ссылку на норму оформляй курсивом: `<em><a ...>ст. XX СК РФ</a></em>`. Пользователь должен сразу увидеть нужную норму.
 
 ```html
 <div class="law-base">
   <h2>Правовая база</h2>
   <ul>
-    <li><a href="https://www.consultant.ru/document/cons_doc_LAW_8982/<hash>/">Ст. XX СК РФ</a> — пояснение простыми словами</li>
+    <li><em><a href="https://www.consultant.ru/document/cons_doc_LAW_8982/<hash>/" target="_blank" rel="noopener">Ст. XX СК РФ</a></em> — пояснение простыми словами</li>
   </ul>
 </div>
 ```
@@ -335,6 +335,12 @@ CSS: surface bg, border, radius 10px. Список без маркеров, ка
 ```html
 <h2 id="summary">Коротко: что запомнить</h2>
 <div class="callout callout-summary">
+  <div class="callout-header">
+    <svg class="callout-icon-svg" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0z" />
+    </svg>
+    <span class="callout-title">Резюме</span>
+  </div>
   <ol>
     <li><strong>Глагол:</strong> суть пункта.</li>
   </ol>
@@ -646,7 +652,7 @@ document.querySelectorAll('.animate-in').forEach(el => observer.observe(el));
 | 10. Sticky nav | `.toc` |
 | 10. Сценарные развилки | `.choice-cards` |
 | 11. Правовая база | `.law-base` (для юридической ниши) |
-| 12. Резюме | `.callout-summary` с `<ol>` |
+| 12. Резюме | `.callout.callout-summary` с `.callout-header` и `<ol>` |
 | 13. Образец документа | `.doc-template` (если тема предполагает) |
 | 14. Судебная практика | `.court-practice` (для конфликтных тем) |
 | 15. Таблица рисков | `.risk-table` (для сложных споров) |

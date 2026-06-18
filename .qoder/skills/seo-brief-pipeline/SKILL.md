@@ -258,7 +258,7 @@ npm.cmd run analyze:query -- --id <queryId> --query "<query>" --locale ru-RU
 4. **Структура**: breadcrumbs → sidebar TOC → meta → h1 → summary card → sections → FAQ → disclaimer
 5. **Ссылки на источники**: `rel="noopener"`, `target="_blank"`
 6. **Без выдуманных URL**: используй конкретные URL статей (с хешем) из WebSearch; если хеш недоступен — base-URL + пометка `[URL требует уточнения]`
-7. **Компоненты только из UI kit**: summary-card, choice-cards, callout, risk-table, court-practice, steps, checklist, doc-template, doc-download-block, FAQ, law-base, author/trust, related links.
+7. **Компоненты только из UI kit**: `.summary-card`, `.choice-cards`, `.callout.callout-important`, `.callout.callout-tip`, `.callout.callout-summary`, `.risk-table`, `.court-practice`, `.steps`, `.checklist`, `.doc-template`, `.doc-download-block`, `.faq-item`, `.law-base`, `.auth-v9-author-card`, `.auth-v9-reviewer-card`, `.relink-block`, `.relink-card`, `.disclaimer`.
 
 ### Обязательные блоки для YMYL
 
