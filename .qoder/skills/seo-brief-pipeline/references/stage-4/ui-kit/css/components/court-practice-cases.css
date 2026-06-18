@@ -1,0 +1,27 @@
+/* Court Practice Cases & Scenarios */
+.case, .scenario {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.01);
+}
+
+.case h3, .scenario h3 {
+  margin-top: 0;
+  font-size: var(--fs-lg);
+  font-weight: 700;
+  color: var(--heading-text);
+  margin-bottom: 8px;
+}
+
+.case p, .scenario p {
+  font-size: var(--fs-sm);
+  margin-bottom: 8px;
+}
+
+.case p:last-child, .scenario p:last-child {
+  margin-bottom: 0;
+}

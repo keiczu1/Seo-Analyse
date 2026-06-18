@@ -1,0 +1,175 @@
+/* Document Download Block (Variant 3: Large Cards Layout) */
+.doc-download-block {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 16px;
+  margin: var(--space-md) 0 var(--space-lg);
+}
+
+.doc-download-block .download-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.01);
+}
+
+.doc-download-block .download-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 6px 20px rgba(53, 83, 128, 0.06);
+  transform: translateY(-2px);
+}
+
+.doc-download-block .card-header-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  min-width: 240px;
+  flex: 1;
+}
+
+.doc-download-block .card-icon-container {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.doc-download-block .docx-card .card-icon-container {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.doc-download-block .pdf-card .card-icon-container {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+.doc-download-block .card-meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.doc-download-block .card-title {
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--heading-text);
+  margin-bottom: 2px;
+}
+
+.doc-download-block .card-desc {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.doc-download-block .card-action-btn,
+.doc-header .card-action-btn {
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-width: 150px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 480px) {
+
+  .doc-download-block .card-action-btn,
+  .doc-header .card-action-btn {
+    width: 100%;
+  }
+}
+
+.doc-download-block .docx-card .card-action-btn {
+  background: #eff6ff;
+  color: #2563eb;
+  border: 1px solid #93c5fd;
+}
+
+.doc-download-block .docx-card .card-action-btn:hover {
+  background: #2563eb;
+  color: #ffffff;
+  border-color: #2563eb;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15);
+}
+
+.doc-download-block .pdf-card .card-action-btn,
+.doc-header .card-action-btn.docx-btn {
+  background: #fef2f2;
+  color: #dc2626;
+  border: 1px solid #fca5a5;
+}
+
+.doc-download-block .pdf-card .card-action-btn:hover,
+.doc-header .card-action-btn.docx-btn:hover {
+  background: #dc2626;
+  color: #ffffff;
+  border-color: #dc2626;
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.15);
+}
+
+.doc-download-block .card-action-btn.is-disabled,
+.doc-header .card-action-btn.is-disabled {
+  background: #eef2f7;
+  color: #64748b;
+  border-color: #cbd5e1;
+  box-shadow: none;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.doc-download-block .file-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.doc-download-block .button-icon,
+.doc-header .button-icon {
+  width: 15px;
+  height: 15px;
+  stroke-width: 2.5px;
+}
+
+/* Download block preview wrapper */
+.download-preview-section {
+  margin: var(--space-md) 0 var(--space-lg);
+  border: 1.5px dashed var(--border);
+  border-radius: 16px;
+  padding: 24px;
+  background: rgba(248, 250, 252, 0.4);
+}
+
+.preview-group {
+  margin-bottom: 24px;
+}
+
+.preview-group:last-child {
+  margin-bottom: 0;
+}
+
+.preview-title {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}

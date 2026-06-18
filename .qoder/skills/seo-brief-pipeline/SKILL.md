@@ -246,14 +246,14 @@ npm.cmd run analyze:query -- --id <queryId> --query "<query>" --locale ru-RU
 
 ### UI kit gate
 
-Если в проекте есть `Gemini/article-ui-kit.html`, он является каноническим визуальным и семантическим эталоном для всех HTML-статей. Если проектного UI kit нет, используй bundled-копию skill как эталон: `references/stage-4/ui-kit/article.html`, `references/stage-4/ui-kit/css/article.css`, `references/stage-4/ui-kit/css/demo.css` и `references/stage-4/ui-kit/js/interactions.js`. Demo CSS/JS нужны только для reference-страницы UI kit; в production-статью переносить production-компоненты и проектные слои, а не `.kit-*`.
+Если в проекте есть `Gemini/article-ui-kit.html`, он является каноническим визуальным и семантическим эталоном для всех HTML-статей. Если проектного UI kit нет, используй bundled-копию skill как эталон: `references/stage-4/ui-kit/article.html`, `references/stage-4/ui-kit/css/article.css`, модульные папки `references/stage-4/ui-kit/css/base/`, `layout/`, `components/`, `page-shell/`, `references/stage-4/ui-kit/css/demo.css` и `references/stage-4/ui-kit/js/interactions.js`. Demo CSS/JS нужны только для reference-страницы UI kit; в production-статью переносить production-компоненты и проектные слои, а не `.kit-*`.
 
 Перед генерацией статьи:
 1. Открой проектный `Gemini/article-ui-kit.html`; если его нет — `references/stage-4/ui-kit/article.html`. Используй структуру, классы и паттерны UI kit как источник правды.
 2. Не изобретай новые блоки вместо существующих компонентов UI kit.
 3. Если статье нужен новый тип повторяемого блока, сначала обнови UI kit и правила, затем используй его в статье.
 4. HTML-статья считается незавершенной, если обязательный блок есть в брифе, но не оформлен компонентом из UI kit.
-5. Соблюдай слои: HTML = семантика и контент, CSS = компоненты и layout, JS = поведение. Не возвращай demo CSS или JS в inline-блоки и не используй `style=""` для повторяемых UI-компонентов.
+5. Соблюдай слои: HTML = семантика и контент, CSS = компоненты и layout, JS = поведение. `css/article.css` в bundled UI kit является только entrypoint с `@import`; новые правила добавляй в профильный модуль `base/`, `layout/`, `components/` или `page-shell/`. Не возвращай demo CSS или JS в inline-блоки и не используй `style=""` для повторяемых UI-компонентов.
 
 ### Краткие правила
 
@@ -299,7 +299,7 @@ npm.cmd run analyze:query -- --id <queryId> --query "<query>" --locale ru-RU
 6. **Evidence mode всегда виден.** `knowledge_draft` ≠ `parsed_html`.
 7. **SEO-триплеты с типами.** Без типизации — это просто список фактов.
 8. **UI kit обязателен для HTML.** Все статьи используют проектный `Gemini/article-ui-kit.html` или bundled `references/stage-4/ui-kit/article.html` как эталон оформления; нельзя выпускать одноразовую разметку, которая расходится с UI kit.
-9. **Модульность обязательна.** Для UI kit и новых статей не смешивай HTML, CSS и JS в одном файле. Повторяемые стили и поведение выноси в отдельные файлы или существующие проектные слои.
+9. **Модульность обязательна.** Для UI kit и новых статей не смешивай HTML, CSS и JS в одном файле. Повторяемые стили и поведение выноси в отдельные файлы или существующие проектные слои. В bundled UI kit `css/article.css` держи только как импортирующий entrypoint; компонентные стили храни в `css/components/`, сетки в `css/layout/`, токены и reset в `css/base/`, шапку/футер в `css/page-shell/`.
 
 ---
 
@@ -361,7 +361,11 @@ Pipeline:
 - `references/stage-4/editorial-legal.md` — Stage 4: редакторские правила для юридической ниши
 - `references/stage-4/editorial-general.md` — Stage 4: редакторские правила для общей ниши
 - `references/stage-4/ui-kit/article.html` — Stage 4: bundled UI kit HTML-структура для проектов без локального `Gemini/article-ui-kit.html`
-- `references/stage-4/ui-kit/css/article.css` — Stage 4: production CSS-компоненты статьи
+- `references/stage-4/ui-kit/css/article.css` — Stage 4: CSS entrypoint с `@import` модулей
+- `references/stage-4/ui-kit/css/base/` — Stage 4: design tokens и reset
+- `references/stage-4/ui-kit/css/layout/` — Stage 4: сетки и responsive layout
+- `references/stage-4/ui-kit/css/components/` — Stage 4: компоненты статьи
+- `references/stage-4/ui-kit/css/page-shell/` — Stage 4: шапка и футер reference-страницы
 - `references/stage-4/ui-kit/css/demo.css` — Stage 4: demo-only стили страницы UI kit (`.kit-*`)
 - `references/stage-4/ui-kit/js/interactions.js` — Stage 4: поведение demo-страницы UI kit
 

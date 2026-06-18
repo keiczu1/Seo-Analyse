@@ -1,0 +1,30 @@
+/* Risk table tags */
+.risk-high {
+  background: #FEE2E2;
+  color: #991B1B;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  display: inline-block;
+}
+
+.risk-medium {
+  background: #FEF3C7;
+  color: #92400E;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  display: inline-block;
+}
+
+.risk-low {
+  background: #D1FAE5;
+  color: #065F46;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  display: inline-block;
+}

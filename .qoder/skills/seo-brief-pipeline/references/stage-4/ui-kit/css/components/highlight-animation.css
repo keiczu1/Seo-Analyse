@@ -1,0 +1,18 @@
+/* Animations for interaction pulsing */
+@keyframes highlightPulse {
+  0% {
+    background-color: rgba(53, 83, 128, 0.15);
+    box-shadow: 0 0 0 4px rgba(53, 83, 128, 0.1);
+  }
+
+  100% {
+    background-color: transparent;
+    box-shadow: none;
+  }
+}
+
+.highlight-pulse-active {
+  animation: highlightPulse 1.5s ease-out forwards;
+  border-radius: 8px;
+  padding: 4px;
+}

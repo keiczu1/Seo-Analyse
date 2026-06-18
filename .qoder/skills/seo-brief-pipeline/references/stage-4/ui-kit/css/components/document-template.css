@@ -1,0 +1,75 @@
+/* Document template */
+.doc-template {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  margin: var(--space-md) 0;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(14, 42, 71, 0.03);
+}
+
+.doc-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 16px 20px;
+  background: #F8FAFC;
+  border-bottom: 1px solid var(--border);
+}
+
+.doc-header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.doc-header h3 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--heading-text);
+}
+
+.doc-badge {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  background: var(--brand-accent);
+  color: #fff;
+  padding: 3px 8px;
+  border-radius: 4px;
+  letter-spacing: 0.5px;
+}
+
+.doc-body {
+  margin: 0;
+  padding: 40px;
+  background: #ffffff;
+  font-size: 15px;
+  line-height: 1.5;
+  font-family: "Times New Roman", Times, serif;
+  color: #111111;
+  /* pure legal print black for maximum contrast */
+  border-bottom: 1px solid var(--border);
+}
+
+.doc-body .placeholder {
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+  font-weight: 600;
+  color: #854d0e;
+  /* darker amber/brown for readability */
+  border-bottom: 1px dashed #a16207;
+  /* darker dash border */
+  background: rgba(251, 191, 36, 0.06);
+  padding: 0 4px;
+  border-radius: 2px;
+}
+
+.doc-footer {
+  padding: 12px 20px;
+  background: #F8FAFC;
+  font-size: 13px;
+  color: var(--muted);
+}

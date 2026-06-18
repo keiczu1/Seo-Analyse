@@ -50,7 +50,7 @@
 
 ## Канонический UI kit
 
-Источник правды для оформления HTML-статей — проектный `Gemini/article-ui-kit.html`. Если проектного UI kit нет, используй bundled-копию skill как эталон: `references/stage-4/ui-kit/article.html`, `references/stage-4/ui-kit/css/article.css`, `references/stage-4/ui-kit/css/demo.css` и `references/stage-4/ui-kit/js/interactions.js`. Demo CSS/JS нужны только для reference-страницы UI kit; в production-статью переносить production-компоненты и проектные слои, а не `.kit-*`. Все новые статьи должны использовать семантику, классы, порядок блоков и визуальные паттерны выбранного UI kit.
+Источник правды для оформления HTML-статей — проектный `Gemini/article-ui-kit.html`. Если проектного UI kit нет, используй bundled-копию skill как эталон: `references/stage-4/ui-kit/article.html`, `references/stage-4/ui-kit/css/article.css`, модульные папки `references/stage-4/ui-kit/css/base/`, `layout/`, `components/`, `page-shell/`, `references/stage-4/ui-kit/css/demo.css` и `references/stage-4/ui-kit/js/interactions.js`. Demo CSS/JS нужны только для reference-страницы UI kit; в production-статью переносить production-компоненты и проектные слои, а не `.kit-*`. Все новые статьи должны использовать семантику, классы, порядок блоков и визуальные паттерны выбранного UI kit.
 
 Правила:
 - Перед сборкой HTML открыть проектный `Gemini/article-ui-kit.html`; если его нет — `references/stage-4/ui-kit/article.html`; сверить нужные компоненты
@@ -64,11 +64,15 @@
 Соблюдай разделение слоев:
 
 - `article.html` — только HTML-структура, контент демо и JSON-LD. Не добавлять inline CSS/JS и `style=""` для повторяемых UI-компонентов.
-- `css/article.css` — production-компоненты статьи: layout, typography, cards, callouts, tables, documents, FAQ, trust, relink.
+- `css/article.css` — только entrypoint с `@import` модулей. Не добавлять сюда компонентные правила.
+- `css/base/` — design tokens, reset, базовые стили.
+- `css/layout/` — сетка статьи, responsive layout и layout-only media queries.
+- `css/components/` — reusable-компоненты статьи: cards, callouts, tables, documents, FAQ, trust, relink.
+- `css/page-shell/` — шапка и футер reference-страницы, чтобы page shell не смешивался с article components.
 - `css/demo.css` — только демо-слой UI kit: `.kit-*`, preview grids, поясняющие панели. Эти классы не переносить в публичную статью.
 - `js/interactions.js` — поведение демо-страницы: checklist, active TOC, mobile header, dropdowns.
 
-Для production-статьи повторяемый CSS и JS выноси во внешние файлы проекта или подключай существующие слои. `style=""` на повторяемых блоках запрещен. Inline допускается только для `application/ld+json` schema и минимальных одноразовых данных, которые не являются стилями или поведением.
+Для production-статьи повторяемый CSS и JS выноси во внешние файлы проекта или подключай существующие слои. В bundled UI kit новые правила добавляй в профильный модуль, а `css/article.css` оставляй импортирующим entrypoint. Шапку/футер reference-страницы держи отдельно в `css/page-shell/`, не смешивай их с article components. `style=""` на повторяемых блоках запрещен. Inline допускается только для `application/ld+json` schema и минимальных одноразовых данных, которые не являются стилями или поведением.
 
 ### Карта компонентов UI kit
 
@@ -678,7 +682,7 @@ document.querySelectorAll('.animate-in').forEach(el => observer.observe(el));
 - [ ] Title/H1/Description из брифа (секция 8)
 - [ ] Использованы компоненты из проектного `Gemini/article-ui-kit.html` или bundled `references/stage-4/ui-kit/article.html`; новые одноразовые блоки не подменяют UI kit
 - [ ] В публичную статью не попали `.kit-*`, демо-пояснения и служебные блоки UI kit
-- [ ] HTML, CSS и JS разделены по слоям; нет inline CSS/JS и `style=""` для повторяемых компонентов
+- [ ] HTML, CSS и JS разделены по слоям; `css/article.css` является entrypoint, компонентные правила лежат в `base/`, `layout/`, `components/` или `page-shell/`; нет inline CSS/JS и `style=""` для повторяемых компонентов
 - [ ] Schema.org: Article + типовой schema
 - [ ] Responsive CSS (media query ≤600px)
 - [ ] Breadcrumbs + sticky TOC

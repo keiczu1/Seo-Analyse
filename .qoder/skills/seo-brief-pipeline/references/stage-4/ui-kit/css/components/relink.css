@@ -1,0 +1,134 @@
+/* --- Relink Block Styles (Tactile Convex Glass) --- */
+.relink-block {
+  margin: var(--space-xl) 0;
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--border);
+}
+
+.relink-title-main {
+  font-family: var(--font-heading);
+  color: var(--heading-text);
+  font-size: var(--fs-2xl);
+  font-weight: 700;
+  margin-bottom: var(--space-md);
+  text-align: center;
+}
+
+.relink-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.relink-card {
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  padding: 24px;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  /* Convex tactile shadow depth */
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.02),
+    0 2px 6px rgba(15, 23, 42, 0.02),
+    inset 0 2px 4px rgba(255, 255, 255, 0.8),
+    inset 0 -2px 4px rgba(15, 23, 42, 0.01);
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.relink-card:hover {
+  transform: translateY(2px);
+  /* Pushes down slightly like a tactile button */
+  /* Concave pressed shadow */
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.01),
+    inset 0 3px 8px rgba(15, 23, 42, 0.04),
+    inset 0 -3px 8px rgba(255, 255, 255, 0.8);
+}
+
+.relink-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  flex-grow: 1;
+}
+
+.relink-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.relink-bullet {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--brand-accent);
+  display: inline-block;
+  box-shadow: 0 0 6px var(--brand-accent);
+}
+
+/* Bullet pulsate animation when parent card is hovered */
+.relink-card:hover .relink-bullet {
+  animation: bullet-pulse 1s infinite alternate;
+}
+
+@keyframes bullet-pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 4px var(--brand-accent);
+  }
+
+  100% {
+    transform: scale(1.4);
+    box-shadow: 0 0 10px var(--brand-accent);
+  }
+}
+
+.relink-tag {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--muted);
+}
+
+.relink-card-title {
+  font-family: var(--font-heading);
+  color: var(--heading-text);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 16px;
+  flex-grow: 1;
+}
+
+.relink-card-link {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--accent);
+  align-self: flex-start;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.relink-card:hover .relink-card-link {
+  color: var(--brand-accent);
+  transform: translateX(3px);
+}
+
+/* Responsive Overrides */
+@media (max-width: 992px) {
+  .relink-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .relink-container {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,30 @@
+/* Law base */
+.law-base {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+  margin: var(--space-md) 0;
+}
+
+.law-base h2 {
+  margin-top: 0;
+  border-top: none;
+  padding-top: 0;
+}
+
+.law-base ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.law-base li {
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: var(--fs-sm);
+}
+
+.law-base li:last-child {
+  border-bottom: none;
+}

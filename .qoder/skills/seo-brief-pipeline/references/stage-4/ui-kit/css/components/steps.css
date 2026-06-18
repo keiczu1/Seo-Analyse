@@ -1,0 +1,40 @@
+/* Steps */
+.steps {
+  counter-reset: step;
+  list-style: none;
+  padding-left: 0;
+}
+
+.steps li {
+  counter-increment: step;
+  padding-left: 52px;
+  position: relative;
+  margin-bottom: var(--space-md);
+  font-size: var(--fs-sm);
+}
+
+.steps li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+  box-shadow: 0 4px 10px rgba(43, 76, 126, 0.15);
+}
+
+.steps li strong {
+  display: block;
+  margin-bottom: 6px;
+  font-size: var(--fs-base);
+  color: var(--heading-text);
+  font-weight: 700;
+}

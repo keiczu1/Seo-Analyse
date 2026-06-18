@@ -1,0 +1,16 @@
+/* Disclaimer */
+.disclaimer {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px 20px;
+  font-size: var(--fs-xs);
+  color: var(--muted);
+  margin: var(--space-lg) 0 var(--space-sm);
+  line-height: 1.6;
+}
+
+.disclaimer strong {
+  color: var(--heading-text);
+  font-weight: 700;
+}

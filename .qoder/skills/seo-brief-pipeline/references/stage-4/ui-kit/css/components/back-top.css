@@ -1,0 +1,16 @@
+/* Back to top */
+.back-top {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: var(--fs-xs);
+  color: var(--muted);
+  margin-top: 16px;
+  font-weight: 600;
+  transition: color 0.15s ease;
+  cursor: pointer;
+}
+
+.back-top:hover {
+  color: var(--accent);
+}
