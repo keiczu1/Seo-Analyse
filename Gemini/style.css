@@ -699,14 +699,40 @@ td:first-child {
 }
 
 /* Sidebar TOC */
-.toc {
+.toc-sidebar {
   position: sticky;
   top: 40px;
+  align-self: start;
+  max-height: calc(100vh - 80px);
+}
+
+.toc {
+  position: static;
   font-size: var(--fs-xs);
   padding: 12px 0;
   border-left: 2px solid var(--border);
-  max-height: calc(100vh - 80px);
+  max-height: inherit;
   overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+  scroll-padding: 12px 0;
+}
+
+.toc::-webkit-scrollbar {
+  width: 8px;
+}
+
+.toc::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.toc::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 999px;
+}
+
+.toc::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
 }
 
 .toc a {
@@ -970,6 +996,10 @@ td:first-child {
 }
 
 @media (max-width: 600px) {
+  .toc-sidebar {
+    display: none;
+  }
+
   .article-container {
     padding: 20px 10px 60px;
   }
@@ -1014,45 +1044,6 @@ td:first-child {
   th,
   td {
     padding: 8px 10px;
-  }
-
-  .toc {
-    position: static;
-    border-left: none;
-    display: flex;
-    overflow-x: auto;
-    white-space: nowrap;
-    gap: 8px;
-    padding: 8px 0;
-    margin-bottom: 16px;
-    max-height: none;
-    scrollbar-width: none;
-  }
-
-  .toc::-webkit-scrollbar {
-    display: none;
-  }
-
-  .toc-title {
-    display: none;
-  }
-
-  .toc a {
-    display: inline-block;
-    padding: 6px 12px;
-    border-radius: 8px;
-    border-left: none;
-    margin-left: 0;
-    font-size: 12px;
-    background: #e8edf3;
-    color: var(--text);
-  }
-
-  .toc a:hover,
-  .toc a.active {
-    background: var(--accent);
-    color: #fff;
-    padding-left: 12px;
   }
 
   .doc-header {

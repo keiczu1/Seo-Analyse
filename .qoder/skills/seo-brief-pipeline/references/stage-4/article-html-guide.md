@@ -196,15 +196,16 @@ CSS:
 ```css
 body { display: grid; grid-template-columns: 1fr 220px; gap: 32px; max-width: 1100px; }
 .breadcrumbs { grid-column: 1 / -1; }
-.toc { position: sticky; top: 24px; border-left: 2px solid var(--border); }
+.toc-sidebar { position: sticky; top: 24px; align-self: start; max-height: calc(100vh - 48px); }
+.toc { border-left: 2px solid var(--border); max-height: inherit; overflow-y: auto; overscroll-behavior: contain; scrollbar-gutter: stable; scroll-padding: 12px 0; }
 .toc a { display: block; padding: 5px 0 5px 14px; border-left: 2px solid transparent; }
 .toc a.active { color: var(--accent); border-left-color: var(--accent); }
 ```
 
-Mobile (≤600px): grid → 1 колонка, TOC становится горизонтальной pill-полосой сверху.
+Mobile (≤600px): grid → 1 колонка, `.toc-sidebar { display: none; }`. TOC является только desktop-компонентом и не показывается на mobile.
 Tablet (601–900px): `grid-template-columns: 1fr 180px`.
 
-Scroll-spy JS: при скролле подсвечивать активный .toc a.
+Scroll-spy JS: при скролле подсвечивать активный `.toc a` и автоматически прокручивать scrollable TOC так, чтобы активный пункт оставался видимым.
 
 ### 3. Summary Card
 

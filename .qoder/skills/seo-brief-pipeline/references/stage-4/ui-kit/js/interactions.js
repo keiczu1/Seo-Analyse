@@ -12,10 +12,39 @@
     const sections = tocLinks
       .map(link => document.querySelector(link.getAttribute('href')))
       .filter(Boolean);
+    let activeIndexCurrent = -1;
 
     if (!tocLinks.length || !sections.length) {
       return;
     }
+
+    const scrollActiveLinkIntoView = link => {
+      const toc = link.closest('.toc');
+
+      if (!toc) {
+        return;
+      }
+
+      const tocRect = toc.getBoundingClientRect();
+      const linkRect = link.getBoundingClientRect();
+      const edgePadding = 12;
+
+      if (toc.scrollHeight > toc.clientHeight + 1) {
+        if (linkRect.top < tocRect.top + edgePadding) {
+          toc.scrollTop += linkRect.top - tocRect.top - Math.max(edgePadding, (toc.clientHeight - linkRect.height) / 2);
+        } else if (linkRect.bottom > tocRect.bottom - edgePadding) {
+          toc.scrollTop += linkRect.top - tocRect.top - Math.max(edgePadding, (toc.clientHeight - linkRect.height) / 2);
+        }
+      }
+
+      if (toc.scrollWidth > toc.clientWidth + 1) {
+        if (linkRect.left < tocRect.left + edgePadding) {
+          toc.scrollLeft += linkRect.left - tocRect.left - Math.max(edgePadding, (toc.clientWidth - linkRect.width) / 2);
+        } else if (linkRect.right > tocRect.right - edgePadding) {
+          toc.scrollLeft += linkRect.left - tocRect.left - Math.max(edgePadding, (toc.clientWidth - linkRect.width) / 2);
+        }
+      }
+    };
 
     const updateActiveToc = () => {
       let activeIndex = -1;
@@ -32,6 +61,15 @@
       tocLinks.forEach((link, index) => {
         link.classList.toggle('active', index === activeIndex);
       });
+
+      if (activeIndex !== activeIndexCurrent) {
+        activeIndexCurrent = activeIndex;
+        const activeLink = tocLinks[activeIndex];
+
+        if (activeLink) {
+          scrollActiveLinkIntoView(activeLink);
+        }
+      }
     };
 
     window.addEventListener('scroll', updateActiveToc, { passive: true });

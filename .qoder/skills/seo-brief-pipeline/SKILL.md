@@ -260,7 +260,7 @@ npm.cmd run analyze:query -- --id <queryId> --query "<query>" --locale ru-RU
 1. **Семантический HTML5**: `<article>`, `<nav>`, `<section>`, `<details>`, `<time>`
 2. **Schema.org JSON-LD** в `<head>`: `Article` + типовой schema (HowTo, FAQPage, etc.)
 3. **Responsive CSS**: max-width 1100px (CSS Grid: `1fr 220px`), media query ≤600px
-4. **Структура**: breadcrumbs → sidebar TOC → meta → h1 → summary card → sections → FAQ → disclaimer
+4. **Структура**: breadcrumbs → desktop-only sticky sidebar TOC → meta → h1 → summary card → sections → FAQ → disclaimer
 5. **Ссылки на источники**: `rel="noopener"`, `target="_blank"`
 6. **Без выдуманных URL**: используй конкретные URL статей (с хешем) из WebSearch; если хеш недоступен — base-URL + пометка `[URL требует уточнения]`
 7. **Компоненты только из UI kit**: `.summary-card`, `.choice-cards`, `.callout.callout-important`, `.callout.callout-tip`, `.callout.callout-summary`, `.risk-table`, `.court-practice`, `.steps`, `.checklist`, `.doc-template`, `.doc-download-block`, `.faq-item`, `.law-base`, `.article-link`, `.auth-v9-author-card`, `.auth-v9-reviewer-card`, `.relink-block`, `.relink-card`, `.disclaimer`.

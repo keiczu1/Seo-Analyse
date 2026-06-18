@@ -6,7 +6,7 @@
   <title>Как развестись без согласия жены в 2026 году: порядок через суд</title>
   <meta name="description" content="Пошаговая инструкция развода через суд при несогласии супруги. Куда подавать, какие документы нужны, сколько стоит и сколько займёт. Актуально на 2026 год.">
 
-  <link rel="stylesheet" href="style.css?v=10">
+  <link rel="stylesheet" href="style.css?v=11">
 
   <!-- Article schema -->
   <script type="application/ld+json">
@@ -1184,6 +1184,35 @@
     const selector = link.getAttribute('href');
     return document.querySelector(selector);
   }).filter(Boolean);
+  let activeIndexCurrent = -1;
+
+  function scrollActiveTocLinkIntoView(link) {
+    const toc = link.closest('.toc');
+
+    if (!toc) {
+      return;
+    }
+
+    const tocRect = toc.getBoundingClientRect();
+    const linkRect = link.getBoundingClientRect();
+    const edgePadding = 12;
+
+    if (toc.scrollHeight > toc.clientHeight + 1) {
+      if (linkRect.top < tocRect.top + edgePadding) {
+        toc.scrollTop += linkRect.top - tocRect.top - Math.max(edgePadding, (toc.clientHeight - linkRect.height) / 2);
+      } else if (linkRect.bottom > tocRect.bottom - edgePadding) {
+        toc.scrollTop += linkRect.top - tocRect.top - Math.max(edgePadding, (toc.clientHeight - linkRect.height) / 2);
+      }
+    }
+
+    if (toc.scrollWidth > toc.clientWidth + 1) {
+      if (linkRect.left < tocRect.left + edgePadding) {
+        toc.scrollLeft += linkRect.left - tocRect.left - Math.max(edgePadding, (toc.clientWidth - linkRect.width) / 2);
+      } else if (linkRect.right > tocRect.right - edgePadding) {
+        toc.scrollLeft += linkRect.left - tocRect.left - Math.max(edgePadding, (toc.clientWidth - linkRect.width) / 2);
+      }
+    }
+  }
 
   function updateActiveToc() {
     let activeIndex = -1;
@@ -1204,6 +1233,15 @@
         link.classList.remove('active');
       }
     });
+
+    if (activeIndex !== activeIndexCurrent) {
+      activeIndexCurrent = activeIndex;
+      const activeLink = tocLinks[activeIndex];
+
+      if (activeLink) {
+        scrollActiveTocLinkIntoView(activeLink);
+      }
+    }
   }
 
   window.addEventListener('scroll', updateActiveToc);
@@ -1260,4 +1298,3 @@
 </script>
 </body>
 </html>
-
