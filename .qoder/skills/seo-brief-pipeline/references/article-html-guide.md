@@ -45,7 +45,7 @@
 - Не создавать одноразовые классы, если в UI kit уже есть подходящий блок
 - Если нужен новый повторяемый паттерн, сначала добавить его в UI kit и только потом использовать в статье
 - Не переносить в публичную статью служебные элементы UI kit: `.kit-*`, демо-подписи, таблицы правил, пояснения для разработчика
-- Публичная статья использует реальные компоненты из UI kit: `.meta`, `.summary-card`, `.choice-cards`, `.callout-*`, `.risk-table`, `.court-practice`, `.steps`, `.checklist`, `.doc-template`, `.doc-download-block`, `.faq-item`, `.law-base`, `.author-box`, `.related-articles`, `.disclaimer`
+- Публичная статья использует реальные компоненты из UI kit: `.meta`, `.summary-card`, `.choice-cards`, `.callout-*`, `.risk-table`, `.court-practice`, `.steps`, `.checklist`, `.doc-template`, `.doc-download-block`, `.faq-item`, `.law-base`, `.auth-v9-author-card`, `.auth-v9-reviewer-card`, `.relink-block`, `.relink-card`, `.disclaimer`
 
 ### Карта компонентов UI kit
 
@@ -65,8 +65,8 @@
 | Файл образца | `.doc-download-block` | Один реальный файл, DOCX по умолчанию |
 | FAQ | `.faq-item` / `<details>` | Вопросы, которые дополняют body |
 | Правовая база | `.law-base` | Все использованные нормы с точными ссылками |
-| Доверие | `.author-box`, `.reviewer-box`, `.disclaimer` | Автор, проверка, ограничение ответственности |
-| Перелинковка | `.related-articles` | Следующие связанные статьи |
+| Доверие | `.auth-v9-author-card`, `.auth-v9-reviewer-card`, `.disclaimer` | Автор, проверка, ограничение ответственности |
+| Перелинковка | `.relink-block`, `.relink-card` | Следующие связанные статьи |
 
 ---
 
@@ -198,13 +198,25 @@ CSS Grid: `grid-template-columns: repeat(auto-fit, minmax(180px, 1fr))`.
 
 ```html
 <!-- Предупреждение -->
-<div class="callout callout-warn">
-  <strong>⚠️ Важно:</strong> текст предупреждения
+<div class="callout callout-important">
+  <div class="callout-header">
+    <svg class="callout-icon-svg" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+    </svg>
+    <span class="callout-title">Важно!</span>
+  </div>
+  <p class="callout-text">текст предупреждения</p>
 </div>
 
 <!-- Рекомендация -->
 <div class="callout callout-tip">
-  <strong>💡 Рекомендация:</strong> текст совета
+  <div class="callout-header">
+    <svg class="callout-icon-svg" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12z" />
+    </svg>
+    <span class="callout-title">Совет</span>
+  </div>
+  <p class="callout-text">текст совета</p>
 </div>
 ```
 
@@ -354,33 +366,64 @@ CSS: surface bg, border, radius 10px. Список без маркеров, ка
 ```html
 <div class="doc-template">
   <div class="doc-header">
-    <h3>Образец: <название документа></h3>
-    <span class="doc-badge">Образец</span>
+    <div class="doc-header-left">
+      <h3>Образец искового заявления</h3>
+      <span class="doc-badge">Шаблон</span>
+    </div>
+    <a href="isk-razvod.docx" class="card-action-btn docx-btn" title="Скачать в формате DOCX" download>
+      <svg class="button-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+        <polyline points="7 10 12 15 17 10" />
+        <line x1="12" y1="15" x2="12" y2="3" />
+      </svg>
+      Скачать DOCX
+    </a>
   </div>
-  <pre class="doc-body"><code>В <span class="placeholder">[наименование суда/органа]</span>
-От: <span class="placeholder">[Ваше Ф.И.О.]</span>
-Адрес: <span class="placeholder">[Ваш адрес]</span>
-Телефон: <span class="placeholder">[Ваш телефон]</span>
+  <div class="doc-body">
+    <div class="doc-meta-header">
+      В <span class="placeholder">[наименование суда/органа]</span><br>
+      <strong>Истец:</strong> <span class="placeholder">[Ваше Ф.И.О.]</span><br>
+      <strong>Ответчик:</strong> <span class="placeholder">[Ф.И.О. ответчика]</span>
+    </div>
+    <div class="doc-title-main">Исковое заявление<br>о <span class="placeholder">[предмет иска]</span></div>
+    <div class="doc-content-text">
+      <p><span class="placeholder">[Основная часть: описание обстоятельств и обоснование требований]</span></p>
+    </div>
+    <div class="doc-title-request">Прошу:</div>
+    <div class="doc-content-text">
+      <p>1. <span class="placeholder">[Требование 1]</span></p>
+      <p>2. <span class="placeholder">[Требование 2]</span></p>
+    </div>
+    <div class="doc-signature">
+      <span>Истец: ___________</span>
+      <span><span class="placeholder">[Дата]</span></span>
+    </div>
+  </div>
+  <div class="doc-footer">Образец носит информационный характер и не гарантирует положительное решение. Перед использованием рекомендуем проконсультироваться с юристом.</div>
+</div>
 
-ИСКОВОЕ ЗАЯВЛЕНИЕ
-о <span class="placeholder">[предмет иска]</span>
-
-<span class="placeholder">[Основная часть: описание обстоятельств, обоснование требований]</span>
-
-На основании изложенного, руководствуясь
-<span class="placeholder">[статьи закона]</span>,
-
-ПРОШУ:
-1. <span class="placeholder">[Требование 1]</span>
-2. <span class="placeholder">[Требование 2]</span>
-
-Приложение:
-1. <span class="placeholder">[Список документов]</span>
-
-Дата: <span class="placeholder">[ДД.ММ.ГГГГ]</span>
-Подпись: ____________</code></pre>
-  <div class="doc-footer">
-    <span class="doc-note">⚠️ Образец носит информационный характер. Рекомендуем проконсультироваться со специалистом.</span>
+<div class="doc-download-block">
+  <div class="download-card docx-card">
+    <div class="card-header-info">
+      <div class="card-icon-container">
+        <svg class="file-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+          <polyline points="14 2 14 8 20 8" />
+        </svg>
+      </div>
+      <div class="card-meta">
+        <span class="card-title">Исковое заявление о разводе</span>
+        <span class="card-desc">Формат DOCX · редактируемый шаблон</span>
+      </div>
+    </div>
+    <a href="isk-razvod.docx" class="card-action-btn" title="Скачать в формате DOCX" download>
+      <svg class="button-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+        <polyline points="7 10 12 15 17 10" />
+        <line x1="12" y1="15" x2="12" y2="3" />
+      </svg>
+      Скачать DOCX
+    </a>
   </div>
 </div>
 ```
@@ -388,17 +431,24 @@ CSS: surface bg, border, radius 10px. Список без маркеров, ка
 CSS:
 ```css
 .doc-template { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; margin: 20px 0; overflow: hidden; }
-.doc-header { display: flex; align-items: center; gap: 10px; padding: 14px 18px; border-bottom: 1px solid var(--border); }
+.doc-header { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 18px; border-bottom: 1px solid var(--border); }
 .doc-header h3 { margin: 0; font-size: 16px; }
 .doc-badge { font-size: 11px; font-weight: 700; text-transform: uppercase; background: var(--accent); color: #fff; padding: 2px 8px; border-radius: 4px; }
-.doc-body { margin: 0; padding: 18px; background: #fff; font-size: 14px; line-height: 1.8; overflow-x: auto; white-space: pre-wrap; font-family: "Courier New", monospace; }
+.doc-body { margin: 0; padding: 18px; background: #fff; font-size: 14px; line-height: 1.8; overflow-x: auto; }
+.doc-meta-header { margin-bottom: 18px; }
+.doc-title-main { text-align: center; font-weight: 700; text-transform: uppercase; margin: 18px 0; }
+.doc-content-text p { margin: 0 0 10px; }
+.doc-title-request { margin: 16px 0 8px; font-weight: 700; }
+.doc-signature { display: flex; justify-content: space-between; gap: 16px; margin-top: 24px; }
 .doc-body .placeholder { background: #fef3c7; padding: 1px 4px; border-radius: 3px; font-style: italic; }
 .doc-footer { padding: 10px 18px; border-top: 1px solid var(--border); font-size: 13px; color: var(--muted); }
+.doc-download-block { display: grid; grid-template-columns: 1fr; gap: 12px; margin: 18px 0; }
+.download-card { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 18px; border: 1px solid var(--border); border-radius: 10px; }
 ```
 
 **Правила:**
 - Все поля для заполнения — в `<span class="placeholder">[Описание]</span>`
-- Оформление образца не менять произвольно: использовать `.doc-template`, `.doc-header`, `.doc-body`, `.doc-footer` как в UI kit `Gemini/article-ui-kit.html`
+- Оформление образца не менять произвольно: использовать `.doc-template`, `.doc-header`, `.doc-body`, `.doc-footer`, `.doc-download-block`, `.download-card`, `.card-action-btn` и иконки скачивания как в UI kit `Gemini/article-ui-kit.html`
 - В заголовке образца обязательно указать тип документа (`Образец искового заявления`, `Образец жалобы`) и бейдж `Образец` или `Шаблон`
 - Тело образца должно выглядеть как документ: адресат, заявитель, название документа, фактическая часть, просьба/требования, приложения, дата, подпись
 - Все пользовательские данные и переменные поля оставлять только как плейсхолдеры в квадратных скобках: `[Ваше Ф.И.О.]`, `[Дата]`, `[Наименование суда]`; не выдумывать имена, адреса, номера дел, телефоны
@@ -591,7 +641,7 @@ document.querySelectorAll('.animate-in').forEach(el => observer.observe(el));
 | 8. Description | `<meta name="description">` |
 | 8. Первый экран | summary-card + choice-cards (если есть развилка) |
 | 9. H2 контент-план | `<section>` + `<h2>` |
-| 9. Формат блока | table / ol.steps / timeline / callout / checklist / document-template / court-practice / risk-table |
+| 9. Формат блока | table / ol.steps / timeline / callout / checklist / doc-template / court-practice / risk-table |
 | 9. FAQ | `<details>` + FAQPage schema |
 | 10. Sticky nav | `.toc` |
 | 10. Сценарные развилки | `.choice-cards` |

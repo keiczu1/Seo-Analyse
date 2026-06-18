@@ -191,7 +191,7 @@ Evidence mode: knowledge_draft | title_snippet_only | parsed_html
 Что написать: <конкретика для копирайтера>
 Обязательные факты: <из секции 5>
 Покрываемые запросы: core | supporting
-Формат блока: текст | таблица | список | callout | timeline | чек-лист | document-template | court-practice | risk-table
+Формат блока: текст | таблица | список | callout | timeline | чек-лист | doc-template | court-practice | risk-table
 Не писать: <чего избегать>
 ```
 
@@ -240,8 +240,8 @@ Evidence mode: knowledge_draft | title_snippet_only | parsed_html
 | Образец документа | `.doc-template` + `.doc-download-block` |
 | FAQ | `.faq-item` |
 | Правовая база | `.law-base` |
-| Автор / проверка / дисклеймер | `.author-box` / `.reviewer-box` / `.disclaimer` |
-| Перелинковка | `.related-articles` |
+| Автор / проверка / дисклеймер | `.auth-v9-author-card` / `.auth-v9-reviewer-card` / `.disclaimer` |
+| Перелинковка | `.relink-block` / `.relink-card` |
 
 ---
 
