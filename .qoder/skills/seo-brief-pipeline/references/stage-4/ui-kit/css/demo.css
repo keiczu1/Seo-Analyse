@@ -1,11 +1,11 @@
-/* Demo-only styles for stage-4-04-ui-kit-article.html.
-   Production article components live in stage-4-05-ui-kit-style.css. */
+/* Demo-only styles for article.html.
+   Production article components live in css/article.css. */
 
 .kit-main {
   padding-bottom: 48px;
 }
 
-.header-nav-row--flush {
+.kit-header-nav-row-flush {
   border: none;
   width: 100%;
 }

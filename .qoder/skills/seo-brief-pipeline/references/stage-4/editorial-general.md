@@ -1,6 +1,6 @@
 # Редакторский стандарт: общий контент + SEO-pipeline
 
-Объединённый документ для **не-YMYL** и **слабо-YMYL** ниш (how-to, обзоры, инструкции, сравнения). Для юридической ниши используй `stage-4-02-editorial-legal.md`. Для медицинской/финансовой — `stage-4-03-editorial-general.md` + YMYL-правила из `stage-4-02-editorial-legal.md`.
+Объединённый документ для **не-YMYL** и **слабо-YMYL** ниш (how-to, обзоры, инструкции, сравнения). Для юридической ниши используй `references/stage-4/editorial-legal.md`. Для медицинской/финансовой — `references/stage-4/editorial-general.md` + YMYL-правила из `references/stage-4/editorial-legal.md`.
 
 ## Содержание
 

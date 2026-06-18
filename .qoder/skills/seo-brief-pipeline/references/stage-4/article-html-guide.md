@@ -50,10 +50,10 @@
 
 ## Канонический UI kit
 
-Источник правды для оформления HTML-статей — проектный `Gemini/article-ui-kit.html`. Если проектного UI kit нет, используй bundled-копию skill как эталон: `references/stage-4-04-ui-kit-article.html`, `references/stage-4-05-ui-kit-style.css`, `references/stage-4-06-ui-kit-demo.css` и `references/stage-4-07-ui-kit-interactions.js`. Demo CSS/JS нужны только для reference-страницы UI kit; в production-статью переносить production-компоненты и проектные слои, а не `.kit-*`. Все новые статьи должны использовать семантику, классы, порядок блоков и визуальные паттерны выбранного UI kit.
+Источник правды для оформления HTML-статей — проектный `Gemini/article-ui-kit.html`. Если проектного UI kit нет, используй bundled-копию skill как эталон: `references/stage-4/ui-kit/article.html`, `references/stage-4/ui-kit/css/article.css`, `references/stage-4/ui-kit/css/demo.css` и `references/stage-4/ui-kit/js/interactions.js`. Demo CSS/JS нужны только для reference-страницы UI kit; в production-статью переносить production-компоненты и проектные слои, а не `.kit-*`. Все новые статьи должны использовать семантику, классы, порядок блоков и визуальные паттерны выбранного UI kit.
 
 Правила:
-- Перед сборкой HTML открыть проектный `Gemini/article-ui-kit.html`; если его нет — `references/stage-4-04-ui-kit-article.html`; сверить нужные компоненты
+- Перед сборкой HTML открыть проектный `Gemini/article-ui-kit.html`; если его нет — `references/stage-4/ui-kit/article.html`; сверить нужные компоненты
 - Не создавать одноразовые классы, если в UI kit уже есть подходящий блок
 - Если нужен новый повторяемый паттерн, сначала добавить его в UI kit и только потом использовать в статье
 - Не переносить в публичную статью служебные элементы UI kit: `.kit-*`, демо-подписи, таблицы правил, пояснения для разработчика
@@ -63,10 +63,10 @@
 
 Соблюдай разделение слоев:
 
-- `stage-4-04-ui-kit-article.html` — только HTML-структура, контент демо и JSON-LD. Не добавлять inline CSS/JS и `style=""` для повторяемых UI-компонентов.
-- `stage-4-05-ui-kit-style.css` — production-компоненты статьи: layout, typography, cards, callouts, tables, documents, FAQ, trust, relink.
-- `stage-4-06-ui-kit-demo.css` — только демо-слой UI kit: `.kit-*`, preview grids, поясняющие панели. Эти классы не переносить в публичную статью.
-- `stage-4-07-ui-kit-interactions.js` — поведение демо-страницы: checklist, active TOC, mobile header, dropdowns.
+- `article.html` — только HTML-структура, контент демо и JSON-LD. Не добавлять inline CSS/JS и `style=""` для повторяемых UI-компонентов.
+- `css/article.css` — production-компоненты статьи: layout, typography, cards, callouts, tables, documents, FAQ, trust, relink.
+- `css/demo.css` — только демо-слой UI kit: `.kit-*`, preview grids, поясняющие панели. Эти классы не переносить в публичную статью.
+- `js/interactions.js` — поведение демо-страницы: checklist, active TOC, mobile header, dropdowns.
 
 Для production-статьи повторяемый CSS и JS выноси во внешние файлы проекта или подключай существующие слои. `style=""` на повторяемых блоках запрещен. Inline допускается только для `application/ld+json` schema и минимальных одноразовых данных, которые не являются стилями или поведением.
 
@@ -530,7 +530,7 @@ CSS: стандартные table-стили + цветная вероятнос
 .animate-in.visible { opacity: 1; transform: translateY(0); }
 ```
 
-JS (подключается перед `</body>`):
+JS добавляй только во внешний файл поведения проекта, например `article-interactions.js`, или в существующий JS-слой статьи:
 ```js
 const observer = new IntersectionObserver(entries => {
   entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
@@ -676,7 +676,7 @@ document.querySelectorAll('.animate-in').forEach(el => observer.observe(el));
 
 ```
 - [ ] Title/H1/Description из брифа (секция 8)
-- [ ] Использованы компоненты из проектного `Gemini/article-ui-kit.html` или bundled `references/stage-4-04-ui-kit-article.html`; новые одноразовые блоки не подменяют UI kit
+- [ ] Использованы компоненты из проектного `Gemini/article-ui-kit.html` или bundled `references/stage-4/ui-kit/article.html`; новые одноразовые блоки не подменяют UI kit
 - [ ] В публичную статью не попали `.kit-*`, демо-пояснения и служебные блоки UI kit
 - [ ] HTML, CSS и JS разделены по слоям; нет inline CSS/JS и `style=""` для повторяемых компонентов
 - [ ] Schema.org: Article + типовой schema
