@@ -65,9 +65,9 @@
 
 - `article.html` — только HTML-структура, контент демо и JSON-LD. Не добавлять inline CSS/JS и `style=""` для повторяемых UI-компонентов.
 - `css/article.css` — только entrypoint с `@import` модулей. Не добавлять сюда компонентные правила.
-- `css/base/` — design tokens, reset, базовые стили.
+- `css/base/` — design tokens, reset и глобальная типографика (`h1-h3`, базовые `p`, `a`, `ul/ol/li`).
 - `css/layout/` — сетка статьи, responsive layout и layout-only media queries.
-- `css/components/` — reusable-компоненты статьи: cards, callouts, tables, documents, FAQ, trust, relink.
+- `css/components/` — reusable-компоненты статьи: cards, callouts, tables, documents, FAQ, trust, relink, article links.
 - `css/page-shell/` — шапка и футер reference-страницы, чтобы page shell не смешивался с article components.
 - `css/demo.css` — только демо-слой UI kit: `.kit-*`, preview grids, поясняющие панели. Эти классы не переносить в публичную статью.
 - `js/interactions.js` — поведение демо-страницы: checklist, active TOC, mobile header, dropdowns.

@@ -299,7 +299,7 @@ npm.cmd run analyze:query -- --id <queryId> --query "<query>" --locale ru-RU
 6. **Evidence mode всегда виден.** `knowledge_draft` ≠ `parsed_html`.
 7. **SEO-триплеты с типами.** Без типизации — это просто список фактов.
 8. **UI kit обязателен для HTML.** Все статьи используют проектный `Gemini/article-ui-kit.html` или bundled `references/stage-4/ui-kit/article.html` как эталон оформления; нельзя выпускать одноразовую разметку, которая расходится с UI kit.
-9. **Модульность обязательна.** Для UI kit и новых статей не смешивай HTML, CSS и JS в одном файле. Повторяемые стили и поведение выноси в отдельные файлы или существующие проектные слои. В bundled UI kit `css/article.css` держи только как импортирующий entrypoint; компонентные стили храни в `css/components/`, сетки в `css/layout/`, токены и reset в `css/base/`, шапку/футер в `css/page-shell/`.
+9. **Модульность обязательна.** Для UI kit и новых статей не смешивай HTML, CSS и JS в одном файле. Повторяемые стили и поведение выноси в отдельные файлы или существующие проектные слои. В bundled UI kit `css/article.css` держи только как импортирующий entrypoint; компонентные стили храни в `css/components/`, сетки в `css/layout/`, токены, reset и типографику в `css/base/`, шапку/футер в `css/page-shell/`.
 
 ---
 
@@ -362,7 +362,7 @@ Pipeline:
 - `references/stage-4/editorial-general.md` — Stage 4: редакторские правила для общей ниши
 - `references/stage-4/ui-kit/article.html` — Stage 4: bundled UI kit HTML-структура для проектов без локального `Gemini/article-ui-kit.html`
 - `references/stage-4/ui-kit/css/article.css` — Stage 4: CSS entrypoint с `@import` модулей
-- `references/stage-4/ui-kit/css/base/` — Stage 4: design tokens и reset
+- `references/stage-4/ui-kit/css/base/` — Stage 4: design tokens, reset и глобальная типографика
 - `references/stage-4/ui-kit/css/layout/` — Stage 4: сетки и responsive layout
 - `references/stage-4/ui-kit/css/components/` — Stage 4: компоненты статьи
 - `references/stage-4/ui-kit/css/page-shell/` — Stage 4: шапка и футер reference-страницы
