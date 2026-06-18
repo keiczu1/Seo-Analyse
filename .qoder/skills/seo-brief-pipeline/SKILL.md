@@ -1,6 +1,6 @@
 ---
 name: seo-brief-pipeline
-description: Universal SEO page brief pipeline. Takes any search query, runs rule-based analysis (Stage 1), LLM synthesis (Stage 2), fact-checking (Stage 3), and generates a production-ready HTML article (Stage 4). Works with or without the Node.js CLI kit.
+description: Create and update SEO briefs and production HTML articles from search queries, especially Russian legal and YMYL articles. Use when Codex needs SEO analysis, бриф/ТЗ, fact-check, редакторские правила, semantic article markup, UI kit/Юкид/оформление статьи, or conversion of an existing article into the approved UI-kit article structure.
 ---
 
 # SEO Brief Pipeline
@@ -65,7 +65,7 @@ description: Universal SEO page brief pipeline. Takes any search query, runs rul
 
 ## Stage 1: Rule-Based Analysis
 
-Рабочий чек-лист этапа — `references/stage-1-01-rule-analysis.md`.
+Источник правды для этапа — `references/stage-1-01-rule-analysis.md`. Блок ниже — короткий обзор; при расхождении следуй reference-файлу.
 
 ### Если доступен `analysis-engine.mjs`
 
@@ -159,7 +159,7 @@ npm.cmd run analyze:query -- --id <queryId> --query "<query>" --locale ru-RU
 
 ## Stage 3: Fact-Check + Score
 
-Рабочий чек-лист fact-check и score — `references/stage-3-01-fact-check-score.md`.
+Источник правды для fact-check, score и gate — `references/stage-3-01-fact-check-score.md`. Блок ниже — короткий обзор; при расхождении следуй reference-файлу.
 
 > **GATE: переход к Stage 4 запрещён, пока Stage 3 не пройден.**
 > После завершения Stage 3 выведи явный блок:

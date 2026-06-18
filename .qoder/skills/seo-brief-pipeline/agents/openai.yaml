@@ -1,4 +1,4 @@
 interface:
   display_name: "SEO Brief Pipeline"
-  short_description: "SEO briefs and UI-kit HTML articles"
-  default_prompt: "Use $seo-brief-pipeline to create a fact-checked SEO brief and UI-kit HTML article."
+  short_description: "SEO briefs, fact-check, and UI-kit HTML articles"
+  default_prompt: "Use $seo-brief-pipeline to create or review a fact-checked SEO brief and UI-kit HTML article."

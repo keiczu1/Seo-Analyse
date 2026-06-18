@@ -1398,6 +1398,16 @@ td:first-child {
   box-shadow: 0 4px 12px rgba(220, 38, 38, 0.15);
 }
 
+.doc-download-block .card-action-btn.is-disabled,
+.doc-header .card-action-btn.is-disabled {
+  background: #eef2f7;
+  color: #64748b;
+  border-color: #cbd5e1;
+  box-shadow: none;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
 .doc-download-block .file-icon {
   width: 20px;
   height: 20px;
@@ -1464,6 +1474,15 @@ td:first-child {
   height: 60px;
   border-radius: 16px;
   object-fit: cover;
+}
+
+.auth-v9-img-placeholder {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #e0f2fe, #e2e8f0);
+  color: #0f172a;
+  font-weight: 700;
 }
 
 .auth-v9-badge {

@@ -2,6 +2,17 @@
 
 Правила генерации HTML-статьи из брифа (Stage 4 pipeline).
 
+## Содержание
+
+- Базовая структура HTML
+- Канонический UI kit и карта компонентов
+- Метаданные статьи и CSS-система
+- Обязательные компоненты статьи
+- Образец документа, судебная практика и таблицы рисков
+- Анимации и Schema.org
+- Правила ссылок, YMYL-дополнения, маппинг бриф -> HTML
+- Чек-лист HTML
+
 ---
 
 ## Базовая структура
@@ -376,7 +387,8 @@ CSS: surface bg, border, radius 10px. Список без маркеров, ка
       <h3>Образец искового заявления</h3>
       <span class="doc-badge">Шаблон</span>
     </div>
-    <a href="isk-razvod.docx" class="card-action-btn docx-btn" title="Скачать в формате DOCX" download>
+    <!-- Render only after the DOCX file is actually generated. Replace href with the real generated file path. -->
+    <a href="documents/generated-document.docx" class="card-action-btn docx-btn" title="Скачать в формате DOCX" download>
       <svg class="button-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
         <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
         <polyline points="7 10 12 15 17 10" />
@@ -422,7 +434,8 @@ CSS: surface bg, border, radius 10px. Список без маркеров, ка
         <span class="card-desc">Формат DOCX · редактируемый шаблон</span>
       </div>
     </div>
-    <a href="isk-razvod.docx" class="card-action-btn" title="Скачать в формате DOCX" download>
+    <!-- Render only after the DOCX file is actually generated. Replace href with the real generated file path. -->
+    <a href="documents/generated-document.docx" class="card-action-btn" title="Скачать в формате DOCX" download>
       <svg class="button-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
         <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
         <polyline points="7 10 12 15 17 10" />
@@ -462,6 +475,7 @@ CSS:
 - Для каждого образца обязательно сгенерировать и подключить один реальный файл для скачивания. По умолчанию использовать `.docx`, потому что пользователь должен легко отредактировать шаблон
 - `.pdf` использовать только вместо `.docx`, если тема требует печатную/нередактируемую форму. Не показывать DOCX и PDF одновременно без отдельной причины в брифе
 - Отсутствующий файл для скачивания — это незавершенная генерация, а не допустимое состояние UI. Не оставлять disabled-кнопки и не ставить `href="#"`
+- Исключение: bundled UI kit может показывать disabled-кнопку как демонстрацию состояния. В production-статье active download link разрешен только после генерации реального DOCX/PDF
 - Текстовый образец на странице и скачиваемый файл должны совпадать по смыслу; нельзя давать на странице один документ, а в файле другой
 - Для YMYL: добавить «Рекомендуем проконсультироваться с юристом/специалистом»
 
