@@ -221,6 +221,528 @@
       animation: classic-swing-right 4s ease-in-out infinite;
       transform-origin: 80px 30px;
     }
+
+    /* SWITCHER STYLES */
+    .intro-switcher-btn {
+      background: rgba(14, 42, 71, 0.05);
+      border: 1px solid rgba(14, 42, 71, 0.1);
+      color: var(--heading-text);
+      padding: 10px 20px;
+      border-radius: 12px;
+      font-size: 13.5px;
+      cursor: pointer;
+      font-family: var(--font-body);
+      font-weight: 600;
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .intro-switcher-btn:hover {
+      background: rgba(14, 42, 71, 0.08);
+      transform: translateY(-1px);
+    }
+    
+    .intro-switcher-btn.active {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #ffffff;
+      box-shadow: 0 4px 12px rgba(53, 83, 128, 0.15);
+    }
+
+    /* INTRO DEMO LAYOUTS */
+    .intro-demo-section {
+      padding: 20px 0;
+      animation: fadeIn 0.4s ease forwards;
+    }
+
+    /* Option 1: Conversational Q&A Grid */
+    .intro-dialogue-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-bottom: 30px;
+    }
+    
+    @media (max-width: 900px) {
+      .intro-dialogue-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+    }
+    
+    .intro-dialogue-card {
+      background: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(53, 83, 128, 0.1);
+      border-radius: 20px;
+      padding: 28px 24px;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 4px 15px rgba(14, 42, 71, 0.01);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .intro-dialogue-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: var(--accent);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    
+    .intro-dialogue-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(53, 83, 128, 0.25);
+      background: #ffffff;
+      box-shadow: 0 12px 30px rgba(14, 42, 71, 0.06);
+    }
+    
+    .intro-dialogue-card:hover::before {
+      opacity: 1;
+    }
+    
+    .dialogue-q {
+      font-family: var(--font-heading);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--heading-text);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .dialogue-q-icon {
+      color: var(--accent);
+      flex-shrink: 0;
+      transition: transform 0.3s ease;
+    }
+    
+    .intro-dialogue-card:hover .dialogue-q-icon {
+      transform: scale(1.1) rotate(-5deg);
+    }
+    
+    .dialogue-a {
+      margin: 0;
+      font-size: 14.5px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* Option 2: Step-by-Step Timeline Flow */
+    .intro-timeline-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      position: relative;
+      margin-bottom: 30px;
+    }
+    
+    @media (max-width: 900px) {
+      .intro-timeline-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+    }
+    
+    @media (min-width: 901px) {
+      .intro-timeline-grid::before {
+        content: "";
+        position: absolute;
+        top: 48px;
+        left: 10%;
+        right: 10%;
+        height: 2px;
+        background: linear-gradient(to right, rgba(53,83,128,0.05), var(--border) 20%, var(--border) 80%, rgba(53,83,128,0.05));
+        z-index: 1;
+      }
+    }
+    
+    .intro-timeline-card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 30px 24px;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.005);
+    }
+    
+    .intro-timeline-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent);
+      box-shadow: 0 12px 28px rgba(14, 42, 71, 0.05);
+    }
+    
+    .intro-timeline-step-badge {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--surface);
+      border: 2px solid var(--border);
+      color: var(--muted);
+      font-family: var(--font-heading);
+      font-weight: 800;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 18px;
+      z-index: 3;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+    
+    .intro-timeline-card:hover .intro-timeline-step-badge {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #ffffff;
+      transform: scale(1.1);
+      box-shadow: 0 0 0 5px rgba(53, 83, 128, 0.1);
+    }
+    
+    .intro-timeline-card h3 {
+      font-family: var(--font-heading);
+      color: var(--heading-text);
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      margin-top: 0;
+    }
+    
+    .intro-timeline-card p {
+      margin: 0;
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    /* Option 3: Split Scenarios Layout */
+    .intro-split-container {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 40px;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+    
+    @media (max-width: 900px) {
+      .intro-split-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+    }
+    
+    .intro-split-left h3 {
+      font-family: var(--font-heading);
+      color: var(--heading-text);
+      font-size: 28px;
+      font-weight: 800;
+      line-height: 1.3;
+      margin-bottom: 16px;
+      margin-top: 0;
+    }
+    
+    .intro-split-left p {
+      color: var(--muted);
+      font-size: 15.5px;
+      line-height: 1.65;
+      margin-bottom: 24px;
+    }
+    
+    .intro-split-right-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    
+    .intro-scenario-card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px 24px;
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 4px 12px rgba(14, 42, 71, 0.01);
+      cursor: pointer;
+    }
+    
+    .intro-scenario-card:hover {
+      transform: translateX(8px);
+      border-color: var(--accent);
+      box-shadow: 0 8px 24px rgba(14, 42, 71, 0.04);
+    }
+    
+    .intro-scenario-icon-box {
+      width: 46px;
+      height: 46px;
+      border-radius: 12px;
+      background: rgba(53, 83, 128, 0.05);
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: all 0.25s ease;
+    }
+    
+    .intro-scenario-card:hover .intro-scenario-icon-box {
+      background: var(--accent);
+      color: #ffffff;
+      transform: scale(1.05) rotate(3deg);
+    }
+    
+    .intro-scenario-info h4 {
+      font-family: var(--font-heading);
+      color: var(--heading-text);
+      font-size: 16.5px;
+      font-weight: 700;
+      margin-bottom: 6px;
+      margin-top: 0;
+    }
+    
+    .intro-scenario-info p {
+      margin: 0;
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    /* Option 4: Unified Trust Card & Dialer Status */
+    .intro-trust-box {
+      background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(248,250,252,0.9) 100%);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 36px;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 36px;
+      box-shadow: 0 8px 30px rgba(14, 42, 71, 0.01);
+      align-items: center;
+      margin-bottom: 30px;
+    }
+    
+    @media (max-width: 900px) {
+      .intro-trust-box {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 24px;
+      }
+    }
+    
+    .intro-trust-left h3 {
+      font-family: var(--font-heading);
+      color: var(--heading-text);
+      font-size: 24px;
+      font-weight: 800;
+      line-height: 1.35;
+      margin-bottom: 14px;
+      margin-top: 0;
+    }
+    
+    .intro-trust-left p {
+      font-size: 15px;
+      color: var(--muted);
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+    
+    .intro-trust-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    
+    .intro-trust-item {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+    
+    .intro-trust-icon-box {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: rgba(16, 185, 129, 0.1);
+      color: #10b981;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    
+    .intro-trust-text h4 {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--heading-text);
+      margin-bottom: 4px;
+      margin-top: 0;
+    }
+    
+    .intro-trust-text p {
+      font-size: 13.5px;
+      color: var(--muted);
+      margin: 0;
+      line-height: 1.45;
+    }
+    
+    .intro-live-widget {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 28px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 15px rgba(14, 42, 71, 0.02);
+      position: relative;
+    }
+    
+    .intro-live-pulse-dot {
+      width: 8px;
+      height: 8px;
+      background: #10b981;
+      border-radius: 50%;
+      display: inline-block;
+      margin-right: 6px;
+      position: relative;
+    }
+    
+    .intro-live-pulse-dot::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #10b981;
+      border-radius: 50%;
+      animation: live-pulse-ring 1.8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    
+    @keyframes live-pulse-ring {
+      0% { transform: scale(1); opacity: 0.8; }
+      100% { transform: scale(2.8); opacity: 0; }
+    }
+    
+    .intro-live-label {
+      font-size: 11.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--muted);
+      letter-spacing: 0.8px;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .intro-live-number {
+      font-family: var(--font-heading);
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--brand-accent);
+      text-decoration: none;
+      transition: all 0.25s ease;
+      display: block;
+      margin-bottom: 10px;
+    }
+    
+    .intro-live-number:hover {
+      color: var(--brand-accent-hover);
+      transform: scale(1.02);
+    }
+    
+    .intro-live-sub {
+      font-size: 12.5px;
+      color: var(--muted);
+      line-height: 1.45;
+      margin: 0;
+    }
+
+    /* Option 5: Premium Obsidian Theme (Noble Slate) */
+    .intro-dark-container {
+      background: linear-gradient(135deg, #0E2A47 0%, #0a1b2e 100%);
+      border-radius: 24px;
+      padding: 40px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: #cbd5e1;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 30px;
+      box-shadow: 0 12px 36px rgba(10, 27, 46, 0.3);
+    }
+    
+    .intro-dark-container::after {
+      content: "";
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(56, 189, 248, 0.05) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    
+    .intro-dark-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 32px;
+    }
+    
+    @media (max-width: 900px) {
+      .intro-dark-grid-3 {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+    }
+    
+    .intro-dark-step-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 16px;
+      padding: 26px 22px;
+      position: relative;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .intro-dark-step-card:hover {
+      transform: translateY(-4px);
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(56, 189, 248, 0.25);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+    
+    .intro-dark-step-card h3 {
+      font-family: var(--font-heading);
+      color: #ffffff;
+      font-size: 17.5px;
+      font-weight: 700;
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+    
+    .intro-dark-step-card p {
+      margin: 0;
+      font-size: 13.5px;
+      color: #94a3b8;
+      line-height: 1.55;
+    }
+  </style>
   </style>
 </head>
 <body>
@@ -325,6 +847,28 @@
           </div>
         </div>
       </section>
+
+      <!-- Intro Section Showcase -->
+      <div style="margin-top: 60px; border-top: 1px solid var(--border); padding-top: 40px; margin-bottom: 20px;">
+        <div style="text-align: center; margin-bottom: 30px;">
+          <h3 style="font-family: var(--font-heading); color: var(--heading-text); font-size: 22px; font-weight: 800; margin-bottom: 10px;">Выбор стиля вводного блока (Intro Block)</h3>
+          <p style="color: var(--muted); font-size: 14.5px; max-width: 650px; margin: 0 auto 20px; line-height: 1.6;">
+            Переключайте варианты ниже для просмотра различных структур, макетов и улучшенных ("человеческих") текстов для вводной секции:
+          </p>
+          
+          <div class="intro-switcher-panel" style="display: flex; justify-content: center; gap: 8px; flex-wrap: wrap;">
+            <button class="intro-switcher-btn active" onclick="switchIntro(1)">1. Стеклянный грид</button>
+            <button class="intro-switcher-btn" onclick="switchIntro(2)">2. Сплит-строки</button>
+            <button class="intro-switcher-btn" onclick="switchIntro(3)">3. Пошаговый процесс</button>
+            <button class="intro-switcher-btn" onclick="switchIntro(4)">4. Единая карточка</button>
+            <button class="intro-switcher-btn" onclick="switchIntro(5)">5. Темный премиум</button>
+          </div>
+        </div>
+        
+        <!-- Target container for intro block layout swap -->
+        <div id="introBlockContainer"></div>
+      </div>
+
     </div>
     
   </div>
@@ -475,6 +1019,302 @@
       container.classList.remove('fade-out');
     }, 150);
   }
+
+  // 5 вариантов вводного блока с очеловеченным текстом и разными макетами
+  const introsData = {
+    1: `<div class="intro-demo-section">
+          <h2 style="font-family: var(--font-heading); color: var(--heading-text); font-size: 28px; font-weight: 800; text-align: center; margin-bottom: 12px; border-top: none; padding-top: 0; margin-top: 0;">
+            Быстрая помощь квалифицированного юриста без лишних затрат
+          </h2>
+          <p style="color: var(--muted); font-size: 16px; text-align: center; max-width: 800px; margin: 0 auto 36px; line-height: 1.65;">
+            Консультация по телефону бесплатной горячей линии — это самый простой способ получить правовую помощь жителям Москвы, крупных городов и всех регионов РФ. Вам не нужно тратить время на поездки в офисы или оплачивать услуги юристов. Достаточно позвонить, и дежурный специалист подскажет верное решение.
+          </p>
+          
+          <div class="intro-dialogue-grid">
+            <div class="intro-dialogue-card">
+              <div class="dialogue-q">
+                <svg class="dialogue-q-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <span>Оценка ситуации</span>
+              </div>
+              <p class="dialogue-a">Если вы столкнулись с правовым спором, юрист поможет разобраться, на чьей стороне закон, и простыми словами объяснит ваши реальные права.</p>
+            </div>
+            
+            <div class="intro-dialogue-card">
+              <div class="dialogue-q">
+                <svg class="dialogue-q-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                <span>Экономия времени</span>
+              </div>
+              <p class="dialogue-a">Не тратьте время на чтение форумов и бумажную бюрократию. Вы получите понятный и быстрый практический совет прямо во время звонка.</p>
+            </div>
+            
+            <div class="intro-dialogue-card">
+              <div class="dialogue-q">
+                <svg class="dialogue-q-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+                <span>Безопасный старт</span>
+              </div>
+              <p class="dialogue-a">Вы сможете трезво оценить свои реальные шансы на успех в суде до того, как начнете нанимать адвокатов и нести расходы.</p>
+            </div>
+          </div>
+          
+          <div class="urgent-box">
+            <div class="urgent-icon-wrapper">
+              <div class="urgent-icon-pulse"></div>
+              <div class="urgent-icon">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0zM12 9v4M12 17h.01"></path>
+                </svg>
+              </div>
+            </div>
+            <div class="urgent-content">
+              <h4>Нужна срочная помощь в неотложной ситуации?</h4>
+              <p>К нам часто обращаются с экстренными вопросами: незаконное увольнение, конфликты с соседями, споры о правах потребителей и другие проблемы. Первичная консультация поможет быстро сориентироваться, защитить свои интересы и наметить первые шаги.</p>
+            </div>
+          </div>
+        </div>`,
+    2: `<div class="intro-demo-section">
+          <div class="intro-split-container">
+            <div class="intro-split-left">
+              <h3>Быстрая помощь юриста без лишних затрат</h3>
+              <p>
+                Бесплатная юридическая консультация по телефону горячей линии — это удобный способ оперативно получить помощь квалифицированного юриста жителям Москвы, крупных городов и всех регионов РФ. Вам не придется выходить из дома или оплачивать услуги. Юрист подскажет правильный алгоритм действий всего за пару минут общения.
+              </p>
+              <div class="hero-phone-cta" style="margin-top: 20px; display: inline-flex; align-items: center; width: auto; background: var(--bg); border: 1px solid var(--border);">
+                <div class="cta-icon" style="background: var(--accent); color: #fff; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  </svg>
+                </div>
+                <div class="cta-info" style="margin-left: 12px; text-align: left; display: flex; flex-direction: column;">
+                  <span class="cta-label" style="font-size: 10px; text-transform: uppercase; color: var(--muted); font-weight: 700; letter-spacing: 0.5px; line-height: 1.2;">Бесплатный звонок по РФ</span>
+                  <a href="tel:+78005512406" class="cta-number" style="font-size: 18px; font-weight: 800; color: var(--brand-accent); text-decoration: none; line-height: 1.2;">8 (800) 551-24-06</a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="intro-split-right-grid">
+              <div class="intro-scenario-card">
+                <div class="intro-scenario-icon-box">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  </svg>
+                </div>
+                <div class="intro-scenario-info">
+                  <h4>Оценка правовой ситуации</h4>
+                  <p>Поможем вовремя разобраться в правовой проблеме, трезво оценить обстоятельства и понять свои законные права.</p>
+                </div>
+              </div>
+              
+              <div class="intro-scenario-card">
+                <div class="intro-scenario-icon-box">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                </div>
+                <div class="intro-scenario-info">
+                  <h4>Экономия сил и времени</h4>
+                  <p>Вы получаете оперативный, понятный совет специалиста без лишних формальностей, бумажной волокиты и поездок.</p>
+                </div>
+              </div>
+              
+              <div class="intro-scenario-card">
+                <div class="intro-scenario-icon-box">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  </svg>
+                </div>
+                <div class="intro-scenario-info">
+                  <h4>Безопасный старт дела</h4>
+                  <p>Узнайте реальные шансы на успешное разрешение судебного или досудебного спора до начала платного сопровождения.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>`,
+    3: `<div class="intro-demo-section">
+          <h2 style="font-family: var(--font-heading); color: var(--heading-text); font-size: 28px; font-weight: 800; text-align: center; margin-bottom: 12px; border-top: none; padding-top: 0; margin-top: 0;">
+            Как работает бесплатная юридическая поддержка
+          </h2>
+          <p style="color: var(--muted); font-size: 16px; text-align: center; max-width: 800px; margin: 0 auto 36px; line-height: 1.65;">
+            Вы получаете полноценную юридическую консультацию без затрат, очередей и поездок. Наш формат помощи состоит из трех простых шагов:
+          </p>
+          
+          <div class="intro-timeline-grid">
+            <div class="intro-timeline-card">
+              <div class="intro-timeline-step-badge">1</div>
+              <h3>Разбор вашей ситуации</h3>
+              <p>Вы звоните на горячую линию и описываете правовую проблему. Юрист вникает в детали и определяет ваши права по закону.</p>
+            </div>
+            
+            <div class="intro-timeline-card">
+              <div class="intro-timeline-step-badge">2</div>
+              <h3>Экономия вашего времени</h3>
+              <p>Вам не нужно изучать кодексы или собирать бланки. Вы сразу получаете готовый профессиональный совет от практикующего юриста.</p>
+            </div>
+            
+            <div class="intro-timeline-card">
+              <div class="intro-timeline-step-badge">3</div>
+              <h3>Оценка шансов на успех</h3>
+              <p>Перед тем как принимать решения или нанимать адвокатов, вы узнаете объективные перспективы вашего дела.</p>
+            </div>
+          </div>
+          
+          <div class="urgent-box info-theme">
+            <div class="urgent-icon-wrapper">
+              <div class="urgent-icon-pulse"></div>
+              <div class="urgent-icon">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="12" y1="16" x2="12" y2="12"></line>
+                  <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                </svg>
+              </div>
+            </div>
+            <div class="urgent-content">
+              <h4>Экстренные юридические вопросы</h4>
+              <p>Если у вас произошла неотложная ситуация (незаконное увольнение, конфликт с соседями, ущемление прав потребителя) — не теряйте время. Позвоните, и наш специалист поможет быстро наметить план защиты.</p>
+            </div>
+          </div>
+        </div>`,
+    4: `<div class="intro-demo-section">
+          <div class="intro-trust-box">
+            <div class="intro-trust-left">
+              <h3>Быстрая правовая помощь без затрат и рисков</h3>
+              <p>
+                Горячая линия бесплатной юридической поддержки создана для того, чтобы жители Москвы и любых других регионов РФ могли оперативно защитить свои интересы. Вы получите экспертный совет по телефону без поездок в офисы и без скрытых условий.
+              </p>
+              
+              <div class="intro-trust-list">
+                <div class="intro-trust-item">
+                  <div class="intro-trust-icon-box">
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                  </div>
+                  <div class="intro-trust-text">
+                    <h4>Честная оценка правовой ситуации</h4>
+                    <p>Юрист выслушает вас, проанализирует обстоятельства спора и разъяснит ваши права.</p>
+                  </div>
+                </div>
+                <div class="intro-trust-item">
+                  <div class="intro-trust-icon-box">
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                  </div>
+                  <div class="intro-trust-text">
+                    <h4>Существенная экономия времени</h4>
+                    <p>Быстрый разбор проблемы по телефону без бумажной бюрократии за 5–10 минут.</p>
+                  </div>
+                </div>
+                <div class="intro-trust-item">
+                  <div class="intro-trust-icon-box">
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                  </div>
+                  <div class="intro-trust-text">
+                    <h4>Безопасная оценка шансов дела</h4>
+                    <p>Определим перспективы судебного дела до того, как вы начнете тратить средства.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="intro-live-widget">
+              <div class="intro-live-label" style="display: flex; align-items: center; justify-content: center; margin-bottom: 8px;">
+                <span class="intro-live-pulse-dot"></span>
+                <span style="font-size: 11.5px; font-weight: 700; text-transform: uppercase; color: var(--muted); letter-spacing: 0.5px;">Дежурные юристы на линии</span>
+              </div>
+              <a href="tel:+78005512406" class="intro-live-number" style="display: block; font-family: var(--font-heading); font-size: 24px; font-weight: 800; color: var(--brand-accent); text-decoration: none; margin-bottom: 10px;">8 (800) 551-24-06</a>
+              <p class="intro-live-sub" style="font-size: 12.5px; color: var(--muted); margin: 0; line-height: 1.45;">
+                Звонок бесплатный по всей РФ. Юрист ответит на ваш вопрос в течение 2-3 минут. Линия работает круглосуточно.
+              </p>
+            </div>
+          </div>
+        </div>`,
+    5: `<div class="intro-demo-section">
+          <div class="intro-dark-container">
+            <h2 style="font-family: var(--font-heading); color: #ffffff; font-size: 28px; font-weight: 800; text-align: center; margin-bottom: 12px; border-top: none; padding-top: 0; margin-top: 0;">
+              Быстрая помощь квалифицированного юриста без затрат
+            </h2>
+            <p style="color: #94a3b8; font-size: 16px; text-align: center; max-width: 800px; margin: 0 auto 36px; line-height: 1.65;">
+              Бесплатная телефонная консультация — это надежный и быстрый способ разобраться в законах для жителей Москвы, крупных городов и всех регионов РФ. Наберите номер горячей линии, чтобы квалифицированный специалист оперативно подсказал правильное решение.
+            </p>
+            
+            <div class="intro-dark-grid-3">
+              <div class="intro-dark-step-card">
+                <h3>01 / Анализ правовой ситуации</h3>
+                <p>Юрист детально разберет факты вашего спора, сопоставит их с законами РФ и укажет на ваши реальные права.</p>
+              </div>
+              
+              <div class="intro-dark-step-card">
+                <h3>02 / Экономия времени и сил</h3>
+                <p>Никакой бумажной рутины и поездок в офис. Получите четкие устные рекомендации и план действий за один звонок.</p>
+              </div>
+              
+              <div class="intro-dark-step-card">
+                <h3>03 / Безопасная оценка судебных перспектив</h3>
+                <p>Честный прогноз вероятности успеха в суде до того, как вы начнете оплачивать услуги сторонних адвокатов.</p>
+              </div>
+            </div>
+            
+            <div class="urgent-box" style="margin-top: 32px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.08); border-left: 4px solid var(--accent); display: flex; gap: 16px; padding: 20px; border-radius: 12px;">
+              <div class="urgent-icon-wrapper" style="flex-shrink: 0;">
+                <div class="urgent-icon" style="background: rgba(255, 255, 255, 0.1); color: #ffffff; width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0zM12 9v4M12 17h.01"></path>
+                  </svg>
+                </div>
+              </div>
+              <div class="urgent-content" style="text-align: left;">
+                <h4 style="color: #ffffff; font-family: var(--font-heading); font-size: 16px; font-weight: 700; margin-bottom: 6px; margin-top: 0;">Экстренный разбор в неотложных ситуациях</h4>
+                <p style="color: #94a3b8; font-size: 13.5px; line-height: 1.5; margin: 0;">Увольнения, споры при ДТП, конфликты с соседями или претензии к продавцам — квалифицированная консультация поможет быстро разобраться в случившемся и защитить свои интересы.</p>
+              </div>
+            </div>
+          </div>
+        </div>`
+  };
+
+  function switchIntro(introId) {
+    const container = document.getElementById('introBlockContainer');
+    if (!container) return;
+    
+    // Switch button active class
+    const buttons = document.querySelectorAll('.intro-switcher-btn');
+    buttons.forEach((btn, index) => {
+      if (index === (introId - 1)) {
+        btn.classList.add('active');
+      } else {
+        btn.classList.remove('active');
+      }
+    });
+    
+    // Fade transition
+    container.style.opacity = 0;
+    container.style.transform = 'translateY(8px)';
+    container.style.transition = 'opacity 0.2s ease, transform 0.2s ease';
+    
+    setTimeout(() => {
+      container.innerHTML = introsData[introId];
+      container.style.opacity = 1;
+      container.style.transform = 'translateY(0)';
+    }, 200);
+  }
+
+  // Set default options on load
+  document.addEventListener('DOMContentLoaded', () => {
+    switchIntro(1);
+  });
 </script>
 </body>
 </html>
