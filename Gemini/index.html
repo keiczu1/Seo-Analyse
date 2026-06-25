@@ -806,13 +806,14 @@
     }
   });
 
-  // ── Auto-highlight steps sequentially ──
+  // ── Auto-highlight steps sequentially (once-off) ──
   const initStepsHighlight = () => {
     const steps = document.querySelectorAll('.hp-step-item');
     if (steps.length === 0) return;
     
     let currentIndex = 0;
     let intervalId = null;
+    let hasCompletedCycle = false;
     
     const highlightStep = (index) => {
       steps.forEach((step, idx) => {
@@ -826,10 +827,17 @@
     };
     
     const startCycle = () => {
+      if (hasCompletedCycle) return;
       if (intervalId) clearInterval(intervalId);
+      
       intervalId = setInterval(() => {
-        const nextIndex = (currentIndex + 1) % steps.length;
-        highlightStep(nextIndex);
+        const nextIndex = currentIndex + 1;
+        if (nextIndex < steps.length) {
+          highlightStep(nextIndex);
+        } else {
+          clearInterval(intervalId);
+          hasCompletedCycle = true;
+        }
       }, 1000); // Shifting every 1 second
     };
     
@@ -840,7 +848,9 @@
       });
       
       step.addEventListener('mouseleave', () => {
-        startCycle();
+        if (!hasCompletedCycle) {
+          startCycle();
+        }
       });
     });
     
