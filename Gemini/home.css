@@ -2637,3 +2637,151 @@ body.hp-body {
     padding: 10px 16px;
   }
 }
+
+/* ─── Steps Section (Block 04) ─── */
+.hp-steps-section {
+  padding: 80px 0;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+}
+
+.hp-steps-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.hp-steps-title {
+  text-align: center;
+  font-family: var(--font-heading);
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--heading-text);
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+
+/* Timeline/Grid Container */
+.hp-steps-timeline {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  position: relative;
+}
+
+/* Connecting line on desktop */
+@media (min-width: 769px) {
+  .hp-steps-timeline::before {
+    content: '';
+    position: absolute;
+    top: 22px; /* aligns in the center of the step markers */
+    left: 40px;
+    right: 40px;
+    height: 2px;
+    background: repeating-linear-gradient(90deg, var(--border), var(--border) 4px, transparent 4px, transparent 8px);
+    z-index: 1;
+  }
+}
+
+.hp-step-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  z-index: 2;
+}
+
+.hp-step-marker {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-size: 16px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(14, 42, 71, 0.05);
+  transition: all 0.3s ease;
+}
+
+.hp-step-item:hover .hp-step-marker {
+  border-color: var(--brand-accent);
+  color: var(--brand-accent);
+  transform: scale(1.08);
+  box-shadow: 0 6px 14px rgba(204, 63, 92, 0.15);
+}
+
+.hp-step-content h3 {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--heading-text);
+  margin: 0 0 10px 0;
+  border: none;
+  padding: 0;
+}
+
+.hp-step-content p {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Staggered entrance animation delays */
+.hp-step-item.hp-reveal:nth-child(1) { transition-delay: 0s; }
+.hp-step-item.hp-reveal:nth-child(2) { transition-delay: 0.15s; }
+.hp-step-item.hp-reveal:nth-child(3) { transition-delay: 0.3s; }
+.hp-step-item.hp-reveal:nth-child(4) { transition-delay: 0.45s; }
+
+/* Mobile styles: vertical timeline with guide line */
+@media (max-width: 768px) {
+  .hp-steps-section {
+    padding: 60px 0;
+  }
+  
+  .hp-steps-title {
+    font-size: 26px;
+    margin-bottom: 36px;
+  }
+  
+  .hp-steps-timeline {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding-left: 36px;
+  }
+  
+  /* Vertical guide line */
+  .hp-steps-timeline::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    left: 17px;
+    width: 2px;
+    background: var(--brand-accent); /* Contrasting guiding line */
+    z-index: 1;
+  }
+  
+  .hp-step-item {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  
+  .hp-step-marker {
+    position: absolute;
+    left: -36px;
+    margin-bottom: 0;
+    width: 36px;
+    height: 36px;
+    font-size: 14px;
+    border-color: var(--brand-accent);
+    color: var(--brand-accent);
+  }
+}
