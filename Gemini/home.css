@@ -2135,22 +2135,33 @@ body.hp-body {
   font-weight: 600;
   color: var(--muted);
   text-decoration: none;
-  border-bottom: 1.5px dashed rgba(71, 85, 105, 0.4);
-  padding-bottom: 2px;
   transition: all 0.2s ease;
   cursor: pointer;
   background: none;
   border: none;
+  padding: 0;
+}
+
+.hp-channels-prep-link-btn span {
+  border-bottom: 1.5px dashed rgba(71, 85, 105, 0.4);
+  padding-bottom: 1px;
+  transition: border-color 0.2s ease;
 }
 
 .hp-channels-prep-link-btn:hover {
   color: var(--brand-accent);
+}
+
+.hp-channels-prep-link-btn:hover span {
   border-bottom-color: transparent;
 }
 
 .hp-channels-prep-icon {
   color: var(--brand-accent);
   flex-shrink: 0;
+  transform-origin: bottom center;
+  transition: color 0.2s ease, transform 0.2s ease;
+  animation: hp-swing-paper-auto 1s ease-in-out infinite;
 }
 
 .hp-channels-prep-arrow {
@@ -2161,6 +2172,14 @@ body.hp-body {
 .hp-channels-prep-link-btn:hover .hp-channels-prep-arrow {
   color: var(--brand-accent);
   transform: translateX(3px);
+}
+
+@keyframes hp-swing-paper-auto {
+  0%, 100% { transform: rotate(0deg); }
+  20% { transform: rotate(-8deg); }
+  40% { transform: rotate(6deg); }
+  60% { transform: rotate(-4deg); }
+  80% { transform: rotate(2deg); }
 }
 
 /* Badge/Kicker */
