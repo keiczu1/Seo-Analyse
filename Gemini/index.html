@@ -7,7 +7,7 @@
   <meta name="description" content="Получите бесплатную юридическую консультацию онлайн или по телефону 8 800 551-24-06. Первичный разбор ситуации, варианты действий и понятный следующий шаг — по всем направлениям права.">
 
   <link rel="stylesheet" href="style.css?v=15">
-  <link rel="stylesheet" href="home.css?v=8">
+  <link rel="stylesheet" href="home.css?v=9">
 
   <script type="application/ld+json">
   {
@@ -805,6 +805,49 @@
       });
     }
   });
+
+  // ── Auto-highlight steps sequentially ──
+  const initStepsHighlight = () => {
+    const steps = document.querySelectorAll('.hp-step-item');
+    if (steps.length === 0) return;
+    
+    let currentIndex = 0;
+    let intervalId = null;
+    
+    const highlightStep = (index) => {
+      steps.forEach((step, idx) => {
+        if (idx === index) {
+          step.classList.add('active');
+        } else {
+          step.classList.remove('active');
+        }
+      });
+      currentIndex = index;
+    };
+    
+    const startCycle = () => {
+      if (intervalId) clearInterval(intervalId);
+      intervalId = setInterval(() => {
+        const nextIndex = (currentIndex + 1) % steps.length;
+        highlightStep(nextIndex);
+      }, 1000); // Shifting every 1 second
+    };
+    
+    steps.forEach((step, idx) => {
+      step.addEventListener('mouseenter', () => {
+        clearInterval(intervalId);
+        highlightStep(idx);
+      });
+      
+      step.addEventListener('mouseleave', () => {
+        startCycle();
+      });
+    });
+    
+    highlightStep(0);
+    startCycle();
+  };
+  initStepsHighlight();
 
   // ── Intersection Observer: entrance animations ──
   const animElements = document.querySelectorAll('.hp-animate, .hp-reveal');

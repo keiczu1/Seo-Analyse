@@ -2709,11 +2709,18 @@ body.hp-body {
   transition: all 0.3s ease;
 }
 
-.hp-step-item:hover .hp-step-marker {
+.hp-step-item:hover .hp-step-marker,
+.hp-step-item.active .hp-step-marker {
   border-color: var(--brand-accent);
   color: var(--brand-accent);
   transform: scale(1.08);
   box-shadow: 0 6px 14px rgba(204, 63, 92, 0.15);
+}
+
+.hp-step-item:hover h3,
+.hp-step-item.active h3 {
+  color: var(--brand-accent);
+  transition: color 0.3s ease;
 }
 
 .hp-step-content h3 {
