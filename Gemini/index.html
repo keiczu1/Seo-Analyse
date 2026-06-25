@@ -6,8 +6,8 @@
   <title>Бесплатная юридическая консультация онлайн и по телефону — по всей России</title>
   <meta name="description" content="Получите бесплатную юридическую консультацию онлайн или по телефону 8 800 551-24-06. Первичный разбор ситуации, варианты действий и понятный следующий шаг — по всем направлениям права.">
 
-  <link rel="stylesheet" href="style.css?v=15">
-  <link rel="stylesheet" href="home.css?v=17">
+  <link rel="stylesheet" href="style.css?v=16">
+  <link rel="stylesheet" href="home.css?v=53">
 
   <script type="application/ld+json">
   {
@@ -28,7 +28,7 @@
         "name": "Действительно ли консультация бесплатная?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Да. Первичный разбор ситуации, общие ориентиры в законодательстве и объяснение следующего шага предоставляются бесплатно. Платные услуги (подготовка документов, представительство) обсуждаются отдельно и начинаются только после вашего согласия."
+          "text": "Да. Первичный разбор ситуации, общие ориентиры в законодательстве и объяснение следующего шага предоставляются бесплатно. Платные услуги (подготовка документов, судебное представительство) обсуждаются отдельно и начинаются только после вашего согласия."
         }
       },
       {
@@ -45,6 +45,38 @@
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "По телефону — ответ в момент звонка. Онлайн-обращение обрабатывается в течение рабочего дня, обычно в пределах нескольких часов."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Кто именно оказывает консультацию?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Консультации проводят квалифицированные практикующие юристы и адвокаты партнерской сети с подтвержденным опытом работы от 3 лет."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "В каких регионах оказывается помощь?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Консультации оказываются по всей территории Российской Федерации. В нашей партнерской сети работают специалисты из различных регионов, что позволяет учитывать местную специфику."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Обязан ли я заказывать платные услуги после консультации?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Нет. Получение первичной консультации не накладывает на вас никаких финансовых или договорных обязательств. Вы можете использовать рекомендации для самостоятельных действий."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Поможете ли вы составить иск или претензию бесплатно?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "В рамках бесплатной консультации юрист объясняет алгоритм действий и указывает перечень необходимых документов. Непосредственное составление искового заявления или жалобы является платной услугой."
         }
       }
     ]
@@ -96,7 +128,7 @@
         <div class="header-contacts">
           <div class="phone-row">
             <span class="phone-label">Бесплатная консультация юриста:</span>
-            <a href="tel:+78005512406" class="phone-number">
+            <a href="tel:+78005512406" class="phone-number" aria-label="Позвонить бесплатно">
               <span class="phone-icon-container">
                 <svg class="phone-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
                   stroke-linecap="round" stroke-linejoin="round">
@@ -244,6 +276,23 @@
     <div class="hp-hero-text">
       <div class="hp-hero-kicker">Юридическая помощь по всей России</div>
 
+      <div class="hp-hero-live-badges">
+        <!-- Badge 1: Online -->
+        <div class="hp-hero-live-badge badge-online">
+          <span class="hp-pulse-dot"></span>
+          <span class="hp-hero-live-text">Сейчас в сети: <strong id="live-specialists-count">8</strong> <span id="live-specialists-text">юристов</span> онлайн</span>
+        </div>
+
+        <!-- Badge 2: Response Time -->
+        <div class="hp-hero-live-badge badge-time">
+          <svg class="hp-time-icon pulsing" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 16 14"></polyline>
+          </svg>
+          <span class="hp-hero-live-text">Среднее время ответа: <strong id="live-response-time">12</strong> <span id="live-time-text">минут</span></span>
+        </div>
+      </div>
+
       <h1>Бесплатная юридическая консультация онлайн и&nbsp;по&nbsp;телефону</h1>
 
       <p class="hp-hero-subtitle">Получите первичный разбор ситуации, возможные варианты действий и&nbsp;понятный следующий шаг</p>
@@ -255,10 +304,8 @@
           </svg>
           <span>Бесплатно</span>
         </div>
-        <p>Первичная консультация предоставляется бесплатно. Подготовка документов и&nbsp;представительство в&nbsp;суде обсуждаются отдельно.</p>
+        <p>Разберем вашу проблему, укажем на&nbsp;нужные статьи законов и&nbsp;составим схему действий. Разработка документов и&nbsp;представительство в&nbsp;суде&nbsp;— это отдельные платные услуги. Узнайте <a href="#responsibility-section" class="hp-hero-boundary-link">подробнее о том, что входит в бесплатную консультацию</a> или посмотрите примеры в разделе <a href="#consults-section" class="hp-hero-boundary-link">последние вопросы и ответы</a>.</p>
       </div>
-
-      <div class="hp-hero-meta">Информация и&nbsp;специалисты работают по&nbsp;законодательству&nbsp;РФ. Условия сервиса проверены: июнь&nbsp;2026</div>
     </div>
 
     <!-- Right column: Two CTA cards -->
@@ -392,29 +439,9 @@
 <section class="hp-trust-section" id="trust-section">
   <div class="hp-trust-inner">
     
-    <!-- Dynamic Metrics Pill Bar -->
-    <div class="hp-trust-metrics-bar">
-      <span class="hp-pulse-dot green"></span>
-      <span class="hp-trust-metrics-text">
-        Сейчас в сети: <strong id="live-specialists-count">12</strong> специалистов онлайн &nbsp;•&nbsp; 
-        Среднее время ответа: <strong id="live-response-time">8</strong> минут
-      </span>
-    </div>
-
-    <!-- 4 Trust Points Grid -->
+    <!-- 3 Trust Points Grid -->
     <div class="hp-trust-grid">
-      <!-- Item 1: По всей России -->
-      <div class="hp-trust-card">
-        <div class="hp-trust-icon-wrapper">
-          <svg class="hp-trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path>
-            <circle cx="12" cy="10" r="3"></circle>
-          </svg>
-        </div>
-        <span class="hp-trust-text">По всей России</span>
-      </div>
-
-      <!-- Item 2: Проверенные специалисты -->
+      <!-- Item 1: Проверенные специалисты -->
       <div class="hp-trust-card">
         <div class="hp-trust-icon-wrapper">
           <svg class="hp-trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -425,7 +452,7 @@
         <span class="hp-trust-text">Проверенные специалисты</span>
       </div>
 
-      <!-- Item 3: Конфиденциальная обработка обращения -->
+      <!-- Item 2: Конфиденциальная обработка обращения -->
       <div class="hp-trust-card">
         <div class="hp-trust-icon-wrapper">
           <svg class="hp-trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -436,7 +463,7 @@
         <span class="hp-trust-text">Конфиденциальная обработка обращения</span>
       </div>
 
-      <!-- Item 4: Платные услуги только по отдельному согласованию -->
+      <!-- Item 3: Платные услуги только по отдельному согласованию -->
       <div class="hp-trust-card">
         <div class="hp-trust-icon-wrapper">
           <svg class="hp-trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -554,6 +581,12 @@
               <span>Ответы на уточняющие вопросы в рамках первого обращения</span>
             </li>
           </ul>
+          <div class="hp-card-link-wrapper">
+            <svg class="hp-card-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14">
+              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+            </svg>
+            <a href="#consults-section" class="hp-card-inner-link">Примеры разобранных вопросов</a>
+          </div>
         </div>
       </div>
 
@@ -621,8 +654,1115 @@
   </div>
 </section>
 
+<!-- ═══════════════════════════════════════════
+     БЛОК 06: НАПРАВЛЕНИЯ ПРАВА
+     ═══════════════════════════════════════════ -->
+<section class="hp-categories-section" id="categories-section">
+  <div class="hp-categories-inner hp">
+    <div class="hp-section-header hp-reveal">
+      <span class="hp-section-kicker">Направления практики</span>
+      <h2 class="hp-categories-title">По какому вопросу нужна помощь</h2>
+      <p class="hp-section-subtitle">Выберите сферу права, чтобы направить вопрос профильному юристу и получить бесплатный разбор ситуации</p>
+    </div>
 
+    <div class="hp-categories-grid">
+      <!-- Card 1: Семейное право -->
+      <a href="zadat-vopros.html" class="hp-category-card hp-reveal" data-category="family">
+        <div class="hp-category-card-header">
+          <div class="hp-category-icon-wrapper">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+          </div>
+          <h3>Семейное право</h3>
+        </div>
+        <ul class="hp-category-questions">
+          <li>Развод и раздел имущества супругов</li>
+          <li>Взыскание и изменение алиментов</li>
+          <li>Определение места жительства детей</li>
+          <li>Установление и оспаривание отцовства</li>
+          <li>Лишение родительских прав</li>
+          <li>Составление брачного договора</li>
+        </ul>
+        <div class="hp-category-card-action">
+          <span>Задать вопрос</span>
+          <svg class="hp-category-action-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </div>
+      </a>
 
+      <!-- Card 2: Жилищные вопросы -->
+      <a href="zadat-vopros.html" class="hp-category-card hp-reveal" data-category="housing">
+        <div class="hp-category-card-header">
+          <div class="hp-category-icon-wrapper">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+              <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+          </div>
+          <h3>Жилищные вопросы</h3>
+        </div>
+        <ul class="hp-category-questions">
+          <li>Выселение и снятие с учета</li>
+          <li>Споры с управляющей компанией и ЖКХ</li>
+          <li>Затопление квартиры и возмещение ущерба</li>
+          <li>Разделение лицевых счетов за ЖКУ</li>
+          <li>Согласование и легализация перепланировок</li>
+          <li>Приватизация квартир и комнат</li>
+        </ul>
+        <div class="hp-category-card-action">
+          <span>Задать вопрос</span>
+          <svg class="hp-category-action-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </div>
+      </a>
+
+      <!-- Card 3: Трудовое право -->
+      <a href="zadat-vopros.html" class="hp-category-card hp-reveal" data-category="labor">
+        <div class="hp-category-card-header">
+          <div class="hp-category-icon-wrapper">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+              <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+            </svg>
+          </div>
+          <h3>Трудовое право</h3>
+        </div>
+        <ul class="hp-category-questions">
+          <li>Незаконное увольнение и сокращение</li>
+          <li>Взыскание долгов по заработной плате</li>
+          <li>Оспаривание дисциплинарных взысканий</li>
+          <li>Изменение условий трудового договора</li>
+          <li>Компенсации при травмах на производстве</li>
+          <li>Споры о материальной ответственности</li>
+        </ul>
+        <div class="hp-category-card-action">
+          <span>Задать вопрос</span>
+          <svg class="hp-category-action-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </div>
+      </a>
+
+      <!-- Card 4: Кредиты и долги -->
+      <a href="zadat-vopros.html" class="hp-category-card hp-reveal" data-category="debt">
+        <div class="hp-category-card-header">
+          <div class="hp-category-icon-wrapper">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+              <line x1="1" y1="10" x2="23" y2="10"></line>
+            </svg>
+          </div>
+          <h3>Кредиты и долги</h3>
+        </div>
+        <ul class="hp-category-questions">
+          <li>Банкротство граждан и списание долгов</li>
+          <li>Взыскание долгов по договорам и распискам</li>
+          <li>Отмена судебных приказов от МФО и банков</li>
+          <li>Защита от коллекторов и приставов</li>
+          <li>Реструктуризация и снижение платежей</li>
+          <li>Списание штрафов, неустоек и пеней</li>
+        </ul>
+        <div class="hp-category-card-action">
+          <span>Задать вопрос</span>
+          <svg class="hp-category-action-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </div>
+      </a>
+
+      <!-- Card 5: Наследство -->
+      <a href="zadat-vopros.html" class="hp-category-card hp-reveal" data-category="inheritance">
+        <div class="hp-category-card-header">
+          <div class="hp-category-icon-wrapper">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 2H3v16h18V2z"></path>
+              <path d="M21 18H3c0 2.2 1.8 4 4 4h10c2.2 0 4-1.8 4-4z"></path>
+            </svg>
+          </div>
+          <h3>Наследство</h3>
+        </div>
+        <ul class="hp-category-questions">
+          <li>Оформление наследства по закону и завещанию</li>
+          <li>Восстановление сроков принятия наследства</li>
+          <li>Оспаривание завещаний в судебном порядке</li>
+          <li>Раздел наследства между родственниками</li>
+          <li>Выделение обязательной доли в наследстве</li>
+          <li>Признание наследников недостойными</li>
+        </ul>
+        <div class="hp-category-card-action">
+          <span>Задать вопрос</span>
+          <svg class="hp-category-action-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </div>
+      </a>
+
+      <!-- Card 6: Автомобильные вопросы -->
+      <a href="zadat-vopros.html" class="hp-category-card hp-reveal" data-category="auto">
+        <div class="hp-category-card-header">
+          <div class="hp-category-icon-wrapper">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1" y="3" width="15" height="13"></rect>
+              <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+              <circle cx="5.5" cy="18.5" r="2.5"></circle>
+              <circle cx="18.5" cy="18.5" r="2.5"></circle>
+            </svg>
+          </div>
+          <h3>Автомобильные вопросы</h3>
+        </div>
+        <ul class="hp-category-questions">
+          <li>Споры со страховыми компаниями (ОСАГО/КАСКО)</li>
+          <li>Обжалование незаконных штрафов ГИБДД</li>
+          <li>Защита прав при лишении водительского удостоверения</li>
+          <li>Споры при ДТП, возмещение материального ущерба</li>
+          <li>Претензии к автосалонам, автодилерам и сервисам</li>
+          <li>Разрешение конфликтов при покупке б/у авто с дефектами</li>
+        </ul>
+        <div class="hp-category-card-action">
+          <span>Задать вопрос</span>
+          <svg class="hp-category-action-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </div>
+      </a>
+
+      <!-- Card 7: Уголовное право -->
+      <a href="zadat-vopros.html" class="hp-category-card hp-reveal" data-category="criminal">
+        <div class="hp-category-card-header">
+          <div class="hp-category-icon-wrapper">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+          </div>
+          <h3>Уголовное право</h3>
+        </div>
+        <ul class="hp-category-questions">
+          <li>Защита подозреваемого и обвиняемого на следствии</li>
+          <li>Подготовка жалоб, ходатайств по уголовным делам</li>
+          <li>Представление интересов потерпевшей стороны</li>
+          <li>Помощь при досрочном освобождении (УДО)</li>
+          <li>Юридическая защита при обысках, допросах, задержаниях</li>
+          <li>Апелляционное и кассационное обжалование приговоров</li>
+        </ul>
+        <div class="hp-category-card-action">
+          <span>Задать вопрос</span>
+          <svg class="hp-category-action-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </div>
+      </a>
+
+      <!-- Card 8: Военное право -->
+      <a href="zadat-vopros.html" class="hp-category-card hp-reveal" data-category="military">
+        <div class="hp-category-card-header">
+          <div class="hp-category-icon-wrapper">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 22 7 22 17 12 22 2 17 2 7 12 2"></polygon>
+            </svg>
+          </div>
+          <h3>Военное право</h3>
+        </div>
+        <ul class="hp-category-questions">
+          <li>Отсрочка и освобождение от призыва в армию</li>
+          <li>Направление на альтернативную гражданскую службу</li>
+          <li>Начисление выплат и льгот военнослужащим</li>
+          <li>Обжалование решений и действий призывных комиссий</li>
+          <li>Порядок расторжения контракта и увольнения</li>
+          <li>Оформление статуса и льгот ветерана БД</li>
+        </ul>
+        <div class="hp-category-card-action">
+          <span>Задать вопрос</span>
+          <svg class="hp-category-action-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </div>
+      </a>
+
+      <!-- Card 9: Недвижимость и земля -->
+      <a href="zadat-vopros.html" class="hp-category-card hp-reveal" data-category="realty">
+        <div class="hp-category-card-header">
+          <div class="hp-category-icon-wrapper">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polygon points="12 2 22 7 12 12 2 7 12 2"></polygon>
+              <polyline points="2 17 12 22 22 17"></polyline>
+              <polyline points="2 12 12 17 22 12"></polyline>
+            </svg>
+          </div>
+          <h3>Недвижимость и земля</h3>
+        </div>
+        <ul class="hp-category-questions">
+          <li>Сопровождение сделок купли-продажи и дарения</li>
+          <li>Споры о границах и межевании земельных участков</li>
+          <li>Признание прав собственности на спорные объекты</li>
+          <li>Аренда жилых, нежилых и коммерческих объектов</li>
+          <li>Легализация самовольных построек и дач</li>
+          <li>Оспаривание кадастровой оценки недвижимости</li>
+        </ul>
+        <div class="hp-category-card-action">
+          <span>Задать вопрос</span>
+          <svg class="hp-category-action-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </div>
+      </a>
+
+      <!-- Card 10: Защита прав потребителей -->
+      <a href="zadat-vopros.html" class="hp-category-card hp-reveal" data-category="consumer">
+        <div class="hp-category-card-header">
+          <div class="hp-category-icon-wrapper">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <path d="M16 10a4 4 0 0 1-8 0"></path>
+            </svg>
+          </div>
+          <h3>Защита прав потребителей</h3>
+        </div>
+        <ul class="hp-category-questions">
+          <li>Возврат бракованного товара продавцу или производителю</li>
+          <li>Споры с застройщиком при просрочке сдачи по ДДУ</li>
+          <li>Ненадлежащее качество медицинских, сервисных услуг</li>
+          <li>Претензии к авиаперевозчикам и турфирмам</li>
+          <li>Возврат денежных средств за обучение и подписки</li>
+          <li>Взыскание законной неустойки, штрафов и морального вреда</li>
+        </ul>
+        <div class="hp-category-card-action">
+          <span>Задать вопрос</span>
+          <svg class="hp-category-action-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </div>
+      </a>
+
+      <!-- Card 11: Вопросы бизнеса -->
+      <a href="zadat-vopros.html" class="hp-category-card hp-reveal" data-category="business">
+        <div class="hp-category-card-header">
+          <div class="hp-category-icon-wrapper">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+              <polyline points="17 6 23 6 23 12"></polyline>
+            </svg>
+          </div>
+          <h3>Вопросы бизнеса</h3>
+        </div>
+        <ul class="hp-category-questions">
+          <li>Регистрация и официальное закрытие ООО / ИП</li>
+          <li>Составление, проверка коммерческих договоров</li>
+          <li>Арбитражные споры, защита интересов в суде</li>
+          <li>Налоговое консультирование и проверки ФНС</li>
+          <li>Защита брендов, товарных знаков и патентов</li>
+          <li>Разрешение споров между учредителями и партнерами</li>
+        </ul>
+        <div class="hp-category-card-action">
+          <span>Задать вопрос</span>
+          <svg class="hp-category-action-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </div>
+      </a>
+
+      <!-- Card 12: Другая тема -->
+      <a href="zadat-vopros.html" class="hp-category-card hp-reveal" data-category="other">
+        <div class="hp-category-card-header">
+          <div class="hp-category-icon-wrapper">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+              <line x1="12" y1="17" x2="12.01" y2="17"></line>
+            </svg>
+          </div>
+          <h3>Другая тема</h3>
+        </div>
+        <ul class="hp-category-questions">
+          <li>Консультации по миграционному законодательству</li>
+          <li>Вопросы пенсионного обеспечения, выплат и льгот</li>
+          <li>Составление и правовой анализ любых документов</li>
+          <li>Представление в судах общей юрисдикции</li>
+          <li>Обжалование действий органов власти и чиновников</li>
+          <li>Любые иные нестандартные правовые ситуации</li>
+        </ul>
+        <div class="hp-category-card-action">
+          <span>Задать вопрос</span>
+          <svg class="hp-category-action-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     БЛОК 07: ЮРИСТЫ, КОТОРЫЕ ОТВЕЧАЮТ
+     ═══════════════════════════════════════════ -->
+<section class="hp-lawyers-section" id="lawyers-section">
+  <div class="hp-lawyers-inner hp">
+    <div class="hp-section-header hp-reveal">
+      <span class="hp-section-kicker">Специалисты сервиса</span>
+      <h2 class="hp-lawyers-title">Юристы и адвокаты сервиса</h2>
+      <p class="hp-section-subtitle">Специалисты проходят строгую проверку документов, подтверждение квалификации и практического опыта</p>
+    </div>
+
+    <div class="hp-lawyers-grid">
+      
+      <!-- Lawyer 1: Дмитрий Носиков -->
+      <div class="hp-lawyer-card hp-reveal">
+        <div class="hp-lawyer-card-top">
+          <div class="hp-lawyer-avatar-container">
+            <img src="dmitry-nosikov.png" alt="Дмитрий Носиков" class="hp-lawyer-avatar">
+            <span class="hp-lawyer-status-indicator status-online" title="Онлайн"></span>
+          </div>
+          <div class="hp-lawyer-header-info">
+            <div class="hp-lawyer-meta-tags">
+              <span class="hp-lawyer-status">Адвокат</span>
+              <span class="hp-lawyer-verified-tag" title="Проверен">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" width="10" height="10">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                Проверен
+              </span>
+            </div>
+            <h3 class="hp-lawyer-name">Дмитрий Носиков</h3>
+            <div class="hp-lawyer-city-row">г. Москва</div>
+          </div>
+        </div>
+        
+        <div class="hp-lawyer-rating-row">
+          <div class="hp-lawyer-stars">
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <span class="hp-lawyer-rating-val">5.0</span>
+          <span class="hp-lawyer-reviews-count">(342 отзыва)</span>
+        </div>
+        
+        <p class="hp-lawyer-desc">Специализируется на защите прав граждан в сложных уголовных делах и спорах с государственными органами.</p>
+        
+        <ul class="hp-lawyer-stats-list">
+          <li class="hp-lawyer-stat-item">
+            <span class="hp-lawyer-stat-label">Специализация:</span> Уголовное, военное право
+          </li>
+          <li class="hp-lawyer-stat-item">
+            <span class="hp-lawyer-stat-label">Стаж работы:</span> 15 лет
+          </li>
+          <li class="hp-lawyer-stat-item">
+            <span class="hp-lawyer-stat-label">Консультаций:</span> 1 420
+          </li>
+        </ul>
+        
+        <div class="hp-lawyer-actions-links">
+          <a href="https://law-divorce.org/specialists/dmitry-nosikov/" class="hp-lawyer-link-profile">
+            <span>Профиль</span>
+            <svg class="hp-lawyer-link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+          <a href="zadat-vopros.html" class="hp-lawyer-link-ask" data-category="criminal">
+            <span>Спросить его</span>
+            <svg class="hp-lawyer-link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Lawyer 2: Елена Смирнова -->
+      <div class="hp-lawyer-card hp-reveal">
+        <div class="hp-lawyer-card-top">
+          <div class="hp-lawyer-avatar-container">
+            <img src="elena-smirnova.png" alt="Елена Смирнова" class="hp-lawyer-avatar">
+            <span class="hp-lawyer-status-indicator status-online" title="Онлайн"></span>
+          </div>
+          <div class="hp-lawyer-header-info">
+            <div class="hp-lawyer-meta-tags">
+              <span class="hp-lawyer-status">Юрист</span>
+              <span class="hp-lawyer-verified-tag" title="Проверена">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" width="10" height="10">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                Проверена
+              </span>
+            </div>
+            <h3 class="hp-lawyer-name">Елена Смирнова</h3>
+            <div class="hp-lawyer-city-row">г. Санкт-Петербург</div>
+          </div>
+        </div>
+        
+        <div class="hp-lawyer-rating-row">
+          <div class="hp-lawyer-stars">
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <span class="hp-lawyer-rating-val">4.9</span>
+          <span class="hp-lawyer-reviews-count">(512 отзывов)</span>
+        </div>
+        
+        <p class="hp-lawyer-desc">Эксперт по бракоразводным процессам, разделу совместного имущества и наследственным спорам.</p>
+        
+        <ul class="hp-lawyer-stats-list">
+          <li class="hp-lawyer-stat-item">
+            <span class="hp-lawyer-stat-label">Специализация:</span> Семейное, наследственное право
+          </li>
+          <li class="hp-lawyer-stat-item">
+            <span class="hp-lawyer-stat-label">Стаж работы:</span> 12 лет
+          </li>
+          <li class="hp-lawyer-stat-item">
+            <span class="hp-lawyer-stat-label">Консультаций:</span> 2 150
+          </li>
+        </ul>
+        
+        <div class="hp-lawyer-actions-links">
+          <a href="https://law-divorce.org/specialists/elena-smirnova/" class="hp-lawyer-link-profile">
+            <span>Профиль</span>
+            <svg class="hp-lawyer-link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+          <a href="zadat-vopros.html" class="hp-lawyer-link-ask" data-category="family">
+            <span>Спросить ее</span>
+            <svg class="hp-lawyer-link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Lawyer 3: Алексей Петров -->
+      <div class="hp-lawyer-card hp-reveal">
+        <div class="hp-lawyer-card-top">
+          <div class="hp-lawyer-avatar-container">
+            <img src="aleksey-petrov.png" alt="Алексей Петров" class="hp-lawyer-avatar">
+            <span class="hp-lawyer-status-indicator status-online" title="Онлайн"></span>
+          </div>
+          <div class="hp-lawyer-header-info">
+            <div class="hp-lawyer-meta-tags">
+              <span class="hp-lawyer-status">Юрист</span>
+              <span class="hp-lawyer-verified-tag" title="Проверен">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" width="10" height="10">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                Проверен
+              </span>
+            </div>
+            <h3 class="hp-lawyer-name">Алексей Петров</h3>
+            <div class="hp-lawyer-city-row">г. Новосибирск</div>
+          </div>
+        </div>
+        
+        <div class="hp-lawyer-rating-row">
+          <div class="hp-lawyer-stars">
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <span class="hp-lawyer-rating-val">4.8</span>
+          <span class="hp-lawyer-reviews-count">(184 отзыва)</span>
+        </div>
+        
+        <p class="hp-lawyer-desc">Помогает гражданам списать долги через банкротство, отменить судебные приказы и защититься от коллекторов.</p>
+        
+        <ul class="hp-lawyer-stats-list">
+          <li class="hp-lawyer-stat-item">
+            <span class="hp-lawyer-stat-label">Специализация:</span> Банкротство, кредиты и долги
+          </li>
+          <li class="hp-lawyer-stat-item">
+            <span class="hp-lawyer-stat-label">Стаж работы:</span> 8 лет
+          </li>
+          <li class="hp-lawyer-stat-item">
+            <span class="hp-lawyer-stat-label">Консультаций:</span> 980
+          </li>
+        </ul>
+        
+        <div class="hp-lawyer-actions-links">
+          <a href="https://law-divorce.org/specialists/aleksey-petrov/" class="hp-lawyer-link-profile">
+            <span>Профиль</span>
+            <svg class="hp-lawyer-link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+          <a href="zadat-vopros.html" class="hp-lawyer-link-ask" data-category="debt">
+            <span>Спросить его</span>
+            <svg class="hp-lawyer-link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Lawyer 4: Татьяна Козлова -->
+      <div class="hp-lawyer-card hp-reveal">
+        <div class="hp-lawyer-card-top">
+          <div class="hp-lawyer-avatar-container">
+            <img src="tatiana-kozlova.png" alt="Татьяна Козлова" class="hp-lawyer-avatar">
+            <span class="hp-lawyer-status-indicator status-offline" title="Офлайн"></span>
+          </div>
+          <div class="hp-lawyer-header-info">
+            <div class="hp-lawyer-meta-tags">
+              <span class="hp-lawyer-status">Адвокат</span>
+              <span class="hp-lawyer-verified-tag" title="Проверена">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" width="10" height="10">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                Проверена
+              </span>
+            </div>
+            <h3 class="hp-lawyer-name">Татьяна Козлова</h3>
+            <div class="hp-lawyer-city-row">г. Краснодар</div>
+          </div>
+        </div>
+        
+        <div class="hp-lawyer-rating-row">
+          <div class="hp-lawyer-stars">
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <span class="hp-lawyer-rating-val">5.0</span>
+          <span class="hp-lawyer-reviews-count">(720 отзывов)</span>
+        </div>
+        
+        <p class="hp-lawyer-desc">Специалист по земельным спорам, кадастровому учету и сопровождению коммерческих сделок.</p>
+        
+        <ul class="hp-lawyer-stats-list">
+          <li class="hp-lawyer-stat-item">
+            <span class="hp-lawyer-stat-label">Специализация:</span> Недвижимость, земля, бизнес
+          </li>
+          <li class="hp-lawyer-stat-item">
+            <span class="hp-lawyer-stat-label">Стаж работы:</span> 18 лет
+          </li>
+          <li class="hp-lawyer-stat-item">
+            <span class="hp-lawyer-stat-label">Консультаций:</span> 3 400
+          </li>
+        </ul>
+        
+        <div class="hp-lawyer-actions-links">
+          <a href="https://law-divorce.org/specialists/tatiana-kozlova/" class="hp-lawyer-link-profile">
+            <span>Профиль</span>
+            <svg class="hp-lawyer-link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+          <a href="zadat-vopros.html" class="hp-lawyer-link-ask" data-category="realty">
+            <span>Спросить ее</span>
+            <svg class="hp-lawyer-link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="hp-section-more hp-reveal">
+      <a href="https://law-divorce.org/yuristy/" class="hp-more-link">
+        <span>Посмотреть всех юристов</span>
+        <svg class="hp-more-link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     БЛОК 08: ПОСЛЕДНИЕ КОНСУЛЬТАЦИИ
+     ═══════════════════════════════════════════ -->
+<section class="hp-consults-section" id="consults-section">
+  <div class="hp-consults-inner hp">
+    <div class="hp-section-header hp-reveal">
+      <span class="hp-section-kicker">База знаний и решений</span>
+      <h2 class="hp-consults-title">Последние вопросы и ответы</h2>
+      <p class="hp-section-subtitle">Реальные обезличенные обращения граждан и ответы практикующих юристов нашего сервиса</p>
+    </div>
+
+    <div class="hp-consults-grid">
+      
+      <!-- Card 1: Семейное право -->
+      <div class="hp-consult-card hp-reveal">
+        <div class="hp-consult-card-meta">
+          <span class="hp-consult-tag">Семейное право</span>
+          <span class="hp-consult-meta-item">г. Москва</span>
+          <span class="hp-consult-meta-item">24 июня 2026 г.</span>
+        </div>
+        
+        <h3 class="hp-consult-question-title">Дистанционный развод через Госуслуги при наличии детей</h3>
+        
+        <div class="hp-consult-qa-block">
+          <div class="hp-consult-q-text">
+            <strong>Вопрос:</strong> «Супруг находится за границей, согласен на развод. У нас двое детей (5 и 8 лет). Можно ли оформить развод полностью онлайн через Госуслуги без личной явки в суд?»
+          </div>
+          <div class="hp-consult-a-text">
+            <strong>Ответ юриста:</strong> «Развод при наличии несовершеннолетних детей оформляется исключительно через суд (ст. 21 СК РФ). Однако в 2026 году вы можете подать иск электронно через ГАС «Правосудие» и ходатайствовать о ВКС...»
+          </div>
+        </div>
+        
+        <div class="hp-consult-author-row">
+          <div class="hp-consult-author-info">
+            <span class="hp-consult-author-label">Ответил:</span>
+            <a href="https://law-divorce.org/specialists/elena-smirnova/" class="hp-consult-author-link">Елена Смирнова</a>
+          </div>
+          <div class="hp-consult-time-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="12" height="12">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+            <span>Ответ за 14 мин.</span>
+          </div>
+        </div>
+        
+        <div class="hp-consult-actions">
+          <a href="#" class="hp-consult-action-read">
+            <span>Читать ответ</span>
+            <svg class="hp-consult-action-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+          <a href="zadat-vopros.html" class="hp-consult-action-ask">
+            <span>Задать свой вопрос</span>
+            <svg class="hp-consult-action-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 2: Кредиты и долги -->
+      <div class="hp-consult-card hp-reveal">
+        <div class="hp-consult-card-meta">
+          <span class="hp-consult-tag">Кредиты и долги</span>
+          <span class="hp-consult-meta-item">г. Екатеринбург</span>
+          <span class="hp-consult-meta-item">22 июня 2026 г.</span>
+        </div>
+        
+        <h3 class="hp-consult-question-title">Внесудебное банкротство через МФЦ на сумму 1,2 млн рублей</h3>
+        
+        <div class="hp-consult-qa-block">
+          <div class="hp-consult-q-text">
+            <strong>Вопрос:</strong> «Сумма долгов перед банками и ЖКХ составляет 1 200 000 руб. Дохода и имущества нет, дела у приставов закрыты по п. 4 ч. 1 ст. 46. Могу ли списать эти долги бесплатно через МФЦ?»
+          </div>
+          <div class="hp-consult-a-text">
+            <strong>Ответ юриста:</strong> «Да, вы полностью подпадаете под лимиты внесудебного банкротства через МФЦ (в 2026 году лимит до 1,5 млн руб.). Обратитесь в МФЦ с заявлением и списком кредиторов, процедура займет 6 месяцев.»
+          </div>
+        </div>
+        
+        <div class="hp-consult-author-row">
+          <div class="hp-consult-author-info">
+            <span class="hp-consult-author-label">Ответил:</span>
+            <a href="https://law-divorce.org/specialists/aleksey-petrov/" class="hp-consult-author-link">Алексей Петров</a>
+          </div>
+          <div class="hp-consult-time-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="12" height="12">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+            <span>Ответ за 18 мин.</span>
+          </div>
+        </div>
+        
+        <div class="hp-consult-actions">
+          <a href="#" class="hp-consult-action-read">
+            <span>Читать ответ</span>
+            <svg class="hp-consult-action-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+          <a href="zadat-vopros.html" class="hp-consult-action-ask">
+            <span>Задать свой вопрос</span>
+            <svg class="hp-consult-action-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 3: Недвижимость и земля -->
+      <div class="hp-consult-card hp-reveal">
+        <div class="hp-consult-card-meta">
+          <span class="hp-consult-tag">Недвижимость и земля</span>
+          <span class="hp-consult-meta-item">г. Краснодар</span>
+          <span class="hp-consult-meta-item">20 июня 2026 г.</span>
+        </div>
+        
+        <h3 class="hp-consult-question-title">Налог при продаже унаследованной квартиры в 2026 году</h3>
+        
+        <div class="hp-consult-qa-block">
+          <div class="hp-consult-q-text">
+            <strong>Вопрос:</strong> «Унаследовала квартиру в 2025 году. Хочу продать её сейчас. Кадастровая стоимость 5 млн руб. Будет ли налог, если продать квартиру ниже кадастровой стоимости за 4,8 млн руб.?»
+          </div>
+          <div class="hp-consult-a-text">
+            <strong>Ответ юриста:</strong> «Налог 13% рассчитывается от большей величины: цены сделки или 70% кадастра (3,5 млн). В вашем случае налог рассчитается от 4,8 млн руб. за вычетом стандартного вычета 1 млн руб...»
+          </div>
+        </div>
+        
+        <div class="hp-consult-author-row">
+          <div class="hp-consult-author-info">
+            <span class="hp-consult-author-label">Ответил:</span>
+            <a href="https://law-divorce.org/specialists/tatiana-kozlova/" class="hp-consult-author-link">Татьяна Козлова</a>
+          </div>
+          <div class="hp-consult-time-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="12" height="12">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+            <span>Ответ за 22 мин.</span>
+          </div>
+        </div>
+        
+        <div class="hp-consult-actions">
+          <a href="#" class="hp-consult-action-read">
+            <span>Читать ответ</span>
+            <svg class="hp-consult-action-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+          <a href="zadat-vopros.html" class="hp-consult-action-ask">
+            <span>Задать свой вопрос</span>
+            <svg class="hp-consult-action-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="hp-section-more hp-reveal">
+      <a href="https://law-divorce.org/voprosy-otvety/" class="hp-more-link">
+        <span>Все вопросы и ответы</span>
+        <svg class="hp-more-link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     БЛОК 09: КАК ПРОВЕРЯЮТСЯ СПЕЦИАЛИСТЫ
+     ═══════════════════════════════════════════ -->
+<section class="hp-verify-section" id="verify-section">
+  <div class="hp-verify-inner hp">
+    <div class="hp-section-header hp-reveal">
+      <span class="hp-section-kicker">Стандарты качества</span>
+      <h2 class="hp-verify-title">Как мы проверяем юристов</h2>
+    </div>
+
+    <div class="hp-verify-container">
+      <div class="hp-verify-grid">
+        
+        <!-- Left Column: Description -->
+        <div class="hp-verify-desc-col hp-reveal">
+          <p class="hp-verify-intro-text">Наш приоритет — предоставить вам квалифицированную и надежную юридическую помощь. Каждый специалист, прежде чем начать отвечать на вопросы пользователей или консультировать по телефону, проходит строгую многоступенчатую проверку службой безопасности и качества сервиса.</p>
+          
+          <div class="hp-verify-advocate-box">
+            <div class="hp-verify-adv-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="20" height="20">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+            <div class="hp-verify-adv-text">
+              <strong>Для адвокатов:</strong> Дополнительно верифицируем действующий статус по <a href="https://minjust.gov.ru/ru/pages/advokaty-rossijskoj-federacii/" target="_blank" rel="noopener noreferrer">официальному реестру адвокатов Министерства юстиции РФ<svg class="hp-verify-external-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="12" height="12"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>.
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: 5 Stages Timeline -->
+        <div class="hp-verify-stages-col hp-reveal">
+          <div class="hp-verify-timeline">
+            
+            <!-- Stage 1 -->
+            <div class="hp-verify-stage-item">
+              <div class="hp-verify-stage-num">1</div>
+              <div class="hp-verify-stage-content">
+                <h4>Проверка личности</h4>
+                <p>Загрузка паспорта и биометрическое подтверждение личности (селфи) для полного исключения анонимных или подставных профилей.</p>
+              </div>
+            </div>
+
+            <!-- Stage 2 -->
+            <div class="hp-verify-stage-item">
+              <div class="hp-verify-stage-num">2</div>
+              <div class="hp-verify-stage-content">
+                <h4>Проверка образования</h4>
+                <p>Ручная верификация диплома о высшем юридическом образовании аккредитованных вузов и проверка ученых степеней.</p>
+              </div>
+            </div>
+
+            <!-- Stage 3 -->
+            <div class="hp-verify-stage-item">
+              <div class="hp-verify-stage-num">3</div>
+              <div class="hp-verify-stage-content">
+                <h4>Специализация и опыт</h4>
+                <p>Проверка подтвержденного трудового стажа по профильным направлениям права (семейное, уголовное, земельное и др.) от 3 лет.</p>
+              </div>
+            </div>
+
+            <!-- Stage 4 -->
+            <div class="hp-verify-stage-item">
+              <div class="hp-verify-stage-num">4</div>
+              <div class="hp-verify-stage-content">
+                <h4>Контроль первых ответов</h4>
+                <p>Обязательное модерирование и оценка правовой точности первых десяти ответов юриста нашими внутренними экспертами.</p>
+              </div>
+            </div>
+
+            <!-- Stage 5 -->
+            <div class="hp-verify-stage-item">
+              <div class="hp-verify-stage-num">5</div>
+              <div class="hp-verify-stage-content">
+                <h4>Отзывы и постоянная модерация</h4>
+                <p>Непрерывный мониторинг оценок пользователей, разбор конфликтных ситуаций службой поддержки и блокировка при нарушениях стандартов.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Links at the bottom -->
+      <div class="hp-verify-footer-links hp-reveal">
+        <a href="#" class="hp-verify-link">
+          <span>Подробнее о стандартах качества</span>
+          <svg class="hp-verify-link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+        <a href="#" class="hp-verify-link hp-verify-complaint">
+          <span>Сообщить о проблеме / Подать жалобу</span>
+          <svg class="hp-verify-link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     БЛОК 11: КАК ПОДГОТОВИТЬСЯ К КОНСУЛЬТАЦИИ
+     ═══════════════════════════════════════════ -->
+<section class="hp-section hp-reveal" id="prep-section">
+  <div class="hp-section-inner hp">
+    <div class="hp-section-header hp-reveal">
+      <span class="hp-section-kicker">Рекомендации</span>
+      <h2 class="hp-section-title">Как подготовиться к консультации</h2>
+      <p class="hp-section-subtitle">Несколько простых шагов помогут юристу точнее проанализировать вашу ситуацию и предложить эффективный план действий</p>
+    </div>
+
+    <div class="hp-prep-grid">
+      <!-- Left Column: Steps Timeline -->
+      <div class="hp-prep-steps-col hp-reveal">
+        <div class="hp-prep-checklist">
+          
+          <!-- Step 1 -->
+          <div class="hp-prep-step-item">
+            <span class="hp-prep-step-num">01</span>
+            <div class="hp-prep-step-content">
+              <h3>Сформулируйте основной вопрос</h3>
+              <p>Четко определите, какого именно юридического результата или ответа вы хотите достичь. Для примера посмотрите <a href="#consults-section" class="hp-prep-inner-link">последние вопросы и ответы</a> других пользователей.</p>
+            </div>
+          </div>
+          
+          <!-- Step 2 -->
+          <div class="hp-prep-step-item">
+            <span class="hp-prep-step-num">02</span>
+            <div class="hp-prep-step-content">
+              <h3>Подготовьте хронологию и даты</h3>
+              <p>Запишите последовательность ключевых событий, чтобы не упустить важные детали во время разговора.</p>
+            </div>
+          </div>
+          
+          <!-- Step 3 -->
+          <div class="hp-prep-step-item">
+            <span class="hp-prep-step-num">03</span>
+            <div class="hp-prep-step-content">
+              <h3>Укажите ваш регион</h3>
+              <p>В разных субъектах РФ законодательство и судебная практика могут иметь существенные различия.</p>
+            </div>
+          </div>
+          
+          <!-- Step 4 -->
+          <div class="hp-prep-step-item">
+            <span class="hp-prep-step-num">04</span>
+            <div class="hp-prep-step-content">
+              <h3>Опишите предпринятые действия</h3>
+              <p>Расскажите, направлялись ли претензии, жалобы, запросы в ведомства или судебные иски.</p>
+            </div>
+          </div>
+          
+          <!-- Step 5 -->
+          <div class="hp-prep-step-item">
+            <span class="hp-prep-step-num">05</span>
+            <div class="hp-prep-step-content">
+              <h3>Подготовьте названия документов</h3>
+              <p>Составьте список имеющихся договоров, соглашений, свидетельств или официальных отказов госорганов.</p>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+
+      <!-- Right Column: Security Card -->
+      <div class="hp-prep-warning-col hp-reveal">
+        <div class="hp-prep-warning">
+          <div class="hp-prep-warning-header">
+            <div class="hp-prep-warning-icon-wrapper">
+              <svg class="hp-prep-warning-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="22" height="22">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                <line x1="12" y1="8" x2="12" y2="12"></line>
+                <circle cx="12" cy="16" r="0.8" fill="currentColor" stroke="none"></circle>
+              </svg>
+            </div>
+            <div>
+              <span class="hp-prep-warning-kicker">Безопасность</span>
+              <h3 class="hp-prep-warning-title">Никогда не отправляйте!</h3>
+            </div>
+          </div>
+          
+          <ul class="hp-prep-warning-list">
+            <li>Паспортные данные и фото удостоверений личности</li>
+            <li>Полные реквизиты карт и банковских счетов</li>
+            <li>Пароли от сервисов и коды подтверждения из СМС</li>
+            <li>Необезличенные официальные документы третьих лиц</li>
+            <li>Персональные данные родственников без их согласия</li>
+          </ul>
+          
+          <div class="hp-prep-warning-footer">
+            <a href="#" class="hp-prep-warning-link">
+              <span>Как безопасно подготовить документы</span>
+              <svg class="hp-prep-link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     БЛОК 12: FAQ
+     ═══════════════════════════════════════════ -->
+<section class="hp-section hp-reveal" id="faq-section">
+  <div class="hp-section-inner hp">
+    <div class="hp-section-header hp-reveal">
+      <span class="hp-section-kicker">Вопросы и ответы</span>
+      <h2 class="hp-section-title">Частые вопросы о бесплатной консультации</h2>
+      <p class="hp-section-subtitle">Ответы на популярные вопросы о порядке, условиях и правилах оказания юридических услуг</p>
+    </div>
+
+    <div class="hp-faq-list hp-reveal">
+      <!-- FAQ Item 1 -->
+      <details class="faq-item" open>
+        <summary>Действительно ли консультация бесплатная?</summary>
+        <div class="faq-answer">
+          <p>Да. Первичный разбор ситуации, общие ориентиры в законодательстве и объяснение следующего шага предоставляются бесплатно. Платные услуги (подготовка документов, судебное представительство) обсуждаются отдельно и начинаются только после вашего явного согласия и заключения договора.</p>
+        </div>
+      </details>
+
+      <!-- FAQ Item 2 -->
+      <details class="faq-item">
+        <summary>Можно ли задать вопрос без указания телефона?</summary>
+        <div class="faq-answer">
+          <p>Да. При отправке письменного обращения онлайн номер телефона не является обязательным полем. Ответ будет подготовлен юристом и направлен вам в письменном виде на указанный email или через личную ссылку. Подробнее читайте в наших <a href="#" class="hp-faq-link">Правилах оказания консультаций</a>.</p>
+        </div>
+      </details>
+
+      <!-- FAQ Item 3 -->
+      <details class="faq-item">
+        <summary>Сколько ждать ответа?</summary>
+        <div class="faq-answer">
+          <p>При телефонном звонке на горячую линию консультация предоставляется в режиме реального времени. Обработка письменного вопроса через форму на сайте занимает в среднем от 15 минут до нескольких часов в течение рабочего дня. Поддержка и прием обращений осуществляются круглосуточно.</p>
+        </div>
+      </details>
+
+      <!-- FAQ Item 4 -->
+      <details class="faq-item">
+        <summary>Кто именно оказывает консультацию?</summary>
+        <div class="faq-answer">
+          <p>Консультации проводят квалифицированные практикующие юристы и адвокаты партнерской сети с опытом работы от 3 лет, прошедшие проверку квалификации. Связаться с технической службой поддержки по вопросам работы сервиса вы можете по адресу <a href="mailto:support@law-divorce.org" class="hp-faq-link">support@law-divorce.org</a>.</p>
+        </div>
+      </details>
+
+      <!-- FAQ Item 5 -->
+      <details class="faq-item">
+        <summary>В каких регионах оказывается помощь?</summary>
+        <div class="faq-answer">
+          <p>Бесплатная первичная помощь оказывается гражданам на всей территории Российской Федерации. В нашей партнерской сети работают специалисты из всех крупных регионов и часовых поясов, что позволяет оперативно обрабатывать запросы с учетом местной специфики и законодательных актов субъектов РФ.</p>
+        </div>
+      </details>
+
+      <!-- FAQ Item 6 -->
+      <details class="faq-item">
+        <summary>Обязан ли я заказывать платные услуги после консультации?</summary>
+        <div class="faq-answer">
+          <p>Нет, абсолютно не обязаны. Проведение первичной консультации не накладывает на вас никаких договорных или финансовых обязательств. Вы можете использовать рекомендации юриста для самостоятельного решения вопроса или обратиться в любую стороннюю правовую организацию.</p>
+        </div>
+      </details>
+
+      <!-- FAQ Item 7 -->
+      <details class="faq-item">
+        <summary>Поможете ли вы составить иск или претензию бесплатно?</summary>
+        <div class="faq-answer">
+          <p>В рамках бесплатной консультации юрист объясняет общий порядок действий, перечень законов и документов, необходимых для решения вашей проблемы. Непосредственная техническая подготовка процессуальных документов (жалоб, исков, договоров) является платной услугой и осуществляется по согласованию сторон. Подробнее — в нашем <a href="#" class="hp-faq-link">Пользовательском соглашении</a>.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
 
 <!-- ═══════════════════════════════════════════
      БЛОК 14: FOOTER
@@ -819,10 +1959,29 @@
   };
   updateCardBSchedule();
   
+  // Helper for Russian plurals
+  const getPluralForm = (number, one, two, five) => {
+    let n = Math.abs(number);
+    n %= 100;
+    if (n >= 5 && n <= 20) {
+      return five;
+    }
+    n %= 10;
+    if (n === 1) {
+      return one;
+    }
+    if (n >= 2 && n <= 4) {
+      return two;
+    }
+    return five;
+  };
+
   // ── Dynamic live metrics calculation ──
   const updateLiveMetrics = () => {
     const specialistsEl = document.getElementById('live-specialists-count');
     const timeEl = document.getElementById('live-response-time');
+    const specialistsTextEl = document.getElementById('live-specialists-text');
+    const timeTextEl = document.getElementById('live-time-text');
     if (!specialistsEl || !timeEl) return;
 
     const now = new Date();
@@ -850,22 +2009,22 @@
 
     specialistsEl.textContent = finalSpecialists;
     timeEl.textContent = finalTime;
+
+    if (specialistsTextEl) {
+      specialistsTextEl.textContent = getPluralForm(finalSpecialists, 'юрист', 'юриста', 'юристов');
+    }
+    if (timeTextEl) {
+      timeTextEl.textContent = getPluralForm(finalTime, 'минута', 'минуты', 'минут');
+    }
   };
   updateLiveMetrics();
   setInterval(updateLiveMetrics, 30000);
 
   // ── Card B Preparation Checklist modal toggle ──
-  const cardBPrepLink = document.getElementById('cardBPrepLink');
   const prepModal = document.getElementById('prepModal');
   const prepModalClose = document.getElementById('prepModalClose');
 
-  if (cardBPrepLink && prepModal && prepModalClose) {
-    cardBPrepLink.addEventListener('click', (e) => {
-      e.preventDefault();
-      prepModal.classList.add('open');
-      document.body.style.overflow = 'hidden';
-    });
-
+  if (prepModal && prepModalClose) {
     const closePrepModal = () => {
       prepModal.classList.remove('open');
       document.body.style.overflow = '';
@@ -905,7 +2064,7 @@
   }
 
   // ── FAQ accordion (single-open) ──
-  const faqItems = document.querySelectorAll('.hp-faq-item');
+  const faqItems = document.querySelectorAll('#faq-section .faq-item');
   faqItems.forEach(item => {
     const summary = item.querySelector('summary');
     if (summary) {
@@ -971,6 +2130,85 @@
     startCycle();
   };
   initStepsHighlight();
+
+  // ── Auto-highlight prep steps sequentially on scroll (once-off) ──
+  const initPrepStepsHighlight = () => {
+    const prepSection = document.getElementById('prep-section');
+    const steps = document.querySelectorAll('.hp-prep-step-item');
+    if (!prepSection || steps.length === 0) return;
+
+    let currentIndex = 0;
+    let intervalId = null;
+    let hasCompletedCycle = false;
+    let hasStarted = false;
+
+    const highlightStep = (index) => {
+      steps.forEach((step, idx) => {
+        if (idx === index) {
+          step.classList.add('active');
+        } else {
+          step.classList.remove('active');
+        }
+      });
+      currentIndex = index;
+    };
+
+    const startCycle = () => {
+      if (hasCompletedCycle) return;
+      if (intervalId) clearInterval(intervalId);
+
+      intervalId = setInterval(() => {
+        const nextIndex = currentIndex + 1;
+        if (nextIndex < steps.length) {
+          highlightStep(nextIndex);
+        } else {
+          clearInterval(intervalId);
+          steps.forEach(step => step.classList.remove('active'));
+          hasCompletedCycle = true;
+        }
+      }, 1000); // Shifting every 1 second
+    };
+
+    const startHighlighting = () => {
+      if (hasStarted) return;
+      hasStarted = true;
+      highlightStep(0);
+      startCycle();
+    };
+
+    // Trigger on scroll via Intersection Observer
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            startHighlighting();
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+      observer.observe(prepSection);
+    } else {
+      startHighlighting();
+    }
+
+    // Add hover overrides
+    steps.forEach((step, idx) => {
+      step.addEventListener('mouseenter', () => {
+        clearInterval(intervalId);
+        steps.forEach(s => s.classList.remove('active'));
+        step.classList.add('active');
+        currentIndex = idx;
+      });
+
+      step.addEventListener('mouseleave', () => {
+        step.classList.remove('active');
+        if (!hasCompletedCycle && hasStarted) {
+          startCycle();
+        }
+      });
+    });
+  };
+  initPrepStepsHighlight();
 
   // ── Intersection Observer: entrance animations ──
   const animElements = document.querySelectorAll('.hp-animate, .hp-reveal');
@@ -1247,6 +2485,16 @@
       startDialogue();
     }
   })();
+
+  // Handle Category/Lawyer Card Clicks
+  document.querySelectorAll('.hp-category-card, .hp-lawyer-link-ask').forEach(el => {
+    el.addEventListener('click', () => {
+      const category = el.getAttribute('data-category');
+      if (category) {
+        sessionStorage.setItem('pendingQuestionCat', category);
+      }
+    });
+  });
 
 })();
 </script>

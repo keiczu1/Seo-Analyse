@@ -2513,51 +2513,58 @@ td:first-child {
 @media (max-width: 1024px) {
   .header-top-row {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-columns: auto 1fr auto;
     align-items: center;
-    gap: 12px;
+    gap: 16px;
     min-height: 62px;
     padding: 10px 0;
   }
   
   .header-logo {
-    display: none;
+    display: flex;
+    grid-column: 1;
+    grid-row: 1;
   }
   
   .header-top-right {
-    grid-column: 2;
+    grid-column: 3;
     grid-row: 1;
+    display: flex;
     justify-content: flex-end;
   }
   
   .header-contacts {
-    grid-column: 1;
+    grid-column: 2;
     grid-row: 1;
     width: auto;
     margin-top: 0;
     display: flex !important;
     align-items: center;
-    justify-content: center;
-    text-align: center;
+    justify-content: flex-end;
+    text-align: right;
   }
   
   .header-contacts .phone-row {
-    flex-direction: column;
-    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
     align-items: center;
-    gap: 2px;
+    gap: 8px;
   }
 
   .header-contacts .phone-label {
-    font-size: 10px;
+    font-size: 11px;
     line-height: 1.2;
     letter-spacing: 0.35px;
+    color: var(--muted);
   }
 
   .header-contacts .phone-number {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.15;
-    justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
   }
 
   .header-contacts .timing-badge {
@@ -2566,15 +2573,57 @@ td:first-child {
 
   .header-contacts .phone-icon-container {
     display: inline-flex;
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
     margin-right: 6px;
+    align-items: center;
+    justify-content: center;
   }
 
   .header-contacts .phone-icon-svg {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .header-contacts .phone-label {
+    display: none !important;
+  }
+  
+  .header-contacts .phone-number span:not(.phone-icon-container) {
+    display: none !important;
+  }
+  
+  .header-contacts .phone-number {
+    padding: 0;
+    width: 36px;
+    height: 36px;
+    background: rgba(14, 42, 71, 0.04);
+    border: 1px solid rgba(14, 42, 71, 0.1);
+    border-radius: 50%;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+  }
+  
+  .header-contacts .phone-number:hover {
+    background: rgba(14, 42, 71, 0.08);
+  }
+  
+  .header-contacts .phone-icon-container {
+    margin-right: 0 !important;
+  }
+  
+  .header-contacts .phone-icon-svg {
     width: 15px;
     height: 15px;
+    color: #0E2A47;
   }
+}
+
+@media (max-width: 1024px) {
 
   .mobile-toggle {
     width: 28px;
