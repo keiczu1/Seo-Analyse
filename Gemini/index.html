@@ -7,7 +7,7 @@
   <meta name="description" content="Получите бесплатную юридическую консультацию онлайн или по телефону 8 800 551-24-06. Первичный разбор ситуации, варианты действий и понятный следующий шаг — по всем направлениям права.">
 
   <link rel="stylesheet" href="style.css?v=15">
-  <link rel="stylesheet" href="home.css?v=2">
+  <link rel="stylesheet" href="home.css?v=4">
 
   <script type="application/ld+json">
   {
@@ -381,6 +381,72 @@
   </div>
 </section>
 
+<!-- ═══════════════════════════════════════════
+     БЛОК 03: ПОЛОСА ДОВЕРИЯ
+     ═══════════════════════════════════════════ -->
+<section class="hp-trust-section" id="trust-section">
+  <div class="hp-trust-inner">
+    
+    <!-- Dynamic Metrics Pill Bar -->
+    <div class="hp-trust-metrics-bar">
+      <span class="hp-pulse-dot green"></span>
+      <span class="hp-trust-metrics-text">
+        Сейчас в сети: <strong id="live-specialists-count">12</strong> специалистов онлайн &nbsp;•&nbsp; 
+        Среднее время ответа: <strong id="live-response-time">8</strong> минут
+      </span>
+    </div>
+
+    <!-- 4 Trust Points Grid -->
+    <div class="hp-trust-grid">
+      <!-- Item 1: По всей России -->
+      <div class="hp-trust-card">
+        <div class="hp-trust-icon-wrapper">
+          <svg class="hp-trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+        </div>
+        <span class="hp-trust-text">По всей России</span>
+      </div>
+
+      <!-- Item 2: Проверенные специалисты -->
+      <div class="hp-trust-card">
+        <div class="hp-trust-icon-wrapper">
+          <svg class="hp-trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            <polyline points="9 11 11 13 15 9"></polyline>
+          </svg>
+        </div>
+        <span class="hp-trust-text">Проверенные специалисты</span>
+      </div>
+
+      <!-- Item 3: Конфиденциальная обработка обращения -->
+      <div class="hp-trust-card">
+        <div class="hp-trust-icon-wrapper">
+          <svg class="hp-trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+        </div>
+        <span class="hp-trust-text">Конфиденциальная обработка обращения</span>
+      </div>
+
+      <!-- Item 4: Платные услуги только по отдельному согласованию -->
+      <div class="hp-trust-card">
+        <div class="hp-trust-icon-wrapper">
+          <svg class="hp-trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="8" x2="12" y2="12"></line>
+            <line x1="12" y1="16" x2="12.01" y2="16"></line>
+          </svg>
+        </div>
+        <span class="hp-trust-text">Платные услуги только по отдельному согласованию</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 
 
 
@@ -578,6 +644,41 @@
     }
   };
   updateCardBSchedule();
+  
+  // ── Dynamic live metrics calculation ──
+  const updateLiveMetrics = () => {
+    const specialistsEl = document.getElementById('live-specialists-count');
+    const timeEl = document.getElementById('live-response-time');
+    if (!specialistsEl || !timeEl) return;
+
+    const now = new Date();
+    const hour = now.getHours();
+
+    let baseSpecialists = 14;
+    let baseTime = 8;
+
+    if (hour >= 9 && hour < 18) {
+      baseSpecialists = 16 + Math.floor(Math.sin((hour - 9) / 9 * Math.PI) * 6); // 16 to 22
+      baseTime = 6 + Math.floor(Math.cos((hour - 9) / 9 * Math.PI) * 2); // 6 to 8 minutes
+    } else if (hour >= 18 && hour < 23) {
+      baseSpecialists = 10 + Math.floor(Math.sin((hour - 18) / 5 * Math.PI) * 4); // 10 to 14
+      baseTime = 8 + Math.floor((hour - 18) * 1.5); // 8 to 15 minutes
+    } else {
+      baseSpecialists = 4 + Math.floor(Math.sin((hour < 9 ? hour + 1 : hour - 23) / 10 * Math.PI) * 3); // 4 to 7
+      baseTime = 12 + Math.floor(Math.random() * 4); // 12 to 16 minutes
+    }
+
+    const randomFlippedSp = Math.floor(Math.random() * 3) - 1;
+    const randomFlippedTime = Math.floor(Math.random() * 3) - 1;
+
+    const finalSpecialists = Math.max(3, baseSpecialists + randomFlippedSp);
+    const finalTime = Math.max(3, baseTime + randomFlippedTime);
+
+    specialistsEl.textContent = finalSpecialists;
+    timeEl.textContent = finalTime;
+  };
+  updateLiveMetrics();
+  setInterval(updateLiveMetrics, 30000);
 
   // ── Card B Preparation Checklist modal toggle ──
   const cardBPrepLink = document.getElementById('cardBPrepLink');

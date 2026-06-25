@@ -2526,3 +2526,106 @@ body.hp-body {
   color: var(--brand-accent);
   border-bottom-color: transparent;
 }
+
+/* ─── Trust Section (Block 03) ─── */
+.hp-trust-section {
+  padding: 60px 0;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.hp-trust-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Metrics Pill Bar */
+.hp-trust-metrics-bar {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(16, 185, 129, 0.06);
+  border: 1px solid rgba(16, 185, 129, 0.15);
+  padding: 8px 20px;
+  border-radius: 9999px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #065f46;
+  margin-bottom: 40px;
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.02);
+}
+
+/* Grid */
+.hp-trust-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  width: 100%;
+}
+
+.hp-trust-card {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.hp-trust-icon-wrapper {
+  background: rgba(53, 83, 128, 0.06);
+  color: var(--accent);
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.hp-trust-card:hover .hp-trust-icon-wrapper {
+  background: var(--brand-accent);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.hp-trust-icon {
+  width: 22px;
+  height: 22px;
+}
+
+.hp-trust-text {
+  font-family: var(--font-heading);
+  font-size: 14.5px;
+  font-weight: 700;
+  color: var(--heading-text);
+  line-height: 1.45;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .hp-trust-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hp-trust-section {
+    padding: 40px 0;
+  }
+  .hp-trust-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .hp-trust-metrics-bar {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    border-radius: 12px;
+    padding: 10px 16px;
+  }
+}
