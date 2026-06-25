@@ -2043,38 +2043,116 @@ body.hp-body {
   padding: 0 20px;
 }
 
+.hp-channels-container {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(14, 42, 71, 0.03);
+}
+
 .hp-channels-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  position: relative;
+  gap: 80px; /* space to accommodate the divider */
 }
 
-.hp-channel-card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 20px;
-  padding: 30px;
-  box-shadow: 0 10px 30px rgba(14, 42, 71, 0.03);
+.hp-channel-column {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  overflow: hidden;
   height: 100%;
 }
 
-/* Card hover transitions: custom colors for A and B */
-.hp-channel-card.card-online:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 16px 36px rgba(204, 63, 92, 0.06);
-  border-color: var(--brand-accent);
+/* Divider vertical for desktop */
+.hp-channels-divider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none;
+  width: 44px;
 }
 
-.hp-channel-card.card-phone:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 16px 36px rgba(53, 83, 128, 0.06);
-  border-color: var(--accent);
+.hp-channels-divider-line {
+  width: 1px;
+  background: var(--border);
+  flex-grow: 1;
+}
+
+.hp-channels-divider-badge {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--muted);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin: 12px 0;
+}
+
+/* Inner Horizontal Divider */
+.hp-channels-inner-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 32px 0 24px 0;
+}
+
+/* Unified Preparation Link inside Container */
+.hp-channels-prep-link-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.hp-channels-prep-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14.5px;
+  font-weight: 600;
+  color: var(--muted);
+  text-decoration: none;
+  border-bottom: 1.5px dashed rgba(71, 85, 105, 0.4);
+  padding-bottom: 2px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.hp-channels-prep-link-btn:hover {
+  color: var(--brand-accent);
+  border-bottom-color: transparent;
+}
+
+.hp-channels-prep-icon {
+  color: var(--brand-accent);
+  flex-shrink: 0;
+}
+
+.hp-channels-prep-arrow {
+  color: var(--muted);
+  transition: transform 0.2s ease;
+}
+
+.hp-channels-prep-link-btn:hover .hp-channels-prep-arrow {
+  color: var(--brand-accent);
+  transform: translateX(3px);
 }
 
 /* Badge/Kicker */
@@ -2100,7 +2178,7 @@ body.hp-body {
   color: var(--accent);
 }
 
-.hp-channel-card h3 {
+.hp-channel-column h3 {
   font-family: var(--font-heading);
   font-size: 24px;
   font-weight: 800;
@@ -2369,12 +2447,39 @@ body.hp-body {
 }
 
 @media (max-width: 768px) {
+  .hp-channels-container {
+    padding: 24px 20px;
+  }
   .hp-channels-grid {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 0;
   }
-  .hp-channel-card {
-    padding: 20px;
+  .hp-channel-column {
+    height: auto;
+  }
+  .hp-channels-divider {
+    position: relative;
+    left: 0;
+    transform: none;
+    flex-direction: row;
+    width: 100%;
+    margin: 24px 0;
+    align-items: center;
+    top: auto;
+    bottom: auto;
+    height: 38px;
+  }
+  .hp-channels-divider-line {
+    height: 1px;
+    width: 100%;
+    flex-grow: 1;
+    background: var(--border);
+  }
+  .hp-channels-divider-badge {
+    margin: 0 16px;
+  }
+  .hp-channels-inner-divider {
+    margin: 24px 0 20px 0;
   }
   .hp-channels-section {
     padding: 60px 0;
@@ -2382,44 +2487,6 @@ body.hp-body {
 }
 
 
-
-
-/* ─── Unified Preparation Link (V4) ─── */
-.hp-channels-prep-link-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  margin-top: 36px;
-}
-
-.hp-channels-prep-link-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 14.5px;
-  font-weight: 600;
-  color: var(--muted);
-  text-decoration: none;
-  border-bottom: 1.5px dashed rgba(71, 85, 105, 0.4);
-  padding-bottom: 2px;
-  transition: all 0.2s ease;
-  cursor: pointer;
-  background: none;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-}
-
-.hp-channels-prep-link-btn:hover {
-  color: var(--brand-accent);
-  border-bottom-color: transparent;
-}
-
-.hp-channels-prep-icon {
-  color: var(--brand-accent);
-  flex-shrink: 0;
-}
 
 
 /* ─── Card Header Layout (V4) ─── */
@@ -2430,4 +2497,32 @@ body.hp-body {
   width: 100%;
   height: 32px; /* Fixed height to ensure headings align vertically */
   margin-bottom: 16px;
+}
+
+/* ─── Legal Disclaimer Block (V6) ─── */
+.hp-channels-legal-block {
+  text-align: center;
+  margin-top: 32px;
+  font-size: 13.5px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.hp-channels-legal-block p {
+  margin: 0;
+}
+
+.hp-legal-trigger {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 1.5px dashed rgba(53, 83, 128, 0.4);
+  padding-bottom: 1px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.hp-legal-trigger:hover {
+  color: var(--brand-accent);
+  border-bottom-color: transparent;
 }

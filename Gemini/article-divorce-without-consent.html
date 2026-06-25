@@ -101,182 +101,179 @@
 <body>
 <!-- Site Header (Navy Theme) -->
 <header class="site-header" id="siteHeader">
-  <!-- Top bar / Main bar -->
-  <div class="header-main-bar">
-    <div class="header-inner">
-      <!-- Top row: Logo, Contacts and Mobile Toggle -->
-      <div class="header-top-row">
-        <a href="https://law-divorce.org/" class="header-logo" data-wpel-link="internal">
-          <svg class="header-logo-icon" viewBox="0 0 100 100" width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="solidNavyLogoArt" x1="15" y1="10" x2="85" y2="90" gradientUnits="userSpaceOnUse">
-                <stop offset="0%" stop-color="#476899" />
-                <stop offset="45%" stop-color="#355380" />
-                <stop offset="100%" stop-color="#0E2A47" />
-              </linearGradient>
-              <clipPath id="shieldClipMonoLogoArt">
-                <path d="M50,10 C72,10 82,13 85,16 C85,48 87,68 50,90 C13,68 15,48 15,16 C18,13 28,10 50,10 Z"></path>
-              </clipPath>
-            </defs>
-            <path d="M50,10 C72,10 82,13 85,16 C85,48 87,68 50,90 C13,68 15,48 15,16 C18,13 28,10 50,10 Z" fill="rgba(14, 42, 71, 0.3)" transform="translate(0, 3)"></path>
-            <g clip-path="url(#shieldClipMonoLogoArt)">
-              <path d="M0,0 H100 V100 H0 Z" fill="url(#solidNavyLogoArt)"></path>
-              <path d="M15,10 H50 V90 H15 Z" fill="#ffffff" opacity="0.06"></path>
-              <path d="M50,10 H85 V90 H50 Z" fill="#000000" opacity="0.06"></path>
-              <path d="M-10,-10 L110,40 L110,-10 Z" fill="#ffffff" opacity="0.08" pointer-events="none"></path>
-            </g>
-            <line x1="50" y1="10" x2="50" y2="90" stroke="#000000" stroke-width="1.2" stroke-opacity="0.15"></line>
-            <line x1="50" y1="10" x2="50" y2="90" stroke="#ffffff" stroke-width="1" stroke-opacity="0.1" transform="translate(-1, 0)"></line>
-            <path d="M50,10 C72,10 82,13 85,16 C85,48 87,68 50,90 C13,68 15,48 15,16 C18,13 28,10 50,10 Z" stroke="#355380" stroke-width="2.5" stroke-opacity="0.9" stroke-linejoin="round"></path>
-            <path d="M50,13 C69,13 77,15 80,18 C80,44 82,60 50,81 C18,60 20,44 20,18 C23,15 31,13 50,13 Z" stroke="#ffffff" stroke-width="1" stroke-opacity="0.45" stroke-linejoin="round"></path>
-          </svg>
-          <span class="header-logo-text"><span class="logo-law">Law</span><span class="logo-divorce">Divorce</span></span>
-        </a>
-        
-        <!-- Centered Contacts -->
-        <div class="header-contacts">
-          <div class="phone-row">
-            <span class="phone-label">Бесплатная консультация юриста:</span>
-            <a href="tel:+78005512406" class="phone-number">
-              <span class="phone-icon-container">
-                <svg class="phone-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                </svg>
-              </span>
-              <span>+7 (800) 551-24-06</span>
-            </a>
-            <span class="timing-badge">
-              <svg class="timing-svg" viewBox="0 0 54 18" width="54" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g class="timing-clock-group" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="9" cy="9" r="7.5" />
-                  <path d="M9 4.5V9l3 1.5" />
-                  <path d="M9 1.5v1.5M9 16.5v-1.5M1.5 9h1.5M16.5 9h-1.5" stroke-width="1" />
-                </g>
-                <text class="timing-text" x="22" y="13" font-family="'Jost', sans-serif" font-size="12" font-weight="700" fill="currentColor" letter-spacing="0.5">24/7</text>
-              </svg>
-            </span>
-          </div>
-        </div>
+    <div class="header-main-bar">
+      <div class="header-inner">
+        <div class="header-top-row">
+          <a href="https://law-divorce.org/" class="header-logo" data-wpel-link="internal">
+            <svg class="header-logo-icon" viewBox="0 0 100 100" width="22" height="22" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="solidNavyLogoKit" x1="15" y1="10" x2="85" y2="90" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#476899" />
+                  <stop offset="45%" stop-color="#355380" />
+                  <stop offset="100%" stop-color="#0E2A47" />
+                </linearGradient>
+                <clipPath id="shieldClipMonoLogoKit">
+                  <path d="M50,10 C72,10 82,13 85,16 C85,48 87,68 50,90 C13,68 15,48 15,16 C18,13 28,10 50,10 Z"></path>
+                </clipPath>
+              </defs>
+              <path d="M50,10 C72,10 82,13 85,16 C85,48 87,68 50,90 C13,68 15,48 15,16 C18,13 28,10 50,10 Z"
+                fill="rgba(14, 42, 71, 0.3)" transform="translate(0, 3)"></path>
+              <g clip-path="url(#shieldClipMonoLogoKit)">
+                <path d="M0,0 H100 V100 H0 Z" fill="url(#solidNavyLogoKit)"></path>
+                <path d="M15,10 H50 V90 H15 Z" fill="#ffffff" opacity="0.06"></path>
+                <path d="M50,10 H85 V90 H50 Z" fill="#000000" opacity="0.06"></path>
+                <path d="M-10,-10 L110,40 L110,-10 Z" fill="#ffffff" opacity="0.08" pointer-events="none"></path>
+              </g>
+              <line x1="50" y1="10" x2="50" y2="90" stroke="#000000" stroke-width="1.2" stroke-opacity="0.15"></line>
+              <line x1="50" y1="10" x2="50" y2="90" stroke="#ffffff" stroke-width="1" stroke-opacity="0.1"
+                transform="translate(-1, 0)"></line>
+              <path d="M50,10 C72,10 82,13 85,16 C85,48 87,68 50,90 C13,68 15,48 15,16 C18,13 28,10 50,10 Z"
+                stroke="#355380" stroke-width="2.5" stroke-opacity="0.9" stroke-linejoin="round"></path>
+              <path d="M50,13 C69,13 77,15 80,18 C80,44 82,60 50,81 C18,60 20,44 20,18 C23,15 31,13 50,13 Z"
+                stroke="#ffffff" stroke-width="1" stroke-opacity="0.45" stroke-linejoin="round"></path>
+            </svg>
+            <span class="header-logo-text"><span class="logo-law">Law</span><span
+                class="logo-divorce">Divorce</span></span>
+          </a>
 
-        <div class="header-top-right">
-          <button class="mobile-toggle" id="mobileToggle" aria-label="Открыть меню">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <!-- Separate Navigation Bar (White/Light theme) -->
-  <div class="header-nav-bar" id="headerNavRow">
-    <div class="header-inner">
-      <nav class="header-nav-row" style="border: none; width: 100%;">
-        <ul id="main_menu" class="top_menu">
-          <li id="menu-item-4037" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-4037 has-image">
-            <a href="#">
-              <span class="icon_text">Консультации</span>
-            </a> 
-            <span class="arrow"></span>
-            <div class="sub">
-              <ul>
-                <li id="menu-item-4301"><a href="https://law-divorce.org/besplatnye-konsultatsii-yurista-po-semejnym-voprosam-online/" data-wpel-link="internal">По семейным спорам</a></li>
-                <li id="menu-item-4302"><a href="https://law-divorce.org/avtoyuristy-besplatnaya-konsultatsiya-onlajn-kruglosutochno/" data-wpel-link="internal">По автомобильным спорам</a></li>
-                <li id="menu-item-4303"><a href="https://law-divorce.org/besplatnaya-konsultatsiya-yurista-po-zhilishhnym-voprosam/" data-wpel-link="internal">По жилищным спорам</a></li>
-                <li id="menu-item-4304"><a href="https://law-divorce.org/besplatnaya-yuridicheskaya-konsultatsiya-po-trudovomu-pravu-onlajn/" data-wpel-link="internal">По трудовым спорам</a></li>
-                <li id="menu-item-4305"><a href="https://law-divorce.org/besplatnaya-konsultatsiya-yurista-po-kreditam-online/" data-wpel-link="internal">По кредитам и банкам</a></li>
-              </ul>
-              <ul>
-                <li id="menu-item-4306"><a href="https://law-divorce.org/besplatnaya-konsultatsiya-yurista-po-zemelnym-voprosam-online-po-telefonu/" data-wpel-link="internal">По земельным спорам</a></li>
-                <li id="menu-item-4307"><a href="https://law-divorce.org/besplatnaya-konsultatsiya-yurista-po-nasledstvu-online/" data-wpel-link="internal">По наследству</a></li>
-                <li id="menu-item-4308"><a href="https://law-divorce.org/besplatnaya-onlajn-advokata-po-ugolovnym-delam/" data-wpel-link="internal">По уголовным делам</a></li>
-                <li id="menu-item-4309"><a href="https://law-divorce.org/besplatnaya-konsultatsiya-yurista-po-zashhite-prav-potrebitelej/" data-wpel-link="internal">По потребительскому правоу</a></li>
-              </ul>
-            </div>
-          </li>
-          <li id="menu-item-4048" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-4048 has-image">
-            <a href="#">
-              <span class="icon_text">Блог</span>
-            </a>
-            <span class="arrow"></span>
-            <div class="sub">
-              <ul>
-                <li id="menu-item-4235"><a href="https://law-divorce.org/razvody/" data-wpel-link="internal">Разводы</a></li>
-                <li id="menu-item-4236"><a href="https://law-divorce.org/razdel-imushhestva/" data-wpel-link="internal">Раздел имущества</a></li>
-                <li id="menu-item-4233"><a href="https://law-divorce.org/alimenty/" data-wpel-link="internal">Алименты</a></li>
-                <li id="menu-item-4234"><a href="https://law-divorce.org/nasledstvo/" data-wpel-link="internal">Наследство</a></li>
-                <li id="menu-item-4237"><a href="https://law-divorce.org/brachnyi-dogovor/" data-wpel-link="internal">Брачный договор</a></li>
-              </ul>
-              <ul>
-                <li id="menu-item-6669"><a href="https://law-divorce.org/zhilishhnye-spory/" data-wpel-link="internal">Жилищные споры</a></li>
-                <li id="menu-item-9998"><a href="https://law-divorce.org/zemelnye-spory/" data-wpel-link="internal">Земельные споры</a></li>
-                <li id="menu-item-11573"><a href="https://law-divorce.org/prava-roditelej/" data-wpel-link="internal">Права родителей</a></li>
-                <li id="menu-item-11619"><a href="https://law-divorce.org/kuplya-prodazha-kvartiry/" data-wpel-link="internal">Купля-продажа квартиры</a></li>
-                <li id="menu-item-13845"><a href="https://law-divorce.org/zhilishhnye-spory/uluchshenie-zhilishhnyh-uslovij/" data-wpel-link="internal">Улучшение жилищных условий</a></li>
-              </ul>
-              <ul>
-                <li id="menu-item-13864"><a href="https://law-divorce.org/opeka/" data-wpel-link="internal">Опека</a></li>
-                <li id="menu-item-13865"><a href="https://law-divorce.org/usynovlenie/" data-wpel-link="internal">Усыновление</a></li>
-                <li id="menu-item-14275"><a href="https://law-divorce.org/konflikt-s-sosedyami/" data-wpel-link="internal">Конфликт с соседями</a></li>
-                <li id="menu-item-14685"><a href="https://law-divorce.org/molodaya-semya/" data-wpel-link="internal">Молодая семья</a></li>
-              </ul>
-            </div>
-          </li>
-          <li id="menu-item-4211" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-4211 has-image">
-            <a href="#">
-              <span class="icon_text">Услуги</span>
-            </a>
-            <span class="arrow"></span>
-            <div class="sub">
-              <ul>
-                <li id="menu-item-7472"><a href="https://law-divorce.org/yurist-advokat-po-razvodam-v-moskve/" data-wpel-link="internal">Расторжение брака</a></li>
-                <li id="menu-item-7659"><a href="https://law-divorce.org/yurist-advokat-po-razdelu-imushhestva-pri-razvode/" data-wpel-link="internal">Раздел имущества</a></li>
-                <li id="menu-item-7814"><a href="https://law-divorce.org/yurist-advokat-po-semejnym-delam/" data-wpel-link="internal">Семейные споры</a></li>
-                <li id="menu-item-8705"><a href="https://law-divorce.org/advokat-po-ugolovnym-delam/" data-wpel-link="internal">Адвокат по уголовным делам</a></li>
-                <li id="menu-item-8770"><a href="https://law-divorce.org/advokat-po-grazhdanskim-delam/" data-wpel-link="internal">Адвокат по гражданским делам</a></li>
-              </ul>
-            </div>
-          </li>
-          <li id="menu-item-19081" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-19081">
-            <a href="#">
-              <span class="icon_text">Tools</span>
-            </a>
-            <span class="arrow"></span>
-            <div class="sub">
-              <ul>
-                <li id="menu-item-19082"><a href="https://law-divorce.org/kalkulyator-protsentov-395-gk-rf-po-novym-pravilam/" data-wpel-link="internal">Калькулятор процентов 395 ГК РФ</a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="menu-item-contacts-mobile">
-            <div class="mobile-contacts-inner">
+          <div class="header-contacts">
+            <div class="phone-row">
               <span class="phone-label">Бесплатная консультация юриста:</span>
               <a href="tel:+78005512406" class="phone-number">
                 <span class="phone-icon-container">
-                  <svg class="phone-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  <svg class="phone-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                      d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                    </path>
                   </svg>
                 </span>
                 <span>+7 (800) 551-24-06</span>
               </a>
               <span class="timing-badge">
-                <svg class="timing-svg" viewBox="0 0 54 18" width="54" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <g class="timing-clock-group" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <svg class="timing-svg" viewBox="0 0 54 18" width="54" height="18" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <g class="timing-clock-group" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round">
                     <circle cx="9" cy="9" r="7.5" />
                     <path d="M9 4.5V9l3 1.5" />
                     <path d="M9 1.5v1.5M9 16.5v-1.5M1.5 9h1.5M16.5 9h-1.5" stroke-width="1" />
                   </g>
-                  <text class="timing-text" x="22" y="13" font-family="'Jost', sans-serif" font-size="12" font-weight="700" fill="currentColor" letter-spacing="0.5">24/7</text>
+                  <text class="timing-text" x="22" y="13" font-family="'Jost', sans-serif" font-size="12"
+                    font-weight="700" fill="currentColor" letter-spacing="0.5">24/7</text>
                 </svg>
               </span>
             </div>
-          </li>
-        </ul>
-      </nav>
+          </div>
+
+          <div class="header-top-right">
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Открыть меню">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</header>
+
+    <div class="header-nav-bar" id="headerNavRow">
+      <div class="header-inner">
+        <nav class="header-nav-row" style="border: none; width: 100%;">
+          <ul id="main_menu" class="top_menu">
+            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+              <a href="https://law-divorce.org/besplatnye-konsultatsii-yurista-po-semejnym-voprosam-online/"
+                data-wpel-link="internal"><span class="icon_text">Консультации</span></a>
+              <span class="arrow"></span>
+              <div class="sub">
+                <ul>
+                  <li><a href="https://law-divorce.org/besplatnye-konsultatsii-yurista-po-semejnym-voprosam-online/"
+                      data-wpel-link="internal">По семейным спорам</a></li>
+                  <li><a href="https://law-divorce.org/besplatnaya-konsultatsiya-yurista-po-zhilishhnym-voprosam/"
+                      data-wpel-link="internal">По жилищным спорам</a></li>
+                  <li><a href="https://law-divorce.org/besplatnaya-konsultatsiya-yurista-po-nasledstvu-online/"
+                      data-wpel-link="internal">По наследству</a></li>
+                </ul>
+                <ul>
+                  <li><a
+                      href="https://law-divorce.org/besplatnaya-yuridicheskaya-konsultatsiya-po-trudovomu-pravu-onlajn/"
+                      data-wpel-link="internal">По трудовым спорам</a></li>
+                  <li><a href="https://law-divorce.org/besplatnaya-konsultatsiya-yurista-po-kreditam-online/"
+                      data-wpel-link="internal">По кредитам и банкам</a></li>
+                  <li><a href="https://law-divorce.org/besplatnaya-konsultatsiya-yurista-po-zashhite-prav-potrebitelej/"
+                      data-wpel-link="internal">По защите прав потребителей</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+              <a href="category-divorce.html"><span class="icon_text">Блог</span></a>
+              <span class="arrow"></span>
+              <div class="sub">
+                <ul>
+                  <li><a href="category-divorce.html">Разводы</a></li>
+                  <li><a href="article-divorce-without-consent.html#data">Раздел имущества</a></li>
+                  <li><a href="article-divorce-without-consent.html#children">Алименты</a></li>
+                </ul>
+                <ul>
+                  <li><a href="article-divorce-without-consent.html#children">Права родителей</a></li>
+                  <li><a href="article-divorce-without-consent.html#children">Опека</a></li>
+                  <li><a href="article-divorce-without-consent.html#children">Усыновление</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+              <a href="https://law-divorce.org/yurist-advokat-po-razvodam-v-moskve/" data-wpel-link="internal"><span
+                  class="icon_text">Услуги</span></a>
+              <span class="arrow"></span>
+              <div class="sub">
+                <ul>
+                  <li><a href="https://law-divorce.org/yurist-advokat-po-razvodam-v-moskve/"
+                      data-wpel-link="internal">Расторжение брака</a></li>
+                  <li><a href="https://law-divorce.org/yurist-advokat-po-razdelu-imushhestva-pri-razvode/"
+                      data-wpel-link="internal">Раздел имущества</a></li>
+                  <li><a href="https://law-divorce.org/yurist-advokat-po-semejnym-delam/"
+                      data-wpel-link="internal">Семейные споры</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="menu-item menu-item-type-custom menu-item-object-custom">
+              <a href="article-divorce-without-consent.html"><span class="icon_text">Статья</span></a>
+            </li>
+            <li class="menu-item-contacts-mobile">
+              <div class="mobile-contacts-inner">
+                <span class="phone-label">Бесплатная консультация юриста:</span>
+                <a href="tel:+78005512406" class="phone-number">
+                  <span class="phone-icon-container">
+                    <svg class="phone-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <path
+                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                      </path>
+                    </svg>
+                  </span>
+                  <span>+7 (800) 551-24-06</span>
+                </a>
+                <span class="timing-badge">
+                  <svg class="timing-svg" viewBox="0 0 54 18" width="54" height="18" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g class="timing-clock-group" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round">
+                      <circle cx="9" cy="9" r="7.5" />
+                      <path d="M9 4.5V9l3 1.5" />
+                      <path d="M9 1.5v1.5M9 16.5v-1.5M1.5 9h1.5M16.5 9h-1.5" stroke-width="1" />
+                    </g>
+                    <text class="timing-text" x="22" y="13" font-family="'Jost', sans-serif" font-size="12"
+                      font-weight="700" fill="currentColor" letter-spacing="0.5">24/7</text>
+                  </svg>
+                </span>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
 
 <div class="header-placeholder" id="headerPlaceholder"></div>
 

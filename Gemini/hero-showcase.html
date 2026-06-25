@@ -222,121 +222,14 @@
       transform-origin: 80px 30px;
     }
 
-    /* SWITCHER STYLES */
-    .intro-switcher-btn {
-      background: rgba(14, 42, 71, 0.05);
-      border: 1px solid rgba(14, 42, 71, 0.1);
-      color: var(--heading-text);
-      padding: 10px 20px;
-      border-radius: 12px;
-      font-size: 13.5px;
-      cursor: pointer;
-      font-family: var(--font-body);
-      font-weight: 600;
-      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    
-    .intro-switcher-btn:hover {
-      background: rgba(14, 42, 71, 0.08);
-      transform: translateY(-1px);
-    }
-    
-    .intro-switcher-btn.active {
-      background: var(--accent);
-      border-color: var(--accent);
-      color: #ffffff;
-      box-shadow: 0 4px 12px rgba(53, 83, 128, 0.15);
-    }
-
     /* INTRO DEMO LAYOUTS */
     .intro-demo-section {
       padding: 20px 0;
       animation: fadeIn 0.4s ease forwards;
     }
 
-    /* Option 1: Conversational Q&A Grid */
-    .intro-dialogue-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-      margin-bottom: 30px;
-    }
-    
-    @media (max-width: 900px) {
-      .intro-dialogue-grid {
-        grid-template-columns: 1fr;
-        gap: 16px;
-      }
-    }
-    
-    .intro-dialogue-card {
-      background: rgba(255, 255, 255, 0.6);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      border: 1px solid rgba(53, 83, 128, 0.1);
-      border-radius: 20px;
-      padding: 28px 24px;
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      box-shadow: 0 4px 15px rgba(14, 42, 71, 0.01);
-      display: flex;
-      flex-direction: column;
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .intro-dialogue-card::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 4px;
-      height: 100%;
-      background: var(--accent);
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-    
-    .intro-dialogue-card:hover {
-      transform: translateY(-4px);
-      border-color: rgba(53, 83, 128, 0.25);
-      background: #ffffff;
-      box-shadow: 0 12px 30px rgba(14, 42, 71, 0.06);
-    }
-    
-    .intro-dialogue-card:hover::before {
-      opacity: 1;
-    }
-    
-    .dialogue-q {
-      font-family: var(--font-heading);
-      font-size: 18px;
-      font-weight: 700;
-      color: var(--heading-text);
-      margin-bottom: 12px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    
-    .dialogue-q-icon {
-      color: var(--accent);
-      flex-shrink: 0;
-      transition: transform 0.3s ease;
-    }
-    
-    .intro-dialogue-card:hover .dialogue-q-icon {
-      transform: scale(1.1) rotate(-5deg);
-    }
-    
-    .dialogue-a {
-      margin: 0;
-      font-size: 14.5px;
-      color: var(--muted);
-      line-height: 1.6;
-    }
-
-    /* Option 2: Step-by-Step Timeline Flow */
-    .intro-timeline-grid {
+    /* Option 5: Interactive Progress */
+    .timeline-interactive-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 30px;
@@ -345,26 +238,13 @@
     }
     
     @media (max-width: 900px) {
-      .intro-timeline-grid {
+      .timeline-interactive-grid {
         grid-template-columns: 1fr;
         gap: 24px;
       }
     }
     
-    @media (min-width: 901px) {
-      .intro-timeline-grid::before {
-        content: "";
-        position: absolute;
-        top: 48px;
-        left: 10%;
-        right: 10%;
-        height: 2px;
-        background: linear-gradient(to right, rgba(53,83,128,0.05), var(--border) 20%, var(--border) 80%, rgba(53,83,128,0.05));
-        z-index: 1;
-      }
-    }
-    
-    .intro-timeline-card {
+    .timeline-interactive-card {
       background: #ffffff;
       border: 1px solid var(--border);
       border-radius: 20px;
@@ -372,19 +252,62 @@
       text-align: center;
       position: relative;
       z-index: 2;
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      box-shadow: 0 4px 15px rgba(0,0,0,0.005);
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), border-color 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .timeline-interactive-card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .timeline-interactive-card.visible:nth-child(1) {
+      transition-delay: 0s, 0s;
+    }
+    .timeline-interactive-card.visible:nth-child(2) {
+      transition-delay: 0.15s, 0.15s;
+    }
+    .timeline-interactive-card.visible:nth-child(3) {
+      transition-delay: 0.3s, 0.3s;
+    }
+
+    /* SVG border wrapper overlays */
+    .card-border-svg {
+      position: absolute;
+      inset: -1px;
+      width: calc(100% + 2px);
+      height: calc(100% + 2px);
+      pointer-events: none;
+      z-index: 5;
+      overflow: visible; /* Prevents stroke and shadow clipping */
+    }
+
+    .card-border-path {
+      fill: none;
+      stroke: var(--accent);
+      stroke-width: 3px; /* Slightly thinner for more premium look */
+      stroke-linecap: round;
+      filter: drop-shadow(0 0 5px var(--accent)) drop-shadow(0 0 2px var(--brand-accent));
+      opacity: 0;
+      transition: opacity 0.15s ease;
+    }
+
+    .timeline-interactive-card.active .card-border-path {
+      opacity: 1;
     }
     
-    .intro-timeline-card:hover {
-      transform: translateY(-4px);
-      border-color: var(--accent);
-      box-shadow: 0 12px 28px rgba(14, 42, 71, 0.05);
+    .timeline-interactive-card:hover,
+    .timeline-interactive-card.active {
+      transform: translateY(-6px);
+      border-color: rgba(53, 83, 128, 0.1);
+      box-shadow: 0 16px 36px rgba(14, 42, 71, 0.08);
     }
     
-    .intro-timeline-step-badge {
-      width: 38px;
-      height: 38px;
+    .timeline-interactive-badge {
+      width: 40px;
+      height: 40px;
       border-radius: 50%;
       background: var(--surface);
       border: 2px solid var(--border);
@@ -398,351 +321,56 @@
       margin: 0 auto 18px;
       z-index: 3;
       position: relative;
-      transition: all 0.3s ease;
+      transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
     }
     
-    .intro-timeline-card:hover .intro-timeline-step-badge {
+    .timeline-interactive-card:hover .timeline-interactive-badge {
       background: var(--accent);
       border-color: var(--accent);
       color: #ffffff;
+      box-shadow: 0 0 0 6px rgba(53, 83, 128, 0.12);
       transform: scale(1.1);
-      box-shadow: 0 0 0 5px rgba(53, 83, 128, 0.1);
+    }
+
+    /* Expanding ripple shockwave when the light beam hits a badge */
+    .timeline-interactive-card.active .timeline-interactive-badge {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #ffffff;
+      transform: scale(1.15);
+      animation: badge-hit-pulse 0.5s ease-out forwards;
+    }
+
+    @keyframes badge-hit-pulse {
+      0% {
+        box-shadow: 0 0 0 0px rgba(53, 83, 128, 0.8), 0 0 25px rgba(53, 83, 128, 0.9);
+      }
+      100% {
+        box-shadow: 0 0 0 12px rgba(53, 83, 128, 0), 0 0 0px rgba(53, 83, 128, 0);
+      }
     }
     
-    .intro-timeline-card h3 {
+    .timeline-interactive-card h3 {
       font-family: var(--font-heading);
       color: var(--heading-text);
       font-size: 18px;
       font-weight: 700;
       margin-bottom: 10px;
       margin-top: 0;
-    }
-    
-    .intro-timeline-card p {
-      margin: 0;
-      font-size: 14px;
-      color: var(--muted);
-      line-height: 1.55;
+      transition: color 0.3s ease;
     }
 
-    /* Option 3: Split Scenarios Layout */
-    .intro-split-container {
-      display: grid;
-      grid-template-columns: 1fr 1.5fr;
-      gap: 40px;
-      align-items: center;
-      margin-bottom: 30px;
-    }
-    
-    @media (max-width: 900px) {
-      .intro-split-container {
-        grid-template-columns: 1fr;
-        gap: 30px;
-      }
-    }
-    
-    .intro-split-left h3 {
-      font-family: var(--font-heading);
-      color: var(--heading-text);
-      font-size: 28px;
-      font-weight: 800;
-      line-height: 1.3;
-      margin-bottom: 16px;
-      margin-top: 0;
-    }
-    
-    .intro-split-left p {
-      color: var(--muted);
-      font-size: 15.5px;
-      line-height: 1.65;
-      margin-bottom: 24px;
-    }
-    
-    .intro-split-right-grid {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-    
-    .intro-scenario-card {
-      background: #ffffff;
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 20px 24px;
-      display: flex;
-      gap: 20px;
-      align-items: flex-start;
-      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-      box-shadow: 0 4px 12px rgba(14, 42, 71, 0.01);
-      cursor: pointer;
-    }
-    
-    .intro-scenario-card:hover {
-      transform: translateX(8px);
-      border-color: var(--accent);
-      box-shadow: 0 8px 24px rgba(14, 42, 71, 0.04);
-    }
-    
-    .intro-scenario-icon-box {
-      width: 46px;
-      height: 46px;
-      border-radius: 12px;
-      background: rgba(53, 83, 128, 0.05);
+    .timeline-interactive-card:hover h3,
+    .timeline-interactive-card.active h3 {
       color: var(--accent);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      transition: all 0.25s ease;
     }
     
-    .intro-scenario-card:hover .intro-scenario-icon-box {
-      background: var(--accent);
-      color: #ffffff;
-      transform: scale(1.05) rotate(3deg);
-    }
-    
-    .intro-scenario-info h4 {
-      font-family: var(--font-heading);
-      color: var(--heading-text);
-      font-size: 16.5px;
-      font-weight: 700;
-      margin-bottom: 6px;
-      margin-top: 0;
-    }
-    
-    .intro-scenario-info p {
+    .timeline-interactive-card p {
       margin: 0;
       font-size: 14px;
       color: var(--muted);
-      line-height: 1.5;
-    }
-
-    /* Option 4: Unified Trust Card & Dialer Status */
-    .intro-trust-box {
-      background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(248,250,252,0.9) 100%);
-      border: 1px solid var(--border);
-      border-radius: 24px;
-      padding: 36px;
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 36px;
-      box-shadow: 0 8px 30px rgba(14, 42, 71, 0.01);
-      align-items: center;
-      margin-bottom: 30px;
-    }
-    
-    @media (max-width: 900px) {
-      .intro-trust-box {
-        grid-template-columns: 1fr;
-        gap: 30px;
-        padding: 24px;
-      }
-    }
-    
-    .intro-trust-left h3 {
-      font-family: var(--font-heading);
-      color: var(--heading-text);
-      font-size: 24px;
-      font-weight: 800;
-      line-height: 1.35;
-      margin-bottom: 14px;
-      margin-top: 0;
-    }
-    
-    .intro-trust-left p {
-      font-size: 15px;
-      color: var(--muted);
-      line-height: 1.6;
-      margin-bottom: 24px;
-    }
-    
-    .intro-trust-list {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-    
-    .intro-trust-item {
-      display: flex;
-      gap: 12px;
-      align-items: flex-start;
-    }
-    
-    .intro-trust-icon-box {
-      width: 22px;
-      height: 22px;
-      border-radius: 50%;
-      background: rgba(16, 185, 129, 0.1);
-      color: #10b981;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      margin-top: 2px;
-    }
-    
-    .intro-trust-text h4 {
-      font-size: 15px;
-      font-weight: 700;
-      color: var(--heading-text);
-      margin-bottom: 4px;
-      margin-top: 0;
-    }
-    
-    .intro-trust-text p {
-      font-size: 13.5px;
-      color: var(--muted);
-      margin: 0;
-      line-height: 1.45;
-    }
-    
-    .intro-live-widget {
-      background: #ffffff;
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 28px;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      box-shadow: 0 4px 15px rgba(14, 42, 71, 0.02);
-      position: relative;
-    }
-    
-    .intro-live-pulse-dot {
-      width: 8px;
-      height: 8px;
-      background: #10b981;
-      border-radius: 50%;
-      display: inline-block;
-      margin-right: 6px;
-      position: relative;
-    }
-    
-    .intro-live-pulse-dot::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: #10b981;
-      border-radius: 50%;
-      animation: live-pulse-ring 1.8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-    }
-    
-    @keyframes live-pulse-ring {
-      0% { transform: scale(1); opacity: 0.8; }
-      100% { transform: scale(2.8); opacity: 0; }
-    }
-    
-    .intro-live-label {
-      font-size: 11.5px;
-      font-weight: 700;
-      text-transform: uppercase;
-      color: var(--muted);
-      letter-spacing: 0.8px;
-      margin-bottom: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    
-    .intro-live-number {
-      font-family: var(--font-heading);
-      font-size: 26px;
-      font-weight: 800;
-      color: var(--brand-accent);
-      text-decoration: none;
-      transition: all 0.25s ease;
-      display: block;
-      margin-bottom: 10px;
-    }
-    
-    .intro-live-number:hover {
-      color: var(--brand-accent-hover);
-      transform: scale(1.02);
-    }
-    
-    .intro-live-sub {
-      font-size: 12.5px;
-      color: var(--muted);
-      line-height: 1.45;
-      margin: 0;
-    }
-
-    /* Option 5: Premium Obsidian Theme (Noble Slate) */
-    .intro-dark-container {
-      background: linear-gradient(135deg, #0E2A47 0%, #0a1b2e 100%);
-      border-radius: 24px;
-      padding: 40px;
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      color: #cbd5e1;
-      position: relative;
-      overflow: hidden;
-      margin-bottom: 30px;
-      box-shadow: 0 12px 36px rgba(10, 27, 46, 0.3);
-    }
-    
-    .intro-dark-container::after {
-      content: "";
-      position: absolute;
-      top: -50%;
-      right: -20%;
-      width: 400px;
-      height: 400px;
-      background: radial-gradient(circle, rgba(56, 189, 248, 0.05) 0%, transparent 70%);
-      pointer-events: none;
-    }
-    
-    .intro-dark-grid-3 {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-      margin-top: 32px;
-    }
-    
-    @media (max-width: 900px) {
-      .intro-dark-grid-3 {
-        grid-template-columns: 1fr;
-        gap: 16px;
-      }
-    }
-    
-    .intro-dark-step-card {
-      background: rgba(255, 255, 255, 0.03);
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      border-radius: 16px;
-      padding: 26px 22px;
-      position: relative;
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    
-    .intro-dark-step-card:hover {
-      transform: translateY(-4px);
-      background: rgba(255, 255, 255, 0.05);
-      border-color: rgba(56, 189, 248, 0.25);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-    }
-    
-    .intro-dark-step-card h3 {
-      font-family: var(--font-heading);
-      color: #ffffff;
-      font-size: 17.5px;
-      font-weight: 700;
-      margin-top: 0;
-      margin-bottom: 10px;
-    }
-    
-    .intro-dark-step-card p {
-      margin: 0;
-      font-size: 13.5px;
-      color: #94a3b8;
       line-height: 1.55;
     }
-  </style>
   </style>
 </head>
 <body>
@@ -848,25 +476,64 @@
         </div>
       </section>
 
-      <!-- Intro Section Showcase -->
+      <!-- Intro Section -->
       <div style="margin-top: 60px; border-top: 1px solid var(--border); padding-top: 40px; margin-bottom: 20px;">
-        <div style="text-align: center; margin-bottom: 30px;">
-          <h3 style="font-family: var(--font-heading); color: var(--heading-text); font-size: 22px; font-weight: 800; margin-bottom: 10px;">Выбор стиля вводного блока (Intro Block)</h3>
-          <p style="color: var(--muted); font-size: 14.5px; max-width: 650px; margin: 0 auto 20px; line-height: 1.6;">
-            Переключайте варианты ниже для просмотра различных структур, макетов и улучшенных ("человеческих") текстов для вводной секции:
+        <div class="intro-demo-section">
+          <h2 style="font-family: var(--font-heading); color: var(--heading-text); font-size: 28px; font-weight: 800; text-align: center; margin-bottom: 12px; border-top: none; padding-top: 0; margin-top: 0;">
+            Простой процесс решения вашего вопроса
+          </h2>
+          <p style="color: var(--muted); font-size: 16px; text-align: center; max-width: 800px; margin: 0 auto 36px; line-height: 1.65;">
+            Правовая поддержка помогает быстро сориентироваться в сложной ситуации. Мы предлагаем удобный формат разбора вашей проблемы всего за три простых шага.
           </p>
           
-          <div class="intro-switcher-panel" style="display: flex; justify-content: center; gap: 8px; flex-wrap: wrap;">
-            <button class="intro-switcher-btn active" onclick="switchIntro(1)">1. Стеклянный грид</button>
-            <button class="intro-switcher-btn" onclick="switchIntro(2)">2. Сплит-строки</button>
-            <button class="intro-switcher-btn" onclick="switchIntro(3)">3. Пошаговый процесс</button>
-            <button class="intro-switcher-btn" onclick="switchIntro(4)">4. Единая карточка</button>
-            <button class="intro-switcher-btn" onclick="switchIntro(5)">5. Темный премиум</button>
+          <div class="timeline-interactive-grid" id="timelineGrid">
+            <!-- Card 1: Clockwise border SVG (Starts TR, ends TR) -->
+            <div class="timeline-interactive-card" onmouseenter="handleCardEnter(1)" onmouseleave="handleCardLeave()">
+              <svg class="card-border-svg" viewBox="0 0 300 200" preserveAspectRatio="none">
+                <path class="card-border-path" d="M 279 1 A 20 20 0 0 1 299 21 V 179 A 20 20 0 0 1 279 199 H 21 A 20 20 0 0 1 1 179 V 21 A 20 20 0 0 1 21 1 H 279" />
+              </svg>
+              <div class="timeline-interactive-badge">1</div>
+              <h3>Анализ ситуации</h3>
+              <p>Вы звоните дежурному юристу и описываете обстоятельства. Специалист сопоставит факты с законом и определит ваши права.</p>
+            </div>
+            
+            <!-- Card 2: Counter-Clockwise border SVG (Starts TR, ends TR) -->
+            <div class="timeline-interactive-card" onmouseenter="handleCardEnter(2)" onmouseleave="handleCardLeave()">
+              <svg class="card-border-svg" viewBox="0 0 300 200" preserveAspectRatio="none">
+                <path class="card-border-path" d="M 279 1 H 21 A 20 20 0 0 0 1 21 V 179 A 20 20 0 0 0 21 199 H 279 A 20 20 0 0 0 299 179 V 21 A 20 20 0 0 0 279 1" />
+              </svg>
+              <div class="timeline-interactive-badge">2</div>
+              <h3>Экономия времени</h3>
+              <p>Вам не нужно изучать судебные архивы. Вы сразу получаете четкий устный алгоритм дальнейших действий.</p>
+            </div>
+            
+            <!-- Card 3: Clockwise border SVG (Starts TL, ends TL) -->
+            <div class="timeline-interactive-card" onmouseenter="handleCardEnter(3)" onmouseleave="handleCardLeave()">
+              <svg class="card-border-svg" viewBox="0 0 300 200" preserveAspectRatio="none">
+                <path class="card-border-path" d="M 21 1 H 279 A 20 20 0 0 1 299 21 V 179 A 20 20 0 0 1 279 199 H 21 A 20 20 0 0 1 1 179 V 21 A 20 20 0 0 1 21 1" />
+              </svg>
+              <div class="timeline-interactive-badge">3</div>
+              <h3>Прогноз исхода</h3>
+              <p>Юрист оценит реальные шансы на успех и предупредит о рисках, чтобы уберечь вас от лишних расходов.</p>
+            </div>
+          </div>
+          
+          <div class="urgent-box">
+            <div class="urgent-icon-wrapper">
+              <div class="urgent-icon-pulse"></div>
+              <div class="urgent-icon">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0zM12 9v4M12 17h.01"></path>
+                </svg>
+              </div>
+            </div>
+            <div class="urgent-content">
+              <h4>Помощь в неотложных ситуациях</h4>
+              <p>Мы часто разбираем экстренные споры: незаконное увольнение, конфликты с соседями или споры о защите прав потребителей. Оперативный совет поможет не совершить ошибок в первые часы спора.</p>
+            </div>
           </div>
         </div>
-        
-        <!-- Target container for intro block layout swap -->
-        <div id="introBlockContainer"></div>
+      </div>
       </div>
 
     </div>
@@ -998,487 +665,152 @@
         </svg>`
   };
 
-  function switchIcon(iconId) {
-    const container = document.getElementById('shieldIconContainer');
-    if (!container) return;
-    
-    // Switch button active class
-    const buttons = document.querySelectorAll('.icon-switcher-btn');
-    buttons.forEach((btn, index) => {
-      if (index === (iconId - 1)) {
-        btn.classList.add('active');
-      } else {
-        btn.classList.remove('active');
-      }
+  let sequenceTimer = null;
+  let currentPhase = 0; // 0 to 2
+  let isHovered = false;
+  let hoverResumeTimeout = null;
+  let introAnimated = false; // Flag to track if the scroll-in sequence has run once
+  
+  let pathLengths = [];
+
+  function initPaths() {
+    const paths = document.querySelectorAll('.card-border-path');
+    paths.forEach((path, idx) => {
+      const length = path.getTotalLength();
+      pathLengths[idx] = length;
+      path.style.strokeDasharray = `120 ${length}`; // 120px glowing dash, followed by empty gap
+      path.style.strokeDashoffset = length; // Hide at start
     });
-    
-    // Fade transition
-    container.classList.add('fade-out');
-    setTimeout(() => {
-      container.innerHTML = iconsData[iconId];
-      container.classList.remove('fade-out');
-    }, 150);
   }
 
-  // 10 вариантов вводного блока с очеловеченным текстом и разными макетами
-  const introsData = {
-    1: `<div class="intro-demo-section">
-          <h2 style="font-family: var(--font-heading); color: var(--heading-text); font-size: 28px; font-weight: 800; text-align: center; margin-bottom: 12px; border-top: none; padding-top: 0; margin-top: 0;">
-            Простой процесс решения вашего вопроса
-          </h2>
-          <p style="color: var(--muted); font-size: 16px; text-align: center; max-width: 800px; margin: 0 auto 36px; line-height: 1.65;">
-            Правовая поддержка помогает быстро сориентироваться в сложной ситуации. Мы предлагаем удобный формат разбора вашей проблемы всего за три простых шага.
-          </p>
-          
-          <div class="intro-timeline-grid">
-            <div class="intro-timeline-card">
-              <div class="intro-timeline-step-badge">1</div>
-              <h3>Анализ ситуации</h3>
-              <p>Вы звоните дежурному юристу и описываете обстоятельства. Специалист сопоставит факты с законом и определит ваши права.</p>
-            </div>
-            
-            <div class="intro-timeline-card">
-              <div class="intro-timeline-step-badge">2</div>
-              <h3>Экономия времени</h3>
-              <p>Вам не нужно изучать судебные архивы. Вы сразу получаете четкий устный алгоритм дальнейших действий.</p>
-            </div>
-            
-            <div class="intro-timeline-card">
-              <div class="intro-timeline-step-badge">3</div>
-              <h3>Прогноз исхода</h3>
-              <p>Юрист оценит реальные шансы на успех и предупредит о рисках, чтобы уберечь вас от лишних расходов.</p>
-            </div>
-          </div>
-          
-          <div class="urgent-box">
-            <div class="urgent-icon-wrapper">
-              <div class="urgent-icon-pulse"></div>
-              <div class="urgent-icon">
-                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0zM12 9v4M12 17h.01"></path>
-                </svg>
-              </div>
-            </div>
-            <div class="urgent-content">
-              <h4>Помощь в неотложных ситуациях</h4>
-              <p>Мы часто разбираем экстренные споры: незаконное увольнение, конфликты с соседями или споры о защите прав потребителей. Оперативный совет поможет не совершить ошибок в первые часы спора.</p>
-            </div>
-          </div>
-        </div>`,
-    2: `<div class="intro-demo-section">
-          <h2 style="font-family: var(--font-heading); color: var(--heading-text); font-size: 28px; font-weight: 800; text-align: center; margin-bottom: 12px; border-top: none; padding-top: 0; margin-top: 0;">
-            Этапы работы с юристом
-          </h2>
-          <p style="color: var(--muted); font-size: 16px; text-align: center; max-width: 800px; margin: 0 auto 36px; line-height: 1.65;">
-            Пошаговый процесс разбора вашей проблемы строится так, чтобы вы сберегли силы и получили максимально объективный ответ.
-          </p>
-          
-          <div class="intro-zigzag-container">
-            <div class="intro-zigzag-row">
-              <div class="intro-zigzag-content">
-                <h3>
-                  <span class="intro-zigzag-step-label">Шаг 1</span>
-                  Честный анализ вашей ситуации
-                </h3>
-                <p>Юрист выслушает обстоятельства, сопоставит их со статьями законов РФ и судебной практикой, чтобы определить сильные и слабые стороны вашего дела.</p>
-              </div>
-              <div class="intro-zigzag-visual">
-                <div class="intro-zigzag-bg-num">01</div>
-              </div>
-            </div>
-            
-            <div class="intro-zigzag-row">
-              <div class="intro-zigzag-content">
-                <h3>
-                  <span class="intro-zigzag-step-label">Шаг 2</span>
-                  Экономия сил и личного времени
-                </h3>
-                <p>Вы получаете готовую инструкцию по телефону. Никаких поездок в офисы, пробок и утомительного ожидания приема — ответ готов за 5-10 минут.</p>
-              </div>
-              <div class="intro-zigzag-visual">
-                <div class="intro-zigzag-bg-num">02</div>
-              </div>
-            </div>
-            
-            <div class="intro-zigzag-row">
-              <div class="intro-zigzag-content">
-                <h3>
-                  <span class="intro-zigzag-step-label">Шаг 3</span>
-                  Оценка судебных перспектив
-                </h3>
-                <p>Специалист открыто расскажет, стоит ли доводить дело до суда и на какой исход можно рассчитывать, защищая вас от навязанных дорогостоящих услуг.</p>
-              </div>
-              <div class="intro-zigzag-visual">
-                <div class="intro-zigzag-bg-num">03</div>
-              </div>
-            </div>
-          </div>
-        </div>`,
-    3: `<div class="intro-demo-section">
-          <h2 style="font-family: var(--font-heading); color: var(--heading-text); font-size: 28px; font-weight: 800; text-align: center; margin-bottom: 12px; border-top: none; padding-top: 0; margin-top: 0;">
-            Три преимущества бесплатной поддержки
-          </h2>
-          <p style="color: var(--muted); font-size: 16px; text-align: center; max-width: 800px; margin: 0 auto 36px; line-height: 1.65;">
-            Получите квалифицированную консультацию дежурного юриста по всей России прямо сейчас.
-          </p>
-          
-          <div class="intro-accent-grid">
-            <div class="intro-accent-card">
-              <div class="accent-card-icon-box">
-                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="11" cy="11" r="8"></circle>
-                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                </svg>
-              </div>
-              <h3>Разбор правовой ситуации</h3>
-              <p>Юрист проведет экспресс-оценку ситуации, объяснит ваши права по закону и укажет на возможные риски.</p>
-            </div>
-            
-            <div class="intro-accent-card">
-              <div class="accent-card-icon-box">
-                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <polyline points="12 6 12 12 16 14"></polyline>
-                </svg>
-              </div>
-              <h3>Существенная экономия времени</h3>
-              <p>Никакой рутины и длительного ожидания. Вы получаете четкие рекомендации за один телефонный разговор.</p>
-            </div>
-            
-            <div class="intro-accent-card">
-              <div class="accent-card-icon-box">
-                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                </svg>
-              </div>
-              <h3>Оценка шансов на успех</h3>
-              <p>Мы открыто предупреждаем о перспективах спора в суде до того, как вы начнете тратить личные сбережения.</p>
-            </div>
-          </div>
-          
-          <div class="urgent-box">
-            <div class="urgent-icon-wrapper">
-              <div class="urgent-icon-pulse"></div>
-              <div class="urgent-icon">
-                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <line x1="12" y1="16" x2="12" y2="12"></line>
-                  <line x1="12" y1="8" x2="12.01" y2="8"></line>
-                </svg>
-              </div>
-            </div>
-            <div class="urgent-content">
-              <h4>Экстренные и спорные ситуации</h4>
-              <p>Незаконно уволили с работы, возник конфликт с соседями или магазин отказывает в возврате товара? Дежурный юрист поможет составить первичный план действий для защиты ваших интересов.</p>
-            </div>
-          </div>
-        </div>`,
-    4: `<div class="intro-demo-section">
-          <h2 style="font-family: var(--font-heading); color: var(--heading-text); font-size: 28px; font-weight: 800; text-align: center; margin-bottom: 12px; border-top: none; padding-top: 0; margin-top: 0;">
-            Процесс правового разбора
-          </h2>
-          <p style="color: var(--muted); font-size: 16px; text-align: center; max-width: 800px; margin: 0 auto 36px; line-height: 1.65;">
-            Три простых этапа для решения вашего юридического вопроса по всей России.
-          </p>
-          
-          <div class="intro-blob-grid">
-            <div class="intro-blob-card">
-              <div class="blob-step-num">1</div>
-              <h3>Анализ обстоятельств</h3>
-              <p>Юрист изучит все факты вашего обращения, определит применимые законы и права, которыми вы обладаете.</p>
-            </div>
-            
-            <div class="intro-blob-card">
-              <div class="blob-step-num">2</div>
-              <h3>Экономия сил и времени</h3>
-              <p>Получите готовый алгоритм и ответы на вопросы без пробок, визитов в офисы и чтения сложных кодексов.</p>
-            </div>
-            
-            <div class="intro-blob-card">
-              <div class="blob-step-num">3</div>
-              <h3>Оценка рисков дела</h3>
-              <p>Определим перспективы дела в суде и убережем вас от обращения к сомнительным платным адвокатам.</p>
-            </div>
-          </div>
-          
-          <div class="urgent-box">
-            <div class="urgent-icon-wrapper">
-              <div class="urgent-icon-pulse"></div>
-              <div class="urgent-icon">
-                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 0 1-3.46 0"></path>
-                </svg>
-              </div>
-            </div>
-            <div class="urgent-content">
-              <h4>Неотложные ситуации</h4>
-              <p>При увольнениях, спорах с соседями или претензиях к продавцам важно действовать быстро. Позвоните на горячую линию для моментальной оценки ваших прав.</p>
-            </div>
-          </div>
-        </div>`,
-    5: `<div class="intro-demo-section">
-          <div class="intro-dark-container" style="background: linear-gradient(135deg, #0e2a47 0%, #081729 100%); padding: 40px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.08); margin-bottom: 30px;">
-            <h2 style="font-family: var(--font-heading); color: #ffffff; font-size: 28px; font-weight: 800; text-align: center; margin-bottom: 12px; border-top: none; padding-top: 0; margin-top: 0;">
-              Пошаговая юридическая поддержка
-            </h2>
-            <p style="color: #94a3b8; font-size: 16px; text-align: center; max-width: 800px; margin: 0 auto 36px; line-height: 1.65;">
-              Современный подход к решению правовых вопросов без поездок, очередей и переплат.
-            </p>
-            
-            <div class="intro-darkstep-grid">
-              <div class="intro-darkstep-card">
-                <div class="darkstep-badge">01</div>
-                <h3>Оценка ситуации</h3>
-                <p>Быстрый разбор дела по закону. Юрист поможет выявить сильные стороны и определить ваши законные права.</p>
-              </div>
-              
-              <div class="intro-darkstep-card">
-                <div class="darkstep-badge">02</div>
-                <h3>Экономия ресурсов</h3>
-                <p>Готовые ответы и понятные инструкции по телефону за несколько минут без бумажной волокиты.</p>
-              </div>
-              
-              <div class="intro-darkstep-card">
-                <div class="darkstep-badge">03</div>
-                <h3>Прогноз результатов</h3>
-                <p>Реальная оценка шансов в суде до того, как вы начнете нести расходы на навязанных платных юристов.</p>
-              </div>
-            </div>
-            
-            <div class="urgent-box" style="background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.08); border-left: 4px solid var(--accent); display: flex; gap: 16px; padding: 20px; border-radius: 12px; text-align: left;">
-              <div class="urgent-icon-wrapper" style="flex-shrink: 0;">
-                <div class="urgent-icon" style="background: rgba(255, 255, 255, 0.1); color: #ffffff; width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0zM12 9v4M12 17h.01"></path>
-                  </svg>
-                </div>
-              </div>
-              <div class="urgent-content">
-                <h4 style="color: #ffffff; font-family: var(--font-heading); font-size: 16px; font-weight: 700; margin-bottom: 6px; margin-top: 0;">Экстренная юридическая помощь</h4>
-                <p style="color: #94a3b8; font-size: 13.5px; line-height: 1.5; margin: 0;">Незаконное увольнение, конфликты с соседями, претензии потребителей — дежурный специалист подскажет верный план действий при любых неотложных спорах.</p>
-              </div>
-            </div>
-          </div>
-        </div>`,
-    6: `<div class="intro-demo-section">
-          <div class="intro-glassplate-container">
-            <div class="glassplate-left" style="text-align: left;">
-              <h3>Быстрая помощь юриста без лишних затрат</h3>
-              <p>
-                Бесплатная поддержка призвана помочь вам вовремя разобраться в законах РФ и защитить свои права. Наш дежурный специалист поможет сэкономить драгоценное время и силы, предоставив понятную инструкцию.
-              </p>
-              <div class="glassplate-benefits">
-                <div class="glassplate-benefit-item">
-                  <span class="glassplate-dot"></span>
-                  <span>Честный анализ вашей ситуации</span>
-                </div>
-                <div class="glassplate-benefit-item">
-                  <span class="glassplate-dot"></span>
-                  <span>Существенная экономия личного времени</span>
-                </div>
-                <div class="glassplate-benefit-item">
-                  <span class="glassplate-dot"></span>
-                  <span>Оценка шансов на успех в суде</span>
-                </div>
-              </div>
-            </div>
-            <div class="glassplate-right-topics">
-              <h4>Популярные темы споров</h4>
-              <div class="glassplate-tags-flex">
-                <span class="glassplate-tag">Увольнение</span>
-                <span class="glassplate-tag">Конфликт с соседями</span>
-                <span class="glassplate-tag">Защита прав потребителей</span>
-                <span class="glassplate-tag">Семейные дела</span>
-                <span class="glassplate-tag">Жилищные споры</span>
-                <span class="glassplate-tag">Наследство</span>
-              </div>
-              <div style="font-size: 11px; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">Конфиденциальный разбор обращений</div>
-            </div>
-          </div>
-        </div>`,
-    7: `<div class="intro-demo-section">
-          <div class="intro-metrics-container">
-            <div class="metrics-left" style="text-align: left;">
-              <h3>Комплексная правовая оценка без промедлений</h3>
-              <p>
-                Горячая линия бесплатной поддержки работает для оперативного разбора правовых споров граждан. Мы сориентируем вас в законах и поможем избежать ошибок при экстренных проблемах (таких как незаконное увольнение, претензии потребителей или конфликты с соседями).
-              </p>
-              <div class="metrics-list">
-                <div class="metrics-item">
-                  <span class="metrics-item-bullet">&bull;</span>
-                  <span>Разъясняем права гражданина простым и понятным языком</span>
-                </div>
-                <div class="metrics-item">
-                  <span class="metrics-item-bullet">&bull;</span>
-                  <span>Экономим ваше время — разбор проблемы за 5-10 минут</span>
-                </div>
-                <div class="metrics-item">
-                  <span class="metrics-item-bullet">&bull;</span>
-                  <span>Честно оцениваем шансы на победу до обращения в суды</span>
-                </div>
-              </div>
-            </div>
-            <div class="metrics-right-widget">
-              <div class="metrics-grid">
-                <div class="metric-box">
-                  <div class="metric-val">2 мин</div>
-                  <div class="metric-lbl">Среднее время ответа</div>
-                </div>
-                <div class="metric-box">
-                  <div class="metric-val">12</div>
-                  <div class="metric-lbl">Юристов на связи</div>
-                </div>
-                <div class="metric-box">
-                  <div class="metric-val">98%</div>
-                  <div class="metric-lbl">Успешных разборов</div>
-                </div>
-                <div class="metric-box">
-                  <div class="metric-val">24/7</div>
-                  <div class="metric-lbl">Режим дежурства</div>
-                </div>
-              </div>
-              <div class="metrics-status-bar">
-                <span class="metrics-dot-pulse"></span>
-                <span>Консультанты онлайн. Прием обращений идет</span>
-              </div>
-            </div>
-          </div>
-        </div>`,
-    8: `<div class="intro-demo-section">
-          <div class="intro-chat-container">
-            <div class="chat-left" style="text-align: left;">
-              <h3>Честные ответы на ваши вопросы</h3>
-              <p>
-                Наша цель — предоставить понятную и практическую юридическую помощь. Специалист поможет оценить обстоятельства дела, подскажет верные пути решения, сэкономит время и предостережет от лишних расходов на платные суды.
-              </p>
-              <div style="background: rgba(53, 83, 128, 0.04); padding: 15px; border-radius: 12px; border-left: 3px solid var(--accent); font-size: 13.5px; color: var(--muted); line-height: 1.5;">
-                <strong>Срочные споры:</strong> Защита при незаконном увольнении, споры с соседями, возврат некачественных товаров.
-              </div>
-            </div>
-            <div class="chat-right-panel">
-              <div class="mini-chat-messages">
-                <div class="mini-chat-bubble mini-chat-bubble-bot">
-                  Здравствуйте! Какая у вас юридическая проблема? Опишите кратко ситуацию.
-                </div>
-                <div class="mini-chat-bubble mini-chat-bubble-user">
-                  Работодатель требует уволиться по собственному желанию, грозит уволить по статье. Что делать?
-                </div>
-                <div class="mini-chat-bubble mini-chat-bubble-bot">
-                  Это распространенное нарушение. Не подписывайте заявление, фиксируйте угрозы. Мы поможем подготовить жалобу в трудовую инспекцию.
-                </div>
-              </div>
-              <div class="mini-chat-footer">
-                Симуляция диалога с дежурным юристом
-              </div>
-            </div>
-          </div>
-        </div>`,
-    9: `<div class="intro-demo-section">
-          <div class="intro-noble-box">
-            <div class="noble-inner">
-              <h3>Профессиональный правовой разбор споров</h3>
-              <p>
-                Бесплатная консультация дежурного юриста помогает трезво оценить сложившуюся ситуацию, сберечь силы и личное время. Мы помогаем найти оптимальные решения при незаконном увольнении, спорах с соседями или претензиях к продавцам. Вы узнаете объективные перспективы вашего дела без навязанных услуг.
-              </p>
-              <div class="noble-badges-row">
-                <div class="noble-badge-item">
-                  <span class="noble-badge-check">&check;</span>
-                  <span>Оценка правовой ситуации</span>
-                </div>
-                <div class="noble-badge-item">
-                  <span class="noble-badge-check">&check;</span>
-                  <span>Экономия времени без поездок</span>
-                </div>
-                <div class="noble-badge-item">
-                  <span class="noble-badge-check">&check;</span>
-                  <span>Оценка шансов на успех</span>
-                </div>
-                <div class="noble-badge-item">
-                  <span class="noble-badge-check">&check;</span>
-                  <span>Полная конфиденциальность</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>`,
-    10: `<div class="intro-demo-section">
-          <div class="intro-obsidian-container">
-            <div class="obsidian-left" style="text-align: left;">
-              <h3>Надежная правовая защита и оценка перспектив</h3>
-              <p>
-                Бесплатный телефонный разбор дел позволяет гражданам быстро получить совет в сложной правовой ситуации. Юрист оценит обстоятельства, подскажет правильный порядок действий по закону и честно укажет шансы на победу, чтобы защитить вас от лишних расходов.
-              </p>
-              <div class="obsidian-benefits">
-                <div class="obsidian-benefit-item">
-                  <div class="obsidian-check-wrapper">&check;</div>
-                  <div class="obsidian-benefit-text">
-                    <h4>Честный анализ правовой ситуации</h4>
-                    <p>Вы узнаете реальное положение дел со ссылками на законы РФ.</p>
-                  </div>
-                </div>
-                <div class="obsidian-benefit-item">
-                  <div class="obsidian-check-wrapper">&check;</div>
-                  <div class="obsidian-benefit-text">
-                    <h4>Существенная экономия вашего времени</h4>
-                    <p>Не тратьте время на чтение форумов, получите готовый алгоритм.</p>
-                  </div>
-                </div>
-                <div class="obsidian-benefit-item">
-                  <div class="obsidian-check-wrapper">&check;</div>
-                  <div class="obsidian-benefit-text">
-                    <h4>Разбор экстренных и неотложных споров</h4>
-                    <p>Помощь при увольнениях, спорах с соседями, нарушении прав потребителей.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <div class="obsidian-right-seal">
-              <div class="obsidian-seal-icon">
-                <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-                  <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-                </svg>
-              </div>
-              <h4>Конфиденциальность гарантирована</h4>
-              <p>
-                Все консультации и обращения граждан строго защищены в соответствии с ФЗ-152 о персональных данных РФ.
-              </p>
-            </div>
-          </div>
-        </div>`
-  };
+  function runSequence() {
+    if (isHovered) return;
 
+    const cards = document.querySelectorAll('.timeline-interactive-card');
+    const paths = document.querySelectorAll('.card-border-path');
+    if (paths.length === 0) return;
 
-  function switchIntro(introId) {
-    const container = document.getElementById('introBlockContainer');
-    if (!container) return;
-    
-    // Switch button active class
-    const buttons = document.querySelectorAll('.intro-switcher-btn');
-    buttons.forEach((btn, index) => {
-      if (index === (introId - 1)) {
-        btn.classList.add('active');
-      } else {
-        btn.classList.remove('active');
-      }
-    });
-    
-    // Fade transition
-    container.style.opacity = 0;
-    container.style.transform = 'translateY(8px)';
-    container.style.transition = 'opacity 0.2s ease, transform 0.2s ease';
-    
-    setTimeout(() => {
-      container.innerHTML = introsData[introId];
-      container.style.opacity = 1;
-      container.style.transform = 'translateY(0)';
-    }, 200);
+    if (currentPhase === 0) {
+      // Card 1 active: outline rotates clockwise (full loop TR -> TR, 1.6s)
+      cards[0].classList.add('active');
+      cards[1].classList.remove('active');
+      cards[2].classList.remove('active');
+      
+      paths[0].style.transition = 'stroke-dashoffset 1.6s linear';
+      paths[0].style.strokeDashoffset = -120;
+
+      sequenceTimer = setTimeout(() => {
+        cards[0].classList.remove('active');
+        currentPhase = 1;
+        runSequence();
+      }, 1600);
+
+    } else if (currentPhase === 1) {
+      // Card 2 active: outline rotates counter-clockwise (full loop TR -> TR, 1.6s)
+      cards[0].classList.remove('active');
+      cards[1].classList.add('active');
+      cards[2].classList.remove('active');
+
+      paths[1].style.transition = 'stroke-dashoffset 1.6s linear';
+      paths[1].style.strokeDashoffset = -120;
+
+      sequenceTimer = setTimeout(() => {
+        cards[1].classList.remove('active');
+        currentPhase = 2;
+        runSequence();
+      }, 1600);
+
+    } else if (currentPhase === 2) {
+      // Card 3 active: outline rotates clockwise (full loop TL -> TL, 1.6s)
+      cards[0].classList.remove('active');
+      cards[1].classList.remove('active');
+      cards[2].classList.add('active');
+
+      paths[2].style.transition = 'stroke-dashoffset 1.6s linear';
+      paths[2].style.strokeDashoffset = -120;
+
+      sequenceTimer = setTimeout(() => {
+        cards[2].classList.remove('active');
+        introAnimated = true; // Finished once
+      }, 1600);
+    }
   }
 
-  // Set default options on load
+  function handleCardEnter(stepNum) {
+    isHovered = true;
+    if (sequenceTimer) clearTimeout(sequenceTimer);
+    if (hoverResumeTimeout) clearTimeout(hoverResumeTimeout);
+
+    const cards = document.querySelectorAll('.timeline-interactive-card');
+    const paths = document.querySelectorAll('.card-border-path');
+
+    cards.forEach((card, index) => {
+      const path = paths[index];
+      if (index === stepNum - 1) {
+        card.classList.add('active');
+        if (path) {
+          // Instantly trace full card outline when hovered manually
+          path.style.transition = 'stroke-dashoffset 0.6s cubic-bezier(0.25, 1, 0.5, 1)';
+          path.style.strokeDashoffset = 0;
+        }
+      } else {
+        card.classList.remove('active');
+        if (path) {
+          path.style.transition = 'stroke-dashoffset 0.3s ease';
+          path.style.strokeDashoffset = pathLengths[index] || 1000;
+        }
+      }
+    });
+  }
+
+  function handleCardLeave() {
+    isHovered = false;
+    if (hoverResumeTimeout) clearTimeout(hoverResumeTimeout);
+    
+    hoverResumeTimeout = setTimeout(() => {
+      if (isHovered) return;
+      const cards = document.querySelectorAll('.timeline-interactive-card');
+      const paths = document.querySelectorAll('.card-border-path');
+      
+      cards.forEach((card, index) => {
+        card.classList.remove('active');
+        const path = paths[index];
+        if (path) {
+          path.style.transition = 'stroke-dashoffset 0.4s ease';
+          path.style.strokeDashoffset = pathLengths[index] || 1000;
+        }
+      });
+    }, 800);
+  }
+
+  // Intersection Observer for scroll entrance animations
   document.addEventListener('DOMContentLoaded', () => {
-    switchIntro(1);
+    // Initialize paths SVG lengths
+    initPaths();
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Add visible class to trigger CSS transitions
+          const cards = document.querySelectorAll('.timeline-interactive-card');
+          cards.forEach(card => card.classList.add('visible'));
+          
+          // Start the choreographed sequence after a brief entrance delay
+          setTimeout(() => {
+            if (!isHovered) {
+              currentPhase = 0;
+              runSequence();
+            }
+          }, 600);
+          
+          // Stop observing once animated in
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    const grid = document.getElementById('timelineGrid');
+    if (grid) observer.observe(grid);
   });
 </script>
 </body>

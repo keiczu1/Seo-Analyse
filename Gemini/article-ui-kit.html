@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>UI kit статьи LawDivorce</title>
-  <meta name="description" content="Справочная страница с компонентами оформления статей LawDivorce: типографика, карточки, callout-блоки, таблицы, документы, FAQ, автор и перелинковка.">
+  <meta name="description"
+    content="Справочная страница с компонентами оформления статей LawDivorce: типографика, карточки, callout-блоки, таблицы, документы, FAQ, автор и перелинковка.">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -391,6 +393,7 @@
     }
 
     @media (max-width: 760px) {
+
       .kit-rules-grid,
       .kit-do-dont {
         grid-template-columns: 1fr;
@@ -481,991 +484,1091 @@
     }
   </style>
 </head>
+
 <body>
-<header class="site-header" id="siteHeader">
-  <div class="header-main-bar">
-    <div class="header-inner">
-      <div class="header-top-row">
-        <a href="https://law-divorce.org/" class="header-logo" data-wpel-link="internal">
-          <svg class="header-logo-icon" viewBox="0 0 100 100" width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="solidNavyLogoKit" x1="15" y1="10" x2="85" y2="90" gradientUnits="userSpaceOnUse">
-                <stop offset="0%" stop-color="#476899" />
-                <stop offset="45%" stop-color="#355380" />
-                <stop offset="100%" stop-color="#0E2A47" />
-              </linearGradient>
-              <clipPath id="shieldClipMonoLogoKit">
-                <path d="M50,10 C72,10 82,13 85,16 C85,48 87,68 50,90 C13,68 15,48 15,16 C18,13 28,10 50,10 Z"></path>
-              </clipPath>
-            </defs>
-            <path d="M50,10 C72,10 82,13 85,16 C85,48 87,68 50,90 C13,68 15,48 15,16 C18,13 28,10 50,10 Z" fill="rgba(14, 42, 71, 0.3)" transform="translate(0, 3)"></path>
-            <g clip-path="url(#shieldClipMonoLogoKit)">
-              <path d="M0,0 H100 V100 H0 Z" fill="url(#solidNavyLogoKit)"></path>
-              <path d="M15,10 H50 V90 H15 Z" fill="#ffffff" opacity="0.06"></path>
-              <path d="M50,10 H85 V90 H50 Z" fill="#000000" opacity="0.06"></path>
-              <path d="M-10,-10 L110,40 L110,-10 Z" fill="#ffffff" opacity="0.08" pointer-events="none"></path>
-            </g>
-            <line x1="50" y1="10" x2="50" y2="90" stroke="#000000" stroke-width="1.2" stroke-opacity="0.15"></line>
-            <line x1="50" y1="10" x2="50" y2="90" stroke="#ffffff" stroke-width="1" stroke-opacity="0.1" transform="translate(-1, 0)"></line>
-            <path d="M50,10 C72,10 82,13 85,16 C85,48 87,68 50,90 C13,68 15,48 15,16 C18,13 28,10 50,10 Z" stroke="#355380" stroke-width="2.5" stroke-opacity="0.9" stroke-linejoin="round"></path>
-            <path d="M50,13 C69,13 77,15 80,18 C80,44 82,60 50,81 C18,60 20,44 20,18 C23,15 31,13 50,13 Z" stroke="#ffffff" stroke-width="1" stroke-opacity="0.45" stroke-linejoin="round"></path>
-          </svg>
-          <span class="header-logo-text"><span class="logo-law">Law</span><span class="logo-divorce">Divorce</span></span>
-        </a>
+  <header class="site-header" id="siteHeader">
+    <div class="header-main-bar">
+      <div class="header-inner">
+        <div class="header-top-row">
+          <a href="https://law-divorce.org/" class="header-logo" data-wpel-link="internal">
+            <svg class="header-logo-icon" viewBox="0 0 100 100" width="22" height="22" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="solidNavyLogoKit" x1="15" y1="10" x2="85" y2="90" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#476899" />
+                  <stop offset="45%" stop-color="#355380" />
+                  <stop offset="100%" stop-color="#0E2A47" />
+                </linearGradient>
+                <clipPath id="shieldClipMonoLogoKit">
+                  <path d="M50,10 C72,10 82,13 85,16 C85,48 87,68 50,90 C13,68 15,48 15,16 C18,13 28,10 50,10 Z"></path>
+                </clipPath>
+              </defs>
+              <path d="M50,10 C72,10 82,13 85,16 C85,48 87,68 50,90 C13,68 15,48 15,16 C18,13 28,10 50,10 Z"
+                fill="rgba(14, 42, 71, 0.3)" transform="translate(0, 3)"></path>
+              <g clip-path="url(#shieldClipMonoLogoKit)">
+                <path d="M0,0 H100 V100 H0 Z" fill="url(#solidNavyLogoKit)"></path>
+                <path d="M15,10 H50 V90 H15 Z" fill="#ffffff" opacity="0.06"></path>
+                <path d="M50,10 H85 V90 H50 Z" fill="#000000" opacity="0.06"></path>
+                <path d="M-10,-10 L110,40 L110,-10 Z" fill="#ffffff" opacity="0.08" pointer-events="none"></path>
+              </g>
+              <line x1="50" y1="10" x2="50" y2="90" stroke="#000000" stroke-width="1.2" stroke-opacity="0.15"></line>
+              <line x1="50" y1="10" x2="50" y2="90" stroke="#ffffff" stroke-width="1" stroke-opacity="0.1"
+                transform="translate(-1, 0)"></line>
+              <path d="M50,10 C72,10 82,13 85,16 C85,48 87,68 50,90 C13,68 15,48 15,16 C18,13 28,10 50,10 Z"
+                stroke="#355380" stroke-width="2.5" stroke-opacity="0.9" stroke-linejoin="round"></path>
+              <path d="M50,13 C69,13 77,15 80,18 C80,44 82,60 50,81 C18,60 20,44 20,18 C23,15 31,13 50,13 Z"
+                stroke="#ffffff" stroke-width="1" stroke-opacity="0.45" stroke-linejoin="round"></path>
+            </svg>
+            <span class="header-logo-text"><span class="logo-law">Law</span><span
+                class="logo-divorce">Divorce</span></span>
+          </a>
 
-        <div class="header-contacts">
-          <div class="phone-row">
-            <span class="phone-label">Бесплатная консультация юриста:</span>
-            <a href="tel:+78005512406" class="phone-number">
-              <span class="phone-icon-container">
-                <svg class="phone-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                </svg>
-              </span>
-              <span>+7 (800) 551-24-06</span>
-            </a>
-            <span class="timing-badge">
-              <svg class="timing-svg" viewBox="0 0 54 18" width="54" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g class="timing-clock-group" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="9" cy="9" r="7.5" />
-                  <path d="M9 4.5V9l3 1.5" />
-                  <path d="M9 1.5v1.5M9 16.5v-1.5M1.5 9h1.5M16.5 9h-1.5" stroke-width="1" />
-                </g>
-                <text class="timing-text" x="22" y="13" font-family="'Jost', sans-serif" font-size="12" font-weight="700" fill="currentColor" letter-spacing="0.5">24/7</text>
-              </svg>
-            </span>
-          </div>
-        </div>
-
-        <div class="header-top-right">
-          <button class="mobile-toggle" id="mobileToggle" aria-label="Открыть меню">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="header-nav-bar" id="headerNavRow">
-    <div class="header-inner">
-      <nav class="header-nav-row" style="border: none; width: 100%;">
-        <ul id="main_menu" class="top_menu">
-          <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
-            <a href="https://law-divorce.org/besplatnye-konsultatsii-yurista-po-semejnym-voprosam-online/" data-wpel-link="internal"><span class="icon_text">Консультации</span></a>
-            <span class="arrow"></span>
-            <div class="sub">
-              <ul>
-                <li><a href="https://law-divorce.org/besplatnye-konsultatsii-yurista-po-semejnym-voprosam-online/" data-wpel-link="internal">По семейным спорам</a></li>
-                <li><a href="https://law-divorce.org/besplatnaya-konsultatsiya-yurista-po-zhilishhnym-voprosam/" data-wpel-link="internal">По жилищным спорам</a></li>
-                <li><a href="https://law-divorce.org/besplatnaya-konsultatsiya-yurista-po-nasledstvu-online/" data-wpel-link="internal">По наследству</a></li>
-              </ul>
-              <ul>
-                <li><a href="https://law-divorce.org/besplatnaya-yuridicheskaya-konsultatsiya-po-trudovomu-pravu-onlajn/" data-wpel-link="internal">По трудовым спорам</a></li>
-                <li><a href="https://law-divorce.org/besplatnaya-konsultatsiya-yurista-po-kreditam-online/" data-wpel-link="internal">По кредитам и банкам</a></li>
-                <li><a href="https://law-divorce.org/besplatnaya-konsultatsiya-yurista-po-zashhite-prav-potrebitelej/" data-wpel-link="internal">По защите прав потребителей</a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
-            <a href="category-divorce.html"><span class="icon_text">Блог</span></a>
-            <span class="arrow"></span>
-            <div class="sub">
-              <ul>
-                <li><a href="category-divorce.html">Разводы</a></li>
-                <li><a href="article-divorce-without-consent.html#data">Раздел имущества</a></li>
-                <li><a href="article-divorce-without-consent.html#children">Алименты</a></li>
-              </ul>
-              <ul>
-                <li><a href="article-divorce-without-consent.html#children">Права родителей</a></li>
-                <li><a href="article-divorce-without-consent.html#children">Опека</a></li>
-                <li><a href="article-divorce-without-consent.html#children">Усыновление</a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
-            <a href="https://law-divorce.org/yurist-advokat-po-razvodam-v-moskve/" data-wpel-link="internal"><span class="icon_text">Услуги</span></a>
-            <span class="arrow"></span>
-            <div class="sub">
-              <ul>
-                <li><a href="https://law-divorce.org/yurist-advokat-po-razvodam-v-moskve/" data-wpel-link="internal">Расторжение брака</a></li>
-                <li><a href="https://law-divorce.org/yurist-advokat-po-razdelu-imushhestva-pri-razvode/" data-wpel-link="internal">Раздел имущества</a></li>
-                <li><a href="https://law-divorce.org/yurist-advokat-po-semejnym-delam/" data-wpel-link="internal">Семейные споры</a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="menu-item menu-item-type-custom menu-item-object-custom">
-            <a href="article-divorce-without-consent.html"><span class="icon_text">Статья</span></a>
-          </li>
-          <li class="menu-item-contacts-mobile">
-            <div class="mobile-contacts-inner">
+          <div class="header-contacts">
+            <div class="phone-row">
               <span class="phone-label">Бесплатная консультация юриста:</span>
               <a href="tel:+78005512406" class="phone-number">
                 <span class="phone-icon-container">
-                  <svg class="phone-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  <svg class="phone-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                      d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                    </path>
                   </svg>
                 </span>
                 <span>+7 (800) 551-24-06</span>
               </a>
               <span class="timing-badge">
-                <svg class="timing-svg" viewBox="0 0 54 18" width="54" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <g class="timing-clock-group" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <svg class="timing-svg" viewBox="0 0 54 18" width="54" height="18" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <g class="timing-clock-group" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round">
                     <circle cx="9" cy="9" r="7.5" />
                     <path d="M9 4.5V9l3 1.5" />
                     <path d="M9 1.5v1.5M9 16.5v-1.5M1.5 9h1.5M16.5 9h-1.5" stroke-width="1" />
                   </g>
-                  <text class="timing-text" x="22" y="13" font-family="'Jost', sans-serif" font-size="12" font-weight="700" fill="currentColor" letter-spacing="0.5">24/7</text>
+                  <text class="timing-text" x="22" y="13" font-family="'Jost', sans-serif" font-size="12"
+                    font-weight="700" fill="currentColor" letter-spacing="0.5">24/7</text>
                 </svg>
               </span>
             </div>
-          </li>
-        </ul>
-      </nav>
+          </div>
+
+          <div class="header-top-right">
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Открыть меню">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</header>
 
-<div class="header-placeholder" id="headerPlaceholder"></div>
-
-<div class="article-container">
-  <nav class="breadcrumbs" aria-label="Хлебные крошки">
-    <ol class="breadcrumbs-list">
-      <li><a href="/">Главная</a></li>
-      <li class="separator">›</li>
-      <li><a href="article-divorce-without-consent.html">Статья</a></li>
-      <li class="separator">›</li>
-      <li aria-current="page" class="current">UI kit</li>
-    </ol>
-  </nav>
-
-  <div class="article-layout">
-    <main class="main kit-main" id="top">
-      <article>
-        <div class="kit-kicker">Article system</div>
-        <div class="meta">
-          <time datetime="2026-06-04">Обновлено: 4 июня 2026</time>
-          <span>Время чтения: ~10 мин</span>
-        </div>
-
-        <h1>UI kit оформления юридической статьи</h1>
-
-        <p>Эта страница собирает основные элементы из текущего макета статьи в один справочник. Ее можно использовать как визуальную базу перед сборкой новых материалов: видно, как выглядят лид, быстрые факты, интерактивный выбор, предупреждения, таблицы, документы, FAQ, авторский блок и перелинковка.</p>
-
-        <div class="summary-card">
-          <div class="item">
-            <span class="label">Файл</span>
-            <span class="value">article-ui-kit.html</span>
-          </div>
-          <div class="item">
-            <span class="label">CSS</span>
-            <span class="value">style.css?v=13</span>
-          </div>
-          <div class="item">
-            <span class="label">Сетка</span>
-            <span class="value">контент + TOC</span>
-          </div>
-          <div class="item">
-            <span class="label">Назначение</span>
-            <span class="value">новые статьи</span>
-          </div>
-        </div>
-
-        <section id="tokens">
-          <h2>Дизайн-токены</h2>
-          <p class="kit-section-note">Цвета и базовая типографика уже лежат в <span class="kit-code">:root</span> внутри общего CSS. Здесь показаны самые заметные переменные.</p>
-
-          <div class="kit-token-grid">
-            <div class="kit-token">
-              <div class="kit-token-swatch" style="background: var(--heading-text);"></div>
-              <div class="kit-token-body">
-                <span class="kit-token-name">Heading / Navy</span>
-                <span class="kit-token-value">--heading-text #0E2A47</span>
+    <div class="header-nav-bar" id="headerNavRow">
+      <div class="header-inner">
+        <nav class="header-nav-row" style="border: none; width: 100%;">
+          <ul id="main_menu" class="top_menu">
+            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+              <a href="https://law-divorce.org/besplatnye-konsultatsii-yurista-po-semejnym-voprosam-online/"
+                data-wpel-link="internal"><span class="icon_text">Консультации</span></a>
+              <span class="arrow"></span>
+              <div class="sub">
+                <ul>
+                  <li><a href="https://law-divorce.org/besplatnye-konsultatsii-yurista-po-semejnym-voprosam-online/"
+                      data-wpel-link="internal">По семейным спорам</a></li>
+                  <li><a href="https://law-divorce.org/besplatnaya-konsultatsiya-yurista-po-zhilishhnym-voprosam/"
+                      data-wpel-link="internal">По жилищным спорам</a></li>
+                  <li><a href="https://law-divorce.org/besplatnaya-konsultatsiya-yurista-po-nasledstvu-online/"
+                      data-wpel-link="internal">По наследству</a></li>
+                </ul>
+                <ul>
+                  <li><a
+                      href="https://law-divorce.org/besplatnaya-yuridicheskaya-konsultatsiya-po-trudovomu-pravu-onlajn/"
+                      data-wpel-link="internal">По трудовым спорам</a></li>
+                  <li><a href="https://law-divorce.org/besplatnaya-konsultatsiya-yurista-po-kreditam-online/"
+                      data-wpel-link="internal">По кредитам и банкам</a></li>
+                  <li><a href="https://law-divorce.org/besplatnaya-konsultatsiya-yurista-po-zashhite-prav-potrebitelej/"
+                      data-wpel-link="internal">По защите прав потребителей</a></li>
+                </ul>
               </div>
-            </div>
-            <div class="kit-token">
-              <div class="kit-token-swatch" style="background: var(--accent);"></div>
-              <div class="kit-token-body">
-                <span class="kit-token-name">Accent</span>
-                <span class="kit-token-value">--accent #355380</span>
-              </div>
-            </div>
-            <div class="kit-token">
-              <div class="kit-token-swatch" style="background: var(--brand-accent);"></div>
-              <div class="kit-token-body">
-                <span class="kit-token-name">Brand accent</span>
-                <span class="kit-token-value">--brand-accent #cc3f5c</span>
-              </div>
-            </div>
-            <div class="kit-token">
-              <div class="kit-token-swatch" style="background: var(--bg);"></div>
-              <div class="kit-token-body">
-                <span class="kit-token-name">Page background</span>
-                <span class="kit-token-value">--bg #F8FAFC</span>
-              </div>
-            </div>
-            <div class="kit-token">
-              <div class="kit-token-swatch" style="background: var(--important-bg);"></div>
-              <div class="kit-token-body">
-                <span class="kit-token-name">Important callout</span>
-                <span class="kit-token-value">--important-bg</span>
-              </div>
-            </div>
-            <div class="kit-token">
-              <div class="kit-token-swatch" style="background: var(--summary-bg);"></div>
-              <div class="kit-token-body">
-                <span class="kit-token-name">Summary callout</span>
-                <span class="kit-token-value">--summary-bg</span>
-              </div>
-            </div>
-          </div>
-
-        </section>
-
-        <section id="skill-rules">
-          <h2>Правила из skill</h2>
-          <p class="kit-section-note">UI kit ориентирован на правила <span class="kit-code">seo-brief-pipeline</span>: статья строится по задаче пользователя, а не по универсальному шаблону.</p>
-
-          <div class="kit-rules-grid">
-            <div class="kit-rule-card">
-              <h3>Редакторская логика</h3>
-              <ul>
-                <li>Пишите для юридически неподготовленного читателя.</li>
-                <li>Двигайтесь от проблемы к решению: суть, варианты, шаги, документы, риски, резюме.</li>
-                <li>Каждый H2 должен выполнять задачу, а не просто содержать ключ.</li>
-                <li>FAQ дополняет статью нюансами и edge-case, а не повторяет body-контент.</li>
-              </ul>
-            </div>
-            <div class="kit-rule-card">
-              <h3>Юридическая ниша</h3>
-              <ul>
-                <li>Ключевое утверждение подкрепляйте ссылкой на норму закона.</li>
-                <li>Ссылки на законы ведут на конкретную статью, если URL проверен.</li>
-                <li>Если точный hash неизвестен, ставьте base-URL и пометку <span class="kit-code">URL требует уточнения</span>.</li>
-                <li>В конце нужен блок «Правовая база» и YMYL-дисклеймер.</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="kit-do-dont">
-            <div class="kit-do">
-              <strong>Правильно</strong>
-              <p><strong>Исковое заявление</strong> — это документ, с которого начинается дело в суде. Вам нужно подать его по месту жительства ответчика, если нет оснований выбрать другой суд.</p>
-            </div>
-            <div class="kit-dont">
-              <strong>Не по правилам</strong>
-              <p>Исковое заявление должно быть подано в установленном порядке согласно действующему законодательству.</p>
-            </div>
-          </div>
-
-          <div class="table-container">
-            <table>
-              <caption>Маппинг правил skill в HTML-компоненты</caption>
-              <thead>
-                <tr>
-                  <th>Правило</th>
-                  <th>Как оформлять</th>
-                  <th>Компонент</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Один H1 на странице</td>
-                  <td>Только главный заголовок из брифа</td>
-                  <td><span class="kit-code">&lt;h1&gt;</span></td>
-                </tr>
-                <tr>
-                  <td>Каждый H2 = задача</td>
-                  <td>Секция отвечает на конкретный вопрос пользователя</td>
-                  <td><span class="kit-code">&lt;section&gt; + &lt;h2&gt;</span></td>
-                </tr>
-                <tr>
-                  <td>Перечисления</td>
-                  <td>Документы, условия, признаки, варианты</td>
-                  <td><span class="kit-code">&lt;ul&gt;</span></td>
-                </tr>
-                <tr>
-                  <td>Порядок действий</td>
-                  <td>Шаги в строгой последовательности</td>
-                  <td><span class="kit-code">&lt;ol&gt;</span> или <span class="kit-code">.steps</span></td>
-                </tr>
-                <tr>
-                  <td>Сценарная развилка</td>
-                  <td>Не ASCII-дерево, а две кликабельные карточки</td>
-                  <td><span class="kit-code">.choice-cards</span></td>
-                </tr>
-                <tr>
-                  <td>Резюме обязательно</td>
-                  <td>3-5 пунктов: глагол + суть</td>
-                  <td><span class="kit-code">.callout-summary</span></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </section>
-
-        <section id="text-elements">
-          <h2>Текстовая разметка</h2>
-          <p class="kit-section-note">Базовые элементы внутри статьи: заголовки H1-H4, абзацы, маркированные и нумерованные списки, а также разные типы ссылок.</p>
-
-          <div class="kit-type-sample">
-            <div class="kit-type-row">
-              <span class="kit-type-label">H1 / главный заголовок страницы / один раз</span>
-              <div class="kit-heading-demo kit-h1-demo">Как развестись без согласия жены в 2026 году</div>
-              <div class="kit-component-note">На реальной статье H1 должен быть один. В UI kit это визуальная демонстрация, поэтому образец не размечен вторым <span class="kit-code">&lt;h1&gt;</span>.</div>
-            </div>
-            <div class="kit-type-row">
-              <span class="kit-type-label">H2 / основной раздел статьи</span>
-              <div class="kit-heading-demo kit-h2-demo">Куда подавать заявление</div>
-              <div class="kit-component-note">H2 отвечает за отдельную задачу: понять правило, выбрать вариант, собрать документы или выполнить шаг.</div>
-            </div>
-            <div class="kit-type-row">
-              <span class="kit-type-label">H3 / подраздел внутри H2</span>
-              <div class="kit-heading-demo kit-h3-demo">Если есть несовершеннолетние дети</div>
-            </div>
-            <div class="kit-type-row">
-              <span class="kit-type-label">H4 / локальный подзаголовок, примечание или группа</span>
-              <div class="kit-heading-demo kit-h4-demo">Документы для районного суда</div>
-            </div>
-            <div class="kit-type-row">
-              <span class="kit-type-label">Абзац</span>
-              <p style="margin: 0;"><strong>Подсудность</strong> — это правило, которое определяет нужный суд. Вам нужно выбрать мировой или районный суд до подачи иска.</p>
-            </div>
-            <div class="kit-type-row">
-              <span class="kit-type-label">Курсив / цитата или ссылка на норму</span>
-              <p style="margin: 0;">Согласно <em><a href="https://www.consultant.ru/document/cons_doc_LAW_8982/4a167ba0c30fe37c07642d042cf2aa85ee1345da/" target="_blank" rel="noopener">ст. 22 СК РФ</a></em>, суд может назначить срок для примирения. Это значит, что процесс иногда затягивается.</p>
-            </div>
-          </div>
-
-          <div class="kit-text-grid">
-            <div class="kit-text-panel">
-              <h3>Маркированный список</h3>
-              <p>Используйте, когда порядок пунктов не важен:</p>
-              <ul>
-                <li>паспорт заявителя;</li>
-                <li>свидетельство о браке;</li>
-                <li>копия иска для ответчика;</li>
-                <li>квитанция об оплате госпошлины.</li>
-              </ul>
-            </div>
-            <div class="kit-text-panel">
-              <h3>Нумерованный список</h3>
-              <p>Используйте, когда важна последовательность действий:</p>
-              <ol>
-                <li>Определить подсудность.</li>
-                <li>Подготовить исковое заявление.</li>
-                <li>Подать документы в суд.</li>
-                <li>Получить решение и обратиться в ЗАГС.</li>
-              </ol>
-            </div>
-          </div>
-
-          <h3>Ссылки в тексте</h3>
-          <p>Обычная ссылка внутри абзаца ведет себя спокойно и не перетягивает внимание. Норму закона оформляйте курсивной ссылкой: <em><a href="https://www.consultant.ru/document/cons_doc_LAW_8982/72751553f2dbd0ffeb99df74fd4b0e9a57ac4255/" target="_blank" rel="noopener">ст. 21 СК РФ</a></em>. Для соседних материалов используйте внутреннюю ссылку: <a href="article-divorce-without-consent.html">развод без согласия супруги</a>.</p>
-
-          <ul class="kit-link-list">
-            <li>
-              <span class="kit-link-label">Внутренняя ссылка на статью</span>
-              <a href="article-divorce-without-consent.html" class="article-link">Как развестись без согласия жены в 2026 году</a>
             </li>
-            <li>
-              <span class="kit-link-label">Обычная текстовая ссылка</span>
-              <a href="#documents">Перейти к блоку документов на этой странице</a>
+            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+              <a href="category-divorce.html"><span class="icon_text">Блог</span></a>
+              <span class="arrow"></span>
+              <div class="sub">
+                <ul>
+                  <li><a href="category-divorce.html">Разводы</a></li>
+                  <li><a href="article-divorce-without-consent.html#data">Раздел имущества</a></li>
+                  <li><a href="article-divorce-without-consent.html#children">Алименты</a></li>
+                </ul>
+                <ul>
+                  <li><a href="article-divorce-without-consent.html#children">Права родителей</a></li>
+                  <li><a href="article-divorce-without-consent.html#children">Опека</a></li>
+                  <li><a href="article-divorce-without-consent.html#children">Усыновление</a></li>
+                </ul>
+              </div>
             </li>
-            <li>
-              <span class="kit-link-label">Внешняя ссылка на источник</span>
-              <em><a href="https://www.consultant.ru/document/cons_doc_LAW_39570/9cfa35a9f7bd49d852f9fcd57179eb6db789fc60/" target="_blank" rel="noopener">ст. 28 ГПК РФ</a></em>
+            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+              <a href="https://law-divorce.org/yurist-advokat-po-razvodam-v-moskve/" data-wpel-link="internal"><span
+                  class="icon_text">Услуги</span></a>
+              <span class="arrow"></span>
+              <div class="sub">
+                <ul>
+                  <li><a href="https://law-divorce.org/yurist-advokat-po-razvodam-v-moskve/"
+                      data-wpel-link="internal">Расторжение брака</a></li>
+                  <li><a href="https://law-divorce.org/yurist-advokat-po-razdelu-imushhestva-pri-razvode/"
+                      data-wpel-link="internal">Раздел имущества</a></li>
+                  <li><a href="https://law-divorce.org/yurist-advokat-po-semejnym-delam/"
+                      data-wpel-link="internal">Семейные споры</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="menu-item menu-item-type-custom menu-item-object-custom">
+              <a href="article-divorce-without-consent.html"><span class="icon_text">Статья</span></a>
+            </li>
+            <li class="menu-item-contacts-mobile">
+              <div class="mobile-contacts-inner">
+                <span class="phone-label">Бесплатная консультация юриста:</span>
+                <a href="tel:+78005512406" class="phone-number">
+                  <span class="phone-icon-container">
+                    <svg class="phone-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <path
+                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                      </path>
+                    </svg>
+                  </span>
+                  <span>+7 (800) 551-24-06</span>
+                </a>
+                <span class="timing-badge">
+                  <svg class="timing-svg" viewBox="0 0 54 18" width="54" height="18" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g class="timing-clock-group" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round">
+                      <circle cx="9" cy="9" r="7.5" />
+                      <path d="M9 4.5V9l3 1.5" />
+                      <path d="M9 1.5v1.5M9 16.5v-1.5M1.5 9h1.5M16.5 9h-1.5" stroke-width="1" />
+                    </g>
+                    <text class="timing-text" x="22" y="13" font-family="'Jost', sans-serif" font-size="12"
+                      font-weight="700" fill="currentColor" letter-spacing="0.5">24/7</text>
+                  </svg>
+                </span>
+              </div>
             </li>
           </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
 
-          <div class="kit-component-note">Для ссылок на статьи можно использовать обычную ссылку в тексте, компактный паттерн <span class="kit-code">.article-link</span> в списке или полноценную карточку <span class="kit-code">.relink-card</span> в блоке перелинковки.</div>
-        </section>
+  <div class="header-placeholder" id="headerPlaceholder"></div>
 
-        <section id="article-start">
-          <h2>Старт статьи</h2>
-          <p class="kit-section-note">Блоки, которые задают контекст до первого основного раздела.</p>
+  <div class="article-container">
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+      <ol class="breadcrumbs-list">
+        <li><a href="/">Главная</a></li>
+        <li class="separator">›</li>
+        <li><a href="article-divorce-without-consent.html">Статья</a></li>
+        <li class="separator">›</li>
+        <li aria-current="page" class="current">UI kit</li>
+      </ol>
+    </nav>
 
+    <div class="article-layout">
+      <main class="main kit-main" id="top">
+        <article>
+          <div class="kit-kicker">Article system</div>
           <div class="meta">
             <time datetime="2026-06-04">Обновлено: 4 июня 2026</time>
             <span>Время чтения: ~10 мин</span>
           </div>
 
-          <p>Если супруга не согласна на развод, брак расторгается через суд. Это стандартная процедура: суд не может отказать, если один из супругов настаивает.</p>
+          <h1>UI kit оформления юридической статьи</h1>
 
-          <div class="kit-component-note">Классы: <span class="kit-code">.meta</span>, обычный лид-абзац, затем <span class="kit-code">.summary-card</span>. Такой старт лучше оставлять компактным: факты должны отвечать на главный практический вопрос пользователя.</div>
+          <p>Эта страница собирает основные элементы из текущего макета статьи в один справочник. Ее можно использовать
+            как визуальную базу перед сборкой новых материалов: видно, как выглядят лид, быстрые факты, интерактивный
+            выбор, предупреждения, таблицы, документы, FAQ, авторский блок и перелинковка.</p>
 
           <div class="summary-card">
             <div class="item">
-              <span class="label">Куда подавать</span>
-              <span class="value">Суд</span>
+              <span class="label">Файл</span>
+              <span class="value">article-ui-kit.html</span>
             </div>
             <div class="item">
-              <span class="label">Госпошлина</span>
-              <span class="value">5 000 ₽ + 5 000 ₽</span>
+              <span class="label">CSS</span>
+              <span class="value">style.css?v=13</span>
             </div>
             <div class="item">
-              <span class="label">Срок</span>
-              <span class="value">2-4 месяца</span>
+              <span class="label">Сетка</span>
+              <span class="value">контент + TOC</span>
             </div>
             <div class="item">
-              <span class="label">Юрист</span>
-              <span class="value">не обязателен</span>
+              <span class="label">Назначение</span>
+              <span class="value">новые статьи</span>
             </div>
           </div>
 
-          <div class="choice-cards">
-            <div class="question-text">У вас есть общие несовершеннолетние дети?</div>
-            <div class="cards">
-              <a href="#data" class="card card-yes">
-                <div class="card-icon yes-icon">✓</div>
-                <div class="card-title">Да, есть дети</div>
-                <div class="card-desc">Дело рассматривает <strong>районный суд</strong> с участием органов опеки.</div>
-                <span class="card-link">→ Посмотреть таблицы</span>
-              </a>
-              <a href="#data" class="card card-no">
-                <div class="card-icon no-icon">—</div>
-                <div class="card-title">Нет, детей нет</div>
-                <div class="card-desc">Дело рассматривает <strong>мировой судья</strong> по месту жительства ответчика.</div>
-                <span class="card-link">→ Определить подсудность</span>
-              </a>
-            </div>
-          </div>
-        </section>
+          <section id="tokens">
+            <h2>Дизайн-токены</h2>
+            <p class="kit-section-note">Цвета и базовая типографика уже лежат в <span class="kit-code">:root</span>
+              внутри общего CSS. Здесь показаны самые заметные переменные.</p>
 
-        <section id="callouts">
-          <h2>Callout-блоки</h2>
-          <p class="kit-section-note">Три основных состояния: важное предупреждение, совет и резюме. Иконка встроена в HTML, цвет задает модификатор.</p>
-
-          <div class="callout callout-important">
-            <div class="callout-header">
-              <svg class="callout-icon-svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-              </svg>
-              <span class="callout-title">Важно!</span>
-            </div>
-            <p class="callout-text">Используйте для ограничений, рисков и норм закона, которые нельзя пропустить перед действием.</p>
-          </div>
-
-          <div class="callout callout-tip">
-            <div class="callout-header">
-              <svg class="callout-icon-svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12z" />
-              </svg>
-              <span class="callout-title">Совет</span>
-            </div>
-            <p class="callout-text">Подходит для практических рекомендаций, которые ускоряют процесс или помогают избежать ошибок.</p>
-          </div>
-
-          <div class="callout callout-summary">
-            <div class="callout-header">
-              <svg class="callout-icon-svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0z" />
-              </svg>
-              <span class="callout-title">Резюме</span>
-            </div>
-            <ol>
-              <li>Соберите ключевые выводы в конце статьи.</li>
-              <li>Делайте пункты короткими, чтобы блок работал как финальная памятка.</li>
-            </ol>
-          </div>
-        </section>
-
-        <section id="data">
-          <h2>Таблицы, статусы и сценарии</h2>
-          <p class="kit-section-note">Компоненты для сравнения условий, оценки риска и коротких разборов ситуаций.</p>
-
-          <div class="table-container">
-            <table>
-              <caption>Сравнение подсудности и условий обращения</caption>
-              <thead>
-                <tr>
-                  <th>Критерий</th>
-                  <th>Мировой суд</th>
-                  <th>Районный суд</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Спор о детях</td>
-                  <td>нет</td>
-                  <td>да</td>
-                </tr>
-                <tr>
-                  <td>Раздел имущества</td>
-                  <td>до 50 000 ₽</td>
-                  <td>свыше 50 000 ₽</td>
-                </tr>
-                <tr>
-                  <td>Срок рассмотрения</td>
-                  <td><span class="risk-low">Низкая нагрузка</span></td>
-                  <td><span class="risk-medium">Средняя нагрузка</span></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <div class="table-container">
-            <table class="risk-table">
-              <caption>Таблица рисков для сложной спорной темы</caption>
-              <thead>
-                <tr>
-                  <th>Риск</th>
-                  <th>Вероятность</th>
-                  <th>Как снизить</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Ответчик не приходит на заседание</td>
-                  <td><span class="risk-medium">Средняя</span></td>
-                  <td>Проверьте адрес и сохраните доказательства уведомления.</td>
-                </tr>
-                <tr>
-                  <td>Появился спор о детях</td>
-                  <td><span class="risk-high">Высокая</span></td>
-                  <td>Готовьте доказательства условий проживания и отдельную позицию по детям.</td>
-                </tr>
-                <tr>
-                  <td>Не хватает копий документов</td>
-                  <td><span class="risk-low">Низкая</span></td>
-                  <td>Сверьте пакет документов по чек-листу перед подачей.</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <div class="kit-grid-two">
-            <div class="scenario">
-              <h3>Сценарий</h3>
-              <p><strong>Проблема:</strong> ответчик не приходит на заседание.</p>
-              <p><strong>Что показать:</strong> вероятность задержки и следующий шаг читателя.</p>
-              <div class="kit-state-strip">
-                <span class="risk-medium">Средняя</span>
-                <span class="kit-inline-pill">.scenario</span>
+            <div class="kit-token-grid">
+              <div class="kit-token">
+                <div class="kit-token-swatch" style="background: var(--heading-text);"></div>
+                <div class="kit-token-body">
+                  <span class="kit-token-name">Heading / Navy</span>
+                  <span class="kit-token-value">--heading-text #0E2A47</span>
+                </div>
+              </div>
+              <div class="kit-token">
+                <div class="kit-token-swatch" style="background: var(--accent);"></div>
+                <div class="kit-token-body">
+                  <span class="kit-token-name">Accent</span>
+                  <span class="kit-token-value">--accent #355380</span>
+                </div>
+              </div>
+              <div class="kit-token">
+                <div class="kit-token-swatch" style="background: var(--brand-accent);"></div>
+                <div class="kit-token-body">
+                  <span class="kit-token-name">Brand accent</span>
+                  <span class="kit-token-value">--brand-accent #cc3f5c</span>
+                </div>
+              </div>
+              <div class="kit-token">
+                <div class="kit-token-swatch" style="background: var(--bg);"></div>
+                <div class="kit-token-body">
+                  <span class="kit-token-name">Page background</span>
+                  <span class="kit-token-value">--bg #F8FAFC</span>
+                </div>
+              </div>
+              <div class="kit-token">
+                <div class="kit-token-swatch" style="background: var(--important-bg);"></div>
+                <div class="kit-token-body">
+                  <span class="kit-token-name">Important callout</span>
+                  <span class="kit-token-value">--important-bg</span>
+                </div>
+              </div>
+              <div class="kit-token">
+                <div class="kit-token-swatch" style="background: var(--summary-bg);"></div>
+                <div class="kit-token-body">
+                  <span class="kit-token-name">Summary callout</span>
+                  <span class="kit-token-value">--summary-bg</span>
+                </div>
               </div>
             </div>
-            <div class="case">
+
+          </section>
+
+          <section id="skill-rules">
+            <h2>Правила из skill</h2>
+            <p class="kit-section-note">UI kit ориентирован на правила <span class="kit-code">seo-brief-pipeline</span>:
+              статья строится по задаче пользователя, а не по универсальному шаблону.</p>
+
+            <div class="kit-rules-grid">
+              <div class="kit-rule-card">
+                <h3>Редакторская логика</h3>
+                <ul>
+                  <li>Пишите для юридически неподготовленного читателя.</li>
+                  <li>Двигайтесь от проблемы к решению: суть, варианты, шаги, документы, риски, резюме.</li>
+                  <li>Каждый H2 должен выполнять задачу, а не просто содержать ключ.</li>
+                  <li>FAQ дополняет статью нюансами и edge-case, а не повторяет body-контент.</li>
+                </ul>
+              </div>
+              <div class="kit-rule-card">
+                <h3>Юридическая ниша</h3>
+                <ul>
+                  <li>Ключевое утверждение подкрепляйте ссылкой на норму закона.</li>
+                  <li>Ссылки на законы ведут на конкретную статью, если URL проверен.</li>
+                  <li>Если точный hash неизвестен, ставьте base-URL и пометку <span class="kit-code">URL требует
+                      уточнения</span>.</li>
+                  <li>В конце нужен блок «Правовая база» и YMYL-дисклеймер.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="kit-do-dont">
+              <div class="kit-do">
+                <strong>Правильно</strong>
+                <p><strong>Исковое заявление</strong> — это документ, с которого начинается дело в суде. Вам нужно
+                  подать его по месту жительства ответчика, если нет оснований выбрать другой суд.</p>
+              </div>
+              <div class="kit-dont">
+                <strong>Не по правилам</strong>
+                <p>Исковое заявление должно быть подано в установленном порядке согласно действующему законодательству.
+                </p>
+              </div>
+            </div>
+
+            <div class="table-container">
+              <table>
+                <caption>Маппинг правил skill в HTML-компоненты</caption>
+                <thead>
+                  <tr>
+                    <th>Правило</th>
+                    <th>Как оформлять</th>
+                    <th>Компонент</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Один H1 на странице</td>
+                    <td>Только главный заголовок из брифа</td>
+                    <td><span class="kit-code">&lt;h1&gt;</span></td>
+                  </tr>
+                  <tr>
+                    <td>Каждый H2 = задача</td>
+                    <td>Секция отвечает на конкретный вопрос пользователя</td>
+                    <td><span class="kit-code">&lt;section&gt; + &lt;h2&gt;</span></td>
+                  </tr>
+                  <tr>
+                    <td>Перечисления</td>
+                    <td>Документы, условия, признаки, варианты</td>
+                    <td><span class="kit-code">&lt;ul&gt;</span></td>
+                  </tr>
+                  <tr>
+                    <td>Порядок действий</td>
+                    <td>Шаги в строгой последовательности</td>
+                    <td><span class="kit-code">&lt;ol&gt;</span> или <span class="kit-code">.steps</span></td>
+                  </tr>
+                  <tr>
+                    <td>Сценарная развилка</td>
+                    <td>Не ASCII-дерево, а две кликабельные карточки</td>
+                    <td><span class="kit-code">.choice-cards</span></td>
+                  </tr>
+                  <tr>
+                    <td>Резюме обязательно</td>
+                    <td>3-5 пунктов: глагол + суть</td>
+                    <td><span class="kit-code">.callout-summary</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section id="text-elements">
+            <h2>Текстовая разметка</h2>
+            <p class="kit-section-note">Базовые элементы внутри статьи: заголовки H1-H4, абзацы, маркированные и
+              нумерованные списки, а также разные типы ссылок.</p>
+
+            <div class="kit-type-sample">
+              <div class="kit-type-row">
+                <span class="kit-type-label">H1 / главный заголовок страницы / один раз</span>
+                <div class="kit-heading-demo kit-h1-demo">Как развестись без согласия жены в 2026 году</div>
+                <div class="kit-component-note">На реальной статье H1 должен быть один. В UI kit это визуальная
+                  демонстрация, поэтому образец не размечен вторым <span class="kit-code">&lt;h1&gt;</span>.</div>
+              </div>
+              <div class="kit-type-row">
+                <span class="kit-type-label">H2 / основной раздел статьи</span>
+                <div class="kit-heading-demo kit-h2-demo">Куда подавать заявление</div>
+                <div class="kit-component-note">H2 отвечает за отдельную задачу: понять правило, выбрать вариант,
+                  собрать документы или выполнить шаг.</div>
+              </div>
+              <div class="kit-type-row">
+                <span class="kit-type-label">H3 / подраздел внутри H2</span>
+                <div class="kit-heading-demo kit-h3-demo">Если есть несовершеннолетние дети</div>
+              </div>
+              <div class="kit-type-row">
+                <span class="kit-type-label">H4 / локальный подзаголовок, примечание или группа</span>
+                <div class="kit-heading-demo kit-h4-demo">Документы для районного суда</div>
+              </div>
+              <div class="kit-type-row">
+                <span class="kit-type-label">Абзац</span>
+                <p style="margin: 0;"><strong>Подсудность</strong> — это правило, которое определяет нужный суд. Вам
+                  нужно выбрать мировой или районный суд до подачи иска.</p>
+              </div>
+              <div class="kit-type-row">
+                <span class="kit-type-label">Курсив / цитата или ссылка на норму</span>
+                <p style="margin: 0;">Согласно <em><a
+                      href="https://www.consultant.ru/document/cons_doc_LAW_8982/4a167ba0c30fe37c07642d042cf2aa85ee1345da/"
+                      target="_blank" rel="noopener">ст. 22 СК РФ</a></em>, суд может назначить срок для примирения. Это
+                  значит, что процесс иногда затягивается.</p>
+              </div>
+            </div>
+
+            <div class="kit-text-grid">
+              <div class="kit-text-panel">
+                <h3>Маркированный список</h3>
+                <p>Используйте, когда порядок пунктов не важен:</p>
+                <ul>
+                  <li>паспорт заявителя;</li>
+                  <li>свидетельство о браке;</li>
+                  <li>копия иска для ответчика;</li>
+                  <li>квитанция об оплате госпошлины.</li>
+                </ul>
+              </div>
+              <div class="kit-text-panel">
+                <h3>Нумерованный список</h3>
+                <p>Используйте, когда важна последовательность действий:</p>
+                <ol>
+                  <li>Определить подсудность.</li>
+                  <li>Подготовить исковое заявление.</li>
+                  <li>Подать документы в суд.</li>
+                  <li>Получить решение и обратиться в ЗАГС.</li>
+                </ol>
+              </div>
+            </div>
+
+            <h3>Ссылки в тексте</h3>
+            <p>Обычная ссылка внутри абзаца ведет себя спокойно и не перетягивает внимание. Норму закона оформляйте
+              курсивной ссылкой: <em><a
+                  href="https://www.consultant.ru/document/cons_doc_LAW_8982/72751553f2dbd0ffeb99df74fd4b0e9a57ac4255/"
+                  target="_blank" rel="noopener">ст. 21 СК РФ</a></em>. Для соседних материалов используйте внутреннюю
+              ссылку: <a href="article-divorce-without-consent.html">развод без согласия супруги</a>.</p>
+
+            <ul class="kit-link-list">
+              <li>
+                <span class="kit-link-label">Внутренняя ссылка на статью</span>
+                <a href="article-divorce-without-consent.html" class="article-link">Как развестись без согласия жены в
+                  2026 году</a>
+              </li>
+              <li>
+                <span class="kit-link-label">Обычная текстовая ссылка</span>
+                <a href="#documents">Перейти к блоку документов на этой странице</a>
+              </li>
+              <li>
+                <span class="kit-link-label">Внешняя ссылка на источник</span>
+                <em><a
+                    href="https://www.consultant.ru/document/cons_doc_LAW_39570/9cfa35a9f7bd49d852f9fcd57179eb6db789fc60/"
+                    target="_blank" rel="noopener">ст. 28 ГПК РФ</a></em>
+              </li>
+            </ul>
+
+            <div class="kit-component-note">Для ссылок на статьи можно использовать обычную ссылку в тексте, компактный
+              паттерн <span class="kit-code">.article-link</span> в списке или полноценную карточку <span
+                class="kit-code">.relink-card</span> в блоке перелинковки.</div>
+          </section>
+
+          <section id="article-start">
+            <h2>Старт статьи</h2>
+            <p class="kit-section-note">Блоки, которые задают контекст до первого основного раздела.</p>
+
+            <div class="meta">
+              <time datetime="2026-06-04">Обновлено: 4 июня 2026</time>
+              <span>Время чтения: ~10 мин</span>
+            </div>
+
+            <p>Если супруга не согласна на развод, брак расторгается через суд. Это стандартная процедура: суд не может
+              отказать, если один из супругов настаивает.</p>
+
+            <div class="kit-component-note">Классы: <span class="kit-code">.meta</span>, обычный лид-абзац, затем <span
+                class="kit-code">.summary-card</span>. Такой старт лучше оставлять компактным: факты должны отвечать на
+              главный практический вопрос пользователя.</div>
+
+            <div class="summary-card">
+              <div class="item">
+                <span class="label">Куда подавать</span>
+                <span class="value">Суд</span>
+              </div>
+              <div class="item">
+                <span class="label">Госпошлина</span>
+                <span class="value">5 000 ₽ + 5 000 ₽</span>
+              </div>
+              <div class="item">
+                <span class="label">Срок</span>
+                <span class="value">2-4 месяца</span>
+              </div>
+              <div class="item">
+                <span class="label">Юрист</span>
+                <span class="value">не обязателен</span>
+              </div>
+            </div>
+
+            <div class="choice-cards">
+              <div class="question-text">У вас есть общие несовершеннолетние дети?</div>
+              <div class="cards">
+                <a href="#data" class="card card-yes">
+                  <div class="card-icon yes-icon">✓</div>
+                  <div class="card-title">Да, есть дети</div>
+                  <div class="card-desc">Дело рассматривает <strong>районный суд</strong> с участием органов опеки.
+                  </div>
+                  <span class="card-link">→ Посмотреть таблицы</span>
+                </a>
+                <a href="#data" class="card card-no">
+                  <div class="card-icon no-icon">—</div>
+                  <div class="card-title">Нет, детей нет</div>
+                  <div class="card-desc">Дело рассматривает <strong>мировой судья</strong> по месту жительства
+                    ответчика.</div>
+                  <span class="card-link">→ Определить подсудность</span>
+                </a>
+              </div>
+            </div>
+          </section>
+
+          <section id="callouts">
+            <h2>Callout-блоки</h2>
+            <p class="kit-section-note">Три основных состояния: важное предупреждение, совет и резюме. Иконка встроена в
+              HTML, цвет задает модификатор.</p>
+
+            <div class="callout callout-important">
+              <div class="callout-header">
+                <svg class="callout-icon-svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                </svg>
+                <span class="callout-title">Важно!</span>
+              </div>
+              <p class="callout-text">Используйте для ограничений, рисков и норм закона, которые нельзя пропустить перед
+                действием.</p>
+            </div>
+
+            <div class="callout callout-tip">
+              <div class="callout-header">
+                <svg class="callout-icon-svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M13 16h-1v-4h-1m1-4h.01M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12z" />
+                </svg>
+                <span class="callout-title">Совет</span>
+              </div>
+              <p class="callout-text">Подходит для практических рекомендаций, которые ускоряют процесс или помогают
+                избежать ошибок.</p>
+            </div>
+
+            <div class="callout callout-summary">
+              <div class="callout-header">
+                <svg class="callout-icon-svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M9 12l2 2 4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0z" />
+                </svg>
+                <span class="callout-title">Резюме</span>
+              </div>
+              <ol>
+                <li>Соберите ключевые выводы в конце статьи.</li>
+                <li>Делайте пункты короткими, чтобы блок работал как финальная памятка.</li>
+              </ol>
+            </div>
+          </section>
+
+          <section id="data">
+            <h2>Таблицы, статусы и сценарии</h2>
+            <p class="kit-section-note">Компоненты для сравнения условий, оценки риска и коротких разборов ситуаций.</p>
+
+            <div class="table-container">
+              <table>
+                <caption>Сравнение подсудности и условий обращения</caption>
+                <thead>
+                  <tr>
+                    <th>Критерий</th>
+                    <th>Мировой суд</th>
+                    <th>Районный суд</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Спор о детях</td>
+                    <td>нет</td>
+                    <td>да</td>
+                  </tr>
+                  <tr>
+                    <td>Раздел имущества</td>
+                    <td>до 50 000 ₽</td>
+                    <td>свыше 50 000 ₽</td>
+                  </tr>
+                  <tr>
+                    <td>Срок рассмотрения</td>
+                    <td><span class="risk-low">Низкая нагрузка</span></td>
+                    <td><span class="risk-medium">Средняя нагрузка</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="table-container">
+              <table class="risk-table">
+                <caption>Таблица рисков для сложной спорной темы</caption>
+                <thead>
+                  <tr>
+                    <th>Риск</th>
+                    <th>Вероятность</th>
+                    <th>Как снизить</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Ответчик не приходит на заседание</td>
+                    <td><span class="risk-medium">Средняя</span></td>
+                    <td>Проверьте адрес и сохраните доказательства уведомления.</td>
+                  </tr>
+                  <tr>
+                    <td>Появился спор о детях</td>
+                    <td><span class="risk-high">Высокая</span></td>
+                    <td>Готовьте доказательства условий проживания и отдельную позицию по детям.</td>
+                  </tr>
+                  <tr>
+                    <td>Не хватает копий документов</td>
+                    <td><span class="risk-low">Низкая</span></td>
+                    <td>Сверьте пакет документов по чек-листу перед подачей.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="kit-grid-two">
+              <div class="scenario">
+                <h3>Сценарий</h3>
+                <p><strong>Проблема:</strong> ответчик не приходит на заседание.</p>
+                <p><strong>Что показать:</strong> вероятность задержки и следующий шаг читателя.</p>
+                <div class="kit-state-strip">
+                  <span class="risk-medium">Средняя</span>
+                  <span class="kit-inline-pill">.scenario</span>
+                </div>
+              </div>
+              <div class="case">
+                <h3>Судебная практика</h3>
+                <p><strong>Ситуация:</strong> спор о месте жительства ребенка.</p>
+                <p><strong>Решение:</strong> районный суд рассматривает требования вместе с разводом.</p>
+                <div class="kit-state-strip">
+                  <span class="risk-high">Высокая</span>
+                  <span class="kit-inline-pill">.case</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="court-practice">
               <h3>Судебная практика</h3>
-              <p><strong>Ситуация:</strong> спор о месте жительства ребенка.</p>
-              <p><strong>Решение:</strong> районный суд рассматривает требования вместе с разводом.</p>
-              <div class="kit-state-strip">
-                <span class="risk-high">Высокая</span>
-                <span class="kit-inline-pill">.case</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="court-practice">
-            <h3>Судебная практика</h3>
-            <div class="practice-case">
-              <div class="case-situation"><strong>Ситуация:</strong> в одном из дел супруг не согласился на развод и просил срок для примирения.</div>
-              <div class="case-decision"><strong>Решение суда:</strong> суд дал время на примирение, но затем расторг брак.</div>
-              <div class="case-reason"><strong>Почему:</strong> истец подтвердил, что семейные отношения прекращены.</div>
-            </div>
-            <div class="practice-case">
-              <div class="case-situation"><strong>Ситуация:</strong> в споре появились требования о месте жительства ребенка.</div>
-              <div class="case-decision"><strong>Решение суда:</strong> дело рассматривал районный суд.</div>
-              <div class="case-reason"><strong>Почему:</strong> спор о детях нельзя оставить только на уровне мирового судьи.</div>
-            </div>
-          </div>
-
-          <div class="timeline">
-            <div class="event">
-              <div class="time">~1 месяц</div>
-              <div>Первое заседание после подачи иска.</div>
-            </div>
-            <div class="event">
-              <div class="time">до 3 месяцев</div>
-              <div>Возможный срок для примирения супругов.</div>
-            </div>
-            <div class="event">
-              <div class="time">1 месяц</div>
-              <div>Вступление решения суда в законную силу.</div>
-            </div>
-          </div>
-        </section>
-
-        <section id="process">
-          <h2>Процесс и чек-листы</h2>
-          <p class="kit-section-note">Для пошаговых инструкций и готовности пользователя к действию.</p>
-
-          <ol class="steps">
-            <li>
-              <strong>Определить подсудность</strong>
-              Мировой суд — если нет спора о детях. Районный — если есть спор о детях или имущество свыше 50 000 рублей.
-            </li>
-            <li>
-              <strong>Подготовить документы</strong>
-              Исковое заявление, свидетельство о браке, копии документов и квитанция об оплате госпошлины.
-            </li>
-            <li>
-              <strong>Подать заявление</strong>
-              Лично, через представителя или почтой. После подачи отслеживать назначение заседания.
-            </li>
-          </ol>
-
-          <h3>Чек-лист готовности</h3>
-          <p class="kit-component-note">Клик по пункту переключает состояние <span class="kit-code">.completed</span>. Этот скрипт уже есть в исходной статье и перенесен сюда.</p>
-          <ul class="checklist">
-            <li>Определена подсудность</li>
-            <li>Составлено исковое заявление</li>
-            <li>Собраны обязательные документы</li>
-            <li>Оплачена госпошлина</li>
-          </ul>
-        </section>
-
-        <section id="documents">
-          <h2>Документы и скачивание</h2>
-          <p class="kit-section-note">Блок шаблона документа и карточки файлов. Хорошо работают в статьях, где есть образцы заявлений или жалоб.</p>
-
-          <div class="kit-rules-grid" aria-label="Правила оформления образца документа">
-            <div class="kit-rule-card">
-              <strong>Структура образца</strong>
-              <p>Образец оформляется как отдельный документ: адресат, заявитель, название, обстоятельства, требования, приложения, дата и подпись.</p>
-            </div>
-            <div class="kit-rule-card">
-              <strong>Плейсхолдеры</strong>
-              <p>Все переменные данные пишем в квадратных скобках: <span class="placeholder">[Ваше ФИО]</span>, <span class="placeholder">[Дата]</span>, <span class="placeholder">[Наименование суда]</span>. Имена, адреса и номера дел не придумываем.</p>
-            </div>
-            <div class="kit-rule-card">
-              <strong>Дисклеймер</strong>
-              <p>Футер обязателен: образец информационный, не гарантирует результат и не заменяет консультацию юриста.</p>
-            </div>
-            <div class="kit-rule-card">
-              <strong>Скачивание</strong>
-              <p>Для каждого образца генерируем один файл. По умолчанию это DOCX, чтобы пользователь мог легко отредактировать шаблон. PDF используем только вместо DOCX, если нужна печатная форма.</p>
-            </div>
-          </div>
-
-          <div class="doc-template">
-            <div class="doc-header">
-              <div class="doc-header-left">
-                <h3>Образец искового заявления</h3>
-                <span class="doc-badge">Шаблон</span>
-              </div>
-              <a href="isk-razvod.docx" class="card-action-btn docx-btn" title="Скачать в формате DOCX" download>
-                <svg class="button-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                  <polyline points="7 10 12 15 17 10" />
-                  <line x1="12" y1="15" x2="12" y2="3" />
-                </svg>
-                Скачать DOCX
-              </a>
-            </div>
-            <div class="doc-body">
-              <div class="doc-meta-header">
-                Мировому судье судебного участка № <span class="placeholder">[Номер]</span><br>
-                <strong>Истец:</strong> <span class="placeholder">[Ваше ФИО]</span><br>
-                <strong>Ответчик:</strong> <span class="placeholder">[ФИО супруги]</span>
-              </div>
-              <div class="doc-title-main">Исковое заявление<br>о расторжении брака</div>
-              <div class="doc-content-text">
-                <p>«<span class="placeholder">__</span>» <span class="placeholder">___________</span> <span class="placeholder">____</span> г. между мной и Ответчиком был зарегистрирован брак.</p>
-                <p>Совместная жизнь не сложилась, примирение невозможно, согласия на расторжение брака через ЗАГС нет.</p>
-              </div>
-              <div class="doc-title-request">Прошу:</div>
-              <div class="doc-content-text">
-                <p>Брак между мной и Ответчиком расторгнуть.</p>
-              </div>
-              <div class="doc-signature">
-                <span>Истец: ___________</span>
-                <span>«___» _________ 2026 г.</span>
-              </div>
-            </div>
-            <div class="doc-footer">Образец носит информационный характер и не гарантирует положительное решение. Перед использованием рекомендуем проконсультироваться с юристом.</div>
-          </div>
-
-          <div class="doc-download-block">
-            <div class="download-card docx-card">
-              <div class="card-header-info">
-                <div class="card-icon-container">
-                  <svg class="file-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-                    <polyline points="14 2 14 8 20 8" />
-                  </svg>
-                </div>
-                <div class="card-meta">
-                  <span class="card-title">Исковое заявление о разводе</span>
-                  <span class="card-desc">Формат DOCX · редактируемый шаблон</span>
+              <div class="practice-case">
+                <div class="case-situation"><strong>Ситуация:</strong> в одном из дел супруг не согласился на развод и
+                  просил срок для примирения.</div>
+                <div class="case-decision"><strong>Решение суда:</strong> суд дал время на примирение, но затем расторг
+                  брак.</div>
+                <div class="case-reason"><strong>Почему:</strong> истец подтвердил, что семейные отношения прекращены.
                 </div>
               </div>
-              <a href="isk-razvod.docx" class="card-action-btn" title="Скачать в формате DOCX" download>
-                <svg class="button-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                  <polyline points="7 10 12 15 17 10" />
-                  <line x1="12" y1="15" x2="12" y2="3" />
-                </svg>
-                Скачать DOCX
-              </a>
+              <div class="practice-case">
+                <div class="case-situation"><strong>Ситуация:</strong> в споре появились требования о месте жительства
+                  ребенка.</div>
+                <div class="case-decision"><strong>Решение суда:</strong> дело рассматривал районный суд.</div>
+                <div class="case-reason"><strong>Почему:</strong> спор о детях нельзя оставить только на уровне мирового
+                  судьи.</div>
+              </div>
             </div>
-          </div>
-        </section>
 
-        <section id="faq">
-          <h2>FAQ и правовая база</h2>
-          <p class="kit-section-note">FAQ лучше ставить ближе к концу, после основного сценария и таблиц. Правовая база закрывает вопрос источников.</p>
-
-          <details class="faq-item" open>
-            <summary>Можно ли открыть вопрос по умолчанию?</summary>
-            <div class="faq-answer">
-              <p>Да. Добавьте атрибут <span class="kit-code">open</span>, если первый ответ критически важен для понимания статьи.</p>
+            <div class="timeline">
+              <div class="event">
+                <div class="time">~1 месяц</div>
+                <div>Первое заседание после подачи иска.</div>
+              </div>
+              <div class="event">
+                <div class="time">до 3 месяцев</div>
+                <div>Возможный срок для примирения супругов.</div>
+              </div>
+              <div class="event">
+                <div class="time">1 месяц</div>
+                <div>Вступление решения суда в законную силу.</div>
+              </div>
             </div>
-          </details>
-          <details class="faq-item">
-            <summary>Какой длины делать ответ?</summary>
-            <div class="faq-answer">
-              <p>Оптимально один короткий абзац. Если нужен разбор, лучше вынести его в отдельный раздел выше.</p>
-            </div>
-          </details>
+          </section>
 
-          <section class="law-base">
-            <h2>Правовая база</h2>
-            <p style="font-size: var(--fs-xs); color: var(--muted); margin-bottom: var(--space-xs);">Список норм, использованных в статье.</p>
-            <ul>
-              <li><em><a href="https://www.consultant.ru/document/cons_doc_LAW_8982/72751553f2dbd0ffeb99df74fd4b0e9a57ac4255/" target="_blank" rel="noopener">Ст. 21 СК РФ</a></em> — расторжение брака в судебном порядке</li>
-              <li><em><a href="https://www.consultant.ru/document/cons_doc_LAW_8982/4a167ba0c30fe37c07642d042cf2aa85ee1345da/" target="_blank" rel="noopener">Ст. 22 СК РФ</a></em> — примирительный срок до 3 месяцев</li>
-              <li><em><a href="https://www.consultant.ru/document/cons_doc_LAW_39570/9cfa35a9f7bd49d852f9fcd57179eb6db789fc60/" target="_blank" rel="noopener">Ст. 28 ГПК РФ</a></em> — подсудность по месту жительства ответчика</li>
+          <section id="process">
+            <h2>Процесс и чек-листы</h2>
+            <p class="kit-section-note">Для пошаговых инструкций и готовности пользователя к действию.</p>
+
+            <ol class="steps">
+              <li>
+                <strong>Определить подсудность</strong>
+                Мировой суд — если нет спора о детях. Районный — если есть спор о детях или имущество свыше 50 000
+                рублей.
+              </li>
+              <li>
+                <strong>Подготовить документы</strong>
+                Исковое заявление, свидетельство о браке, копии документов и квитанция об оплате госпошлины.
+              </li>
+              <li>
+                <strong>Подать заявление</strong>
+                Лично, через представителя или почтой. После подачи отслеживать назначение заседания.
+              </li>
+            </ol>
+
+            <h3>Чек-лист готовности</h3>
+            <p class="kit-component-note">Клик по пункту переключает состояние <span class="kit-code">.completed</span>.
+              Этот скрипт уже есть в исходной статье и перенесен сюда.</p>
+            <ul class="checklist">
+              <li>Определена подсудность</li>
+              <li>Составлено исковое заявление</li>
+              <li>Собраны обязательные документы</li>
+              <li>Оплачена госпошлина</li>
             </ul>
           </section>
-        </section>
 
-        <section id="trust">
-          <h2>Доверие, дисклеймер и перелинковка</h2>
-          <p class="kit-section-note">Финальные блоки статьи: автор, проверяющий, юридический дисклеймер и ссылки на соседние материалы.</p>
+          <section id="documents">
+            <h2>Документы и скачивание</h2>
+            <p class="kit-section-note">Блок шаблона документа и карточки файлов. Хорошо работают в статьях, где есть
+              образцы заявлений или жалоб.</p>
 
-          <aside class="auth-v9-shadow">
-            <div class="auth-v9-author-card">
-              <div class="auth-v9-header">
-                <img src="dmitry-nosikov.png" alt="Дмитрий Носиков" class="auth-v9-img">
-                <div>
-                  <span class="auth-v9-badge">Автор публикации</span>
-                  <h4 class="auth-v9-name">Дмитрий Носиков</h4>
-                  <p class="auth-v9-sub">Юрист по семейным делам, стаж 13 лет</p>
-                </div>
+            <div class="kit-rules-grid" aria-label="Правила оформления образца документа">
+              <div class="kit-rule-card">
+                <strong>Структура образца</strong>
+                <p>Образец оформляется как отдельный документ: адресат, заявитель, название, обстоятельства, требования,
+                  приложения, дата и подпись.</p>
+              </div>
+              <div class="kit-rule-card">
+                <strong>Плейсхолдеры</strong>
+                <p>Все переменные данные пишем в квадратных скобках: <span class="placeholder">[Ваше ФИО]</span>, <span
+                    class="placeholder">[Дата]</span>, <span class="placeholder">[Наименование суда]</span>. Имена,
+                  адреса и номера дел не придумываем.</p>
+              </div>
+              <div class="kit-rule-card">
+                <strong>Дисклеймер</strong>
+                <p>Футер обязателен: образец информационный, не гарантирует результат и не заменяет консультацию юриста.
+                </p>
+              </div>
+              <div class="kit-rule-card">
+                <strong>Скачивание</strong>
+                <p>Для каждого образца генерируем один файл. По умолчанию это DOCX, чтобы пользователь мог легко
+                  отредактировать шаблон. PDF используем только вместо DOCX, если нужна печатная форма.</p>
               </div>
             </div>
-            <div class="auth-v9-reviewer-card">
-              <div class="auth-v9-seal">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="auth-v9-check">
-                  <polyline points="20 6 9 17 4 12" class="checkmark-path"></polyline>
-                </svg>
+
+            <div class="doc-template">
+              <div class="doc-header">
+                <div class="doc-header-left">
+                  <h3>Образец искового заявления</h3>
+                  <span class="doc-badge">Шаблон</span>
+                </div>
+                <a href="isk-razvod.docx" class="card-action-btn docx-btn" title="Скачать в формате DOCX" download>
+                  <svg class="button-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                    <polyline points="7 10 12 15 17 10" />
+                    <line x1="12" y1="15" x2="12" y2="3" />
+                  </svg>
+                  Скачать DOCX
+                </a>
               </div>
-              <div class="auth-v9-rev-details">
-                <span class="auth-v9-rev-badge">Материал проверен</span>
-                <strong class="auth-v9-rev-name">Семен Фролов</strong>
-                <p class="auth-v9-rev-sub">юрист-консультант</p>
-                <span class="auth-v9-date">10 мая 2024</span>
+              <div class="doc-body">
+                <div class="doc-meta-header">
+                  Мировому судье судебного участка № <span class="placeholder">[Номер]</span><br>
+                  <strong>Истец:</strong> <span class="placeholder">[Ваше ФИО]</span><br>
+                  <strong>Ответчик:</strong> <span class="placeholder">[ФИО супруги]</span>
+                </div>
+                <div class="doc-title-main">Исковое заявление<br>о расторжении брака</div>
+                <div class="doc-content-text">
+                  <p>«<span class="placeholder">__</span>» <span class="placeholder">___________</span> <span
+                      class="placeholder">____</span> г. между мной и Ответчиком был зарегистрирован брак.</p>
+                  <p>Совместная жизнь не сложилась, примирение невозможно, согласия на расторжение брака через ЗАГС нет.
+                  </p>
+                </div>
+                <div class="doc-title-request">Прошу:</div>
+                <div class="doc-content-text">
+                  <p>Брак между мной и Ответчиком расторгнуть.</p>
+                </div>
+                <div class="doc-signature">
+                  <span>Истец: ___________</span>
+                  <span>«___» _________ 2026 г.</span>
+                </div>
+              </div>
+              <div class="doc-footer">Образец носит информационный характер и не гарантирует положительное решение.
+                Перед использованием рекомендуем проконсультироваться с юристом.</div>
+            </div>
+
+            <div class="doc-download-block">
+              <div class="download-card docx-card">
+                <div class="card-header-info">
+                  <div class="card-icon-container">
+                    <svg class="file-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                      <polyline points="14 2 14 8 20 8" />
+                    </svg>
+                  </div>
+                  <div class="card-meta">
+                    <span class="card-title">Исковое заявление о разводе</span>
+                    <span class="card-desc">Формат DOCX · редактируемый шаблон</span>
+                  </div>
+                </div>
+                <a href="isk-razvod.docx" class="card-action-btn" title="Скачать в формате DOCX" download>
+                  <svg class="button-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                    <polyline points="7 10 12 15 17 10" />
+                    <line x1="12" y1="15" x2="12" y2="3" />
+                  </svg>
+                  Скачать DOCX
+                </a>
               </div>
             </div>
-          </aside>
+          </section>
 
-          <aside class="disclaimer">
-            <strong>Дисклеймер.</strong> Информация носит общий характер и не является юридической консультацией. Для конкретной ситуации рекомендуем консультацию семейного юриста.
-          </aside>
+          <section id="faq">
+            <h2>FAQ и правовая база</h2>
+            <p class="kit-section-note">FAQ лучше ставить ближе к концу, после основного сценария и таблиц. Правовая
+              база закрывает вопрос источников.</p>
 
-          <aside class="relink-block">
-            <h3 class="relink-title-main">Другие полезные материалы</h3>
-            <div class="relink-container">
-              <a href="article-divorce-without-consent.html#documents" class="relink-card">
-                <div class="relink-content">
-                  <div class="relink-header">
-                    <span class="relink-bullet"></span>
-                    <span class="relink-tag">Раздел имущества</span>
+            <details class="faq-item" open>
+              <summary>Можно ли открыть вопрос по умолчанию?</summary>
+              <div class="faq-answer">
+                <p>Да. Добавьте атрибут <span class="kit-code">open</span>, если первый ответ критически важен для
+                  понимания статьи.</p>
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>Какой длины делать ответ?</summary>
+              <div class="faq-answer">
+                <p>Оптимально один короткий абзац. Если нужен разбор, лучше вынести его в отдельный раздел выше.</p>
+              </div>
+            </details>
+
+            <section class="law-base">
+              <h2>Правовая база</h2>
+              <p style="font-size: var(--fs-xs); color: var(--muted); margin-bottom: var(--space-xs);">Список норм,
+                использованных в статье.</p>
+              <ul>
+                <li><em><a
+                      href="https://www.consultant.ru/document/cons_doc_LAW_8982/72751553f2dbd0ffeb99df74fd4b0e9a57ac4255/"
+                      target="_blank" rel="noopener">Ст. 21 СК РФ</a></em> — расторжение брака в судебном порядке</li>
+                <li><em><a
+                      href="https://www.consultant.ru/document/cons_doc_LAW_8982/4a167ba0c30fe37c07642d042cf2aa85ee1345da/"
+                      target="_blank" rel="noopener">Ст. 22 СК РФ</a></em> — примирительный срок до 3 месяцев</li>
+                <li><em><a
+                      href="https://www.consultant.ru/document/cons_doc_LAW_39570/9cfa35a9f7bd49d852f9fcd57179eb6db789fc60/"
+                      target="_blank" rel="noopener">Ст. 28 ГПК РФ</a></em> — подсудность по месту жительства ответчика
+                </li>
+              </ul>
+            </section>
+          </section>
+
+          <section id="trust">
+            <h2>Доверие, дисклеймер и перелинковка</h2>
+            <p class="kit-section-note">Финальные блоки статьи: автор, проверяющий, юридический дисклеймер и ссылки на
+              соседние материалы.</p>
+
+            <aside class="auth-v9-shadow">
+              <div class="auth-v9-author-card">
+                <div class="auth-v9-header">
+                  <img src="dmitry-nosikov.png" alt="Дмитрий Носиков" class="auth-v9-img">
+                  <div>
+                    <span class="auth-v9-badge">Автор публикации</span>
+                    <h4 class="auth-v9-name">Дмитрий Носиков</h4>
+                    <p class="auth-v9-sub">Юрист по семейным делам, стаж 13 лет</p>
                   </div>
-                  <h4 class="relink-card-title">Раздел имущества супругов при разводе</h4>
-                  <span class="relink-card-link">Читать →</span>
                 </div>
-              </a>
-              <a href="article-divorce-without-consent.html#children" class="relink-card">
-                <div class="relink-content">
-                  <div class="relink-header">
-                    <span class="relink-bullet"></span>
-                    <span class="relink-tag">Алименты</span>
-                  </div>
-                  <h4 class="relink-card-title">Алименты на ребенка в 2026 году</h4>
-                  <span class="relink-card-link">Читать →</span>
+              </div>
+              <div class="auth-v9-reviewer-card">
+                <div class="auth-v9-seal">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="auth-v9-check">
+                    <polyline points="20 6 9 17 4 12" class="checkmark-path"></polyline>
+                  </svg>
                 </div>
-              </a>
-              <a href="article-divorce-without-consent.html#children" class="relink-card">
-                <div class="relink-content">
-                  <div class="relink-header">
-                    <span class="relink-bullet"></span>
-                    <span class="relink-tag">Споры о детях</span>
-                  </div>
-                  <h4 class="relink-card-title">С кем останется ребенок после суда</h4>
-                  <span class="relink-card-link">Читать →</span>
+                <div class="auth-v9-rev-details">
+                  <span class="auth-v9-rev-badge">Материал проверен</span>
+                  <strong class="auth-v9-rev-name">Семен Фролов</strong>
+                  <p class="auth-v9-rev-sub">юрист-консультант</p>
+                  <span class="auth-v9-date">10 мая 2024</span>
                 </div>
-              </a>
-            </div>
-          </aside>
-        </section>
+              </div>
+            </aside>
 
-        <p class="kit-footer-note">UI kit intentionally reuses the production classes from <span class="kit-code">style.css</span>. New helper classes use the <span class="kit-code">kit-*</span> prefix and only shape this reference page.</p>
-      </article>
-    </main>
+            <aside class="disclaimer">
+              <strong>Дисклеймер.</strong> Информация носит общий характер и не является юридической консультацией. Для
+              конкретной ситуации рекомендуем консультацию семейного юриста.
+            </aside>
 
-    <aside class="toc-sidebar">
-      <nav class="toc" aria-label="Содержание UI kit">
-        <div class="toc-title">UI kit</div>
-        <a href="#tokens">Токены</a>
-        <a href="#skill-rules">Правила</a>
-        <a href="#text-elements">Текст</a>
-        <a href="#article-start">Старт статьи</a>
-        <a href="#callouts">Callout</a>
-        <a href="#data">Таблицы</a>
-        <a href="#process">Процесс</a>
-        <a href="#documents">Документы</a>
-        <a href="#faq">FAQ</a>
-        <a href="#trust">Доверие</a>
-      </nav>
-    </aside>
+            <aside class="relink-block">
+              <h3 class="relink-title-main">Другие полезные материалы</h3>
+              <div class="relink-container">
+                <a href="article-divorce-without-consent.html#documents" class="relink-card">
+                  <div class="relink-content">
+                    <div class="relink-header">
+                      <span class="relink-bullet"></span>
+                      <span class="relink-tag">Раздел имущества</span>
+                    </div>
+                    <h4 class="relink-card-title">Раздел имущества супругов при разводе</h4>
+                    <span class="relink-card-link">Читать →</span>
+                  </div>
+                </a>
+                <a href="article-divorce-without-consent.html#children" class="relink-card">
+                  <div class="relink-content">
+                    <div class="relink-header">
+                      <span class="relink-bullet"></span>
+                      <span class="relink-tag">Алименты</span>
+                    </div>
+                    <h4 class="relink-card-title">Алименты на ребенка в 2026 году</h4>
+                    <span class="relink-card-link">Читать →</span>
+                  </div>
+                </a>
+                <a href="article-divorce-without-consent.html#children" class="relink-card">
+                  <div class="relink-content">
+                    <div class="relink-header">
+                      <span class="relink-bullet"></span>
+                      <span class="relink-tag">Споры о детях</span>
+                    </div>
+                    <h4 class="relink-card-title">С кем останется ребенок после суда</h4>
+                    <span class="relink-card-link">Читать →</span>
+                  </div>
+                </a>
+              </div>
+            </aside>
+          </section>
+
+          <p class="kit-footer-note">UI kit intentionally reuses the production classes from <span
+              class="kit-code">style.css</span>. New helper classes use the <span class="kit-code">kit-*</span> prefix
+            and only shape this reference page.</p>
+        </article>
+      </main>
+
+      <aside class="toc-sidebar">
+        <nav class="toc" aria-label="Содержание UI kit">
+          <div class="toc-title">UI kit</div>
+          <a href="#tokens">Токены</a>
+          <a href="#skill-rules">Правила</a>
+          <a href="#text-elements">Текст</a>
+          <a href="#article-start">Старт статьи</a>
+          <a href="#callouts">Callout</a>
+          <a href="#data">Таблицы</a>
+          <a href="#process">Процесс</a>
+          <a href="#documents">Документы</a>
+          <a href="#faq">FAQ</a>
+          <a href="#trust">Доверие</a>
+        </nav>
+      </aside>
+    </div>
   </div>
-</div>
 
-<footer class="site-footer">
-  <div class="footer-container">
-    <div class="footer-grid">
-      <div class="footer-col footer-about">
-        <h4>О нашем сайте</h4>
-        <p class="footer-text">Перед принятием какого-либо решения проконсультируйтесь с юристом. Руководство сайта не несет ответственности за использование размещенной на сайте информации.</p>
-        <p class="footer-text">Информация на сайте носит ознакомительный характер и не является публичной офертой.</p>
-      </div>
-      <div class="footer-col footer-links">
-        <h4>Информация</h4>
-        <ul>
-          <li><a href="article-ui-kit.html#trust">О проекте / Редакция сайта</a></li>
-          <li><a href="article-ui-kit.html#trust">Контакты</a></li>
-          <li><a href="article-ui-kit.html#skill-rules">Политика обработки ПД</a></li>
-          <li><a href="article-ui-kit.html#skill-rules">Пользовательское соглашение</a></li>
-          <li><a href="category-divorce.html">Карта сайта</a></li>
-        </ul>
-      </div>
-      <div class="footer-col footer-contact">
-        <h4>Бесплатная помощь</h4>
-        <div class="footer-phone-card">
-          <span class="footer-phone-label">Бесплатная консультация юриста:</span>
-          <a href="tel:+78005512406" class="footer-phone-number">+7 (800) 551-24-06</a>
-          <div class="footer-ads-info">Реклама Erid: 2W5zFH4JYyW, ООО Лигал Адс Тех</div>
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-col footer-about">
+          <h4>О нашем сайте</h4>
+          <p class="footer-text">Перед принятием какого-либо решения проконсультируйтесь с юристом. Руководство сайта не
+            несет ответственности за использование размещенной на сайте информации.</p>
+          <p class="footer-text">Информация на сайте носит ознакомительный характер и не является публичной офертой.</p>
+        </div>
+        <div class="footer-col footer-links">
+          <h4>Информация</h4>
+          <ul>
+            <li><a href="article-ui-kit.html#trust">О проекте / Редакция сайта</a></li>
+            <li><a href="article-ui-kit.html#trust">Контакты</a></li>
+            <li><a href="article-ui-kit.html#skill-rules">Политика обработки ПД</a></li>
+            <li><a href="article-ui-kit.html#skill-rules">Пользовательское соглашение</a></li>
+            <li><a href="category-divorce.html">Карта сайта</a></li>
+          </ul>
+        </div>
+        <div class="footer-col footer-contact">
+          <h4>Бесплатная помощь</h4>
+          <div class="footer-phone-card">
+            <span class="footer-phone-label">Бесплатная консультация юриста:</span>
+            <a href="tel:+78005512406" class="footer-phone-number">+7 (800) 551-24-06</a>
+            <div class="footer-ads-info">Реклама Erid: 2W5zFH4JYyW, ООО Лигал Адс Тех</div>
+          </div>
         </div>
       </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 LawDivorce. UI kit оформления статей.</p>
+      </div>
     </div>
-    <div class="footer-bottom">
-      <p class="footer-copy">&copy; 2026 LawDivorce. UI kit оформления статей.</p>
-    </div>
-  </div>
-</footer>
+  </footer>
 
-<script>
-  document.querySelectorAll('.checklist li').forEach(item => {
-    item.addEventListener('click', () => {
-      item.classList.toggle('completed');
-    });
-  });
-
-  const tocLinks = document.querySelectorAll('.toc a');
-  const sections = Array.from(tocLinks).map(link => {
-    const selector = link.getAttribute('href');
-    return document.querySelector(selector);
-  }).filter(Boolean);
-  let activeIndexCurrent = -1;
-
-  function scrollActiveTocLinkIntoView(link) {
-    const toc = link.closest('.toc');
-
-    if (!toc) {
-      return;
-    }
-
-    const tocRect = toc.getBoundingClientRect();
-    const linkRect = link.getBoundingClientRect();
-    const edgePadding = 12;
-
-    if (toc.scrollHeight > toc.clientHeight + 1) {
-      if (linkRect.top < tocRect.top + edgePadding) {
-        toc.scrollTop += linkRect.top - tocRect.top - Math.max(edgePadding, (toc.clientHeight - linkRect.height) / 2);
-      } else if (linkRect.bottom > tocRect.bottom - edgePadding) {
-        toc.scrollTop += linkRect.top - tocRect.top - Math.max(edgePadding, (toc.clientHeight - linkRect.height) / 2);
-      }
-    }
-
-    if (toc.scrollWidth > toc.clientWidth + 1) {
-      if (linkRect.left < tocRect.left + edgePadding) {
-        toc.scrollLeft += linkRect.left - tocRect.left - Math.max(edgePadding, (toc.clientWidth - linkRect.width) / 2);
-      } else if (linkRect.right > tocRect.right - edgePadding) {
-        toc.scrollLeft += linkRect.left - tocRect.left - Math.max(edgePadding, (toc.clientWidth - linkRect.width) / 2);
-      }
-    }
-  }
-
-  function updateActiveToc() {
-    let activeIndex = -1;
-    const scrollPos = window.scrollY + 120;
-
-    for (let i = 0; i < sections.length; i++) {
-      if (scrollPos >= sections[i].offsetTop) {
-        activeIndex = i;
-      } else {
-        break;
-      }
-    }
-
-    tocLinks.forEach((link, idx) => {
-      link.classList.toggle('active', idx === activeIndex);
+  <script>
+    document.querySelectorAll('.checklist li').forEach(item => {
+      item.addEventListener('click', () => {
+        item.classList.toggle('completed');
+      });
     });
 
-    if (activeIndex !== activeIndexCurrent) {
-      activeIndexCurrent = activeIndex;
-      const activeLink = tocLinks[activeIndex];
+    const tocLinks = document.querySelectorAll('.toc a');
+    const sections = Array.from(tocLinks).map(link => {
+      const selector = link.getAttribute('href');
+      return document.querySelector(selector);
+    }).filter(Boolean);
+    let activeIndexCurrent = -1;
 
-      if (activeLink) {
-        scrollActiveTocLinkIntoView(activeLink);
+    function scrollActiveTocLinkIntoView(link) {
+      const toc = link.closest('.toc');
+
+      if (!toc) {
+        return;
       }
-    }
-  }
 
-  window.addEventListener('scroll', updateActiveToc);
-  updateActiveToc();
+      const tocRect = toc.getBoundingClientRect();
+      const linkRect = link.getBoundingClientRect();
+      const edgePadding = 12;
 
-  const mobileToggle = document.getElementById('mobileToggle');
-  const headerNavRow = document.getElementById('headerNavRow');
-
-  if (mobileToggle && headerNavRow) {
-    mobileToggle.addEventListener('click', () => {
-      mobileToggle.classList.toggle('active');
-      headerNavRow.classList.toggle('active');
-    });
-  }
-
-  const parentMenuItems = document.querySelectorAll('.menu-item-has-children');
-  parentMenuItems.forEach(item => {
-    const link = item.querySelector('a');
-    const arrow = item.querySelector('.arrow');
-
-    const toggleSubmenu = event => {
-      if (window.innerWidth <= 1024) {
-        event.preventDefault();
-        event.stopPropagation();
-
-        const isActive = item.classList.contains('active-dropdown');
-        parentMenuItems.forEach(otherItem => {
-          otherItem.classList.remove('active-dropdown');
-        });
-
-        if (!isActive) {
-          item.classList.add('active-dropdown');
+      if (toc.scrollHeight > toc.clientHeight + 1) {
+        if (linkRect.top < tocRect.top + edgePadding) {
+          toc.scrollTop += linkRect.top - tocRect.top - Math.max(edgePadding, (toc.clientHeight - linkRect.height) / 2);
+        } else if (linkRect.bottom > tocRect.bottom - edgePadding) {
+          toc.scrollTop += linkRect.top - tocRect.top - Math.max(edgePadding, (toc.clientHeight - linkRect.height) / 2);
         }
       }
-    };
 
-    if (arrow) {
-      arrow.addEventListener('click', toggleSubmenu);
+      if (toc.scrollWidth > toc.clientWidth + 1) {
+        if (linkRect.left < tocRect.left + edgePadding) {
+          toc.scrollLeft += linkRect.left - tocRect.left - Math.max(edgePadding, (toc.clientWidth - linkRect.width) / 2);
+        } else if (linkRect.right > tocRect.right - edgePadding) {
+          toc.scrollLeft += linkRect.left - tocRect.left - Math.max(edgePadding, (toc.clientWidth - linkRect.width) / 2);
+        }
+      }
     }
 
-    if (link && link.getAttribute('href') === '#') {
-      link.addEventListener('click', toggleSubmenu);
+    function updateActiveToc() {
+      let activeIndex = -1;
+      const scrollPos = window.scrollY + 120;
+
+      for (let i = 0; i < sections.length; i++) {
+        if (scrollPos >= sections[i].offsetTop) {
+          activeIndex = i;
+        } else {
+          break;
+        }
+      }
+
+      tocLinks.forEach((link, idx) => {
+        link.classList.toggle('active', idx === activeIndex);
+      });
+
+      if (activeIndex !== activeIndexCurrent) {
+        activeIndexCurrent = activeIndex;
+        const activeLink = tocLinks[activeIndex];
+
+        if (activeLink) {
+          scrollActiveTocLinkIntoView(activeLink);
+        }
+      }
     }
-  });
-</script>
+
+    window.addEventListener('scroll', updateActiveToc);
+    updateActiveToc();
+
+    const mobileToggle = document.getElementById('mobileToggle');
+    const headerNavRow = document.getElementById('headerNavRow');
+
+    if (mobileToggle && headerNavRow) {
+      mobileToggle.addEventListener('click', () => {
+        mobileToggle.classList.toggle('active');
+        headerNavRow.classList.toggle('active');
+      });
+    }
+
+    const parentMenuItems = document.querySelectorAll('.menu-item-has-children');
+    parentMenuItems.forEach(item => {
+      const link = item.querySelector('a');
+      const arrow = item.querySelector('.arrow');
+
+      const toggleSubmenu = event => {
+        if (window.innerWidth <= 1024) {
+          event.preventDefault();
+          event.stopPropagation();
+
+          const isActive = item.classList.contains('active-dropdown');
+          parentMenuItems.forEach(otherItem => {
+            otherItem.classList.remove('active-dropdown');
+          });
+
+          if (!isActive) {
+            item.classList.add('active-dropdown');
+          }
+        }
+      };
+
+      if (arrow) {
+        arrow.addEventListener('click', toggleSubmenu);
+      }
+
+      if (link && link.getAttribute('href') === '#') {
+        link.addEventListener('click', toggleSubmenu);
+      }
+    });
+  </script>
 </body>
+
 </html>
