@@ -2848,12 +2848,12 @@ body.hp-body {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 16px;
-  padding: 40px;
   position: relative;
   box-shadow: 0 4px 12px rgba(14, 42, 71, 0.02);
   transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .hp-responsibility-card:hover {
@@ -2861,12 +2861,53 @@ body.hp-body {
   box-shadow: 0 16px 32px rgba(14, 42, 71, 0.06);
 }
 
-.hp-responsibility-card.card-free {
-  border-top: 4px solid var(--summary-border);
+.hp-responsibility-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  z-index: 10;
 }
 
-.hp-responsibility-card.card-paid {
-  border-top: 4px solid var(--brand-accent);
+.hp-responsibility-card.card-free::before {
+  background: var(--summary-border);
+}
+
+.hp-responsibility-card.card-paid::before {
+  background: var(--brand-accent);
+}
+
+/* Card Header Section */
+.hp-card-header {
+  padding: 36px 36px 24px 36px;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+}
+
+.hp-responsibility-card.card-free .hp-card-header {
+  background: rgba(16, 185, 129, 0.015);
+}
+
+.hp-responsibility-card.card-paid .hp-card-header {
+  background: rgba(204, 63, 92, 0.015);
+}
+
+.hp-card-subtitle {
+  font-size: 13.5px;
+  color: var(--muted);
+  margin: 8px 0 0 0;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* Card Body Section */
+.hp-card-body {
+  padding: 32px 36px 36px 36px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Badge tags inside cards */
@@ -2874,18 +2915,17 @@ body.hp-body {
   display: inline-block;
   align-self: flex-start;
   font-family: var(--font-heading);
-  font-size: 12.5px;
+  font-size: 12px;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.8px;
   padding: 5px 12px;
   border-radius: 6px;
-  margin-bottom: 28px;
 }
 
 .badge-free {
   background: var(--summary-bg);
-  color: #065f46; /* dark emerald green text for accessibility */
+  color: #065f46;
 }
 
 .badge-paid {
@@ -2913,10 +2953,10 @@ body.hp-body {
 }
 
 .hp-list-icon {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   flex-shrink: 0;
-  margin-top: 2px;
+  margin-top: 3px;
 }
 
 .hp-list-icon.icon-free {
@@ -2934,12 +2974,12 @@ body.hp-body {
   justify-content: center;
   gap: 12px;
   background: var(--warn-bg);
-  border: 1px solid rgba(251, 191, 36, 0.3); /* soft amber-400 */
+  border: 1px solid rgba(251, 191, 36, 0.3);
   padding: 16px 28px;
   border-radius: 12px;
   font-size: 14.5px;
   font-weight: 600;
-  color: #92400e; /* amber-800 */
+  color: #92400e;
   max-width: 820px;
   margin: 0 auto;
   line-height: 1.5;
@@ -2957,8 +2997,11 @@ body.hp-body {
 
 /* Responsive styles */
 @media (max-width: 992px) {
-  .hp-responsibility-card {
-    padding: 30px;
+  .hp-card-header {
+    padding: 30px 30px 20px 30px;
+  }
+  .hp-card-body {
+    padding: 24px 30px 30px 30px;
   }
 }
 
