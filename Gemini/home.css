@@ -118,26 +118,26 @@ body.hp-body {
 }
 
 .hp-hero-boundary {
-  background: #f0fdf4;
-  border-left: 4px solid var(--summary-border);
-  border-radius: 0 8px 8px 0;
+  background: rgba(14, 42, 71, 0.02);
+  border-left: 3px solid var(--brand-accent);
+  border-radius: 0 12px 12px 0;
   padding: 16px 20px;
   margin-bottom: 24px;
 }
 
 .hp-hero-boundary-title {
   font-family: var(--font-heading);
-  font-size: 14px;
-  font-weight: 700;
-  color: #166534;
-  margin-bottom: 4px;
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--brand-accent);
+  margin-bottom: 6px;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
 }
 
 .hp-hero-boundary p {
   font-size: 13.5px;
-  color: #1e3a2f;
+  color: var(--text);
   line-height: 1.5;
   margin: 0;
 }
