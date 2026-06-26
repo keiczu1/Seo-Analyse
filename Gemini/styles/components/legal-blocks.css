@@ -1,0 +1,132 @@
+/* Disclaimer */
+.disclaimer {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px 20px;
+  font-size: var(--fs-xs);
+  color: var(--muted);
+  margin: var(--space-lg) 0 var(--space-sm);
+  line-height: 1.6;
+}
+
+.disclaimer strong {
+  color: var(--heading-text);
+  font-weight: 700;
+}
+
+/* Court practice */
+.court-practice {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+  margin: var(--space-md) 0;
+  box-shadow: 0 4px 15px rgba(15, 23, 42, 0.01);
+}
+
+.practice-case {
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.practice-case:last-child {
+  border-bottom: none;
+}
+
+.case-situation,
+.case-decision,
+.case-reason {
+  margin-bottom: 6px;
+  font-size: var(--fs-sm);
+}
+
+/* Risk table tags */
+.risk-high {
+  background: #FEE2E2;
+  color: #991B1B;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  display: inline-block;
+}
+
+.risk-medium {
+  background: #FEF3C7;
+  color: #92400E;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  display: inline-block;
+}
+
+.risk-low {
+  background: #D1FAE5;
+  color: #065F46;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  display: inline-block;
+}
+
+/* Law base */
+.law-base {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+  margin: var(--space-md) 0;
+}
+
+.law-base h2 {
+  margin-top: 0;
+  border-top: none;
+  padding-top: 0;
+}
+
+.law-base ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.law-base li {
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: var(--fs-sm);
+}
+
+.law-base li:last-child {
+  border-bottom: none;
+}
+
+/* Court Practice Cases & Scenarios */
+.case, .scenario {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.01);
+}
+
+.case h3, .scenario h3 {
+  margin-top: 0;
+  font-size: var(--fs-lg);
+  font-weight: 700;
+  color: var(--heading-text);
+  margin-bottom: 8px;
+}
+
+.case p, .scenario p {
+  font-size: var(--fs-sm);
+  margin-bottom: 8px;
+}
+
+.case p:last-child, .scenario p:last-child {
+  margin-bottom: 0;
+}

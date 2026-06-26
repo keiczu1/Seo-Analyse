@@ -1,0 +1,184 @@
+{
+  "cards": [
+    {
+      "key": "family",
+      "href": "zadat-vopros.html",
+      "title": "Семейное право",
+      "iconHtml": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n              <path d=\"M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2\"></path>\n              <circle cx=\"9\" cy=\"7\" r=\"4\"></circle>\n              <path d=\"M23 21v-2a4 4 0 0 0-3-3.87\"></path>\n              <path d=\"M16 3.13a4 4 0 0 1 0 7.75\"></path>\n            </svg>",
+      "questions": [
+        "Развод и раздел имущества супругов",
+        "Взыскание и изменение алиментов",
+        "Определение места жительства детей",
+        "Установление и оспаривание отцовства",
+        "Лишение родительских прав",
+        "Составление брачного договора"
+      ],
+      "actionLabel": "Задать вопрос"
+    },
+    {
+      "key": "housing",
+      "href": "zadat-vopros.html",
+      "title": "Жилищные вопросы",
+      "iconHtml": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n              <path d=\"M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z\"></path>\n              <polyline points=\"9 22 9 12 15 12 15 22\"></polyline>\n            </svg>",
+      "questions": [
+        "Выселение и снятие с учета",
+        "Споры с управляющей компанией и ЖКХ",
+        "Затопление квартиры и возмещение ущерба",
+        "Разделение лицевых счетов за ЖКУ",
+        "Согласование и легализация перепланировок",
+        "Приватизация квартир и комнат"
+      ],
+      "actionLabel": "Задать вопрос"
+    },
+    {
+      "key": "labor",
+      "href": "zadat-vopros.html",
+      "title": "Трудовое право",
+      "iconHtml": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n              <rect x=\"2\" y=\"7\" width=\"20\" height=\"14\" rx=\"2\" ry=\"2\"></rect>\n              <path d=\"M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16\"></path>\n            </svg>",
+      "questions": [
+        "Незаконное увольнение и сокращение",
+        "Взыскание долгов по заработной плате",
+        "Оспаривание дисциплинарных взысканий",
+        "Изменение условий трудового договора",
+        "Компенсации при травмах на производстве",
+        "Споры о материальной ответственности"
+      ],
+      "actionLabel": "Задать вопрос"
+    },
+    {
+      "key": "debt",
+      "href": "zadat-vopros.html",
+      "title": "Кредиты и долги",
+      "iconHtml": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n              <rect x=\"1\" y=\"4\" width=\"22\" height=\"16\" rx=\"2\" ry=\"2\"></rect>\n              <line x1=\"1\" y1=\"10\" x2=\"23\" y2=\"10\"></line>\n            </svg>",
+      "questions": [
+        "Банкротство граждан и списание долгов",
+        "Взыскание долгов по договорам и распискам",
+        "Отмена судебных приказов от МФО и банков",
+        "Защита от коллекторов и приставов",
+        "Реструктуризация и снижение платежей",
+        "Списание штрафов, неустоек и пеней"
+      ],
+      "actionLabel": "Задать вопрос"
+    },
+    {
+      "key": "inheritance",
+      "href": "zadat-vopros.html",
+      "title": "Наследство",
+      "iconHtml": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n              <path d=\"M21 2H3v16h18V2z\"></path>\n              <path d=\"M21 18H3c0 2.2 1.8 4 4 4h10c2.2 0 4-1.8 4-4z\"></path>\n            </svg>",
+      "questions": [
+        "Оформление наследства по закону и завещанию",
+        "Восстановление сроков принятия наследства",
+        "Оспаривание завещаний в судебном порядке",
+        "Раздел наследства между родственниками",
+        "Выделение обязательной доли в наследстве",
+        "Признание наследников недостойными"
+      ],
+      "actionLabel": "Задать вопрос"
+    },
+    {
+      "key": "auto",
+      "href": "zadat-vopros.html",
+      "title": "Автомобильные вопросы",
+      "iconHtml": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n              <rect x=\"1\" y=\"3\" width=\"15\" height=\"13\"></rect>\n              <polygon points=\"16 8 20 8 23 11 23 16 16 16 16 8\"></polygon>\n              <circle cx=\"5.5\" cy=\"18.5\" r=\"2.5\"></circle>\n              <circle cx=\"18.5\" cy=\"18.5\" r=\"2.5\"></circle>\n            </svg>",
+      "questions": [
+        "Споры со страховыми компаниями (ОСАГО/КАСКО)",
+        "Обжалование незаконных штрафов ГИБДД",
+        "Защита прав при лишении водительского удостоверения",
+        "Споры при ДТП, возмещение материального ущерба",
+        "Претензии к автосалонам, автодилерам и сервисам",
+        "Разрешение конфликтов при покупке б/у авто с дефектами"
+      ],
+      "actionLabel": "Задать вопрос"
+    },
+    {
+      "key": "criminal",
+      "href": "zadat-vopros.html",
+      "title": "Уголовное право",
+      "iconHtml": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n              <path d=\"M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z\"></path>\n              <line x1=\"12\" y1=\"8\" x2=\"12\" y2=\"12\"></line>\n              <line x1=\"12\" y1=\"16\" x2=\"12.01\" y2=\"16\"></line>\n            </svg>",
+      "questions": [
+        "Защита подозреваемого и обвиняемого на следствии",
+        "Подготовка жалоб, ходатайств по уголовным делам",
+        "Представление интересов потерпевшей стороны",
+        "Помощь при досрочном освобождении (УДО)",
+        "Юридическая защита при обысках, допросах, задержаниях",
+        "Апелляционное и кассационное обжалование приговоров"
+      ],
+      "actionLabel": "Задать вопрос"
+    },
+    {
+      "key": "military",
+      "href": "zadat-vopros.html",
+      "title": "Военное право",
+      "iconHtml": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n              <polygon points=\"12 2 22 7 22 17 12 22 2 17 2 7 12 2\"></polygon>\n            </svg>",
+      "questions": [
+        "Отсрочка и освобождение от призыва в армию",
+        "Направление на альтернативную гражданскую службу",
+        "Начисление выплат и льгот военнослужащим",
+        "Обжалование решений и действий призывных комиссий",
+        "Порядок расторжения контракта и увольнения",
+        "Оформление статуса и льгот ветерана БД"
+      ],
+      "actionLabel": "Задать вопрос"
+    },
+    {
+      "key": "realty",
+      "href": "zadat-vopros.html",
+      "title": "Недвижимость и земля",
+      "iconHtml": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n              <circle cx=\"12\" cy=\"12\" r=\"10\"></circle>\n              <polygon points=\"12 2 22 7 12 12 2 7 12 2\"></polygon>\n              <polyline points=\"2 17 12 22 22 17\"></polyline>\n              <polyline points=\"2 12 12 17 22 12\"></polyline>\n            </svg>",
+      "questions": [
+        "Сопровождение сделок купли-продажи и дарения",
+        "Споры о границах и межевании земельных участков",
+        "Признание прав собственности на спорные объекты",
+        "Аренда жилых, нежилых и коммерческих объектов",
+        "Легализация самовольных построек и дач",
+        "Оспаривание кадастровой оценки недвижимости"
+      ],
+      "actionLabel": "Задать вопрос"
+    },
+    {
+      "key": "consumer",
+      "href": "zadat-vopros.html",
+      "title": "Защита прав потребителей",
+      "iconHtml": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n              <path d=\"M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z\"></path>\n              <line x1=\"3\" y1=\"6\" x2=\"21\" y2=\"6\"></line>\n              <path d=\"M16 10a4 4 0 0 1-8 0\"></path>\n            </svg>",
+      "questions": [
+        "Возврат бракованного товара продавцу или производителю",
+        "Споры с застройщиком при просрочке сдачи по ДДУ",
+        "Ненадлежащее качество медицинских, сервисных услуг",
+        "Претензии к авиаперевозчикам и турфирмам",
+        "Возврат денежных средств за обучение и подписки",
+        "Взыскание законной неустойки, штрафов и морального вреда"
+      ],
+      "actionLabel": "Задать вопрос"
+    },
+    {
+      "key": "business",
+      "href": "zadat-vopros.html",
+      "title": "Вопросы бизнеса",
+      "iconHtml": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n              <polyline points=\"23 6 13.5 15.5 8.5 10.5 1 18\"></polyline>\n              <polyline points=\"17 6 23 6 23 12\"></polyline>\n            </svg>",
+      "questions": [
+        "Регистрация и официальное закрытие ООО / ИП",
+        "Составление, проверка коммерческих договоров",
+        "Арбитражные споры, защита интересов в суде",
+        "Налоговое консультирование и проверки ФНС",
+        "Защита брендов, товарных знаков и патентов",
+        "Разрешение споров между учредителями и партнерами"
+      ],
+      "actionLabel": "Задать вопрос"
+    },
+    {
+      "key": "other",
+      "href": "zadat-vopros.html",
+      "title": "Другая тема",
+      "iconHtml": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n              <circle cx=\"12\" cy=\"12\" r=\"10\"></circle>\n              <path d=\"M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3\"></path>\n              <line x1=\"12\" y1=\"17\" x2=\"12.01\" y2=\"17\"></line>\n            </svg>",
+      "questions": [
+        "Консультации по миграционному законодательству",
+        "Вопросы пенсионного обеспечения, выплат и льгот",
+        "Составление и правовой анализ любых документов",
+        "Представление в судах общей юрисдикции",
+        "Обжалование действий органов власти и чиновников",
+        "Любые иные нестандартные правовые ситуации"
+      ],
+      "actionLabel": "Задать вопрос"
+    }
+  ]
+}

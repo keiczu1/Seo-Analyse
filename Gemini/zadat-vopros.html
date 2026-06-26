@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
+    <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Завершение отправки вопроса — LawDivorce</title>
   <meta name="description" content="Получите бесплатную юридическую консультацию онлайн или по телефону 8 800 551-24-06. Первичный разбор ситуации, варианты действий и понятный следующий шаг — по всем направлениям права.">
 
-  <link rel="stylesheet" href="style.css?v=15">
-  <link rel="stylesheet" href="home.css?v=1">
 
   <script type="application/ld+json">
   {
@@ -50,152 +49,53 @@
     ]
   }
   </script>
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/pages/home.css">
+  <link rel="stylesheet" href="styles/pages/ask-form.css">
+
 </head>
 <body class="hp-body">
-<header class="site-header hp-header" id="siteHeader">
-  <div class="header-main-bar">
-    <div class="header-inner hp">
-      <div class="header-top-row">
-        <a href="https://law-divorce.org/" class="header-logo" data-wpel-link="internal">
-          <svg class="header-logo-icon" viewBox="0 0 100 100" width="22" height="22" fill="none"
-            xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="solidNavyLogoKit" x1="15" y1="10" x2="85" y2="90" gradientUnits="userSpaceOnUse">
-                <stop offset="0%" stop-color="#476899" />
-                <stop offset="45%" stop-color="#355380" />
-                <stop offset="100%" stop-color="#0E2A47" />
-              </linearGradient>
-              <clipPath id="shieldClipMonoLogoKit">
-                <path d="M50,10 C72,10 82,13 85,16 C85,48 87,68 50,90 C13,68 15,48 15,16 C18,13 28,10 50,10 Z"></path>
-              </clipPath>
-            </defs>
-            <path d="M50,10 C72,10 82,13 85,16 C85,48 87,68 50,90 C13,68 15,48 15,16 C18,13 28,10 50,10 Z"
-              fill="rgba(14, 42, 71, 0.3)" transform="translate(0, 3)"></path>
-            <g clip-path="url(#shieldClipMonoLogoKit)">
-              <path d="M0,0 H100 V100 H0 Z" fill="url(#solidNavyLogoKit)"></path>
-              <path d="M15,10 H50 V90 H15 Z" fill="#ffffff" opacity="0.06"></path>
-              <path d="M50,10 H85 V90 H50 Z" fill="#000000" opacity="0.06"></path>
-              <path d="M-10,-10 L110,40 L110,-10 Z" fill="#ffffff" opacity="0.08" pointer-events="none"></path>
-            </g>
-            <line x1="50" y1="10" x2="50" y2="90" stroke="#000000" stroke-width="1.2" stroke-opacity="0.15"></line>
-            <line x1="50" y1="10" x2="50" y2="90" stroke="#ffffff" stroke-width="1" stroke-opacity="0.1"
-              transform="translate(-1, 0)"></line>
-            <path d="M50,10 C72,10 82,13 85,16 C85,48 87,68 50,90 C13,68 15,48 15,16 C18,13 28,10 50,10 Z"
-              stroke="#355380" stroke-width="2.5" stroke-opacity="0.9" stroke-linejoin="round"></path>
-            <path d="M50,13 C69,13 77,15 80,18 C80,44 82,60 50,81 C18,60 20,44 20,18 C23,15 31,13 50,13 Z"
-              stroke="#ffffff" stroke-width="1" stroke-opacity="0.45" stroke-linejoin="round"></path>
-          </svg>
-          <span class="header-logo-text"><span class="logo-law">Law</span><span
-              class="logo-divorce">Divorce</span></span>
-        </a>
+<header class="site-header" id="siteHeader">
+    <div class="header-main-bar">
+      <div class="header-inner">
+        <div class="header-top-row">
+          <a href="https://law-divorce.org/" class="header-logo" data-wpel-link="internal">
+            <svg class="header-logo-icon" viewBox="0 0 100 100" width="22" height="22" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="solidNavyLogoKit" x1="15" y1="10" x2="85" y2="90" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#476899" />
+                  <stop offset="45%" stop-color="#355380" />
+                  <stop offset="100%" stop-color="#0E2A47" />
+                </linearGradient>
+                <clipPath id="shieldClipMonoLogoKit">
+                  <path d="M50,10 C72,10 82,13 85,16 C85,48 87,68 50,90 C13,68 15,48 15,16 C18,13 28,10 50,10 Z"></path>
+                </clipPath>
+              </defs>
+              <path d="M50,10 C72,10 82,13 85,16 C85,48 87,68 50,90 C13,68 15,48 15,16 C18,13 28,10 50,10 Z"
+                fill="rgba(14, 42, 71, 0.3)" transform="translate(0, 3)"></path>
+              <g clip-path="url(#shieldClipMonoLogoKit)">
+                <path d="M0,0 H100 V100 H0 Z" fill="url(#solidNavyLogoKit)"></path>
+                <path d="M15,10 H50 V90 H15 Z" fill="#ffffff" opacity="0.06"></path>
+                <path d="M50,10 H85 V90 H50 Z" fill="#000000" opacity="0.06"></path>
+                <path d="M-10,-10 L110,40 L110,-10 Z" fill="#ffffff" opacity="0.08" pointer-events="none"></path>
+              </g>
+              <line x1="50" y1="10" x2="50" y2="90" stroke="#000000" stroke-width="1.2" stroke-opacity="0.15"></line>
+              <line x1="50" y1="10" x2="50" y2="90" stroke="#ffffff" stroke-width="1" stroke-opacity="0.1"
+                transform="translate(-1, 0)"></line>
+              <path d="M50,10 C72,10 82,13 85,16 C85,48 87,68 50,90 C13,68 15,48 15,16 C18,13 28,10 50,10 Z"
+                stroke="#355380" stroke-width="2.5" stroke-opacity="0.9" stroke-linejoin="round"></path>
+              <path d="M50,13 C69,13 77,15 80,18 C80,44 82,60 50,81 C18,60 20,44 20,18 C23,15 31,13 50,13 Z"
+                stroke="#ffffff" stroke-width="1" stroke-opacity="0.45" stroke-linejoin="round"></path>
+            </svg>
+            <span class="header-logo-text"><span class="logo-law">Law</span><span
+                class="logo-divorce">Divorce</span></span>
+          </a>
 
-        <div class="header-contacts">
-          <div class="phone-row">
-            <span class="phone-label">Бесплатная консультация юриста:</span>
-            <a href="tel:+78005512406" class="phone-number">
-              <span class="phone-icon-container">
-                <svg class="phone-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                  stroke-linecap="round" stroke-linejoin="round">
-                  <path
-                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
-                  </path>
-                </svg>
-              </span>
-              <span>+7 (800) 551-24-06</span>
-            </a>
-            <span class="timing-badge">
-              <svg class="timing-svg" viewBox="0 0 54 18" width="54" height="18" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <g class="timing-clock-group" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                  stroke-linejoin="round">
-                  <circle cx="9" cy="9" r="7.5" />
-                  <path d="M9 4.5V9l3 1.5" />
-                  <path d="M9 1.5v1.5M9 16.5v-1.5M1.5 9h1.5M16.5 9h-1.5" stroke-width="1" />
-                </g>
-                <text class="timing-text" x="22" y="13" font-family="'Jost', sans-serif" font-size="12"
-                  font-weight="700" fill="currentColor" letter-spacing="0.5">24/7</text>
-              </svg>
-            </span>
-          </div>
-        </div>
-
-        <div class="header-top-right">
-          <button class="mobile-toggle" id="mobileToggle" aria-label="Открыть меню">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="header-nav-bar" id="headerNavRow">
-    <div class="header-inner hp">
-      <nav class="header-nav-row" style="border: none; width: 100%;">
-        <ul id="main_menu" class="top_menu">
-          <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
-            <a href="https://law-divorce.org/besplatnye-konsultatsii-yurista-po-semejnym-voprosam-online/"
-              data-wpel-link="internal"><span class="icon_text">Консультации</span></a>
-            <span class="arrow"></span>
-            <div class="sub">
-              <ul>
-                <li><a href="https://law-divorce.org/besplatnye-konsultatsii-yurista-po-semejnym-voprosam-online/"
-                    data-wpel-link="internal">По семейным спорам</a></li>
-                <li><a href="https://law-divorce.org/besplatnaya-konsultatsiya-yurista-po-zhilishhnym-voprosam/"
-                    data-wpel-link="internal">По жилищным спорам</a></li>
-                <li><a href="https://law-divorce.org/besplatnaya-konsultatsiya-yurista-po-nasledstvu-online/"
-                    data-wpel-link="internal">По наследству</a></li>
-              </ul>
-              <ul>
-                <li><a
-                    href="https://law-divorce.org/besplatnaya-yuridicheskaya-konsultatsiya-po-trudovomu-pravu-onlajn/"
-                    data-wpel-link="internal">По трудовым спорам</a></li>
-                <li><a href="https://law-divorce.org/besplatnaya-konsultatsiya-yurista-po-kreditam-online/"
-                    data-wpel-link="internal">По кредитам и банкам</a></li>
-                <li><a href="https://law-divorce.org/besplatnaya-konsultatsiya-yurista-po-zashhite-prav-potrebitelej/"
-                    data-wpel-link="internal">По защите прав потребителей</a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
-            <a href="category-divorce.html"><span class="icon_text">Блог</span></a>
-            <span class="arrow"></span>
-            <div class="sub">
-              <ul>
-                <li><a href="category-divorce.html">Разводы</a></li>
-                <li><a href="article-divorce-without-consent.html#data">Раздел имущества</a></li>
-                <li><a href="article-divorce-without-consent.html#children">Алименты</a></li>
-              </ul>
-              <ul>
-                <li><a href="article-divorce-without-consent.html#children">Права родителей</a></li>
-                <li><a href="article-divorce-without-consent.html#children">Опека</a></li>
-                <li><a href="article-divorce-without-consent.html#children">Усыновление</a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
-            <a href="https://law-divorce.org/yurist-advokat-po-razvodam-v-moskve/" data-wpel-link="internal"><span
-                class="icon_text">Услуги</span></a>
-            <span class="arrow"></span>
-            <div class="sub">
-              <ul>
-                <li><a href="https://law-divorce.org/yurist-advokat-po-razvodam-v-moskve/"
-                    data-wpel-link="internal">Расторжение брака</a></li>
-                <li><a href="https://law-divorce.org/yurist-advokat-po-razdelu-imushhestva-pri-razvode/"
-                    data-wpel-link="internal">Раздел имущества</a></li>
-                <li><a href="https://law-divorce.org/yurist-advokat-po-semejnym-delam/"
-                    data-wpel-link="internal">Семейные споры</a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="menu-item menu-item-type-custom menu-item-object-custom">
-            <a href="article-divorce-without-consent.html"><span class="icon_text">Статья</span></a>
-          </li>
-          <li class="menu-item-contacts-mobile">
-            <div class="mobile-contacts-inner">
+          <div class="header-contacts">
+            <div class="phone-row">
               <span class="phone-label">Бесплатная консультация юриста:</span>
-              <a href="tel:+78005512406" class="phone-number">
+              <a href="tel:+78005512406" class="phone-number" aria-label="Позвонить бесплатно">
                 <span class="phone-icon-container">
                   <svg class="phone-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
                     stroke-linecap="round" stroke-linejoin="round">
@@ -220,15 +120,107 @@
                 </svg>
               </span>
             </div>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </div>
-</header>
-<div class="header-placeholder" style="height: 110px;"></div>
+          </div>
 
-  <div class="step2-container">
+          <div class="header-top-right">
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Открыть меню">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="header-nav-bar" id="headerNavRow">
+      <div class="header-inner">
+        <nav class="header-nav-row header-nav-row--primary" aria-label="Основная навигация">
+          <ul id="main_menu" class="top_menu">
+                        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+              <a href="https://law-divorce.org/besplatnye-konsultatsii-yurista-po-semejnym-voprosam-online/" data-wpel-link="internal"><span class="icon_text">Консультации</span></a>
+              <span class="arrow"></span>
+              <div class="sub">
+                <ul>
+                  <li><a href="https://law-divorce.org/besplatnye-konsultatsii-yurista-po-semejnym-voprosam-online/" data-wpel-link="internal">По семейным спорам</a></li>
+                  <li><a href="https://law-divorce.org/besplatnaya-konsultatsiya-yurista-po-zhilishhnym-voprosam/" data-wpel-link="internal">По жилищным спорам</a></li>
+                  <li><a href="https://law-divorce.org/besplatnaya-konsultatsiya-yurista-po-nasledstvu-online/" data-wpel-link="internal">По наследству</a></li>
+                </ul>
+                <ul>
+                  <li><a href="https://law-divorce.org/besplatnaya-yuridicheskaya-konsultatsiya-po-trudovomu-pravu-onlajn/" data-wpel-link="internal">По трудовым спорам</a></li>
+                  <li><a href="https://law-divorce.org/besplatnaya-konsultatsiya-yurista-po-kreditam-online/" data-wpel-link="internal">По кредитам и банкам</a></li>
+                  <li><a href="https://law-divorce.org/besplatnaya-konsultatsiya-yurista-po-zashhite-prav-potrebitelej/" data-wpel-link="internal">По защите прав потребителей</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+              <a href="category-divorce.html"><span class="icon_text">Блог</span></a>
+              <span class="arrow"></span>
+              <div class="sub">
+                <ul>
+                  <li><a href="category-divorce.html">Разводы</a></li>
+                  <li><a href="article-divorce-without-consent.html#data">Раздел имущества</a></li>
+                  <li><a href="article-divorce-without-consent.html#children">Алименты</a></li>
+                </ul>
+                <ul>
+                  <li><a href="article-divorce-without-consent.html#children">Права родителей</a></li>
+                  <li><a href="article-divorce-without-consent.html#children">Опека</a></li>
+                  <li><a href="article-divorce-without-consent.html#children">Усыновление</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+              <a href="https://law-divorce.org/yurist-advokat-po-razvodam-v-moskve/" data-wpel-link="internal"><span class="icon_text">Услуги</span></a>
+              <span class="arrow"></span>
+              <div class="sub">
+                <ul>
+                  <li><a href="https://law-divorce.org/yurist-advokat-po-razvodam-v-moskve/" data-wpel-link="internal">Расторжение брака</a></li>
+                  <li><a href="https://law-divorce.org/yurist-advokat-po-razdelu-imushhestva-pri-razvode/" data-wpel-link="internal">Раздел имущества</a></li>
+                  <li><a href="https://law-divorce.org/yurist-advokat-po-semejnym-delam/" data-wpel-link="internal">Семейные споры</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="menu-item menu-item-type-custom menu-item-object-custom">
+              <a href="article-divorce-without-consent.html"><span class="icon_text">Статья</span></a>
+            </li>
+            <li class="menu-item-contacts-mobile">
+              <div class="mobile-contacts-inner">
+                <span class="phone-label">Бесплатная консультация юриста:</span>
+                <a href="tel:+78005512406" class="phone-number">
+                  <span class="phone-icon-container">
+                    <svg class="phone-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <path
+                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                      </path>
+                    </svg>
+                  </span>
+                  <span>+7 (800) 551-24-06</span>
+                </a>
+                <span class="timing-badge">
+                  <svg class="timing-svg" viewBox="0 0 54 18" width="54" height="18" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g class="timing-clock-group" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round">
+                      <circle cx="9" cy="9" r="7.5" />
+                      <path d="M9 4.5V9l3 1.5" />
+                      <path d="M9 1.5v1.5M9 16.5v-1.5M1.5 9h1.5M16.5 9h-1.5" stroke-width="1" />
+                    </g>
+                    <text class="timing-text" x="22" y="13" font-family="'Jost', sans-serif" font-size="12"
+                      font-weight="700" fill="currentColor" letter-spacing="0.5">24/7</text>
+                  </svg>
+                </span>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+<div class="header-placeholder ask-header-placeholder"></div>
+
+  <main class="step2-container">
     <div class="step2-card" id="step2Card">
       <div class="step2-header">
         <h1>Задать вопрос онлайн</h1>
@@ -237,8 +229,8 @@
 
       <form id="step2Form">
         <div class="form-group-step2">
-          <label for="step2Category" style="margin-bottom: 8px;">Категория права</label>
-          <select id="step2Category" class="hp-form-select" style="width:100%; border:1.5px solid var(--border); border-radius:8px; padding:12px; font-family:var(--font-body); font-size:14px; background-color:#f8fafc; outline:none; cursor:pointer;" required>
+          <label for="step2Category">Категория права</label>
+          <select id="step2Category" class="ask-form-select" required>
             <option value="family" selected>Семейное право (развод, алименты, дети)</option>
             <option value="housing">Жилищные вопросы (ЖКХ, выселение, перепланировка)</option>
             <option value="labor">Трудовое право (увольнение, задержка зарплаты)</option>
@@ -254,176 +246,32 @@
           </select>
         </div>
 
-        <div class="form-group-step2" style="margin-top:20px; display:flex; flex-direction:column; gap:8px;">
+        <div class="form-group-step2 form-group-step2--spaced">
           <label for="step2Text">Описание вашей ситуации</label>
-          <textarea id="step2Text" placeholder="Подробно опишите вашу ситуацию, чтобы юрист мог дать точный ответ..." style="width:100%; min-height:120px; border:1.5px solid var(--border); border-radius:8px; padding:12px; font-family:var(--font-body); font-size:14px; outline:none; resize:vertical; background-color:#f8fafc; line-height:1.5;" required></textarea>
+          <textarea id="step2Text" class="ask-form-textarea" placeholder="Подробно опишите вашу ситуацию, чтобы юрист мог дать точный ответ..." required></textarea>
         </div>
 
-        <div class="form-group-step2" style="margin-top:20px; display:flex; flex-direction:column; gap:8px;">
+        <div class="form-group-step2 form-group-step2--spaced">
           <label for="step2Name">Ваше имя</label>
           <input type="text" id="step2Name" placeholder="Введите имя..." required>
         </div>
 
-        <div class="form-group-step2" style="margin-top:20px; display:flex; flex-direction:column; gap:8px;">
+        <div class="form-group-step2 form-group-step2--spaced">
           <label for="step2Email">Email для получения ответа</label>
           <input type="email" id="step2Email" placeholder="example@mail.ru" required>
         </div>
 
-        <button type="submit" class="form-submit-step2" id="step2Submit" style="margin-top:30px; font-family:var(--font-heading); font-weight:700;">Отправить вопрос бесплатно</button>
+        <button type="submit" class="form-submit-step2" id="step2Submit">Отправить вопрос бесплатно</button>
       </form>
     </div>
-  </div>
+  </main>
 
-  <style>
-    .step2-container {
-      max-width: 680px;
-      margin: 60px auto 100px;
-      padding: 0 20px;
-    }
-    .step2-card {
-      background: #ffffff;
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 40px;
-      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
-      font-family: var(--font-body), sans-serif;
-    }
-    .step2-header {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    .step2-header h1 {
-      font-family: var(--font-heading);
-      font-size: 26px;
-      font-weight: 800;
-      color: var(--heading-text);
-      margin-bottom: 8px;
-      border: none;
-      padding: 0;
-    }
-    .step2-header p {
-      font-size: 15px;
-      color: var(--muted);
-      margin: 0;
-      line-height: 1.5;
-    }
-    .pending-details {
-      background: #f8fafc;
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 20px;
-      margin-bottom: 30px;
-    }
-    .pending-title {
-      font-size: 11px;
-      font-weight: 700;
-      text-transform: uppercase;
-      color: var(--muted);
-      letter-spacing: 0.5px;
-      margin-bottom: 12px;
-    }
-    .pending-cat-badge {
-      display: inline-block;
-      background: #e0f2fe;
-      color: #0369a1;
-      font-size: 12px;
-      font-weight: 700;
-      padding: 6px 12px;
-      border-radius: 6px;
-      margin-bottom: 12px;
-    }
-    .pending-text-preview {
-      font-size: 14.5px;
-      line-height: 1.6;
-      color: var(--text);
-      white-space: pre-wrap;
-      font-style: italic;
-    }
-    .form-group-step2 {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      margin-bottom: 20px;
-    }
-    .form-group-step2 label {
-      font-size: 11px;
-      font-weight: 700;
-      text-transform: uppercase;
-      color: var(--muted);
-      letter-spacing: 0.5px;
-    }
-    .form-group-step2 input {
-      border: 1.5px solid var(--border);
-      border-radius: 8px;
-      padding: 12px;
-      font-family: var(--font-body);
-      font-size: 14px;
-      outline: none;
-      color: var(--text);
-      background-color: #f8fafc;
-      transition: all 0.2s ease;
-    }
-    .form-group-step2 input:focus {
-      border-color: var(--accent);
-      background-color: #ffffff;
-      box-shadow: 0 0 0 3px rgba(53, 83, 128, 0.1);
-    }
-    .form-submit-step2 {
-      background: var(--brand-accent);
-      color: #ffffff;
-      border: none;
-      border-radius: 8px;
-      padding: 14px;
-      font-family: var(--font-heading);
-      font-size: 15px;
-      font-weight: 700;
-      cursor: pointer;
-      width: 100%;
-      transition: all 0.2s ease;
-      text-align: center;
-    }
-    .form-submit-step2:hover {
-      background: var(--brand-accent-hover);
-    }
-    .step2-success {
-      text-align: center;
-      padding: 20px 0;
-      font-family: var(--font-body), sans-serif;
-    }
-    .step2-success-icon {
-      width: 64px;
-      height: 64px;
-      background: #d1fae5;
-      color: #10b981;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 20px;
-    }
-    .step2-success h2 {
-      font-family: var(--font-heading);
-      font-size: 24px;
-      font-weight: 800;
-      color: var(--heading-text);
-      margin-bottom: 12px;
-      border: none;
-      padding: 0;
-    }
-    .step2-success p {
-      font-size: 15px;
-      color: var(--muted);
-      line-height: 1.6;
-      margin: 0 0 30px;
-    }
-  </style>
-  
-<footer class="site-footer hp-footer" id="footer">
-  <div class="footer-container hp">
-    <div class="footer-grid" style="display: grid; grid-template-columns: 1fr 1fr 1fr 1.5fr; gap: 30px;">
-      
-      <!-- Col 1: О сервисе -->
-      <div class="footer-col footer-links">
+
+
+<footer class="site-footer" id="footer">
+  <div class="footer-container">
+    <div class="footer-grid">
+            <div class="footer-col footer-links">
         <h4>О сервисе</h4>
         <ul>
           <li><a href="#">О проекте</a></li>
@@ -434,7 +282,6 @@
         </ul>
       </div>
 
-      <!-- Col 2: Пользователям -->
       <div class="footer-col footer-links">
         <h4>Пользователям</h4>
         <ul>
@@ -447,7 +294,6 @@
         </ul>
       </div>
 
-      <!-- Col 3: Направления -->
       <div class="footer-col footer-links">
         <h4>Направления</h4>
         <ul>
@@ -460,10 +306,9 @@
         </ul>
       </div>
 
-      <!-- Col 4: Правовая информация -->
       <div class="footer-col footer-contact">
-        <h4>Правовая информация</h4>
-        <ul style="font-size: 13px; margin-bottom: 15px; padding: 0; list-style: none;">
+                <h4>Правовая информация</h4>
+        <ul class="footer-legal-list">
           <li><a href="#">Пользовательское соглашение</a></li>
           <li><a href="#">Политика обработки данных</a></li>
           <li><a href="#">Согласие на обработку данных</a></li>
@@ -473,80 +318,21 @@
         <div class="footer-phone-card">
           <span class="footer-phone-label">Бесплатная консультация юриста:</span>
           <a href="tel:+78005512406" class="footer-phone-number">+7 (800) 551-24-06</a>
-          <div class="footer-ads-info" style="font-size: 11px; color: var(--muted); margin-top: 5px;">Реклама Erid: 2W5zFH4JYyW, ООО Лигал Адс Тех</div>
+          <div class="footer-ads-info">Реклама Erid: 2W5zFH4JYyW, ООО Лигал Адс Тех</div>
         </div>
       </div>
-
     </div>
 
-    <!-- Trust block at bottom of footer -->
-    <div class="footer-bottom" style="border-top: 1px solid var(--border); padding-top: 20px; margin-top: 20px; font-size: 11px; color: var(--muted); line-height: 1.6;">
-      <p class="footer-copy" style="margin-bottom: 8px;">&copy; 2026 LawDivorce. Все права защищены.</p>
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; 2026 LawDivorce. Все права защищены.</p>
       <p><strong>Владелец сайта:</strong> ООО «Лигал Адс Тех» (ОГРН 1237700481200, ИНН 9718228190). <strong>Организатор консультаций (партнерская сеть):</strong> Объединение независимых юристов и адвокатов РФ. <strong>Оператор персональных данных:</strong> ООО «Лигал Адс Тех». Обращение передается профильному специалисту партнерской сети. Услуги связи оказываются оператором связи.</p>
       <p>Для отзыва согласия на обработку персональных данных направьте обращение на <a href="mailto:privacy@law-divorce.org">privacy@law-divorce.org</a>.</p>
     </div>
   </div>
 </footer>
-
-  <script>
-  (function() {
-    'use strict';
-
-    // Mobile menu toggle
-    const mobileToggle = document.getElementById('mobileToggle');
-    const headerNavRow = document.getElementById('headerNavRow');
-    if (mobileToggle && headerNavRow) {
-      mobileToggle.addEventListener('click', () => {
-        mobileToggle.classList.toggle('active');
-        headerNavRow.classList.toggle('active');
-      });
-    }
-
-    // Pre-populate form if sessionStorage has details
-    const pendingCat = sessionStorage.getItem('pendingQuestionCat');
-    const pendingText = sessionStorage.getItem('pendingQuestionText');
-
-    const categoryEl = document.getElementById('step2Category');
-    const textEl = document.getElementById('step2Text');
-
-    if (pendingCat && categoryEl) {
-      const options = Array.from(categoryEl.options);
-      if (options.some(opt => opt.value === pendingCat)) {
-        categoryEl.value = pendingCat;
-      }
-    }
-    if (pendingText && textEl) {
-      textEl.value = pendingText;
-    }
-
-    // Handle form submission
-    const step2Form = document.getElementById('step2Form');
-    const cardContainer = document.getElementById('step2Card');
-
-    if (step2Form && cardContainer) {
-      step2Form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        
-        // Clear session data
-        sessionStorage.removeItem('pendingQuestionCat');
-        sessionStorage.removeItem('pendingQuestionText');
-        
-        cardContainer.innerHTML = `
-          <div class="step2-success">
-            <div class="step2-success-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" width="32" height="32">
-                <polyline points="20 6 9 17 4 12"></polyline>
-              </svg>
-            </div>
-            <h2>Обращение успешно отправлено!</h2>
-            <p>Мы получили ваш вопрос. В течение нескольких часов профильный специалист рассмотрит его и подготовит подробный письменный ответ. Мы направим письменное уведомление на указанный вами Email.</p>
-            <a href="index.html" class="hp-btn-link btn-primary" style="display:inline-flex; text-decoration:none; padding:14px 28px; width:auto; margin:0 auto; justify-content:center;">Вернуться на главную</a>
-          </div>
-        `;
-      });
-    }
-  })();
-  </script>
-  
+  <script src="scripts/core/dom.js"></script>
+  <script src="scripts/core/media.js"></script>
+  <script src="scripts/components/mobile-nav.js"></script>
+  <script src="scripts/pages/ask-form.js"></script>
 </body>
 </html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <!-- @include head/base-meta.html -->
+  <title>Завершение отправки вопроса — LawDivorce</title>
+  <meta name="description" content="Получите бесплатную юридическую консультацию онлайн или по телефону 8 800 551-24-06. Первичный разбор ситуации, варианты действий и понятный следующий шаг — по всем направлениям права.">
+
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Бесплатная юридическая консультация онлайн и по телефону",
+    "description": "Федеральный сервис бесплатной первичной юридической консультации. Задайте вопрос онлайн или позвоните по бесплатному номеру.",
+    "url": "https://law-divorce.org/"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Действительно ли консультация бесплатная?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Да. Первичный разбор ситуации, общие ориентиры в законодательстве и объяснение следующего шага предоставляются бесплатно. Платные услуги (подготовка документов, представительство) обсуждаются отдельно и начинаются только после вашего согласия."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Можно ли задать вопрос без указания телефона?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Да. При онлайн-обращении номер телефона не является обязательным полем. Вы получите ответ в письменной форме."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Сколько ждать ответа?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "По телефону — ответ в момент звонка. Онлайн-обращение обрабатывается в течение рабочего дня, обычно в пределах нескольких часов."
+        }
+      }
+    ]
+  }
+  </script>
+  <!-- @include head/styles.html -->
+</head>
+<body class="hp-body">
+<!-- @include layout/header.html -->
+<div class="header-placeholder ask-header-placeholder"></div>
+
+  <main class="step2-container">
+    <div class="step2-card" id="step2Card">
+      <div class="step2-header">
+        <h1>Задать вопрос онлайн</h1>
+        <p>Опишите вашу ситуацию и получите бесплатный письменный ответ от квалифицированного юриста в течение нескольких часов</p>
+      </div>
+
+      <form id="step2Form">
+        <div class="form-group-step2">
+          <label for="step2Category">Категория права</label>
+          <select id="step2Category" class="ask-form-select" required>
+            <option value="family" selected>Семейное право (развод, алименты, дети)</option>
+            <option value="housing">Жилищные вопросы (ЖКХ, выселение, перепланировка)</option>
+            <option value="labor">Трудовое право (увольнение, задержка зарплаты)</option>
+            <option value="debt">Кредиты и долги (банкротство, коллекторы)</option>
+            <option value="inheritance">Наследство (раздел имущества, завещание)</option>
+            <option value="auto">Автомобильные вопросы (ДТП, ГИБДД, ОСАГО)</option>
+            <option value="criminal">Уголовное право (защита, следствие, приговоры)</option>
+            <option value="military">Военное право (призыв, отсрочки, выплаты)</option>
+            <option value="realty">Недвижимость и земля (купля-продажа, дарение, границы)</option>
+            <option value="consumer">Защита прав потребителей (возврат товара, неустойка)</option>
+            <option value="business">Вопросы бизнеса (регистрация ООО/ИП, договора)</option>
+            <option value="other">Другая тема / Не знаю</option>
+          </select>
+        </div>
+
+        <div class="form-group-step2 form-group-step2--spaced">
+          <label for="step2Text">Описание вашей ситуации</label>
+          <textarea id="step2Text" class="ask-form-textarea" placeholder="Подробно опишите вашу ситуацию, чтобы юрист мог дать точный ответ..." required></textarea>
+        </div>
+
+        <div class="form-group-step2 form-group-step2--spaced">
+          <label for="step2Name">Ваше имя</label>
+          <input type="text" id="step2Name" placeholder="Введите имя..." required>
+        </div>
+
+        <div class="form-group-step2 form-group-step2--spaced">
+          <label for="step2Email">Email для получения ответа</label>
+          <input type="email" id="step2Email" placeholder="example@mail.ru" required>
+        </div>
+
+        <button type="submit" class="form-submit-step2" id="step2Submit">Отправить вопрос бесплатно</button>
+      </form>
+    </div>
+  </main>
+
+
+
+<!-- @include layout/footer.html -->
+
+
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+:root {
+  --text: #1e293b;
+  /* slate-800: darker and high-contrast for readability */
+  --heading-text: #0E2A47;
+  /* brand-navy */
+  --muted: #475569;
+  /* slate-600: higher contrast muted text */
+  --bg: #F8FAFC;
+  /* slate-50 */
+  --surface: #ffffff;
+  --border: #E2E8F0;
+  /* slate-200 */
+  --accent: #355380;
+  /* noble dusty steel blue */
+  --accent-hover: #1e3352;
+  /* dark navy */
+  --link-color: #355380;
+  --link-underline: rgba(53, 83, 128, 0.2);
+  --brand-accent: #cc3f5c;
+  /* soft crimson/rose */
+  --brand-accent-hover: #9c273e;
+  --warn-bg: #FFFBEB;
+  /* amber-50 */
+  --warn-border: #FBBF24;
+  /* amber-400 */
+  --tip-bg: #F0FDF4;
+  /* green-50 */
+  --tip-border: #4ADE80;
+  /* green-400 */
+  --danger-bg: #FEF2F2;
+  /* red-50 */
+  --danger-border: #FCA5A5;
+  /* red-300 */
+  --important-bg: #FFF1F2;
+  /* rose-50 */
+  --important-border: #FDA4AF;
+  /* rose-300 */
+  --summary-bg: #ECFDF5;
+  /* emerald-50 */
+  --summary-border: #10B981;
+  /* emerald-500 */
+  --font-heading: 'Jost', sans-serif;
+  --font-body: 'Open Sans', sans-serif;
+
+  /* Typographic scale */
+  --fs-xs: 13.5px;
+  --fs-sm: 14.5px;
+  --fs-base: 16px;
+  --fs-lg: 18px;
+  --fs-xl: 20px;
+  --fs-2xl: 26px;
+  --fs-3xl: 36px;
+
+  /* Spacing Scale */
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 24px;
+  --space-lg: 36px;
+  --space-xl: 52px;
+}

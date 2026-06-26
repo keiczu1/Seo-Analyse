@@ -1,0 +1,203 @@
+{
+  "lawyers": [
+    {
+      "categories": [
+        "criminal",
+        "military",
+        "other"
+      ],
+      "image": {
+        "src": "assets/images/dmitry-nosikov.png",
+        "alt": "Дмитрий Носиков"
+      },
+      "availability": {
+        "className": "status-online",
+        "title": "Онлайн"
+      },
+      "badge": "Адвокат",
+      "verified": {
+        "title": "Проверен",
+        "label": "Проверен"
+      },
+      "name": "Дмитрий Носиков",
+      "city": "г. Москва",
+      "rating": "5.0",
+      "reviewsText": "(342 отзыва)",
+      "description": "Специализируется на защите прав граждан в сложных уголовных делах и спорах с государственными органами.",
+      "stats": [
+        {
+          "label": "Специализация:",
+          "value": "Уголовное, военное право"
+        },
+        {
+          "label": "Стаж работы:",
+          "value": "15 лет"
+        },
+        {
+          "label": "Консультаций:",
+          "value": "1 420"
+        }
+      ],
+      "microReviewHtml": "«Дмитрий помог вернуть права за 2 дня. Спасибо!» — <em>Антон, г. Москва</em>",
+      "profileLink": {
+        "href": "https://law-divorce.org/specialists/dmitry-nosikov/",
+        "label": "Профиль"
+      },
+      "askLink": {
+        "href": "zadat-vopros.html",
+        "category": "criminal",
+        "label": "Спросить его"
+      }
+    },
+    {
+      "categories": [
+        "family",
+        "inheritance",
+        "consumer",
+        "labor"
+      ],
+      "image": {
+        "src": "assets/images/elena-smirnova.png",
+        "alt": "Елена Смирнова"
+      },
+      "availability": {
+        "className": "status-online",
+        "title": "Онлайн"
+      },
+      "badge": "Юрист",
+      "verified": {
+        "title": "Проверена",
+        "label": "Проверена"
+      },
+      "name": "Елена Смирнова",
+      "city": "г. Санкт-Петербург",
+      "rating": "4.9",
+      "reviewsText": "(512 отзывов)",
+      "description": "Эксперт по бракоразводным процессам, разделу совместного имущества и наследственным спорам.",
+      "stats": [
+        {
+          "label": "Специализация:",
+          "value": "Семейное, наследственное право"
+        },
+        {
+          "label": "Стаж работы:",
+          "value": "12 лет"
+        },
+        {
+          "label": "Консультаций:",
+          "value": "2 150"
+        }
+      ],
+      "microReviewHtml": "«Елена разобралась в сложном разделе имущества. Очень благодарна!» — <em>Марина, г. СПб</em>",
+      "profileLink": {
+        "href": "https://law-divorce.org/specialists/elena-smirnova/",
+        "label": "Профиль"
+      },
+      "askLink": {
+        "href": "zadat-vopros.html",
+        "category": "family",
+        "label": "Спросить ее"
+      }
+    },
+    {
+      "categories": [
+        "debt",
+        "consumer",
+        "labor",
+        "other"
+      ],
+      "image": {
+        "src": "assets/images/aleksey-petrov.png",
+        "alt": "Алексей Петров"
+      },
+      "availability": {
+        "className": "status-online",
+        "title": "Онлайн"
+      },
+      "badge": "Юрист",
+      "verified": {
+        "title": "Проверен",
+        "label": "Проверен"
+      },
+      "name": "Алексей Петров",
+      "city": "г. Новосибирск",
+      "rating": "4.8",
+      "reviewsText": "(184 отзыва)",
+      "description": "Помогает гражданам списать долги через банкротство, отменить судебные приказы и защититься от коллекторов.",
+      "stats": [
+        {
+          "label": "Специализация:",
+          "value": "Банкротство, кредиты и долги"
+        },
+        {
+          "label": "Стаж работы:",
+          "value": "8 лет"
+        },
+        {
+          "label": "Консультаций:",
+          "value": "980"
+        }
+      ],
+      "microReviewHtml": "«Помог списать 800 тыс. долгов через банкротство. Всё честно!» — <em>Игорь, г. Новосибирск</em>",
+      "profileLink": {
+        "href": "https://law-divorce.org/specialists/aleksey-petrov/",
+        "label": "Профиль"
+      },
+      "askLink": {
+        "href": "zadat-vopros.html",
+        "category": "debt",
+        "label": "Спросить его"
+      }
+    },
+    {
+      "categories": [
+        "realty",
+        "business",
+        "housing",
+        "auto"
+      ],
+      "image": {
+        "src": "assets/images/tatiana-kozlova.png",
+        "alt": "Татьяна Козлова"
+      },
+      "availability": {
+        "className": "status-offline",
+        "title": "Офлайн"
+      },
+      "badge": "Адвокат",
+      "verified": {
+        "title": "Проверена",
+        "label": "Проверена"
+      },
+      "name": "Татьяна Козлова",
+      "city": "г. Краснодар",
+      "rating": "5.0",
+      "reviewsText": "(720 отзывов)",
+      "description": "Специалист по земельным спорам, кадастровому учету и сопровождению коммерческих сделок.",
+      "stats": [
+        {
+          "label": "Специализация:",
+          "value": "Недвижимость, земля, бизнес"
+        },
+        {
+          "label": "Стаж работы:",
+          "value": "18 лет"
+        },
+        {
+          "label": "Консультаций:",
+          "value": "3 400"
+        }
+      ],
+      "microReviewHtml": "«Отстояла нашу землю в суде с соседями. Профессионал!» — <em>Олег, г. Краснодар</em>",
+      "profileLink": {
+        "href": "https://law-divorce.org/specialists/tatiana-kozlova/",
+        "label": "Профиль"
+      },
+      "askLink": {
+        "href": "zadat-vopros.html",
+        "category": "realty",
+        "label": "Спросить ее"
+      }
+    }
+  ]
+}

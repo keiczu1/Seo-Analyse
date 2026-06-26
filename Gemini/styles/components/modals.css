@@ -1,0 +1,171 @@
+﻿/* Home legal/preparation modal component. */
+
+.hp-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: 4000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  padding: 20px;
+}
+
+.hp-modal-overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.hp-modal-content {
+  background: #ffffff;
+  border-radius: 16px;
+  max-width: 520px;
+  width: 100%;
+  padding: 32px;
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.2);
+  position: relative;
+  transform: translateY(20px);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  color: var(--text);
+  font-family: var(--font-body), sans-serif;
+  line-height: 1.6;
+}
+
+.hp-modal-content--narrow {
+  max-width: 580px;
+}
+
+.hp-modal-list {
+  padding-left: 20px;
+  margin-top: 12px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.hp-modal-list-item {
+  margin-bottom: 8px;
+}
+
+.hp-modal-warning {
+  background: #fffbeb;
+  border: 1.5px solid #fef3c7;
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 16px;
+  color: #78350f;
+  font-size: 13px;
+}
+
+.hp-modal-warning-title {
+  margin: 0 0 8px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.hp-modal-warning-icon {
+  color: #d97706;
+}
+
+.hp-modal-warning-list {
+  margin: 0;
+  padding-left: 18px;
+  line-height: 1.5;
+}
+
+.hp-modal-intro {
+  margin-bottom: 16px;
+}
+
+.hp-modal-legal-list {
+  padding-left: 0;
+  margin-top: 12px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.hp-modal-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 1px dashed rgba(53, 83, 128, 0.4);
+  transition: border-bottom-color 0.2s;
+}
+
+.hp-modal-link:hover {
+  border-bottom-color: transparent;
+}
+
+.hp-modal-overlay.open .hp-modal-content {
+  transform: translateY(0);
+}
+
+.hp-modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  line-height: 1;
+  color: var(--muted);
+  cursor: pointer;
+  padding: 4px;
+  transition: color 0.15s;
+}
+
+.hp-modal-close:hover {
+  color: var(--heading-text);
+}
+
+.hp-modal-header h3 {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--heading-text);
+  margin-top: 0;
+  margin-bottom: 20px;
+  border: none;
+  padding: 0;
+}
+
+.hp-modal-body {
+  font-size: 13.5px;
+}
+
+.hp-modal-body p {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.hp-modal-body ul {
+  padding-left: 20px;
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+.hp-modal-body li {
+  margin-bottom: 8px;
+}
+
+.hp-modal-body a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.hp-modal-body a:hover {
+  text-decoration: underline;
+}

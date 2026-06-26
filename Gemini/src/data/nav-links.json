@@ -1,0 +1,107 @@
+{
+  "primary": [
+    {
+      "label": "Консультации",
+      "href": "https://law-divorce.org/besplatnye-konsultatsii-yurista-po-semejnym-voprosam-online/",
+      "wpelLink": "internal",
+      "groups": [
+        [
+          {
+            "label": "По семейным спорам",
+            "href": "https://law-divorce.org/besplatnye-konsultatsii-yurista-po-semejnym-voprosam-online/",
+            "wpelLink": "internal"
+          },
+          {
+            "label": "По жилищным спорам",
+            "href": "https://law-divorce.org/besplatnaya-konsultatsiya-yurista-po-zhilishhnym-voprosam/",
+            "wpelLink": "internal"
+          },
+          {
+            "label": "По наследству",
+            "href": "https://law-divorce.org/besplatnaya-konsultatsiya-yurista-po-nasledstvu-online/",
+            "wpelLink": "internal"
+          }
+        ],
+        [
+          {
+            "label": "По трудовым спорам",
+            "href": "https://law-divorce.org/besplatnaya-yuridicheskaya-konsultatsiya-po-trudovomu-pravu-onlajn/",
+            "wpelLink": "internal"
+          },
+          {
+            "label": "По кредитам и банкам",
+            "href": "https://law-divorce.org/besplatnaya-konsultatsiya-yurista-po-kreditam-online/",
+            "wpelLink": "internal"
+          },
+          {
+            "label": "По защите прав потребителей",
+            "href": "https://law-divorce.org/besplatnaya-konsultatsiya-yurista-po-zashhite-prav-potrebitelej/",
+            "wpelLink": "internal"
+          }
+        ]
+      ]
+    },
+    {
+      "label": "Блог",
+      "href": "category-divorce.html",
+      "groups": [
+        [
+          {
+            "label": "Разводы",
+            "href": "category-divorce.html"
+          },
+          {
+            "label": "Раздел имущества",
+            "href": "article-divorce-without-consent.html#data"
+          },
+          {
+            "label": "Алименты",
+            "href": "article-divorce-without-consent.html#children"
+          }
+        ],
+        [
+          {
+            "label": "Права родителей",
+            "href": "article-divorce-without-consent.html#children"
+          },
+          {
+            "label": "Опека",
+            "href": "article-divorce-without-consent.html#children"
+          },
+          {
+            "label": "Усыновление",
+            "href": "article-divorce-without-consent.html#children"
+          }
+        ]
+      ]
+    },
+    {
+      "label": "Услуги",
+      "href": "https://law-divorce.org/yurist-advokat-po-razvodam-v-moskve/",
+      "wpelLink": "internal",
+      "groups": [
+        [
+          {
+            "label": "Расторжение брака",
+            "href": "https://law-divorce.org/yurist-advokat-po-razvodam-v-moskve/",
+            "wpelLink": "internal"
+          },
+          {
+            "label": "Раздел имущества",
+            "href": "https://law-divorce.org/yurist-advokat-po-razdelu-imushhestva-pri-razvode/",
+            "wpelLink": "internal"
+          },
+          {
+            "label": "Семейные споры",
+            "href": "https://law-divorce.org/yurist-advokat-po-semejnym-delam/",
+            "wpelLink": "internal"
+          }
+        ]
+      ]
+    },
+    {
+      "label": "Статья",
+      "href": "article-divorce-without-consent.html"
+    }
+  ]
+}

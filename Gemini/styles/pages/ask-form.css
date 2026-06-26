@@ -1,0 +1,201 @@
+.step2-container {
+  max-width: 680px;
+  margin: 60px auto 100px;
+  padding: 0 20px;
+}
+
+.ask-header-placeholder {
+  height: 110px;
+}
+.step2-card {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
+  font-family: var(--font-body), sans-serif;
+}
+.step2-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.step2-header h1 {
+  font-family: var(--font-heading);
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--heading-text);
+  margin-bottom: 8px;
+  border: none;
+  padding: 0;
+}
+.step2-header p {
+  font-size: 15px;
+  color: var(--muted);
+  margin: 0;
+  line-height: 1.5;
+}
+.pending-details {
+  background: #f8fafc;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+.pending-title {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--muted);
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+}
+.pending-cat-badge {
+  display: inline-block;
+  background: #e0f2fe;
+  color: #0369a1;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.pending-text-preview {
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: var(--text);
+  white-space: pre-wrap;
+  font-style: italic;
+}
+.form-group-step2 {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.form-group-step2--spaced {
+  margin-top: 20px;
+}
+.form-group-step2 label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--muted);
+  letter-spacing: 0.5px;
+}
+.form-group-step2 input {
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  padding: 12px;
+  font-family: var(--font-body);
+  font-size: 14px;
+  outline: none;
+  color: var(--text);
+  background-color: #f8fafc;
+  transition: all 0.2s ease;
+}
+.form-group-step2 input:focus {
+  border-color: var(--accent);
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(53, 83, 128, 0.1);
+}
+
+.ask-form-select,
+.ask-form-textarea {
+  width: 100%;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  padding: 12px;
+  font-family: var(--font-body);
+  font-size: 14px;
+  outline: none;
+  background-color: #f8fafc;
+}
+
+select.ask-form-select {
+  cursor: pointer;
+}
+
+textarea.ask-form-textarea {
+  min-height: 120px;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+select.ask-form-select:focus,
+textarea.ask-form-textarea:focus {
+  border-color: var(--accent);
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(53, 83, 128, 0.1);
+}
+.form-submit-step2 {
+  background: var(--brand-accent);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 14px;
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.2s ease;
+  text-align: center;
+  margin-top: 30px;
+}
+.form-submit-step2:hover {
+  background: var(--brand-accent-hover);
+}
+.step2-success {
+  text-align: center;
+  padding: 20px 0;
+  font-family: var(--font-body), sans-serif;
+}
+.step2-success-icon {
+  width: 64px;
+  height: 64px;
+  background: #d1fae5;
+  color: #10b981;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+.step2-success h2 {
+  font-family: var(--font-heading);
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--heading-text);
+  margin-bottom: 12px;
+  border: none;
+  padding: 0;
+}
+.step2-success p {
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.6;
+  margin: 0 0 30px;
+}
+
+.ask-success-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  margin: 0 auto;
+  padding: 14px 28px;
+  border-radius: 8px;
+  background: var(--brand-accent);
+  color: #ffffff;
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.ask-success-link:hover {
+  background: var(--brand-accent-hover);
+  color: #ffffff;
+}

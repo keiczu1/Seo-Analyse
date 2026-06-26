@@ -1,6 +1,10 @@
 import { Document, Packer, Paragraph, TextRun, AlignmentType, Table, TableRow, TableCell, BorderStyle, WidthType } from 'docx';
 import fs from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const rootDir = path.resolve(__dirname, '..');
 
 // Define invisible border configuration
 const borderNone = {
@@ -320,7 +324,7 @@ const doc = new Document({
 
 // Pack doc and write to disk
 Packer.toBuffer(doc).then((buffer) => {
-    const outputPath = path.join('d:\\Git\\Keiczu1\\Seo Analyse\\Gemini', 'isk-razvod.docx');
+    const outputPath = path.join(rootDir, 'assets', 'documents', 'isk-razvod.docx');
     fs.writeFileSync(outputPath, buffer);
     console.log(`Successfully generated DOCX at: ${outputPath}`);
 }).catch(err => {

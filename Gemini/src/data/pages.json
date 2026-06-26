@@ -1,0 +1,157 @@
+[
+  {
+    "source": "index.html",
+    "output": "index.html",
+    "route": "/",
+    "layout": "default",
+    "title": "LawDivorce",
+    "styles": [
+      "styles/main.css",
+      "styles/pages/home.css"
+    ],
+    "scripts": [
+      "scripts/core/dom.js",
+      "scripts/core/media.js",
+      "scripts/components/mobile-nav.js",
+      "scripts/pages/home.js"
+    ],
+    "public": true,
+    "noindex": false,
+    "sitemap": true
+  },
+  {
+    "source": "zadat-vopros.html",
+    "output": "zadat-vopros.html",
+    "route": "/zadat-vopros.html",
+    "layout": "default",
+    "title": "Завершение отправки вопроса — LawDivorce",
+    "styles": [
+      "styles/main.css",
+      "styles/pages/home.css",
+      "styles/pages/ask-form.css"
+    ],
+    "scripts": [
+      "scripts/core/dom.js",
+      "scripts/core/media.js",
+      "scripts/components/mobile-nav.js",
+      "scripts/pages/ask-form.js"
+    ],
+    "public": true,
+    "noindex": false,
+    "sitemap": true
+  },
+  {
+    "source": "category-divorce.html",
+    "output": "category-divorce.html",
+    "route": "/category-divorce.html",
+    "layout": "default",
+    "title": "Развод",
+    "styles": [
+      "styles/main.css",
+      "styles/pages/article.css",
+      "styles/pages/category.css"
+    ],
+    "scripts": [
+      "scripts/core/dom.js",
+      "scripts/core/media.js",
+      "scripts/components/mobile-nav.js",
+      "scripts/components/checklist.js",
+      "scripts/components/toc.js",
+      "scripts/pages/category.js"
+    ],
+    "public": true,
+    "noindex": false,
+    "sitemap": true,
+    "breadcrumbs": [
+      {
+        "label": "Главная",
+        "href": "/"
+      },
+      {
+        "label": "Семейное право",
+        "href": "/family-law"
+      },
+      {
+        "label": "Развод",
+        "current": true
+      }
+    ]
+  },
+  {
+    "source": "article-divorce-without-consent.html",
+    "output": "article-divorce-without-consent.html",
+    "route": "/article-divorce-without-consent.html",
+    "layout": "default",
+    "title": "Как развестись без согласия жены в 2026 году: порядок через суд",
+    "styles": [
+      "styles/main.css",
+      "styles/pages/article.css"
+    ],
+    "scripts": [
+      "scripts/core/dom.js",
+      "scripts/core/media.js",
+      "scripts/components/mobile-nav.js",
+      "scripts/components/checklist.js",
+      "scripts/components/toc.js",
+      "scripts/pages/article.js"
+    ],
+    "public": true,
+    "noindex": false,
+    "sitemap": true,
+    "breadcrumbs": [
+      {
+        "label": "Главная",
+        "href": "/"
+      },
+      {
+        "label": "Семейное право",
+        "href": "/family-law"
+      },
+      {
+        "label": "Развод",
+        "href": "/family-law/divorce"
+      },
+      {
+        "label": "Без согласия жены",
+        "current": true
+      }
+    ]
+  },
+  {
+    "source": "article-ui-kit.html",
+    "output": "article-ui-kit.html",
+    "route": "/article-ui-kit.html",
+    "layout": "internal",
+    "title": "LawDivorce UI Kit",
+    "styles": [
+      "styles/main.css",
+      "styles/pages/article.css",
+      "styles/pages/ui-kit.css"
+    ],
+    "scripts": [
+      "scripts/core/dom.js",
+      "scripts/core/media.js",
+      "scripts/components/mobile-nav.js",
+      "scripts/components/checklist.js",
+      "scripts/components/toc.js",
+      "scripts/pages/ui-kit.js"
+    ],
+    "public": false,
+    "noindex": true,
+    "sitemap": false,
+    "breadcrumbs": [
+      {
+        "label": "Главная",
+        "href": "/"
+      },
+      {
+        "label": "Статья",
+        "href": "article-divorce-without-consent.html"
+      },
+      {
+        "label": "UI kit",
+        "current": true
+      }
+    ]
+  }
+]

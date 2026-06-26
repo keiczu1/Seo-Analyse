@@ -1,0 +1,343 @@
+/* Document template */
+.doc-template {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  margin: var(--space-md) 0;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(14, 42, 71, 0.03);
+}
+
+.doc-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 16px 20px;
+  background: #F8FAFC;
+  border-bottom: 1px solid var(--border);
+}
+
+.doc-header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.doc-header h3 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--heading-text);
+}
+
+.doc-badge {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  background: var(--brand-accent);
+  color: #fff;
+  padding: 3px 8px;
+  border-radius: 4px;
+  letter-spacing: 0.5px;
+}
+
+.doc-body {
+  margin: 0;
+  padding: 40px;
+  background: #ffffff;
+  font-size: 15px;
+  line-height: 1.5;
+  font-family: "Times New Roman", Times, serif;
+  color: #111111;
+  /* pure legal print black for maximum contrast */
+  border-bottom: 1px solid var(--border);
+}
+
+.doc-body .placeholder {
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+  font-weight: 600;
+  color: #854d0e;
+  /* darker amber/brown for readability */
+  border-bottom: 1px dashed #a16207;
+  /* darker dash border */
+  background: rgba(251, 191, 36, 0.06);
+  padding: 0 4px;
+  border-radius: 2px;
+}
+
+.doc-footer {
+  padding: 12px 20px;
+  background: #F8FAFC;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* Document Template formatting classes */
+.doc-meta-header {
+  margin-left: auto;
+  max-width: 340px;
+  text-align: left;
+  margin-bottom: 24px;
+  line-height: 1.4;
+  font-size: 14px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.doc-title-main {
+  text-align: center;
+  font-weight: 700;
+  margin: 24px auto 16px;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.doc-title-request {
+  text-align: center;
+  font-weight: 700;
+  margin: 20px 0 16px;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.doc-content-text p {
+  margin-bottom: 12px;
+  text-align: justify;
+  text-indent: 1.25cm;
+  line-height: 1.5;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.doc-content-text p.doc-no-indent {
+  text-indent: 0;
+}
+
+.doc-content-text ol,
+.doc-content-text ul {
+  margin-top: 8px;
+  margin-bottom: 12px;
+  padding-left: 24px;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.doc-content-text li {
+  margin-bottom: 6px;
+  text-align: justify;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.doc-signature {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 32px;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 15px;
+}
+
+/* Document Download Block (Variant 3: Large Cards Layout) */
+.doc-download-block {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 16px;
+  margin: var(--space-md) 0 var(--space-lg);
+}
+
+.doc-download-block .download-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.01);
+}
+
+.doc-download-block .download-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 6px 20px rgba(53, 83, 128, 0.06);
+  transform: translateY(-2px);
+}
+
+.doc-download-block .card-header-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  min-width: 240px;
+  flex: 1;
+}
+
+.doc-download-block .card-icon-container {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.doc-download-block .docx-card .card-icon-container {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.doc-download-block .pdf-card .card-icon-container {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+.doc-download-block .card-meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.doc-download-block .card-title {
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--heading-text);
+  margin-bottom: 2px;
+}
+
+.doc-download-block .card-desc {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.doc-download-block .card-action-btn,
+.doc-header .card-action-btn {
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-width: 150px;
+  flex-shrink: 0;
+}
+
+.doc-download-block .docx-card .card-action-btn {
+  background: #eff6ff;
+  color: #2563eb;
+  border: 1px solid #93c5fd;
+}
+
+.doc-download-block .docx-card .card-action-btn:hover {
+  background: #2563eb;
+  color: #ffffff;
+  border-color: #2563eb;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15);
+}
+
+.doc-download-block .pdf-card .card-action-btn,
+.doc-header .card-action-btn.docx-btn {
+  background: #fef2f2;
+  color: #dc2626;
+  border: 1px solid #fca5a5;
+}
+
+.doc-download-block .pdf-card .card-action-btn:hover,
+.doc-header .card-action-btn.docx-btn:hover {
+  background: #dc2626;
+  color: #ffffff;
+  border-color: #dc2626;
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.15);
+}
+
+.doc-download-block .file-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.doc-download-block .button-icon,
+.doc-header .button-icon {
+  width: 15px;
+  height: 15px;
+  stroke-width: 2.5px;
+}
+
+/* Download block preview wrapper */
+.download-preview-section {
+  margin: var(--space-md) 0 var(--space-lg);
+  border: 1.5px dashed var(--border);
+  border-radius: 16px;
+  padding: 24px;
+  background: rgba(248, 250, 252, 0.4);
+}
+
+.preview-group {
+  margin-bottom: 24px;
+}
+
+.preview-group--spaced {
+  margin-top: 24px;
+}
+
+.preview-group:last-child {
+  margin-bottom: 0;
+}
+
+.preview-title {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 600px) {
+  .doc-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    padding: 16px;
+  }
+
+  .doc-header-left {
+    justify-content: center;
+  }
+
+  .doc-header .card-action-btn {
+    width: 100%;
+  }
+
+  .doc-body {
+    padding: 24px 16px;
+    font-size: 14px;
+  }
+
+  .doc-meta-header {
+    max-width: 100%;
+    font-size: 13.5px;
+  }
+
+  .doc-content-text p {
+    text-indent: 0.75cm;
+    margin-bottom: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .doc-download-block .card-action-btn,
+  .doc-header .card-action-btn {
+    width: 100%;
+  }
+}

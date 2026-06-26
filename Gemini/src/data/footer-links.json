@@ -1,0 +1,112 @@
+{
+  "columns": [
+    {
+      "title": "О сервисе",
+      "links": [
+        {
+          "label": "О проекте",
+          "href": "#"
+        },
+        {
+          "label": "Как это работает",
+          "href": "#steps-section"
+        },
+        {
+          "label": "Редакция",
+          "href": "#"
+        },
+        {
+          "label": "Стандарты качества",
+          "href": "#verify-section"
+        },
+        {
+          "label": "Контакты",
+          "href": "#"
+        }
+      ]
+    },
+    {
+      "title": "Пользователям",
+      "links": [
+        {
+          "label": "Задать вопрос",
+          "href": "#hero-form"
+        },
+        {
+          "label": "Позвонить юристу",
+          "href": "tel:+78005512406"
+        },
+        {
+          "label": "Юристы",
+          "href": "#lawyers-section"
+        },
+        {
+          "label": "Вопросы и ответы",
+          "href": "#consults-section"
+        },
+        {
+          "label": "Отзывы",
+          "href": "#reviews-section"
+        },
+        {
+          "label": "Подать жалобу",
+          "href": "#"
+        }
+      ]
+    },
+    {
+      "title": "Направления",
+      "links": [
+        {
+          "label": "Семейное право",
+          "href": "https://law-divorce.org/besplatnye-konsultatsii-yurista-po-semejnym-voprosam-online/"
+        },
+        {
+          "label": "Жилищное право",
+          "href": "https://law-divorce.org/besplatnaya-konsultatsiya-yurista-po-zhilishhnym-voprosam/"
+        },
+        {
+          "label": "Трудовое право",
+          "href": "https://law-divorce.org/besplatnaya-yuridicheskaya-konsultatsiya-po-trudovomu-pravu-onlajn/"
+        },
+        {
+          "label": "Кредиты и долги",
+          "href": "https://law-divorce.org/besplatnaya-konsultatsiya-yurista-po-kreditam-online/"
+        },
+        {
+          "label": "Наследство",
+          "href": "https://law-divorce.org/besplatnaya-konsultatsiya-yurista-po-nasledstvu-online/"
+        },
+        {
+          "label": "Все направления",
+          "href": "#categories-section"
+        }
+      ]
+    }
+  ],
+  "legal": {
+    "title": "Правовая информация",
+    "links": [
+      {
+        "label": "Пользовательское соглашение",
+        "href": "#"
+      },
+      {
+        "label": "Политика обработки данных",
+        "href": "#"
+      },
+      {
+        "label": "Согласие на обработку данных",
+        "href": "#"
+      },
+      {
+        "label": "Правила оказания консультаций",
+        "href": "#"
+      },
+      {
+        "label": "Правила рекламы",
+        "href": "#"
+      }
+    ]
+  }
+}

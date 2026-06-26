@@ -1,0 +1,88 @@
+/* Choice Cards (children toggle) */
+.choice-cards {
+  margin: var(--space-md) 0 var(--space-lg);
+}
+
+.choice-cards .question-text {
+  font-family: var(--font-heading);
+  font-size: var(--fs-lg);
+  font-weight: 700;
+  color: var(--heading-text);
+  margin-bottom: var(--space-sm);
+}
+
+.choice-cards .cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.choice-cards .card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface);
+  text-decoration: none;
+  color: var(--text);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.choice-cards .card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 6px 20px rgba(53, 83, 128, 0.08);
+  transform: translateY(-2px);
+}
+
+.choice-cards .card-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--fs-base);
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.choice-cards .card-icon.yes-icon {
+  background: #FFF1F2;
+  color: #D03B5A;
+}
+
+.choice-cards .card-icon.no-icon {
+  background: #ECFDF5;
+  color: #3A8D63;
+}
+
+.choice-cards .card-title {
+  font-family: var(--font-heading);
+  font-size: var(--fs-lg);
+  font-weight: 700;
+  color: var(--heading-text);
+  margin-bottom: 6px;
+}
+
+.choice-cards .card-desc {
+  font-size: var(--fs-sm);
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.choice-cards .card-link {
+  font-size: var(--fs-xs);
+  color: var(--link-color);
+  font-weight: 700;
+  margin-top: 12px;
+  display: inline-block;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.choice-cards .card:hover .card-link {
+  color: var(--accent-hover);
+  transform: translateX(4px);
+}
