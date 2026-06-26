@@ -4232,7 +4232,6 @@ body.hp-body {
   box-sizing: border-box;
 }
 
-html,
 body[class~="hp-body"] {
   overflow-x: clip;
 }

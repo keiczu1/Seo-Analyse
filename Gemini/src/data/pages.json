@@ -126,6 +126,7 @@
     "styles": [
       "styles/main.css",
       "styles/pages/article.css",
+      "styles/pages/home.css",
       "styles/pages/ui-kit.css"
     ],
     "scripts": [

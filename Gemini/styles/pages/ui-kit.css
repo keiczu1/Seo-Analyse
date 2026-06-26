@@ -338,12 +338,267 @@
 }
 
 .kit-example-title {
-  margin: 26px 0 12px;
+  margin: 30px 0 12px;
   color: var(--heading-text);
   font-family: var(--font-heading);
   font-size: var(--fs-lg);
   font-weight: 700;
   line-height: 1.35;
+}
+
+.kit-home-showcase {
+  display: grid;
+  gap: 32px;
+  margin: 18px 0 42px;
+}
+
+.kit-main .hp-reveal {
+  opacity: 1;
+  transform: none;
+}
+
+.kit-home-surface {
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+#homepage-components {
+  padding-top: 4px;
+}
+
+#homepage-components > .kit-section-note {
+  max-width: 720px;
+}
+
+#homepage-components > .kit-rules-grid {
+  gap: 18px;
+}
+
+#homepage-components .kit-example-title {
+  margin-top: 44px;
+  padding-top: 26px;
+  border-top: 1px solid var(--border);
+  font-size: var(--fs-xl);
+}
+
+.kit-home-map {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin: 20px 0 34px;
+}
+
+.kit-home-map-item {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px 18px;
+  background: #ffffff;
+}
+
+.kit-home-map-step {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 28px;
+  height: 28px;
+  margin-bottom: 10px;
+  border-radius: 999px;
+  background: rgba(53, 83, 128, 0.08);
+  color: var(--accent);
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.kit-home-map-title {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--heading-text);
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.kit-home-map-item p {
+  margin: 0;
+  color: var(--muted);
+  font-size: var(--fs-xs);
+  line-height: 1.55;
+}
+
+.kit-home-surface .hp-hero,
+.kit-home-surface .hp-channels-section,
+.kit-home-surface .hp-steps-section,
+.kit-home-surface .hp-responsibility-section,
+.kit-home-surface .hp-categories-section,
+.kit-home-surface .hp-lawyers-section,
+.kit-home-surface .hp-consults-section,
+.kit-home-surface .hp-verify-section,
+.kit-home-surface .hp-reviews-section,
+.kit-home-surface .hp-section,
+.kit-home-surface .hp-final-cta-section {
+  padding: 28px;
+}
+
+.kit-home-surface .hp,
+.kit-home-surface .hp-channels-inner,
+.kit-home-surface .hp-trust-inner,
+.kit-home-surface .hp-categories-inner,
+.kit-home-surface .hp-lawyers-inner {
+  max-width: none;
+  padding: 0;
+}
+
+.kit-home-mini-hero {
+  padding: 30px;
+  background: #ffffff;
+}
+
+.kit-home-mini-hero .hp-hero-inner {
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.kit-home-mini-hero .hp-hero-live-badges {
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.kit-home-chat-grid,
+.kit-home-card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+}
+
+.kit-home-card-grid .hp-category-card,
+.kit-home-card-grid .hp-lawyer-card,
+.kit-home-card-grid .hp-consult-card,
+.kit-home-card-grid .hp-review-card {
+  height: 100%;
+  max-width: 680px;
+}
+
+.kit-home-chat-grid .tg-chat-container,
+.kit-home-chat-grid .kit-home-surface {
+  max-width: 680px;
+}
+
+.kit-home-card-grid .hp-consult-question-title {
+  min-height: auto;
+}
+
+.kit-home-card-grid .hp-review-card-header,
+.kit-home-card-grid .hp-review-card-footer,
+.kit-home-card-grid .hp-consult-author-row,
+.kit-home-card-grid .hp-consult-actions {
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.kit-home-process-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.kit-home-process-grid .hp-steps-timeline {
+  grid-template-columns: 1fr;
+}
+
+.kit-home-process-grid .hp-steps-timeline::before {
+  display: none;
+}
+
+.kit-home-process-grid .hp-step-item {
+  align-items: flex-start;
+}
+
+.kit-home-process-grid .hp-verify-timeline {
+  padding-left: 0;
+}
+
+.kit-home-process-grid .hp-verify-timeline::before {
+  left: 15px;
+}
+
+.kit-home-prep-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.kit-home-prep-grid .hp-prep-step-item {
+  align-items: flex-start;
+}
+
+.kit-home-prep-grid .hp-prep-progress-fill {
+  width: 60%;
+}
+
+.kit-home-showcase .hp-final-cta-section {
+  border-radius: 8px;
+}
+
+.kit-home-surface .hp-channels-container {
+  padding: 30px;
+  border-radius: 16px;
+}
+
+.kit-home-surface .hp-channels-grid {
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.kit-home-surface .hp-channels-divider {
+  position: static;
+  width: 100%;
+  transform: none;
+  flex-direction: row;
+}
+
+.kit-home-surface .hp-channels-divider-line {
+  width: auto;
+  height: 1px;
+}
+
+.kit-home-surface .hp-channels-divider-badge {
+  margin: 0 12px;
+}
+
+.kit-home-surface .hp-channel-desc {
+  min-height: 0;
+}
+
+@media (max-width: 900px) {
+  #homepage-components > .kit-rules-grid,
+  .kit-home-map,
+  .kit-home-chat-grid,
+  .kit-home-card-grid,
+  .kit-home-process-grid,
+  .kit-home-prep-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .kit-home-surface .hp-hero,
+  .kit-home-surface .hp-channels-section,
+  .kit-home-surface .hp-steps-section,
+  .kit-home-surface .hp-responsibility-section,
+  .kit-home-surface .hp-categories-section,
+  .kit-home-surface .hp-lawyers-section,
+  .kit-home-surface .hp-consults-section,
+  .kit-home-surface .hp-verify-section,
+  .kit-home-surface .hp-reviews-section,
+  .kit-home-surface .hp-section,
+  .kit-home-surface .hp-final-cta-section {
+    padding: 20px;
+  }
 }
 
 .kit-footer-note {
