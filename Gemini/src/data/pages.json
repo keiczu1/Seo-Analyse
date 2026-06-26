@@ -154,5 +154,43 @@
         "current": true
       }
     ]
+  },
+  {
+    "source": "all-components-ui-kit.html",
+    "output": "all-components-ui-kit.html",
+    "route": "/all-components-ui-kit.html",
+    "layout": "internal",
+    "title": "LawDivorce All Components UI Kit",
+    "styles": [
+      "styles/main.css",
+      "styles/pages/article.css",
+      "styles/pages/home.css",
+      "styles/pages/ui-kit.css"
+    ],
+    "scripts": [
+      "scripts/core/dom.js",
+      "scripts/core/media.js",
+      "scripts/components/mobile-nav.js",
+      "scripts/components/checklist.js",
+      "scripts/components/toc.js",
+      "scripts/pages/ui-kit.js"
+    ],
+    "public": false,
+    "noindex": true,
+    "sitemap": false,
+    "breadcrumbs": [
+      {
+        "label": "Главная",
+        "href": "/"
+      },
+      {
+        "label": "UI kit",
+        "href": "article-ui-kit.html"
+      },
+      {
+        "label": "Все компоненты",
+        "current": true
+      }
+    ]
   }
 ]

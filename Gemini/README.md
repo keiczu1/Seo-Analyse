@@ -35,6 +35,7 @@ git diff --check -- Gemini package.json
 - `category-divorce.html`
 - `article-divorce-without-consent.html`
 - `article-ui-kit.html`
+- `all-components-ui-kit.html`
 
 Не открывайте файлы из `src/pages/` напрямую. Это шаблоны для сборщика. В них есть директивы `@include` и `@render`, которые браузер не понимает.
 
@@ -58,6 +59,11 @@ npm.cmd run gemini:build
 ```
 
 Команда пересобирает корневые HTML-файлы из `src/pages/`.
+
+## Внутренние UI kit страницы
+
+- `article-ui-kit.html` - рабочая страница для будущего UI kit компонентов статьи.
+- `all-components-ui-kit.html` - полный справочник всех доступных компонентов LawDivorce. Он создан как клон текущего расширенного `article-ui-kit.html`, чтобы сохранить общую витрину перед дальнейшим сужением article kit.
 
 ## Проверка
 

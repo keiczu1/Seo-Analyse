@@ -50,6 +50,12 @@ UI kit не должен становиться второй копией гла
 
 Для отображения production-компонентов к внутренней странице UI kit подключён `styles/pages/home.css` через `Gemini/src/data/pages.json`. Локальные правила в `styles/pages/ui-kit.css` только ограничивают витрину внутри article layout и делают `.hp-reveal` видимым без запуска домашнего scroll-аниматора.
 
+## Разделение UI kit страниц 2026-06-26
+
+Текущий расширенный UI kit сохранён отдельной внутренней страницей `all-components-ui-kit.html`. Это полный каталог компонентов LawDivorce: статья, главная, карточки, CTA, доверие, формы, FAQ и навигационные блоки.
+
+`article-ui-kit.html` оставлен как рабочая страница для следующего этапа: из неё можно будет убрать всё, что не относится к оформлению самой статьи, не теряя общий справочник компонентов.
+
 ## Browser review 2026-06-26
 
 После первого добавления раздел был проверен в браузере через Playwright. Скриншоты сохранены во временную папку `Gemini/reports/ui-kit-review/`.
@@ -78,9 +84,11 @@ UI kit не должен становиться второй копией гла
 ## Файлы изменений
 
 - `Gemini/src/pages/article-ui-kit.html`
+- `Gemini/src/pages/all-components-ui-kit.html`
 - `Gemini/styles/pages/ui-kit.css`
 - `Gemini/src/data/pages.json`
 - `Gemini/article-ui-kit.html` после сборки
+- `Gemini/all-components-ui-kit.html` после сборки
 
 ## Проверка
 
